@@ -54,7 +54,9 @@ Modified from: HTML5UP
 		margin: auto;
 		display: block;
 	}	
-
+	section p{
+		text-align: justify;
+	}
 
 
 /* Box Model */
@@ -1626,11 +1628,10 @@ Akshay for all screens----------------------------------------------------------
 
 #contactme {
 	cursor: default;
-	display: inline-block;
+	display: block;
 	position: relative;
-	text-align: center;
+	text-align: left;
 	top: -1em;
-	vertical-align: middle;
 	width: 90%;
 }
 
@@ -1639,9 +1640,8 @@ Akshay for all screens----------------------------------------------------------
 		border: 0;
 		font-size: 100%;
 		font: inherit;
-		vertical-align: baseline;
 		display: block;
-		margin: 1.5em 0 0 0;
+		margin: 0 0 0 0;
 	}	
 		
 
@@ -1684,7 +1684,7 @@ Akshay for all screens----------------------------------------------------------
 			}
 
 				#contactme nav a:hover:before {
-					background-color: rgba(255, 255, 255, 0.175);
+					/* background-color: rgba(255, 255, 255, 0.175); */
 					color: #fff;
 				}
 
@@ -1694,7 +1694,7 @@ Akshay for all screens----------------------------------------------------------
 			}
 
 				#contactme nav a:active:before {
-					background-color: rgba(255, 255, 255, 0.35);
+					/* background-color: rgba(255, 255, 255, 0.35); */
 					color: #fff;
 				}
 
@@ -1719,7 +1719,7 @@ Akshay for all screens----------------------------------------------------------
 /*Projects Page */
 
 #projects_page {
-	background: #f3f3f3 url("images/overlay.png");
+	/* background: #f3f3f3 url("images/overlay.png"); */
 }
 
 #projects_page #main {
@@ -1828,6 +1828,7 @@ END ----------------------------------------------------------------------------
 
 			.wrapper.style4 {
 			background: #232323  url(images/overlay.png);
+			height: 80%;
 		}
 
 			.wrapper.style4 .title {
@@ -1838,6 +1839,7 @@ END ----------------------------------------------------------------------------
 			.wrapper.style4 img {
 				object-fit: contain;
 			}
+		
 
 	#header-wrapper {
 		background: url("../../images/banner.jpg") center center;
@@ -1854,121 +1856,12 @@ END ----------------------------------------------------------------------------
 			background: url("images/overlay.png");
 		}
 
-	#footer-wrapper {
-		background: #282b34 url("images/overlay.png");
-		color: #eee;
-		color: rgba(255, 255, 255, 0.5);
-	}
-
-		#footer-wrapper h1, #footer-wrapper h2, #footer-wrapper h3, #footer-wrapper h4, #footer-wrapper h5, #footer-wrapper h6, #footer-wrapper strong, #footer-wrapper b, #footer-wrapper a {
-			color: #fff;
-		}
-
-		#footer-wrapper hr {
-			border-top-color: #333;
-			border-top-color: rgba(255, 255, 255, 0.05);
-		}
-
-		#footer-wrapper form input[type="text"],
-		#footer-wrapper form input[type="email"],
-		#footer-wrapper form input[type="password"],
-		#footer-wrapper form select,
-		#footer-wrapper form textarea {
-			background: #ccc;
-			box-shadow: none;
-		}
-
-			#footer-wrapper form input[type="text"]:focus,
-			#footer-wrapper form input[type="email"]:focus,
-			#footer-wrapper form input[type="password"]:focus,
-			#footer-wrapper form select:focus,
-			#footer-wrapper form textarea:focus {
-				background: #fff;
-			}
-
-		#footer-wrapper input[type="button"],
-		#footer-wrapper input[type="submit"],
-		#footer-wrapper input[type="reset"],
-		#footer-wrapper button,
-		#footer-wrapper .button {
-			color: #fff;
-			box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.5);
-		}
-
-			#footer-wrapper input[type="button"]:hover,
-			#footer-wrapper input[type="submit"]:hover,
-			#footer-wrapper input[type="reset"]:hover,
-			#footer-wrapper button:hover,
-			#footer-wrapper .button:hover {
-				color: #fff;
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.65);
-			}
-
-			#footer-wrapper input[type="button"]:active,
-			#footer-wrapper input[type="submit"]:active,
-			#footer-wrapper input[type="reset"]:active,
-			#footer-wrapper button:active,
-			#footer-wrapper .button:active {
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
-			}
-
-			#footer-wrapper input[type="button"].style2:active,
-			#footer-wrapper input[type="submit"].style2:active,
-			#footer-wrapper input[type="reset"].style2:active,
-			#footer-wrapper button.style2:active,
-			#footer-wrapper .button.style2:active {
-				box-shadow: inset 0px 0px 2px 0px rgba(255, 255, 255, 0.75);
-			}
-
-		#footer-wrapper .title {
-			background: #282b34 url("images/overlay.png");
-			color: #eee;
-		}
-
-		#footer-wrapper header.style1 h2 {
-			color: #fff;
-		}
-
-		#footer-wrapper header.style1 .p {
-			color: inherit;
-		}
-
-		#footer-wrapper .feature-list section {
-			border-top-color: #333;
-			border-top-color: rgba(255, 255, 255, 0.05);
-		}
-
-		#footer-wrapper .feature-list h3:before {
-			background: #3d4249 url("images/overlay.png");
-		}
-
-		#contactme {
-			margin-bottom: 45px;
-		}
-
-
-		
-/* Copyright */
-
-	#copyright {
+	.page-footer h3{
 		text-align: center;
+		color: white;
+		font-size: 2em;
+		font-family: monospace;
 	}
-
-		#copyright ul {
-			display: inline-block;
-			border-radius: 0.35em;
-			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.05);
-			color: #aaa;
-			color: rgba(255, 255, 255, 0.25);
-		}
-
-		#copyright a {
-			color: inherit;
-		}
-
-			#copyright a:hover {
-				color: #fff;
-			}
 
 /* Desktop + Tablet -------------------------------------------------------------------------------------------
 */
@@ -2161,7 +2054,7 @@ END ----------------------------------------------------------------------------
 			}
 
 				.wrapper .title {
-					font-size: 0.9em;
+					font-size: 1.4em;
 					width: 25em;
 					height: 3.25em;
 					top: -3.25em;
@@ -2221,8 +2114,8 @@ END ----------------------------------------------------------------------------
 			#logo p {
 				margin: 2em 0 0 0;
 				display: block;				
-				font-size: 1.1em;
-
+				font-size: 1.5em;
+				
 				-webkit-animation-delay: 0.2s;
 				-moz-animation-delay: 0.2s;
 				-ms-animation-delay: 0.2s;
@@ -2231,6 +2124,10 @@ END ----------------------------------------------------------------------------
 			}
 
 		/* Nav */
+
+		.navList{
+			font-size: 1.3em;
+		}
 
 			#nav {
 				position: absolute;
@@ -2382,6 +2279,7 @@ END ----------------------------------------------------------------------------
 					line-height: 1.35em;
 					padding: 1em 0 1em 0;
 					margin-bottom: 1em;
+					text-align: center;
 				}
 
 				#intro > .style3 {
@@ -2530,9 +2428,9 @@ END ----------------------------------------------------------------------------
 				margin-top: -0.5em !important;
 			}
 
-				#logo h2 {
+			#logo h2 {
 					font-size: 5vw;
-				}
+			}
 
 		/* Intro */
 
@@ -3025,6 +2923,41 @@ END ----------------------------------------------------------------------------
 		}
 	}
 
+.card-blue {
+	width: auto;
+	height: 128px;
+	background: #3E4EB8;
+}
+.card-red {
+	width: auto;
+	height: 128px;
+	background: #e53935;
+}
+.card-pink {
+	width: auto;
+	height: 128px;
+	background: #F50057;
+}
+.card-green {
+	width: auto;
+	height: 128px;
+	background: #4CAF50;
+}
+.card-yellow {
+	width: auto;
+	height: 128px;
+	background: #FFEB3B;
+}
+.card-lime {
+	width: auto;
+	height: 128px;
+	background: #CDDC39;
+}
+.card-purple {
+	width: auto;
+	height: 128px;
+	background: #9C27B0;
+}
 
 .notice-card-shadow {
  
@@ -3061,8 +2994,12 @@ END ----------------------------------------------------------------------------
     background: #FCEBA6;
  
 }
- 
- 
+
+.card-img-top {
+    width: 100%;
+	height: 80vh;
+	object-fit: contain;
+}
  
 .notice-card.card-information .content {
     padding: 40px 55px; 
