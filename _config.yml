@@ -5,7 +5,7 @@ description: ""
 logo: 'assets/images/favicon.png'
 favicon: 'assets/images/favicon.png'
 url: rushichaudhari.github.io
-baseurl: '/myblog'
+baseurl: ''
 google_analytics: ''
 disqus: 'rushichaudhari'
 mailchimp-list: ''
