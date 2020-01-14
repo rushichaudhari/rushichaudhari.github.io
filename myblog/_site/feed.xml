@@ -3,10 +3,10 @@
   <channel>
     <title>A Collection of Random Ideas</title>
     <description></description>
-    <link>/mediumish-theme-jekyll/</link>
-    <atom:link href="/mediumish-theme-jekyll/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Jan 2020 02:05:03 +0530</pubDate>
-    <lastBuildDate>Wed, 15 Jan 2020 02:05:03 +0530</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 15 Jan 2020 02:31:39 +0530</pubDate>
+    <lastBuildDate>Wed, 15 Jan 2020 02:31:39 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -48,8 +48,8 @@
 &lt;/p&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 05 Jan 2020 00:00:00 +0530</pubDate>
-        <link>/mediumish-theme-jekyll/A-vegetarians-guide-in-boston/</link>
-        <guid isPermaLink="true">/mediumish-theme-jekyll/A-vegetarians-guide-in-boston/</guid>
+        <link>http://localhost:4000/A-vegetarians-guide-in-boston/</link>
+        <guid isPermaLink="true">http://localhost:4000/A-vegetarians-guide-in-boston/</guid>
         
         <category>red</category>
         
@@ -76,8 +76,8 @@
 
 </description>
         <pubDate>Wed, 25 Dec 2019 00:00:00 +0530</pubDate>
-        <link>/mediumish-theme-jekyll/Torrents-in-US/</link>
-        <guid isPermaLink="true">/mediumish-theme-jekyll/Torrents-in-US/</guid>
+        <link>http://localhost:4000/Torrents-in-US/</link>
+        <guid isPermaLink="true">http://localhost:4000/Torrents-in-US/</guid>
         
         <category>red</category>
         
