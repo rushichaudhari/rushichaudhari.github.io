@@ -3,11 +3,74 @@
   <channel>
     <title>A Collection of Random Ideas</title>
     <description></description>
-    <link>http://localhost:4000/myblog/</link>
-    <atom:link href="http://localhost:4000/myblog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 15 Jan 2020 03:47:17 +0530</pubDate>
-    <lastBuildDate>Wed, 15 Jan 2020 03:47:17 +0530</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 30 Jan 2020 02:39:11 +0530</pubDate>
+    <lastBuildDate>Thu, 30 Jan 2020 02:39:11 +0530</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Compiling fceux on Debian 10 buster</title>
+        <description>&lt;p&gt;I came across this wonderful video &lt;a href=&quot;https://www.youtube.com/watch?v=qv6UVOQ0F44&quot;&gt;https://www.youtube.com/watch?v=qv6UVOQ0F44&lt;/a&gt;. It took me into searching for its code to implement that. And here are a few.&lt;/p&gt;
+
+&lt;h5 id=&quot;httpsgithubcommario-browsbrows-super-mario&quot;&gt;https://github.com/Mario-brows/Brows-Super-Mario&lt;/h5&gt;
+&lt;h5 id=&quot;httpsgithubcomlopatin96lua-snes-genneurnetwork&quot;&gt;https://github.com/lopatin96/Lua-SNES-GenNeurNetwork&lt;/h5&gt;
+
+&lt;p&gt;The main problem in them is they use &lt;a href=&quot;https://github.com/h31nr1ch/BizHawk&quot;&gt;BizHawk Emulator&lt;/a&gt;, which I was not successful in compiling for my debian OS, Its stable only for windows machines. Then I found its alternative &lt;a href=&quot;http://www.fceux.com/web/download.html&quot;&gt;fceux&lt;/a&gt; Which can handle lua scripts too!.&lt;/p&gt;
+
+&lt;p&gt;The following steps are what I used to compile it successfully.&lt;/p&gt;
+
+&lt;p&gt;Download the FCEUX src. from their website&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;sudo apt-get install libsdl1.2-dev scons libgtk-3-dev liblua5.1-0-dev libgd-dev
+tar xzvf fceux-2.2.3.src.tar.gz
+cd fceux-2.2.3
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Open SConstruct&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;vim SConstruct
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Make sure gtk3 is used&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;BoolVariable('GTK', 'Enable GTK2 GUI (SDL only)', 0),
+BoolVariable('GTK3', 'Enable GTK3 GUI (SDL only)', 1),
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To compile&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;scons
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;This will take around 5-10mins. Onc done Install it.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;sudo scons install
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Adding fceux in application drawer.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;sudo cp fceux.desktop /usr/share/applications
+sudo cp fceux.png /usr/share/pixmaps
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After reboot you can see fceux in application drawer, or type fceux in terminal to run without rebooting.
+I will be uploading my experiences with that mario script soon once I configure :)&lt;/p&gt;
+</description>
+        <pubDate>Wed, 29 Jan 2020 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/Compiling-fceux-on-Debian-Buster/</link>
+        <guid isPermaLink="true">http://localhost:4000/Compiling-fceux-on-Debian-Buster/</guid>
+        
+        
+        <category>emulator</category>
+        
+        <category>snes</category>
+        
+        <category>linux</category>
+        
+      </item>
     
       <item>
         <title>A Vegetarian's guide in Boston</title>
@@ -48,8 +111,8 @@
 &lt;/p&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 05 Jan 2020 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/myblog/A-vegetarians-guide-in-boston/</link>
-        <guid isPermaLink="true">http://localhost:4000/myblog/A-vegetarians-guide-in-boston/</guid>
+        <link>http://localhost:4000/A-vegetarians-guide-in-boston/</link>
+        <guid isPermaLink="true">http://localhost:4000/A-vegetarians-guide-in-boston/</guid>
         
         <category>red</category>
         
@@ -76,8 +139,8 @@
 
 </description>
         <pubDate>Wed, 25 Dec 2019 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/myblog/Torrents-in-US/</link>
-        <guid isPermaLink="true">http://localhost:4000/myblog/Torrents-in-US/</guid>
+        <link>http://localhost:4000/Torrents-in-US/</link>
+        <guid isPermaLink="true">http://localhost:4000/Torrents-in-US/</guid>
         
         <category>red</category>
         
