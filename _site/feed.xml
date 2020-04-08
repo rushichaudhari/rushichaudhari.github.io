@@ -5,8 +5,8 @@
     <description></description>
     <link>http://localhost:4444/</link>
     <atom:link href="http://localhost:4444/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 08 Apr 2020 16:47:39 -0400</pubDate>
-    <lastBuildDate>Wed, 08 Apr 2020 16:47:39 -0400</lastBuildDate>
+    <pubDate>Wed, 08 Apr 2020 17:09:22 -0400</pubDate>
+    <lastBuildDate>Wed, 08 Apr 2020 17:09:22 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -56,6 +56,22 @@ newgrp plugdev
         <category>pcmanfm</category>
         
         <category>debian</category>
+        
+      </item>
+    
+      <item>
+        <title>Imp links for few scripts or codes</title>
+        <description>&lt;h3 id=&quot;create-openvpn-tested-on-debianubuntu-on-cloud&quot;&gt;Create openvpn tested on debian/ubuntu on cloud&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Nyr/openvpn-install&quot;&gt;https://github.com/Nyr/openvpn-install&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 08 Apr 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4444/Imp-links/</link>
+        <guid isPermaLink="true">http://localhost:4444/Imp-links/</guid>
+        
+        
+        <category>vpn</category>
+        
+        <category>digitalocean</category>
         
       </item>
     

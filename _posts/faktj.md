@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Imp links for few scripts or codes"
+author: rushi
+categories: [vpn, digitalocean]
+image: "images/important-icon.jpg"
+featured: false
+hidden: false
+
+---
+
+##Create openvpn tested on debian/ubuntu on cloud
+sadsa
+[https://github.com/Nyr/openvpn-install](https://github.com/Nyr/openvpn-install)
