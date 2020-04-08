@@ -2,8 +2,8 @@
 name: "A Collection of Random Ideas"
 title: "A Collection of Random Ideas"
 description: ""
-logo: 'assets/images/favicon.png'
-favicon: 'assets/images/favicon.png'
+logo: 'assets/images/favicon.ico'
+favicon: 'assets/images/favicon.ico'
 url: rushichaudhari.github.io
 baseurl: ''
 google_analytics: ''
@@ -15,10 +15,10 @@ permalink: /:title/
 # Authors
 authors:
   rushi:
-    name: Rushi
-    display_name: Rushi
-    avatar: 'assets/images/avatar.png'
-    gravatar: b1cc14991db7a456fcd761680bbc8f81
+    name: "Rushi"
+    display_name: ""
+    avatar: ''
+    gravatar: 
     email: rushic24@gmail.com
     web: http://www.rushichaudhari.github.io/profile
     twitter: ''

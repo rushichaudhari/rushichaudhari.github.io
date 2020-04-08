@@ -3,11 +3,61 @@
   <channel>
     <title>A Collection of Random Ideas</title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 30 Jan 2020 02:39:11 +0530</pubDate>
-    <lastBuildDate>Thu, 30 Jan 2020 02:39:11 +0530</lastBuildDate>
+    <link>http://localhost:4444/</link>
+    <atom:link href="http://localhost:4444/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 08 Apr 2020 16:47:39 -0400</pubDate>
+    <lastBuildDate>Wed, 08 Apr 2020 16:47:39 -0400</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Not authorized to perform this operation</title>
+        <description>&lt;p&gt;Sometimes, when using i3wm I get this error when mounting a partition. But it works for other des like gnome/cinnamon.&lt;/p&gt;
+
+&lt;p&gt;Make sure polkit is installed.&lt;/p&gt;
+
+&lt;p&gt;Loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;[Allow Unauthorized mounting/Unmounting]
+Identity=unix-group:plugdev;cdrom
+Action=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject*
+ResultAny=yes
+ResultInactive=yes
+ResultActive=yes
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;groups
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If “plugdev” is not listed, then use:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;rouge-gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;rouge-code&quot;&gt;&lt;pre&gt;# gpasswd -a USER plugdev
+newgrp plugdev
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://forums.debian.net/viewtopic.php?f=10&amp;amp;t=126872&amp;amp;start=30#&quot;&gt;http://forums.debian.net/viewtopic.php?f=10&amp;amp;t=126872&amp;amp;start=30#&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 08 Apr 2020 00:00:00 -0400</pubDate>
+        <link>http://localhost:4444/Not-authorized-to-perform-this-operation/</link>
+        <guid isPermaLink="true">http://localhost:4444/Not-authorized-to-perform-this-operation/</guid>
+        
+        
+        <category>i3wm</category>
+        
+        <category>thunar</category>
+        
+        <category>pcmanfm</category>
+        
+        <category>debian</category>
+        
+      </item>
     
       <item>
         <title>Compiling fceux on Debian 10 buster</title>
@@ -59,9 +109,9 @@ sudo cp fceux.png /usr/share/pixmaps
 &lt;p&gt;After reboot you can see fceux in application drawer, or type fceux in terminal to run without rebooting.
 I will be uploading my experiences with that mario script soon once I configure :)&lt;/p&gt;
 </description>
-        <pubDate>Wed, 29 Jan 2020 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/Compiling-fceux-on-Debian-Buster/</link>
-        <guid isPermaLink="true">http://localhost:4000/Compiling-fceux-on-Debian-Buster/</guid>
+        <pubDate>Wed, 29 Jan 2020 00:00:00 -0500</pubDate>
+        <link>http://localhost:4444/Compiling-fceux-on-Debian-Buster/</link>
+        <guid isPermaLink="true">http://localhost:4444/Compiling-fceux-on-Debian-Buster/</guid>
         
         
         <category>emulator</category>
@@ -110,9 +160,9 @@ I will be uploading my experiences with that mario script soon once I configure 
 &lt;/style&gt;
 &lt;/p&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 05 Jan 2020 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/A-vegetarians-guide-in-boston/</link>
-        <guid isPermaLink="true">http://localhost:4000/A-vegetarians-guide-in-boston/</guid>
+        <pubDate>Sun, 05 Jan 2020 00:00:00 -0500</pubDate>
+        <link>http://localhost:4444/A-vegetarians-guide-in-boston/</link>
+        <guid isPermaLink="true">http://localhost:4444/A-vegetarians-guide-in-boston/</guid>
         
         <category>red</category>
         
@@ -138,9 +188,9 @@ I will be uploading my experiences with that mario script soon once I configure 
 &lt;p&gt;Using a quality VPN is key; don’t settle for a “free” service or VPNs that log your activity, cap your bandwidth and data, or don’t provide sufficient DNS leak protection. Not all VPNs tolerate torrenting. ProtonVpn is another good one which gives free trial for 7 days and also provides anonymity for torrenting. Nord, ExpressVpn, SurfShark are another few which dont keep logs.You can also use paid cloud services like “zbigz.com” to get a direct link.&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 25 Dec 2019 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/Torrents-in-US/</link>
-        <guid isPermaLink="true">http://localhost:4000/Torrents-in-US/</guid>
+        <pubDate>Wed, 25 Dec 2019 00:00:00 -0500</pubDate>
+        <link>http://localhost:4444/Torrents-in-US/</link>
+        <guid isPermaLink="true">http://localhost:4444/Torrents-in-US/</guid>
         
         <category>red</category>
         
