@@ -3,7 +3,7 @@ layout: post
 title:  "Compiling fceux on Debian 10 buster"
 author: rushi
 categories: [ emulator, snes, linux ]
-image: "images/fceux.jpeg"
+image: "https://em.lbbcdn.com/wp-content/uploads/2014/05/fceux-logo-transparent.png"
 featured: false
 hidden: false
 
