@@ -3,7 +3,7 @@ layout: post
 title:  "A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds"
 author: rushi
 categories: [kali, docker, linux, VNC]
-image: "https://wickedcoolbite.com/wp-content/uploads/2014/08/256gb-enough-storage-600x350.jpeg"
+image: "../img/2020-05-14-Docker-VNC/image-20200514151538620.png"
 featured: false
 hidden: false
 
