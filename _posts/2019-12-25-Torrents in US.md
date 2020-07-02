@@ -4,7 +4,7 @@ title:  "Downloading T&ast;&ast;&ast;ents where they've been banned ?"
 author: rushi
 categories: [ vpn, proxy ]
 image: "images/vpn.png"
-featured: true
+featured: false
 hidden: false
 tags: [red, yellow]
 
