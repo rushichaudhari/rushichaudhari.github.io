@@ -4,7 +4,7 @@ layout: post
 title:  "Setting up tigervncserver on arch linux (raspberry-pi)"
 author: rushi
 keywords: [vnc, tigervnc, arch]
-image: "assets/2020-10-29-Setting-up-tigervncserver-on-arch-linux-(raspberry-pi)/fi_tigervnconarch.png"
+image: "../img/fi_tigervnconarch.png"
 featured: false
 hidden: false
 
@@ -70,4 +70,4 @@ $ sudo systemctl start vncserver@:1.service
 ```
 
 ## On tigervnc client
-![sadsad](/assets/2020-10-29-Setting-up-tigervncserver-on-arch-linux-(raspberry-pi)/tigervncclient.png)
+![sadsad](../img/tigervncclient.png)
