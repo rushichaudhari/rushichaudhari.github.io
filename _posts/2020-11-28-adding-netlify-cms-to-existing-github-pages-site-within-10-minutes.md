@@ -8,7 +8,7 @@ categories:
   - netlify
 featured: true
 hidden: false
-image: /images/uploads/fceux.jpeg
+image: /images/uploads/pulao.jpg
 ---
 <!--StartFragment-->
 
