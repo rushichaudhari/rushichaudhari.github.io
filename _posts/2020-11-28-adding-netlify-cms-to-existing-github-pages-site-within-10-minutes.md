@@ -8,7 +8,7 @@ categories:
   - netlify
 featured: true
 hidden: false
-image: /images/uploads/fceux.jpeg
+image: "https://hackaday.com/wp-content/uploads/2017/09/dongle.png?w=800"
 ---
 <!--StartFragment-->
 
