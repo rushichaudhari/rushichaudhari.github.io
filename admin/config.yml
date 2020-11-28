@@ -3,7 +3,7 @@ backend:
   repo: rushichaudhari/rushichaudhari.github.io
   branch: master
   site_domain: distracted-pasteur-3f89cb.netlify.com
-
+media_folder_relative: true
 media_folder: "images/uploads"
 
 collections:
