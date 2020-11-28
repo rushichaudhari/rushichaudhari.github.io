@@ -8,7 +8,7 @@ categories:
   - netlify
 featured: true
 hidden: false
-image: /images/uploads/fceux.jpeg
+image: /images/uploads/thunar_window_failed_to_mount.png
 ---
 <!--StartFragment-->
 
