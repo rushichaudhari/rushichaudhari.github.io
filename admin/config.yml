@@ -19,6 +19,6 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Categories", name: "categories", widget: "list"}
       - {label: "Featured", name: "featured", widget: "boolean", default: false}
-      - {label: "Hidden", name: "featured", widget: "boolean", default: false}
+      - {label: "Hidden", name: "hidden", widget: "boolean", default: false}
       - {label: "Thumbnail Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
