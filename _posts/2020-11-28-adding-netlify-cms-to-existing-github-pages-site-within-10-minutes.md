@@ -8,7 +8,7 @@ categories:
   - netlify
 featured: true
 hidden: false
-image: /images/uploads/pulao.jpg
+image: /images/uploads/spyderwsl.jpg
 ---
 <!--StartFragment-->
 
