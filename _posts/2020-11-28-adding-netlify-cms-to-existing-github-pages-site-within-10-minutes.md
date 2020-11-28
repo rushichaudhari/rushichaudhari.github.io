@@ -2,6 +2,7 @@
 layout: post
 title: Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes
 date: 2020-11-28T05:27:29.162Z
+author: rushi
 categories:
   - cms
   - netlify
