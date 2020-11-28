@@ -5,6 +5,7 @@ backend:
   site_domain: distracted-pasteur-3f89cb.netlify.com
 media_folder_relative: false
 media_folder: "images/uploads"
+public_folder: "images/uploads"
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
