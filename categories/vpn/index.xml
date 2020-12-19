@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vpn on A collection of random ideas so I don&#39;t have to google again</title>
+    <link>https://rushichaudhari.github.io/categories/vpn/</link>
+    <description>Recent content in vpn on A collection of random ideas so I don&#39;t have to google again</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://rushichaudhari.github.io/categories/vpn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Imp links for few scripts or codes</title>
+      <link>https://rushichaudhari.github.io/posts/2020-04-08-imp-links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2020-04-08-imp-links/</guid>
+      <description>Create openvpn tested on debian/ubuntu on cloud https://github.com/Nyr/openvpn-install</description>
+    </item>
+    
+    <item>
+      <title>Running GUI apps from docker inside WSL2.0 as standalone application</title>
+      <link>https://rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/</guid>
+      <description>Another day, again my anaconda crashed for no reason. I decided to never use python on windows without linux vm/ docker.
+I already had my own docker image created here https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0/
+but I wondered If I could use GUI in it, luckily I managed to do so.
+So here are the steps :-
+Pre-requirements:
+ Windows 10 WSL  For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on //build 2020 that they will release soon an improvement that will not require any third-party component to run Linux GUI Apps on Windows Desktop.</description>
+    </item>
+    
+  </channel>
+</rss>
