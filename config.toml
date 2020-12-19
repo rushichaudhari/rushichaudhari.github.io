@@ -1,0 +1,71 @@
+baseURL = "https://rushichaudhari.github.io/"
+languageCode = "en-us"
+title = "A collection of random ideas so I don't have to google again"
+theme = "dream"
+
+disqusShortname = "rushichaudhari"
+
+enableRobotsTXT = true
+
+hasCJKLanguage = true
+
+# Paginate = 4
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+# https://gohugo.io/news/0.60.0-relnotes/
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  background = "#ccc"
+  backgroundImage = "/me/background.jpg"
+  linkColor = "seagreen"
+
+  # dark mode
+  backgroundDark = "black"
+  backgroundImageDark = "/me/background-dark.jpg"
+  darkLinkColor = "darkseagreen"
+  darkNav = true
+  dark404 = true
+
+  images = ["me/background.jpg"]
+
+  author = "rushi"
+  # description = "g1eny0ung 的生活记录～"
+  avatar = "/me/yy.jpg"
+  headerTitle = "A collection of random ideas so I don't have to google again"
+  # motto = "与其感慨路难行，不如马上出发。"
+  # categoriesLimitInHeader = 6
+  # headerBottomText = ""
+
+  rss = true
+
+  utterancesRepo = "rushichaudhari/rushichaudhari.github.io"
+
+  # valine = true
+  # LEANCLOUD_APP_ID = ""
+  # LEANCLOUD_APP_KEY = ""
+  
+  email = "rushic24@gmail.com"
+  # mastodon = ""
+  github = "rushic24"
+
+  siteStartYear = 2018
+
+  favicon = "/favicon.ico"
+
+  highlightjs = true
+  # highlightjsCDN = "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"
+  highlightjsExtraLanguages = ["ocaml"]
+  highlightjsTheme = "gruvbox-light"
+  highlightjsThemeDark = "gruvbox-dark"
+
+  # search
+  enableSearch = true
+
+  # options
+  showSummaryCoverInPost = true
