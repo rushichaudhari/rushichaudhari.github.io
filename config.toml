@@ -1,4 +1,4 @@
-baseURL = "https://rushichaudhari.github.io/"
+baseURL = "rushichaudhari.github.io"
 languageCode = "en-us"
 title = "A collection of random ideas so I don't have to google again"
 theme = "dream"
