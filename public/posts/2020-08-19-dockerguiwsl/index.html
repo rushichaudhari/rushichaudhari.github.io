@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Running GUI apps from docker inside WSL2.0 as standalone application | A collection of random ideas so I don&#39;t have to google again</title>
+
+    
+<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+
+<meta name="author" content="rushi" />
+<meta name="description" content="Another day, again my anaconda crashed for no reason. I decided to never use python on windows without linux vm/ docker.
+I already had my own docker image created here https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0/
+but I wondered If I could use GUI in it, luckily I managed to do so.
+So here are the steps :-
+Pre-requirements:
+ Windows 10 WSL  For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on //build 2020 that they will release soon an improvement that will not require any third-party component to run Linux GUI Apps on Windows Desktop." />
+
+
+
+<meta name="generator" content="Hugo 0.79.0" />
+
+<link rel="canonical" href="rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/" />
+
+
+<meta property="og:title" content="Running GUI apps from docker inside WSL2.0 as standalone application" />
+<meta property="og:description" content="Another day, again my anaconda crashed for no reason. I decided to never use python on windows without linux vm/ docker.
+I already had my own docker image created here https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0/
+but I wondered If I could use GUI in it, luckily I managed to do so.
+So here are the steps :-
+Pre-requirements:
+ Windows 10 WSL  For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on //build 2020 that they will release soon an improvement that will not require any third-party component to run Linux GUI Apps on Windows Desktop." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/" />
+<meta property="og:image" content="rushichaudhari.github.io/me/background.jpg"/>
+
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="rushichaudhari.github.io/me/background.jpg"/>
+
+<meta name="twitter:title" content="Running GUI apps from docker inside WSL2.0 as standalone application"/>
+<meta name="twitter:description" content="Another day, again my anaconda crashed for no reason. I decided to never use python on windows without linux vm/ docker.
+I already had my own docker image created here https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0/
+but I wondered If I could use GUI in it, luckily I managed to do so.
+So here are the steps :-
+Pre-requirements:
+ Windows 10 WSL  For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on //build 2020 that they will release soon an improvement that will not require any third-party component to run Linux GUI Apps on Windows Desktop."/>
+
+
+<link rel="stylesheet" href="/rushichaudhari.github.io/css/semantic.min.css" />
+<link rel="stylesheet" href="/rushichaudhari.github.io/css/icomoon.css" />
+<link rel="stylesheet" href="/rushichaudhari.github.io/css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="/rushichaudhari.github.io/css/github-markdown.css" />
+<link rel="stylesheet" href="/rushichaudhari.github.io/css/site.css" />
+
+<style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
+  a {
+    color: seagreen !important;
+  }
+  
+
+  
+  .inverted a,
+  .inverted a:hover {
+     color: darkseagreen !important;
+  }
+  
+
+  
+  body.default {
+    
+    background-color: #ccc;
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
+  
+
+  
+  body.dark {
+    
+    background-color: black;
+    
+
+    
+    background-image: url(/me/background-dark.jpg);
+    
+  }
+  
+</style>
+
+    
+
+
+  
+    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
+  
+
+
+
+
+
+  </head>
+
+  <body class="default">
+    
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'rushichaudhari.github.io'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
+  
+</nav>
+
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui attached segment">
+      <header>
+        <h1 class="ui large header">
+          Running GUI apps from docker inside WSL2.0 as standalone application
+          <div class="sub header">
+            @
+            
+              
+                rushi
+              
+            
+
+            | 
+                Monday, Jan 1, 0001
+              
+
+            | 3 minutes read
+
+            | Update at
+              
+                Monday, Jan 1, 0001
+              
+          </div>
+        </h1>
+      </header>
+
+      <article class="main"><h2 id="heading"></h2>
+<p><span style="font-size:50px;">A</span>nother day, again my anaconda crashed for no reason. I decided to never use python on windows without linux vm/ docker.</p>
+<p>I already had my own docker image created here <a href="https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0/">https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0/</a></p>
+<p>but I wondered If I could use GUI in it, luckily I managed to do so.</p>
+<p>So here are the steps :-</p>
+<p>Pre-requirements:</p>
+<ul>
+<li>Windows 10</li>
+<li>WSL</li>
+</ul>
+<p>For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on <strong>//build 2020</strong> that they will release soon an improvement that will not require any  third-party component to run Linux GUI Apps on Windows Desktop.</p>
+<h3 id="installing-the-x-server">Installing the X Server</h3>
+<p>The X server is a provider of graphics resources and keyboard/mouse events. I am using the <strong>VcXsrv Windows X Server</strong> that is open-source and is frequently update.</p>
+<p>The first step is to install the third-part display manager called <strong>VcXsrv Windows X Server</strong> available at:</p>
+<p><a href="https://sourceforge.net/projects/vcxsrv/">https://sourceforge.net/projects/vcxsrv/</a></p>
+<p>After installing launch the <strong>xlaunch.exe</strong>, make sure disable access control is clicked to avoid permission error</p>
+<p><img src="../img/2020-08-19-DockerGUIwsl/disableaccesscontrol.jpg" alt="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/201596iBCB2B8DA889830E0/image-size/large?v=1.0&px=999"></p>
+<p>Also allow VcxSrv in the firewall</p>
+<p><img src="../img/2020-08-19-DockerGUIwsl/firewall.jpg" alt="firewall.png"></p>
+<p>Select multiple windows under display settings popup</p>
+<p><img src="../img/2020-08-19-DockerGUIwsl/image-20200819104058629.png" alt="image-20200819104058629"></p>
+<p>And start with no client.</p>
+<h2 id="installing-archlinux-on-wsl">Installing Archlinux on WSL</h2>
+<p>I&rsquo;ve used <a href="https://github.com/yuk7/ArchWSL/">https://github.com/yuk7/ArchWSL/</a> for linux on WSL because arch is completely bloat free so I could install only what I need and save my space. Its installation is easy, just double-click the Arch.exe and it will be set up. For more details refer here</p>
+<p><a href="https://github.com/yuk7/ArchWSL/wiki/How-to-Setup">https://github.com/yuk7/ArchWSL/wiki/How-to-Setup</a></p>
+<p>After getting Arch shell, Install docker</p>
+<p><code>sudo pacman -Syu docker</code></p>
+<p>start docker daemon</p>
+<p><code>sudo dockerd &amp;</code></p>
+<p>The docker image I used was <a href="https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0">https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0</a>  which I had built to run zipline without much hassle. I will be pulling the same here. It is pretty heavy 3-4GB, you can use any light image for base os to pull from <a href="">hub.docker.com</a>.</p>
+<p><code>docker pull rushichaudhari/zipline1.3.0:firstpush</code></p>
+<p>The next step is to set the <strong>DISPLAY</strong> environment  variable on Linux to use the Windows host&rsquo;s IP address as WSL2 and the  Windows host are not in the same network device. It is necessary to run  the following bash command to load the correct IP address on launch:</p>
+<p><em><strong>Inside WSL linux shell</strong></em></p>
+<p><code>export DISPLAY=&quot;`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0&quot;</code></p>
+<p>Running the following command, it is possible to see that the $DISPLAY environment variable now has the Windows Host’s IP set:</p>
+<p><code>echo $DISPLAY</code></p>
+<h3 id="starting-the-docker">Starting the docker</h3>
+<p>Get the docker Image Id</p>
+<p>```sudo docker images``</p>
+<p>​           <img src="../img/2020-08-19-DockerGUIwsl/1.png" alt="file://c:\users\h4x3d\appdata\local\temp\tmpzkddyn\1.png"></p>
+<p>Run a new docker container using</p>
+<p><code> sudo docker run -it  86086b792ad1  /bin/bash</code></p>
+<p>Now the current shell would be a archlinux shell which is inside a docker which is inside an archlinux wsl.</p>
+<p><strong>Map the DISPLAY again like we did before so docker would point to WSL2&rsquo;s ip address which in turn points to Windows hosts ip address.</strong></p>
+<hr>
+<p><em><strong>Inside docker linux shell</strong></em></p>
+<p><code>export DISPLAY=&quot;`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0&quot;</code></p>
+<p><code>echo $DISPLAY</code></p>
+<h3 id="installing-some-test-applications">Installing some test applications</h3>
+<pre><code>pacman -S chromium gedit python python3-pip neofetch
+pacman -S qt5-base libxcb #libraries needed for spyder
+pip3 install spyder
+</code></pre><p>Some applications like chromium doesn&rsquo;t work on root user create a temp user if needed, switch to this user before running that application.</p>
+<pre><code>useradd -m -G wheel -s /bin/bash testuser
+passwd testuser
+</code></pre><p>Make sure that <strong>XLaunch</strong> is running on windows host before starting any app.</p>
+<p>Lets start gedit</p>
+<pre><code>gedit
+</code></pre><p><img src="../img/2020-08-19-DockerGUIwsl/image-20200819110253538.png" alt="image-20200819110253538"></p>
+<pre><code>chromium --no-sandbox
+</code></pre><p><img src="../img/2020-08-19-DockerGUIwsl/image-20200819110323238.png" alt="image-20200819110323238"></p>
+<p><code>spyder3 </code></p>
+<p><img src="../img/2020-08-19-DockerGUIwsl/image-20200819110354785.png" alt="image-20200819110354785"></p>
+<h4 id="these-all-apps-are-not-inside-host-windows-neither-inside-wsl">These all apps are not inside host windows neither inside WSL!!</h4>
+<p>Enjoy :)</p>
+</article>
+    </section>
+
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
+      
+          <a class="ui label">No Tags</a>
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'rushichaudhari.github.io\/posts\/2020-08-19-dockerguiwsl\/';  
+            this.page.identifier = 'rushichaudhari.github.io\/posts\/2020-08-19-dockerguiwsl\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'rushichaudhari' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+    
+    
+      <div class="ui segment utterances-comments" data-html2canvas-ignore>
+        <script src="https://utteranc.es/client.js"
+          repo="rushichaudhari/rushichaudhari.github.io"
+          issue-term="og:title"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </div>
+    
+
+    
+
+  </div>
+  <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
+    
+    
+      <div class="ui segment toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#heading"></a>
+      <ul>
+        <li><a href="#installing-the-x-server">Installing the X Server</a></li>
+      </ul>
+    </li>
+    <li><a href="#installing-archlinux-on-wsl">Installing Archlinux on WSL</a>
+      <ul>
+        <li><a href="#starting-the-docker">Starting the docker</a></li>
+        <li><a href="#installing-some-test-applications">Installing some test applications</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="/rushichaudhari.github.io/me/yy.jpg">
+      
+    </div>
+
+    
+    <h1 class="ui medium header">
+    
+      A collection of random ideas so I don&#39;t have to google again
+      <div class="sub header" style="margin-top: 0.5rem;"></div>
+    
+    </h1>
+    
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="/rushichaudhari.github.io/posts">
+        <i class="archive icon" title="Archives"></i>
+      </a>
+      
+      <a class="item" href="/rushichaudhari.github.io/tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="/rushichaudhari.github.io/categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+      
+      
+      
+      
+
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="/categories/appdata/" title="Appdata">
+              Appdata
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/">SSD - things todo to save space on ssd C drive</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="/categories/cms/" title="Cms">
+              Cms
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/">Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="/categories/debian/" title="Debian">
+              Debian
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/">Not authorized to perform this operation</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="/categories/digitalocean/" title="Digitalocean">
+              Digitalocean
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-04-08-imp-links/">Imp links for few scripts or codes</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/">Running GUI apps from docker inside WSL2.0 as standalone application</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="/categories/docker/" title="Docker">
+              Docker
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-05-14-docker-vnc/">A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="/categories/drive/" title="Drive">
+              Drive
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/">SSD - things todo to save space on ssd C drive</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+
+      
+        <div class="title">
+          <a class="item" href="/rushichaudhari.github.io/categories" style="padding-left: 0.5rem;">......</a>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="/rushichaudhari.github.io/index.xml">
+        <i class=" rss square icon" title="RSS"></i>
+      </a>
+    </div>
+  
+  
+    <div class="item">
+      <a href="mailto:rushic24@gmail.com">
+        <i class=" mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/rushic24" target="_blank">
+        <i class=" github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2018 - 2020 A collection of random ideas so I don&#39;t have to google again</p>
+    
+
+    <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
+
+    
+  </section>
+</article>
+
+  </aside>
+</div>
+
+          </div>
+        </section>
+        <section class="back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
+  
+  
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui bottom attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="/rushichaudhari.github.io/index.xml">
+        <i class="large rss square icon" title="RSS"></i>
+      </a>
+    </div>
+  
+  
+    <div class="item">
+      <a href="mailto:rushic24@gmail.com">
+        <i class="large mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/rushic24" target="_blank">
+        <i class="large github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+  window.backgroundDark = "black"
+  window.backgroundImageDark = "/me/background-dark.jpg"
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  null 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="/rushichaudhari.github.io/js/jquery.min.js"></script>
+<script src="/rushichaudhari.github.io/js/semantic.min.js"></script>
+<script src="/rushichaudhari.github.io/js/jquery.overlayScrollbars.min.js"></script>
+<script src="/rushichaudhari.github.io/js/header.js"></script>
+<script src="/rushichaudhari.github.io/js/main.js"></script>
+<script src="/rushichaudhari.github.io/js/theme.js"></script>
+
+    
+<script src="/rushichaudhari.github.io/js/html2canvas.min.js"></script>
+<script src="/rushichaudhari.github.io/js/post.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+     
+  
+
+  <script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    var lightTheme = "gruvbox-light"
+    var darkTheme = "gruvbox-dark"
+    var theme = isDark ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark ? '#333' : '')
+  }
+</script>
+
+
+
+
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="Search" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('rushichaudhari.github.io/index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/rushichaudhari.github.io/js/search.js"></script>
+
+    
+
+    
+  </body>
+</html>
