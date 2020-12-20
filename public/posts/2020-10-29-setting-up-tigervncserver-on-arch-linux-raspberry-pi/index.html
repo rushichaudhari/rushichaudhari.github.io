@@ -13,19 +13,19 @@
 
 
 <meta name="author" content="rushi" />
-<meta name="description" content="Installing tigervnc sudo pacman -Ss tigervncEditing the environment file ~/.vnc/xstartup functions like .xinitrc and it&amp;rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&amp;rsquo;ll modify the file to:
-$nano ~/.vnc/xstartup#!/bin/bashexec lxde &amp;amp;&amp;gt;/dev/nullThe file should be executable: $ chmod &#43;x ~/.vnc/xstartupAdding vncserver options $ nano ~/.vnc/configdesktop=sandboxgeometry=1920x1080dpi=96SecurityTypes=noneStarting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user" />
+<meta name="description" content="Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&amp;rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&amp;rsquo;ll modify the file to:
+$nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;amp;&amp;gt;/dev/null The file should be executable: $ chmod &#43;x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user" />
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 <link rel="canonical" href="rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
 
 
 <meta property="og:title" content="Setting up tigervncserver on arch linux (raspberry-pi)" />
-<meta property="og:description" content="Installing tigervnc sudo pacman -Ss tigervncEditing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
-$nano ~/.vnc/xstartup#!/bin/bashexec lxde &amp;&gt;/dev/nullThe file should be executable: $ chmod &#43;x ~/.vnc/xstartupAdding vncserver options $ nano ~/.vnc/configdesktop=sandboxgeometry=1920x1080dpi=96SecurityTypes=noneStarting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user" />
+<meta property="og:description" content="Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
+$nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should be executable: $ chmod &#43;x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
 <meta property="og:image" content="rushichaudhari.github.io/me/background.jpg"/>
@@ -37,8 +37,8 @@ $nano ~/.vnc/xstartup#!/bin/bashexec lxde &amp;&gt;/dev/nullThe file should b
 <meta name="twitter:image" content="rushichaudhari.github.io/me/background.jpg"/>
 
 <meta name="twitter:title" content="Setting up tigervncserver on arch linux (raspberry-pi)"/>
-<meta name="twitter:description" content="Installing tigervnc sudo pacman -Ss tigervncEditing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
-$nano ~/.vnc/xstartup#!/bin/bashexec lxde &amp;&gt;/dev/nullThe file should be executable: $ chmod &#43;x ~/.vnc/xstartupAdding vncserver options $ nano ~/.vnc/configdesktop=sandboxgeometry=1920x1080dpi=96SecurityTypes=noneStarting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user"/>
+<meta name="twitter:description" content="Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
+$nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should be executable: $ chmod &#43;x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user"/>
 
 
 <link rel="stylesheet" href="/rushichaudhari.github.io/css/semantic.min.css" />
@@ -307,6 +307,22 @@ WantedBy=multi-user.target
   </section>
 
   
+  <section class="ui attached center aligned segment dream-tags">
+    
+      
+      
+      <a class="ui label" href="/tags/none/" title="None">
+        None
+      </a>
+    
+      
+      
+      <a class="ui label" href="/tags/notes/" title="Notes">
+        Notes
+      </a>
+    
+  </section>
+  
 
   
   <section class="ui attached segment dream-categories">
@@ -466,6 +482,14 @@ WantedBy=multi-user.target
             
             </div>
           </div>
+        
+      
+        
+
+        
+      
+        
+
         
       
         

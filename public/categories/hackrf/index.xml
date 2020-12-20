@@ -12,8 +12,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/</guid>
-      <description>We Need  RTL SDR Dongle RTL SDR Software Computer  SDR works by receiving a analogue radio signal and then using an analog to digital converter to digitalise the signal. The digitalised signal can then be worked in digital processing software.We needGQRX -&amp;gt; osx/ linuxgit clone https://github.com/csete/gqrx.git cd gqrx mkdir build cd build qmake .. make make install
-sudo apt-get update sudo apt install git cmake libusb-1.</description>
+      <description>We Need  RTL SDR Dongle RTL SDR Software Computer  SDR works by receiving a analogue radio signal and then using an analog to digital converter to digitalise the signal. The digitalised signal can then be worked in digital processing software. We need GQRX -&amp;gt; osx/ linux git clone https://github.com/csete/gqrx.git cd gqrx mkdir build cd build qmake .. make make install
+ sudo apt-get update sudo apt install git cmake libusb-1.</description>
     </item>
     
   </channel>

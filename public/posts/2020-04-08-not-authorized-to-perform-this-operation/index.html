@@ -16,11 +16,11 @@
 <meta name="description" content="Sometimes, when using i3wm I get this error when mounting a partition. But it works for other des like gnome/cinnamon.
 Make sure polkit is installed.
 Loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:
-[Allow Unauthorized mounting/Unmounting]Identity=unix-group:plugdev;cdromAction=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject*ResultAny=yesResultInactive=yesResultActive=yesYou can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local." />
+[Allow Unauthorized mounting/Unmounting] Identity=unix-group:plugdev;cdrom Action=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject* ResultAny=yes ResultInactive=yes ResultActive=yes You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local." />
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 <link rel="canonical" href="rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/" />
 
@@ -29,7 +29,7 @@ Loosen the polkit permissions in your system to allow your normal user to mount 
 <meta property="og:description" content="Sometimes, when using i3wm I get this error when mounting a partition. But it works for other des like gnome/cinnamon.
 Make sure polkit is installed.
 Loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:
-[Allow Unauthorized mounting/Unmounting]Identity=unix-group:plugdev;cdromAction=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject*ResultAny=yesResultInactive=yesResultActive=yesYou can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local." />
+[Allow Unauthorized mounting/Unmounting] Identity=unix-group:plugdev;cdrom Action=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject* ResultAny=yes ResultInactive=yes ResultActive=yes You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/" />
 <meta property="og:image" content="rushichaudhari.github.io/me/background.jpg"/>
@@ -44,7 +44,7 @@ Loosen the polkit permissions in your system to allow your normal user to mount 
 <meta name="twitter:description" content="Sometimes, when using i3wm I get this error when mounting a partition. But it works for other des like gnome/cinnamon.
 Make sure polkit is installed.
 Loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:
-[Allow Unauthorized mounting/Unmounting]Identity=unix-group:plugdev;cdromAction=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject*ResultAny=yesResultInactive=yesResultActive=yesYou can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local."/>
+[Allow Unauthorized mounting/Unmounting] Identity=unix-group:plugdev;cdrom Action=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject* ResultAny=yes ResultInactive=yes ResultActive=yes You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local."/>
 
 
 <link rel="stylesheet" href="/rushichaudhari.github.io/css/semantic.min.css" />
@@ -274,6 +274,22 @@ newgrp plugdev
   </section>
 
   
+  <section class="ui attached center aligned segment dream-tags">
+    
+      
+      
+      <a class="ui label" href="/tags/none/" title="None">
+        None
+      </a>
+    
+      
+      
+      <a class="ui label" href="/tags/notes/" title="Notes">
+        Notes
+      </a>
+    
+  </section>
+  
 
   
   <section class="ui attached segment dream-categories">
@@ -433,6 +449,14 @@ newgrp plugdev
             
             </div>
           </div>
+        
+      
+        
+
+        
+      
+        
+
         
       
         

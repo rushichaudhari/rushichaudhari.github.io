@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: rushichaudhari/rushichaudhari.github.io
   branch: master
 publish_mode: editorial_workflow
 media_folder: "static/img"

@@ -18,7 +18,7 @@ LSTMS predict T&#43;1th term by previous k terms of time-series say k=2 So we ne
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 <link rel="canonical" href="rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/" />
 
@@ -164,20 +164,20 @@ LSTMS predict T&#43;1th term by previous k terms of time-series say k=2 So we ne
       <article class="main"><h1 id="lstms-for-stock-price-predictions-worth-it-">LSTMS for stock price predictions, worth it ?</h1>
 <p><span style="font-size:50px;">T</span>he internet is now flooded with &ldquo;predicting stock market prices using LSTM&rdquo;. I went through 9 articles which I found on websites like medium, KDnuggets, etc.
 And I realized almost 6-7 out of them showed good results. But none of them showed their real-life use-case, The question is really helpful?</p>
-<p>LSTMS predict T+1th term by previous k terms of time-series 
+<p>LSTMS predict T+1th term by previous k terms of time-series
 say k=2
 So we need to have T and T-1 to predict T+2</p>
 <p>so suppose my X for input is Open, High, Low, Close, Volume
 and Y would be next day&rsquo;s Close</p>
 <p>I need to have OHLCV values of the previous 2 days to predict the next day&rsquo;s Close.
 This means If I need to know tomorrow&rsquo;s close, I need to wait till the current day ends to get its OHLCV values i.e. it predicts only 1 candlestick in the future.</p>
-<p>One article was like using previous k days Close to predict next days Close. 
-so for T+1, I would give it T&rsquo;s and (T-1)&rsquo;s Close as inputs and 
-for T+2; T&rsquo;s, and (predicted_T+1)&rsquo;s close as input. 
+<p>One article was like using previous k days Close to predict next days Close.
+so for T+1, I would give it T&rsquo;s and (T-1)&rsquo;s Close as inputs and
+for T+2; T&rsquo;s, and (predicted_T+1)&rsquo;s close as input.
 This is again not useful because if there is an error in T+1; it gets propagated in the next sequence, and also logically we cannot predict movements based on only closing prices. OHLCV may work because it might detect few candlestick patterns like Doji, Harami, etc, and also consider volume.</p>
 <p>LSTM&rsquo;s in those articles showed good predictions, because they predict only single value instead of a range of values. So are they worth for a single candlestick? Because even indicators like moving averages give a proper estimate for single candlestick.</p>
 <p>I think there should be a different approach to use LSTMS, for which unfortunately I didn&rsquo;t find any article. Please comment down below if you find something.</p>
-<p>I am not an expert in these fields — I am just putting forward the conclusions I got to after my explorations with this topic, 
+<p>I am not an expert in these fields — I am just putting forward the conclusions I got to after my explorations with this topic,
 so feel free to point out anything I missed. Thank you for your time.</p>
 </article>
     </section>
@@ -270,6 +270,22 @@ so feel free to point out anything I missed. Thank you for your time.</p>
     </div>
   </section>
 
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      
+      
+      <a class="ui label" href="/tags/none/" title="None">
+        None
+      </a>
+    
+      
+      
+      <a class="ui label" href="/tags/notes/" title="Notes">
+        Notes
+      </a>
+    
+  </section>
   
 
   
@@ -430,6 +446,14 @@ so feel free to point out anything I missed. Thank you for your time.</p>
             
             </div>
           </div>
+        
+      
+        
+
+        
+      
+        
+
         
       
         
