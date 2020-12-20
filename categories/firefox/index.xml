@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>firefox on A collection of random ideas so I don&#39;t have to google again</title>
-    <link>https://rushichaudhari.github.io/categories/firefox/</link>
+    <link>rushichaudhari.github.io/categories/firefox/</link>
     <description>Recent content in firefox on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://rushichaudhari.github.io/categories/firefox/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="rushichaudhari.github.io/categories/firefox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SSD - things todo to save space on ssd C drive</title>
-      <link>https://rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/</link>
+      <link>rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/</guid>
+      <guid>rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/</guid>
       <description>Change cache location of Firefox You can do this by creating a new hidden preference.
  Type about:config into the location bar and press enter Accept the warning message that appears, you will be taken to a list of preferences Right-click somewhere in the list and select &amp;ldquo;New &amp;gt; String&amp;rdquo; For the name of the preference type browser.cache.disk.parent_directory For its value type the path to where you want to store the cache Next locate the preference browser.</description>
     </item>

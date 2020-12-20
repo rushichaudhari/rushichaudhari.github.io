@@ -13,39 +13,39 @@
 
 
 <meta name="author" content="rushi" />
-<meta name="description" content="Installing tigervnc sudo pacman -Ss tigervncEditing the environment file ~/.vnc/xstartup functions like .xinitrc and it&amp;rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&amp;rsquo;ll modify the file to:
-$nano ~/.vnc/xstartup#!/bin/bashexec lxde &amp;amp;&amp;gt;/dev/nullThe file should be executable: $ chmod &#43;x ~/.vnc/xstartupAdding vncserver options $ nano ~/.vnc/configdesktop=sandboxgeometry=1920x1080dpi=96SecurityTypes=noneStarting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user" />
+<meta name="description" content="Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&amp;rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&amp;rsquo;ll modify the file to:
+$nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;amp;&amp;gt;/dev/null The file should be executable: $ chmod &#43;x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user" />
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
-<link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
+<link rel="canonical" href="rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
 
 
 <meta property="og:title" content="Setting up tigervncserver on arch linux (raspberry-pi)" />
-<meta property="og:description" content="Installing tigervnc sudo pacman -Ss tigervncEditing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
-$nano ~/.vnc/xstartup#!/bin/bashexec lxde &amp;&gt;/dev/nullThe file should be executable: $ chmod &#43;x ~/.vnc/xstartupAdding vncserver options $ nano ~/.vnc/configdesktop=sandboxgeometry=1920x1080dpi=96SecurityTypes=noneStarting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user" />
+<meta property="og:description" content="Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
+$nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should be executable: $ chmod &#43;x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
+<meta property="og:image" content="rushichaudhari.github.io/me/background.jpg"/>
 
 
 
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta name="twitter:image" content="rushichaudhari.github.io/me/background.jpg"/>
 
 <meta name="twitter:title" content="Setting up tigervncserver on arch linux (raspberry-pi)"/>
-<meta name="twitter:description" content="Installing tigervnc sudo pacman -Ss tigervncEditing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
-$nano ~/.vnc/xstartup#!/bin/bashexec lxde &amp;&gt;/dev/nullThe file should be executable: $ chmod &#43;x ~/.vnc/xstartupAdding vncserver options $ nano ~/.vnc/configdesktop=sandboxgeometry=1920x1080dpi=96SecurityTypes=noneStarting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user"/>
+<meta name="twitter:description" content="Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
+$nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should be executable: $ chmod &#43;x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user"/>
 
 
-<link rel="stylesheet" href="/css/semantic.min.css" />
-<link rel="stylesheet" href="/css/icomoon.css" />
-<link rel="stylesheet" href="/css/OverlayScrollbars.min.css" />
-<link rel="stylesheet" href="/css/github-markdown.css" />
-<link rel="stylesheet" href="/css/site.css" />
+<link rel="stylesheet" href="/rushichaudhari.github.io/css/semantic.min.css" />
+<link rel="stylesheet" href="/rushichaudhari.github.io/css/icomoon.css" />
+<link rel="stylesheet" href="/rushichaudhari.github.io/css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="/rushichaudhari.github.io/css/github-markdown.css" />
+<link rel="stylesheet" href="/rushichaudhari.github.io/css/site.css" />
 
 <style>
   a:hover {
@@ -111,7 +111,7 @@ $nano ~/.vnc/xstartup#!/bin/bashexec lxde &amp;&gt;/dev/nullThe file should b
     <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
   </div>
   <div class="item">
-    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/rushichaudhari.github.io\/'"></i>
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'rushichaudhari.github.io'"></i>
   </div>
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
@@ -227,8 +227,8 @@ WantedBy=multi-user.target
 
 
           var disqus_config = function () {
-            this.page.url = 'https:\/\/rushichaudhari.github.io\/posts\/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi\/';  
-            this.page.identifier = '\/posts\/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi\/'; 
+            this.page.url = 'rushichaudhari.github.io\/posts\/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi\/';  
+            this.page.identifier = 'rushichaudhari.github.io\/posts\/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi\/'; 
           };
 
           (function() { 
@@ -278,34 +278,50 @@ WantedBy=multi-user.target
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
       
-        <img src="/me/yy.jpg">
+        <img src="/rushichaudhari.github.io/me/yy.jpg">
       
     </div>
 
     
-    <div class="ui medium header">
+    <h1 class="ui medium header">
     
       A collection of random ideas so I don&#39;t have to google again
       <div class="sub header" style="margin-top: 0.5rem;"></div>
     
-    </div>
+    </h1>
     
 
     <div class="ui horizontal list">
       
-      <a class="item" href="/posts">
+      <a class="item" href="/rushichaudhari.github.io/posts">
         <i class="archive icon" title="Archives"></i>
       </a>
       
-      <a class="item" href="/tags">
+      <a class="item" href="/rushichaudhari.github.io/tags">
         <i class="tags icon" title="All Tags"></i>
       </a>
-      <a class="item" href="/categories">
+      <a class="item" href="/rushichaudhari.github.io/categories">
         <i class="th list icon" title="All Categories"></i>
       </a>
     </div>
   </section>
 
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      
+      
+      <a class="ui label" href="/tags/none/" title="None">
+        None
+      </a>
+    
+      
+      
+      <a class="ui label" href="/tags/notes/" title="Notes">
+        Notes
+      </a>
+    
+  </section>
   
 
   
@@ -334,7 +350,7 @@ WantedBy=multi-user.target
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020-04-10-ssd-savespace/">SSD - things todo to save space on ssd C drive</a>
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/">SSD - things todo to save space on ssd C drive</a>
                 </div>
               </div>
             
@@ -358,7 +374,7 @@ WantedBy=multi-user.target
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/">Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes</a>
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/">Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes</a>
                 </div>
               </div>
             
@@ -382,7 +398,7 @@ WantedBy=multi-user.target
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020-04-08-not-authorized-to-perform-this-operation/">Not authorized to perform this operation</a>
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/">Not authorized to perform this operation</a>
                 </div>
               </div>
             
@@ -406,13 +422,13 @@ WantedBy=multi-user.target
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020-04-08-imp-links/">Imp links for few scripts or codes</a>
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-04-08-imp-links/">Imp links for few scripts or codes</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020-08-19-dockerguiwsl/">Running GUI apps from docker inside WSL2.0 as standalone application</a>
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/">Running GUI apps from docker inside WSL2.0 as standalone application</a>
                 </div>
               </div>
             
@@ -436,7 +452,7 @@ WantedBy=multi-user.target
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020-05-14-docker-vnc/">A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds</a>
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-05-14-docker-vnc/">A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds</a>
                 </div>
               </div>
             
@@ -460,12 +476,20 @@ WantedBy=multi-user.target
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="/posts/2020-04-10-ssd-savespace/">SSD - things todo to save space on ssd C drive</a>
+                  <a class="item" href="rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/">SSD - things todo to save space on ssd C drive</a>
                 </div>
               </div>
             
             </div>
           </div>
+        
+      
+        
+
+        
+      
+        
+
         
       
         
@@ -567,7 +591,7 @@ WantedBy=multi-user.target
 
       
         <div class="title">
-          <a class="item" href="/categories" style="padding-left: 0.5rem;">......</a>
+          <a class="item" href="/rushichaudhari.github.io/categories" style="padding-left: 0.5rem;">......</a>
         </div>
       
     </div>
@@ -578,7 +602,7 @@ WantedBy=multi-user.target
     <nav class="ui secondary menu dream-menu dream-socials">
   
     <div class="item">
-      <a href="/index.xml">
+      <a href="/rushichaudhari.github.io/index.xml">
         <i class=" rss square icon" title="RSS"></i>
       </a>
     </div>
@@ -648,7 +672,7 @@ WantedBy=multi-user.target
         <nav class="ui secondary menu dream-menu dream-socials">
   
     <div class="item">
-      <a href="/index.xml">
+      <a href="/rushichaudhari.github.io/index.xml">
         <i class="large rss square icon" title="RSS"></i>
       </a>
     </div>
@@ -728,16 +752,16 @@ WantedBy=multi-user.target
     })(document, 'script', 'twitter-wjs')
   }
 </script>
-<script src="/js/jquery.min.js"></script>
-<script src="/js/semantic.min.js"></script>
-<script src="/js/jquery.overlayScrollbars.min.js"></script>
-<script src="/js/header.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/theme.js"></script>
+<script src="/rushichaudhari.github.io/js/jquery.min.js"></script>
+<script src="/rushichaudhari.github.io/js/semantic.min.js"></script>
+<script src="/rushichaudhari.github.io/js/jquery.overlayScrollbars.min.js"></script>
+<script src="/rushichaudhari.github.io/js/header.js"></script>
+<script src="/rushichaudhari.github.io/js/main.js"></script>
+<script src="/rushichaudhari.github.io/js/theme.js"></script>
 
     
-<script src="/js/html2canvas.min.js"></script>
-<script src="/js/post.js"></script>
+<script src="/rushichaudhari.github.io/js/html2canvas.min.js"></script>
+<script src="/rushichaudhari.github.io/js/post.js"></script>
 
 
   <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
@@ -778,7 +802,7 @@ WantedBy=multi-user.target
 </div>
 <script>
   $(document).ready(function () {
-    $.getJSON('https:\/\/rushichaudhari.github.io\//index.json', function (data) {
+    $.getJSON('rushichaudhari.github.io/index.json', function (data) {
       $('.ui.search').search({
         source: data,
         searchFields: ['title'],
@@ -787,7 +811,7 @@ WantedBy=multi-user.target
     })
   })
 </script>
-<script src="/js/search.js"></script>
+<script src="/rushichaudhari.github.io/js/search.js"></script>
 
     
 
