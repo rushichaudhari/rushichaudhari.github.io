@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on A collection of random ideas so I don&#39;t have to google again</title>
+    <link>rushichaudhari.github.io/posts/</link>
+    <description>Recent content in Posts on A collection of random ideas so I don&#39;t have to google again</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 20 Dec 2020 21:04:38 +0000</lastBuildDate><atom:link href="rushichaudhari.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test123</title>
+      <link>rushichaudhari.github.io/posts/2020-12-20-test123/</link>
+      <pubDate>Sun, 20 Dec 2020 21:04:38 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-12-20-test123/</guid>
+      <description>dssdsd</description>
+    </item>
+    
+    <item>
+      <title>My Machine Learning resources</title>
+      <link>rushichaudhari.github.io/posts/2020-12-20-my-machine-learning-resources/</link>
+      <pubDate>Sun, 20 Dec 2020 19:22:19 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-12-20-my-machine-learning-resources/</guid>
+      <description>Machine Learning Concepts. Decision Theory / Risk Estimation Machine Learning #09 Statistical Decision Theory: Regression
+OLS Assumptions 7 Classical Assumptions of Ordinary Least Squares (OLS) Linear Regression - Statistics By Jim
+The Gauss-Markov Theorem and BLUE OLS Coefficient Estimates The Gauss-Markov Theorem and BLUE OLS Coefficient Estimates - Statistics By Jim
+PCA Making sense of principal component analysis, eigenvectors &amp;amp; eigenvalues
+PCA (Overview) StatQuest: Principal Component Analysis (PCA), Step-by-Step
+PCA Math Principal Component Analysis (The Math) : Data Science Concepts</description>
+    </item>
+    
+    <item>
+      <title>Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes</title>
+      <link>rushichaudhari.github.io/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/</link>
+      <pubDate>Sat, 28 Nov 2020 05:27:29 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/</guid>
+      <description>Creating an GitHub OAuth App First, go to GitHub Dev Settings and click New OAuth App. Or just click here: https://github.com/settings/developers
+Enter whatever you like for Application name and Homepage URL.
+In Authorization callback URL, enter: https://api.netlify.com/auth/done.
+Once finished, leave the page in the background. You will need the Client ID and Client Secret on this page later.
+Creating a Netlify Site … Relax! We’re just creating one, without actually using it.</description>
+    </item>
+    
+    <item>
+      <title>A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds</title>
+      <link>rushichaudhari.github.io/posts/2020-05-14-docker-vnc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-05-14-docker-vnc/</guid>
+      <description>This guide assumes you already know what is docker and docker, vncviewer installed on your system The docker image given at https://hub.docker.com/search?q=&amp;amp;type=image is a blank kali image with 0 tools.
+Let us create a light-weight custom image with the tools needed. The following are the tools which I think are commonly used in kali you can add/remove a few from that list.
+aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils dos2unix enum4linux exploitdb ftp git gobuster hashcat hping3 hydra impacket-scripts john joomscan masscan metasploit-framework mimikatz nasm ncat netcat-traditional nikto nmap patator php powersploit proxychains python-pip python2 python3 recon-ng responder samba samdump2 smbclient smbmap snmp socat sqlmap sslscan theharvester vim wafw00f weevely wfuzz whois wordlists wpscan Creating Dockerfile</description>
+    </item>
+    
+    <item>
+      <title>Automate Google forms without selenium</title>
+      <link>rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/</guid>
+      <description>In the previous year, I had posted a script to fill google forms using selenium, and containerizing it with docker to run it parallelly. This is an alternative way to do the same using post requests.
+I had created a google form using the default template shown below.
+Which had fields like To get started we need to capture the request. I&amp;rsquo;ve used burp suite tool to capture, there are many alternative tools you can google.</description>
+    </item>
+    
+    <item>
+      <title>Automate Google forms without selenium</title>
+      <link>rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</guid>
+      <description>LSTMS for stock price predictions, worth it ? The internet is now flooded with &amp;ldquo;predicting stock market prices using LSTM&amp;rdquo;. I went through 9 articles which I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed good results. But none of them showed their real-life use-case, The question is really helpful?
+LSTMS predict T+1th term by previous k terms of time-series say k=2 So we need to have T and T-1 to predict T+2</description>
+    </item>
+    
+    <item>
+      <title>Compiling fceux on Debian 10 buster</title>
+      <link>rushichaudhari.github.io/posts/2020-01-29-compiling-fceux-on-debian-buster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-01-29-compiling-fceux-on-debian-buster/</guid>
+      <description>I came across this wonderful video https://www.youtube.com/watch?v=qv6UVOQ0F44. It took me into searching for its code to implement that. And here are a few.
+https://github.com/Mario-brows/Brows-Super-Mario https://github.com/lopatin96/Lua-SNES-GenNeurNetwork The main problem in them is they use BizHawk Emulator, which I was not successful in compiling for my debian OS, Its stable only for windows machines. Then I found its alternative fceux Which can handle lua scripts too!.
+The following steps are what I used to compile it successfully.</description>
+    </item>
+    
+    <item>
+      <title>Imp links for few scripts or codes</title>
+      <link>rushichaudhari.github.io/posts/2020-04-08-imp-links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-04-08-imp-links/</guid>
+      <description>Create openvpn tested on debian/ubuntu on cloud https://github.com/Nyr/openvpn-install</description>
+    </item>
+    
+    <item>
+      <title>Not authorized to perform this operation</title>
+      <link>rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/</guid>
+      <description>Sometimes, when using i3wm I get this error when mounting a partition. But it works for other des like gnome/cinnamon.
+Make sure polkit is installed.
+Loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:
+[Allow Unauthorized mounting/Unmounting] Identity=unix-group:plugdev;cdrom Action=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject* ResultAny=yes ResultInactive=yes ResultActive=yes You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.</description>
+    </item>
+    
+    <item>
+      <title>RTL SDR notes</title>
+      <link>rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/</guid>
+      <description>We Need  RTL SDR Dongle RTL SDR Software Computer  SDR works by receiving a analogue radio signal and then using an analog to digital converter to digitalise the signal. The digitalised signal can then be worked in digital processing software. We need GQRX -&amp;gt; osx/ linux git clone https://github.com/csete/gqrx.git cd gqrx mkdir build cd build qmake .. make make install
+ sudo apt-get update sudo apt install git cmake libusb-1.</description>
+    </item>
+    
+    <item>
+      <title>Running GUI apps from docker inside WSL2.0 as standalone application</title>
+      <link>rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/</guid>
+      <description>Another day, again my anaconda crashed for no reason. I decided to never use python on windows without linux vm/ docker.
+I already had my own docker image created here https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0/
+but I wondered If I could use GUI in it, luckily I managed to do so.
+So here are the steps :-
+Pre-requirements:
+ Windows 10 WSL  For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on //build 2020 that they will release soon an improvement that will not require any third-party component to run Linux GUI Apps on Windows Desktop.</description>
+    </item>
+    
+    <item>
+      <title>Setting up tigervncserver on arch linux (raspberry-pi)</title>
+      <link>rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/</guid>
+      <description>Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&amp;rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&amp;rsquo;ll modify the file to:
+$nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;amp;&amp;gt;/dev/null The file should be executable: $ chmod +x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user</description>
+    </item>
+    
+    <item>
+      <title>SSD - things todo to save space on ssd C drive</title>
+      <link>rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/</guid>
+      <description>Change cache location of Firefox You can do this by creating a new hidden preference.
+ Type about:config into the location bar and press enter Accept the warning message that appears, you will be taken to a list of preferences Right-click somewhere in the list and select &amp;ldquo;New &amp;gt; String&amp;rdquo; For the name of the preference type browser.cache.disk.parent_directory For its value type the path to where you want to store the cache Next locate the preference browser.</description>
+    </item>
+    
+    <item>
+      <title>To what extent can I get Indian Veg Food in Boston</title>
+      <link>rushichaudhari.github.io/posts/2020-01-05-a-vegetarians-guide-in-boston/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-01-05-a-vegetarians-guide-in-boston/</guid>
+      <description>Unfortunately only 3-4% of citizens in the US are vegetarian. After rambling around nearby streets, I got to know veg stuff was obscured everywhere. Even Subway/McDonald&#39;s were no exception. So here is a dynamic N00Bs guide in becoming a Masterchef with vegetarian things available in Boston. Masala Khichidi with Kadhi Pizza toppings on bread P.S. Pizza base coss around 4$ for 2, bread is 1.6$ for a loaf.
+Pav Bhaji Pulao Cauliflower Chana(black) h3 { font-family: &#39;Great Vibes&#39;, Helvetica, sans-serif; color: #000; text-shadow: 4px 4px 3px rgba(0,0,0,0.</description>
+    </item>
+    
+    <item>
+      <title>Webscraping 1 minute stock data from tradingview</title>
+      <link>rushichaudhari.github.io/posts/2020-06-28-trading-view-scraping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>rushichaudhari.github.io/posts/2020-06-28-trading-view-scraping/</guid>
+      <description>How I webscraped 1 minute stock data from tradingview After a long die-hard trying I managed to get 1 minute stock data for free. My previous tries were using selenium and beautifulsoup modules in python. But the data is highly obfuscated so I was not able to find the exact HTML element to scrape. If you manage to do this using selenium please comment below.
+Probably the data is being loaded up as SVG which is why it isn&amp;rsquo;t being seen in html inspect element.</description>
+    </item>
+    
+  </channel>
+</rss>

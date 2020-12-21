@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>rushichaudhari.github.io/</loc>
+    <lastmod>2020-12-20T21:04:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/</loc>
+    <lastmod>2020-12-20T21:04:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/tags/none/</loc>
+    <lastmod>2020-12-20T21:04:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/</loc>
+    <lastmod>2020-12-20T21:04:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/tags/</loc>
+    <lastmod>2020-12-20T21:04:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-12-20-test123/</loc>
+    <lastmod>2020-12-20T21:04:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/testcat/</loc>
+    <lastmod>2020-12-20T21:04:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-12-20-my-machine-learning-resources/</loc>
+    <lastmod>2020-12-20T19:22:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/tags/notes/</loc>
+    <lastmod>2020-12-20T19:22:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/notes/</loc>
+    <lastmod>2020-12-20T19:22:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/</loc>
+    <lastmod>2020-11-28T05:27:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/cms/</loc>
+    <lastmod>2020-11-28T05:27:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/netlify/</loc>
+    <lastmod>2020-11-28T05:27:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-05-14-docker-vnc/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/appdata/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-01-29-compiling-fceux-on-debian-buster/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/debian/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/digitalocean/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/drive/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/emulator/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/firefox/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/food/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/form/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/google/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/hackrf/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/i3wm/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-04-08-imp-links/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/kali/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/linux/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/pcmanfm/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/python/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/requests/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/rtl-sdr/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/selenium/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/snes/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/space/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/ssd/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/symlink/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/temp/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/thunar/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-01-05-a-vegetarians-guide-in-boston/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/vegetarian/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/vnc/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/categories/vpn/</loc>
+  </url>
+  
+  <url>
+    <loc>rushichaudhari.github.io/posts/2020-06-28-trading-view-scraping/</loc>
+  </url>
+  
+</urlset>
