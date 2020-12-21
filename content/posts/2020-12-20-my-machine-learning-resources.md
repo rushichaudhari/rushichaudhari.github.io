@@ -1,11 +1,11 @@
 ---
-draft: false
 title: My Machine Learning resources
-date: 2020-12-20T19:22:19.784Z
+date: 2020-12-20T19
 lastmod: 2020-12-20T19:22:19.863Z
 author: rushi
 cover: /img/nokia-analytics-banner.webp
-categories: []
+categories:
+  - Notes
 tags:
   - Notes
 ---
