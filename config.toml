@@ -1,4 +1,4 @@
-baseURL = "rushichaudhari.github.io"
+baseURL = ""
 languageCode = "en-us"
 publishDir = "docs"
 title = "A collection of random ideas so I don't have to google again"
@@ -45,7 +45,7 @@ hasCJKLanguage = true
 
   rss = true
 
-  #utterancesRepo = "rushichaudhari/rushichaudhari.github.io"
+  # utterancesRepo = "rushichaudhari/rushichaudhari.github.io"
 
   # valine = true
   # LEANCLOUD_APP_ID = ""
