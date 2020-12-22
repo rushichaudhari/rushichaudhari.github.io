@@ -5,7 +5,18 @@
     <link>/categories/python/</link>
     <description>Recent content in python on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Dec 2020 01:21:27 +0000</lastBuildDate><atom:link href="/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Webscraping 1 minute stock data from tradingview</title>
+      <link>/posts/2020-06-28-trading-view-scraping/</link>
+      <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
+      
+      <guid>/posts/2020-06-28-trading-view-scraping/</guid>
+      <description>How I webscraped 1 minute stock data from tradingview After a long die-hard trying I managed to get 1 minute stock data for free. My previous tries were using selenium and beautifulsoup modules in python. But the data is highly obfuscated so I was not able to find the exact HTML element to scrape. If you manage to do this using selenium please comment below.
+Probably the data is being loaded up as SVG which is why it isn&amp;rsquo;t being seen in html inspect element.</description>
+    </item>
+    
     <item>
       <title>Automate Google forms without selenium</title>
       <link>/posts/2020-07-02-automate-forms-without-selenium/</link>
@@ -25,16 +36,6 @@ Which had fields like To get started we need to capture the request. I&amp;rsquo
       <guid>/posts/2020-07-03-lstm-stock-prediction-worth-it/</guid>
       <description>LSTMS for stock price predictions, worth it ? The internet is now flooded with &amp;ldquo;predicting stock market prices using LSTM&amp;rdquo;. I went through 9 articles which I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed good results. But none of them showed their real-life use-case, The question is really helpful?
 LSTMS predict T+1th term by previous k terms of time-series say k=2 So we need to have T and T-1 to predict T+2</description>
-    </item>
-    
-    <item>
-      <title>Webscraping 1 minute stock data from tradingview</title>
-      <link>/posts/2020-06-28-trading-view-scraping/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2020-06-28-trading-view-scraping/</guid>
-      <description>How I webscraped 1 minute stock data from tradingview After a long die-hard trying I managed to get 1 minute stock data for free. My previous tries were using selenium and beautifulsoup modules in python. But the data is highly obfuscated so I was not able to find the exact HTML element to scrape. If you manage to do this using selenium please comment below.
-Probably the data is being loaded up as SVG which is why it isn&amp;rsquo;t being seen in html inspect element.</description>
     </item>
     
   </channel>

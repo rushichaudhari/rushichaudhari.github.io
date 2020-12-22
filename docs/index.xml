@@ -6,7 +6,17 @@
     <description>Recent content on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Dec 2020 19:22:19 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Dec 2020 01:21:27 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Webscraping 1 minute stock data from tradingview</title>
+      <link>/posts/2020-06-28-trading-view-scraping/</link>
+      <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
+      
+      <guid>/posts/2020-06-28-trading-view-scraping/</guid>
+      <description>How I webscraped 1 minute stock data from tradingview After a long die-hard trying I managed to get 1 minute stock data for free. My previous tries were using selenium and beautifulsoup modules in python. But the data is highly obfuscated so I was not able to find the exact HTML element to scrape. If you manage to do this using selenium please comment below.
+Probably the data is being loaded up as SVG which is why it isn&amp;rsquo;t being seen in html inspect element.</description>
+    </item>
+    
     <item>
       <title>My Machine Learning resources</title>
       <link>/posts/2020-12-20-my-machine-learning-resources/</link>
@@ -150,16 +160,6 @@ $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;amp;&amp;gt;/dev/null The file 
       <guid>/posts/2020-01-05-a-vegetarians-guide-in-boston/</guid>
       <description>Unfortunately only 3-4% of citizens in the US are vegetarian. After rambling around nearby streets, I got to know veg stuff was obscured everywhere. Even Subway/McDonald&#39;s were no exception. So here is a dynamic N00Bs guide in becoming a Masterchef with vegetarian things available in Boston. Masala Khichidi with Kadhi Pizza toppings on bread P.S. Pizza base coss around 4$ for 2, bread is 1.6$ for a loaf.
 Pav Bhaji Pulao Cauliflower Chana(black) h3 { font-family: &#39;Great Vibes&#39;, Helvetica, sans-serif; color: #000; text-shadow: 4px 4px 3px rgba(0,0,0,0.</description>
-    </item>
-    
-    <item>
-      <title>Webscraping 1 minute stock data from tradingview</title>
-      <link>/posts/2020-06-28-trading-view-scraping/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/2020-06-28-trading-view-scraping/</guid>
-      <description>How I webscraped 1 minute stock data from tradingview After a long die-hard trying I managed to get 1 minute stock data for free. My previous tries were using selenium and beautifulsoup modules in python. But the data is highly obfuscated so I was not able to find the exact HTML element to scrape. If you manage to do this using selenium please comment below.
-Probably the data is being loaded up as SVG which is why it isn&amp;rsquo;t being seen in html inspect element.</description>
     </item>
     
   </channel>

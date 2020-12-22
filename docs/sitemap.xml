@@ -4,12 +4,47 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-12-20T19:22:19+00:00</lastmod>
+    <lastmod>2020-12-22T01:21:27+00:00</lastmod>
   </url>
   
   <url>
     <loc>/categories/</loc>
-    <lastmod>2020-12-20T19:22:19+00:00</lastmod>
+    <lastmod>2020-12-22T01:21:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/form/</loc>
+    <lastmod>2020-12-22T01:21:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/google/</loc>
+    <lastmod>2020-12-22T01:21:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-12-22T01:21:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/python/</loc>
+    <lastmod>2020-12-22T01:21:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/requests/</loc>
+    <lastmod>2020-12-22T01:21:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/selenium/</loc>
+    <lastmod>2020-12-22T01:21:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020-06-28-trading-view-scraping/</loc>
+    <lastmod>2020-12-22T01:21:27+00:00</lastmod>
   </url>
   
   <url>
@@ -24,11 +59,6 @@
   
   <url>
     <loc>/categories/notes/</loc>
-    <lastmod>2020-12-20T19:22:19+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
     <lastmod>2020-12-20T19:22:19+00:00</lastmod>
   </url>
   
@@ -101,14 +131,6 @@
   </url>
   
   <url>
-    <loc>/categories/form/</loc>
-  </url>
-  
-  <url>
-    <loc>/categories/google/</loc>
-  </url>
-  
-  <url>
     <loc>/categories/hackrf/</loc>
   </url>
   
@@ -137,14 +159,6 @@
   </url>
   
   <url>
-    <loc>/categories/python/</loc>
-  </url>
-  
-  <url>
-    <loc>/categories/requests/</loc>
-  </url>
-  
-  <url>
     <loc>/posts/2020-04-09-rtl-sdr-notes-copy/</loc>
   </url>
   
@@ -154,10 +168,6 @@
   
   <url>
     <loc>/posts/2020-08-19-dockerguiwsl/</loc>
-  </url>
-  
-  <url>
-    <loc>/categories/selenium/</loc>
   </url>
   
   <url>
@@ -206,10 +216,6 @@
   
   <url>
     <loc>/categories/vpn/</loc>
-  </url>
-  
-  <url>
-    <loc>/posts/2020-06-28-trading-view-scraping/</loc>
   </url>
   
 </urlset>

@@ -6,7 +6,52 @@
     <description>Recent content in Categories on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Dec 2020 19:22:19 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Dec 2020 01:21:27 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>form</title>
+      <link>/categories/form/</link>
+      <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
+      
+      <guid>/categories/form/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google</title>
+      <link>/categories/google/</link>
+      <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
+      
+      <guid>/categories/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/categories/python/</link>
+      <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
+      
+      <guid>/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>requests</title>
+      <link>/categories/requests/</link>
+      <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
+      
+      <guid>/categories/requests/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>selenium</title>
+      <link>/categories/selenium/</link>
+      <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
+      
+      <guid>/categories/selenium/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Notes</title>
       <link>/categories/notes/</link>
@@ -107,24 +152,6 @@
     </item>
     
     <item>
-      <title>form</title>
-      <link>/categories/form/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/form/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>google</title>
-      <link>/categories/google/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/google/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>hackrf</title>
       <link>/categories/hackrf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -170,38 +197,11 @@
     </item>
     
     <item>
-      <title>python</title>
-      <link>/categories/python/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>requests</title>
-      <link>/categories/requests/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/requests/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>rtl-sdr</title>
       <link>/categories/rtl-sdr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/categories/rtl-sdr/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>selenium</title>
-      <link>/categories/selenium/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/selenium/</guid>
       <description></description>
     </item>
     
