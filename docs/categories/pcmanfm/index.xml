@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pcmanfm on A collection of random ideas so I don&#39;t have to google again</title>
-    <link>rushichaudhari.github.io/categories/pcmanfm/</link>
+    <link>/categories/pcmanfm/</link>
     <description>Recent content in pcmanfm on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="rushichaudhari.github.io/categories/pcmanfm/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="/categories/pcmanfm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Not authorized to perform this operation</title>
-      <link>rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/</link>
+      <link>/posts/2020-04-08-not-authorized-to-perform-this-operation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/</guid>
+      <guid>/posts/2020-04-08-not-authorized-to-perform-this-operation/</guid>
       <description>Sometimes, when using i3wm I get this error when mounting a partition. But it works for other des like gnome/cinnamon.
 Make sure polkit is installed.
 Loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:
