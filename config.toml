@@ -45,7 +45,7 @@ hasCJKLanguage = true
 
   rss = true
 
-  utterancesRepo = "rushichaudhari/rushichaudhari.github.io"
+  #utterancesRepo = "rushichaudhari/rushichaudhari.github.io"
 
   # valine = true
   # LEANCLOUD_APP_ID = ""
