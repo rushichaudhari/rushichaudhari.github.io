@@ -164,20 +164,20 @@ Which had fields like To get started we need to capture the request. I&rsquo;ve 
         </h1>
       </header>
 
-      <article class="main"><p><img src="..%5Cimg%5C2020-07-02-Automate-Forms-Without-Selenium%5C46zcd9.jpg" alt="46zcd9"></p>
+      <article class="main"><p><img src="../../img/2020-07-02-Automate-Forms-Without-Selenium/46zcd9.jpg" alt="46zcd9"></p>
 <p><span style="font-size:30px;">I</span>n the previous year, I had posted a script to fill google forms using selenium, and containerizing it with docker to run it parallelly. This is an alternative way to do the same using post requests.</p>
 <p>I had created a google form using the default template shown below.</p>
-<p><img src="..%5Cimg%5C2020-07-02-Automate-Forms-Without-Selenium%5Cimage-20200702100957610.png" alt="image-20200702100957610"></p>
+<p><img src="../../img/2020-07-02-Automate-Forms-Without-Selenium/image-20200702100957610.png" alt="image-20200702100957610"></p>
 <h4 id="which-had-fields-like">Which had fields like</h4>
-<p><img src="..%5Cimg%5C2020-07-02-Automate-Forms-Without-Selenium%5Cimage-20200702101526822.png" alt="image-20200702101526822"></p>
+<p><img src="../../img/2020-07-02-Automate-Forms-Without-Selenium/image-20200702101526822.png" alt="image-20200702101526822"></p>
 <p>To get started we need to capture the request. I&rsquo;ve used <strong>burp suite</strong> tool to capture, there are many alternative tools you can google.</p>
 <h2 id="capturing-requests">Capturing Requests</h2>
 <h4 id="setting-up-burp">Setting up burp</h4>
 <p><strong>Create a localhost proxy in burp</strong></p>
-<p><img src="..%5Cimg%5C2020-07-02-Automate-Forms-Without-Selenium%5Cimage-20200702102944153.png" alt="image-20200702102944153"></p>
+<p><img src="../../img/2020-07-02-Automate-Forms-Without-Selenium/image-20200702102944153.png" alt="image-20200702102944153"></p>
 <p><strong>Then in the browser settings, put the proxy as localhost</strong></p>
-<p><img src="..%5Cimg%5C2020-07-02-Automate-Forms-Without-Selenium%5C2.PNG" alt="2"></p>
-<p><img src="..%5Cimg%5C2020-07-02-Automate-Forms-Without-Selenium%5C3.PNG" alt="3"></p>
+<p><img src="../../img/2020-07-02-Automate-Forms-Without-Selenium/2.PNG" alt="2"></p>
+<p><img src="../../img/2020-07-02-Automate-Forms-Without-Selenium/3.PNG" alt="3"></p>
 <p><strong>You may refer this on how to capture request using burp</strong></p>
 <iframe width="917" height="516" src="https://www.youtube.com/embed/gZtuqbEE6aY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h2 id="the-code">The CODE</h2>
@@ -199,7 +199,7 @@ Which had fields like To get started we need to capture the request. I&rsquo;ve 
 </span><span style="color:#e6db74">Upgrade-Insecure-Requests: 1
 </span><span style="color:#e6db74">&#39;&#39;&#39;</span>
 </code></pre></div><p>Cleaning and converting of the raw_headers into a dictionary</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">headrs<span style="color:#f92672">=</span> dict([[h<span style="color:#f92672">.</span>partition(<span style="color:#e6db74">&#39;:&#39;</span>)[<span style="color:#ae81ff">0</span>], h<span style="color:#f92672">.</span>partition(<span style="color:#e6db74">&#39;:&#39;</span>)[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>strip()] <span style="color:#66d9ef">for</span> h <span style="color:#f92672">in</span> raw_headers<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)])
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">headrs<span style="color:#f92672">=</span> dict([[h<span style="color:#f92672">.</span>partition(<span style="color:#e6db74">&#39;:&#39;</span>)[<span style="color:#ae81ff">0</span>], h<span style="color:#f92672">.</span>partition(<span style="color:#e6db74">&#39;:&#39;</span>)[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>strip()] <span style="color:#66d9ef">for</span> h <span style="color:#f92672">in</span> raw_headers<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;/n&#39;</span>)])
 
 <span style="color:#75715e">#removing cookie and blank keys</span>
 <span style="color:#66d9ef">del</span> headrs[<span style="color:#e6db74">&#39;Cookie&#39;</span>]
@@ -218,7 +218,7 @@ data<span style="color:#f92672">=</span>{}
 data<span style="color:#f92672">=</span> {k: v <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> data<span style="color:#f92672">.</span>items() <span style="color:#66d9ef">if</span> v <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#e6db74">&#39;&#39;</span>}
 <span style="color:#66d9ef">print</span>(data<span style="color:#f92672">.</span>keys())
 </code></pre></div><p>Next we generate a custom dictionary with the keys fetched and their respective values as custom values</p>
-<p>**Note:- **For multiple values like checkboxes we can also pass as a list like <strong>&lsquo;entry.1753222212&rsquo;: [&lsquo;Day 1&rsquo;, &lsquo;Day 3&rsquo;]</strong> here.</p>
+<p><strong>Note:-</strong> For multiple values like checkboxes we can also pass as a list like <strong>&lsquo;entry.1753222212&rsquo;: [&lsquo;Day 1&rsquo;, &lsquo;Day 3&rsquo;]</strong> here.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#f92672">=</span> {
         <span style="color:#e6db74">&#34;entry.2092238618&#34;</span>:<span style="color:#e6db74">&#34;johnwick&#34;</span>,
         <span style="color:#e6db74">&#39;entry.1556369182&#39;</span>: <span style="color:#e6db74">&#39;johnw@gmail.com&#39;</span>,
@@ -661,7 +661,7 @@ resp <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>s
 
   <section class="ui bottom attached center aligned segment">
     
-      <p>© 2018 - 2020 A collection of random ideas so I don&#39;t have to google again</p>
+      <p>© 2018 - 2021 A collection of random ideas so I don&#39;t have to google again</p>
     
 
     <p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with theme <a href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</p>
