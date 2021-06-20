@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title:  "Automate Google forms without selenium"
+title:  "LSTMS for stock price predictions, worth it ?"
 author: rushi
 categories: [python, requests, selenium, google, form]
 cover: "/img/2020-07-03-LSTM-Stock-Prediction-worth-it/image-20200703211002786.png"
@@ -12,7 +12,6 @@ hidden: false
 
 
 
-# LSTMS for stock price predictions, worth it ?
 
 <span style="font-size:50px;">T</span>he internet is now flooded with "predicting stock market prices using LSTM". I went through 9 articles which I found on websites like medium, KDnuggets, etc.
 And I realized almost 6-7 out of them showed good results. But none of them showed their real-life use-case, The question is really helpful?
