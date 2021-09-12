@@ -4,12 +4,13 @@ author: rushi
 title: Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes
 date: 2020-11-28T05:27:29.162Z
 categories:
-  - cms
-  - netlify
+    - cms
+    - netlify
 featured: true
 hidden: false
-cover: /images/uploads/spyderwsl.jpg
+cover: /img/2020-08-19-DockerGUIwsl/spyderwsl.jpg
 ---
+
 <!--StartFragment-->
 
 ## Creating an GitHub OAuth App
@@ -22,13 +23,11 @@ In **Authorization callback URL**, enter: `https://api.netlify.com/auth/done`.
 
 Once finished, leave the page in the background. You will need the **Client ID** and **Client Secret** on this page later.
 
-
-
 ## Creating a Netlify Site
 
 … Relax! We’re just creating one, without actually using it. In fact, if you want to deploy Jekyll site on Netlify, you [will need](https://www.netlify.com/blog/2015/10/28/a-step-by-step-guide-jekyll-3.0-on-netlify/) to include Jekyll (generator) in your git repo.
 
-Go to [Netlify](https://app.netlify.com/account/sites) and create a new site from… *any* repo. We are not really using Netlify to host that, anyway.
+Go to [Netlify](https://app.netlify.com/account/sites) and create a new site from… _any_ repo. We are not really using Netlify to host that, anyway.
 
 After that, go to **Settings**, and copy your **Site name**. It should be something like `octopus-cat-123456`.
 
