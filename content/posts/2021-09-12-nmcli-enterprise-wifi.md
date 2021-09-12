@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 'To what extent can I get Indian Veg Food in Boston'
+title: 'Adding wifi connection without GUI for enterprise wifi like at universities/ offices with PEAP'
 author: rushi
-categories: [linux, pinephone]
+categories: [linux, pinephone, wifi]
 tags:
     - linux
     - pinephone
