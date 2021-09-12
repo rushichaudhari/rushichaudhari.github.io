@@ -3,12 +3,13 @@ title: My Machine Learning resources
 date: 2020-12-20T19
 lastmod: 2020-12-20T19:22:19.863Z
 author: rushi
-cover: /img/nokia-analytics-banner.webp
+# cover: /img/nokia-analytics-banner.webp
 categories:
-  - Notes
+    - Notes
 tags:
-  - Notes
+    - Notes
 ---
+
 # Machine Learning Concepts.
 
 # Decision Theory / Risk Estimation
@@ -65,7 +66,7 @@ ONLY 3 ways to fix
 
 [Basic probability: Joint, marginal and conditional probability | Independence](https://www.youtube.com/watch?v=SrEmzdOT65s)
 
-![Machine%20Learning%20Concepts%20d03b9856e3474ff5ad6230fbfdd06a33/Untitled.png](/img/untitled.png)
+![Machine](/img/2020-12-20-my-machine-learning-resources/untitled.png)
 
 # Multivariate Gaussian distributions and geometry
 
@@ -73,7 +74,7 @@ ONLY 3 ways to fix
 
 # Multinomial Gaussian distribution
 
-![Machine%20Learning%20Concepts%20d03b9856e3474ff5ad6230fbfdd06a33/Untitled%201.png](/img/untitled-1.png)
+![Machine%20Learning%20Concepts%20d03b9856e3474ff5ad6230fbfdd06a33/Untitled%201.png](/img/2020-12-20-my-machine-learning-resources/untitled-1.png)
 
 # Covariance correlation
 
@@ -105,7 +106,7 @@ ONLY 3 ways to fix
 
 # Expectation formulas
 
-![](/img/untitled-2.png)
+![expectation formulas](/img/2020-12-20-my-machine-learning-resources/untitled-2.png)
 
 ## SVM Support Vector Machines
 
