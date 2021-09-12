@@ -22,7 +22,7 @@ Loosen the polkit permissions in your system to allow your normal user to mount 
 
 <meta name="generator" content="Hugo 0.79.1" />
 
-<link rel="canonical" href="/posts/2020-04-08-not-authorized-to-perform-this-operation/" />
+<link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/" />
 
 
 <meta property="og:title" content="Not authorized to perform this operation" />
@@ -31,14 +31,14 @@ Make sure polkit is installed.
 Loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:
 [Allow Unauthorized mounting/Unmounting] Identity=unix-group:plugdev;cdrom Action=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject* ResultAny=yes ResultInactive=yes ResultActive=yes You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/2020-04-08-not-authorized-to-perform-this-operation/" />
-<meta property="og:image" content="me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 
 
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="me/background.jpg"/>
+<meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 <meta name="twitter:title" content="Not authorized to perform this operation"/>
 <meta name="twitter:description" content="Sometimes, when using i3wm I get this error when mounting a partition. But it works for other des like gnome/cinnamon.
@@ -117,7 +117,7 @@ Loosen the polkit permissions in your system to allow your normal user to mount 
     <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
   </div>
   <div class="item">
-    <i class="large link home icon" title="Home" onclick="window.location.href = ''"></i>
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/rushichaudhari.github.io'"></i>
   </div>
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
@@ -138,7 +138,7 @@ Loosen the polkit permissions in your system to allow your normal user to mount 
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
     <section class="ui top attached segment cover">
-      <div class="cover-img" style="background-image: url(/images/Thunar_window_failed_to_mount.png);"></div>
+      <div class="cover-img" style="background-image: url(/img/2020-04-08-Not-authorized-to-perform-this-operation/Thunar_window_failed_to_mount.png);"></div>
     </section>
     
     <section class="ui attached segment">
@@ -207,7 +207,7 @@ newgrp plugdev
 
 
           var disqus_config = function () {
-            this.page.url = '\/posts\/2020-04-08-not-authorized-to-perform-this-operation\/';  
+            this.page.url = 'https:\/\/rushichaudhari.github.io\/posts\/2020-04-08-not-authorized-to-perform-this-operation\/';  
             this.page.identifier = '\/posts\/2020-04-08-not-authorized-to-perform-this-operation\/'; 
           };
 
@@ -823,7 +823,7 @@ newgrp plugdev
 </div>
 <script>
   $(document).ready(function () {
-    $.getJSON('/index.json', function (data) {
+    $.getJSON('https:\/\/rushichaudhari.github.io/index.json', function (data) {
       $('.ui.search').search({
         source: data,
         searchFields: ['title'],

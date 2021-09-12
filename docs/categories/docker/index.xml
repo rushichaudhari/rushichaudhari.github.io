@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on A collection of random ideas so I don&#39;t have to google again</title>
-    <link>/categories/docker/</link>
+    <link>https://rushichaudhari.github.io/categories/docker/</link>
     <description>Recent content in docker on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://rushichaudhari.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds</title>
-      <link>/posts/2020-05-14-docker-vnc/</link>
+      <link>https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2020-05-14-docker-vnc/</guid>
+      <guid>https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/</guid>
       <description>This guide assumes you already know what is docker and docker, vncviewer installed on your system The docker image given at https://hub.docker.com/search?q=&amp;amp;type=image is a blank kali image with 0 tools.
 Let us create a light-weight custom image with the tools needed. The following are the tools which I think are commonly used in kali you can add/remove a few from that list.
 aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils dos2unix enum4linux exploitdb ftp git gobuster hashcat hping3 hydra impacket-scripts john joomscan masscan metasploit-framework mimikatz nasm ncat netcat-traditional nikto nmap patator php powersploit proxychains python-pip python2 python3 recon-ng responder samba samdump2 smbclient smbmap snmp socat sqlmap sslscan theharvester vim wafw00f weevely wfuzz whois wordlists wpscan Creating Dockerfile</description>

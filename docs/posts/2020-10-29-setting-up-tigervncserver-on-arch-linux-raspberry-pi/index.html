@@ -20,21 +20,21 @@ $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;amp;&amp;gt;/dev/null The file 
 
 <meta name="generator" content="Hugo 0.79.1" />
 
-<link rel="canonical" href="/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
+<link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
 
 
 <meta property="og:title" content="Setting up tigervncserver on arch linux (raspberry-pi)" />
 <meta property="og:description" content="Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
 $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should be executable: $ chmod &#43;x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
-<meta property="og:image" content="me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 
 
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="me/background.jpg"/>
+<meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 <meta name="twitter:title" content="Setting up tigervncserver on arch linux (raspberry-pi)"/>
 <meta name="twitter:description" content="Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
@@ -111,7 +111,7 @@ $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should b
     <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
   </div>
   <div class="item">
-    <i class="large link home icon" title="Home" onclick="window.location.href = ''"></i>
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/rushichaudhari.github.io'"></i>
   </div>
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
@@ -227,7 +227,7 @@ WantedBy=multi-user.target
 
 
           var disqus_config = function () {
-            this.page.url = '\/posts\/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi\/';  
+            this.page.url = 'https:\/\/rushichaudhari.github.io\/posts\/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi\/';  
             this.page.identifier = '\/posts\/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi\/'; 
           };
 
@@ -856,7 +856,7 @@ WantedBy=multi-user.target
 </div>
 <script>
   $(document).ready(function () {
-    $.getJSON('/index.json', function (data) {
+    $.getJSON('https:\/\/rushichaudhari.github.io/index.json', function (data) {
       $('.ui.search').search({
         source: data,
         searchFields: ['title'],

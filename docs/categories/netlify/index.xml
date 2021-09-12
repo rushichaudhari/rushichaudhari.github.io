@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>netlify on A collection of random ideas so I don&#39;t have to google again</title>
-    <link>/categories/netlify/</link>
+    <link>https://rushichaudhari.github.io/categories/netlify/</link>
     <description>Recent content in netlify on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 28 Nov 2020 05:27:29 +0000</lastBuildDate><atom:link href="/categories/netlify/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Nov 2020 05:27:29 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/netlify/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes</title>
-      <link>/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/</link>
+      <link>https://rushichaudhari.github.io/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/</link>
       <pubDate>Sat, 28 Nov 2020 05:27:29 +0000</pubDate>
       
-      <guid>/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/</guid>
+      <guid>https://rushichaudhari.github.io/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/</guid>
       <description>Creating an GitHub OAuth App First, go to GitHub Dev Settings and click New OAuth App. Or just click here: https://github.com/settings/developers
 Enter whatever you like for Application name and Homepage URL.
 In Authorization callback URL, enter: https://api.netlify.com/auth/done.

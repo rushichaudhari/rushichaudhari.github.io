@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>requests on A collection of random ideas so I don&#39;t have to google again</title>
-    <link>/categories/requests/</link>
+    <link>https://rushichaudhari.github.io/categories/requests/</link>
     <description>Recent content in requests on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Dec 2020 01:21:27 +0000</lastBuildDate><atom:link href="/categories/requests/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Dec 2020 01:21:27 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/requests/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Webscraping 1 minute stock data from tradingview</title>
-      <link>/posts/2020-06-28-trading-view-scraping/</link>
+      <link>https://rushichaudhari.github.io/posts/2020-06-28-trading-view-scraping/</link>
       <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
       
-      <guid>/posts/2020-06-28-trading-view-scraping/</guid>
+      <guid>https://rushichaudhari.github.io/posts/2020-06-28-trading-view-scraping/</guid>
       <description>How I webscraped 1 minute stock data from tradingview After a long die-hard trying I managed to get 1 minute stock data for free. My previous tries were using selenium and beautifulsoup modules in python. But the data is highly obfuscated so I was not able to find the exact HTML element to scrape. If you manage to do this using selenium please comment below.
 Probably the data is being loaded up as SVG which is why it isn&amp;rsquo;t being seen in html inspect element.</description>
     </item>
     
     <item>
       <title>Automate Google forms without selenium</title>
-      <link>/posts/2020-07-02-automate-forms-without-selenium/</link>
+      <link>https://rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2020-07-02-automate-forms-without-selenium/</guid>
+      <guid>https://rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/</guid>
       <description>In the previous year, I had posted a script to fill google forms using selenium, and containerizing it with docker to run it parallelly. This is an alternative way to do the same using post requests.
 I had created a google form using the default template shown below.
 Which had fields like To get started we need to capture the request. I&amp;rsquo;ve used burp suite tool to capture, there are many alternative tools you can google.</description>
@@ -30,10 +30,10 @@ Which had fields like To get started we need to capture the request. I&amp;rsquo
     
     <item>
       <title>LSTMS for stock price predictions, worth it ?</title>
-      <link>/posts/2020-07-03-lstm-stock-prediction-worth-it/</link>
+      <link>https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/posts/2020-07-03-lstm-stock-prediction-worth-it/</guid>
+      <guid>https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</guid>
       <description>The internet is now flooded with &amp;ldquo;predicting stock market prices using LSTM&amp;rdquo;. I went through 9 articles which I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed good results. But none of them showed their real-life use-case, The question is really helpful?
 LSTMS predict T+1th term by previous k terms of time-series say k=2 So we need to have T and T-1 to predict T+2</description>
     </item>

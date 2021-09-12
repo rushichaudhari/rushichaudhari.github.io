@@ -24,7 +24,7 @@ Pre-requirements:
 
 <meta name="generator" content="Hugo 0.79.1" />
 
-<link rel="canonical" href="/posts/2020-08-19-dockerguiwsl/" />
+<link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/" />
 
 
 <meta property="og:title" content="Running GUI apps from docker inside WSL2.0 as standalone application" />
@@ -35,14 +35,14 @@ So here are the steps :-
 Pre-requirements:
  Windows 10 WSL  For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on //build 2020 that they will release soon an improvement that will not require any third-party component to run Linux GUI Apps on Windows Desktop." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/2020-08-19-dockerguiwsl/" />
-<meta property="og:image" content="me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 
 
 
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="me/background.jpg"/>
+<meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 <meta name="twitter:title" content="Running GUI apps from docker inside WSL2.0 as standalone application"/>
 <meta name="twitter:description" content="Another day, again my anaconda crashed for no reason. I decided to never use python on windows without linux vm/ docker.
@@ -123,7 +123,7 @@ Pre-requirements:
     <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
   </div>
   <div class="item">
-    <i class="large link home icon" title="Home" onclick="window.location.href = ''"></i>
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/rushichaudhari.github.io'"></i>
   </div>
   <div class="item">
     <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
@@ -179,7 +179,7 @@ Pre-requirements:
 <li>Windows 10</li>
 <li>WSL</li>
 </ul>
-<p>For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on <strong>//build 2020</strong> that they will release soon an improvement that will not require any  third-party component to run Linux GUI Apps on Windows Desktop.</p>
+<p>For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on <strong>//build 2020</strong> that they will release soon an improvement that will not require any third-party component to run Linux GUI Apps on Windows Desktop.</p>
 <h3 id="installing-the-x-server">Installing the X Server</h3>
 <p>The X server is a provider of graphics resources and keyboard/mouse events. I am using the <strong>VcXsrv Windows X Server</strong> that is open-source and is frequently update.</p>
 <p>The first step is to install the third-part display manager called <strong>VcXsrv Windows X Server</strong> available at:</p>
@@ -198,23 +198,23 @@ Pre-requirements:
 <p><code>sudo pacman -Syu docker</code></p>
 <p>start docker daemon</p>
 <p><code>sudo dockerd &amp;</code></p>
-<p>The docker image I used was <a href="https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0">https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0</a>  which I had built to run zipline without much hassle. I will be pulling the same here. It is pretty heavy 3-4GB, you can use any light image for base os to pull from <a href="">hub.docker.com</a>.</p>
+<p>The docker image I used was <a href="https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0">https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0</a> which I had built to run zipline without much hassle. I will be pulling the same here. It is pretty heavy 3-4GB, you can use any light image for base os to pull from <a href="">hub.docker.com</a>.</p>
 <p><code>docker pull rushichaudhari/zipline1.3.0:firstpush</code></p>
-<p>The next step is to set the <strong>DISPLAY</strong> environment  variable on Linux to use the Windows host&rsquo;s IP address as WSL2 and the  Windows host are not in the same network device. It is necessary to run  the following bash command to load the correct IP address on launch:</p>
-<p><em><strong>Inside WSL linux shell</strong></em></p>
+<p>The next step is to set the <strong>DISPLAY</strong> environment variable on Linux to use the Windows host&rsquo;s IP address as WSL2 and the Windows host are not in the same network device. It is necessary to run the following bash command to load the correct IP address on launch:</p>
+<p><strong><em>Inside WSL linux shell</em></strong></p>
 <p><code>export DISPLAY=&quot;`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0&quot;</code></p>
 <p>Running the following command, it is possible to see that the $DISPLAY environment variable now has the Windows Host’s IP set:</p>
 <p><code>echo $DISPLAY</code></p>
 <h3 id="starting-the-docker">Starting the docker</h3>
 <p>Get the docker Image Id</p>
 <p><code>sudo docker images</code></p>
-<p>​           <img src="../../img/2020-08-19-DockerGUIwsl/1.png" alt="file://c:\users\h4x3d\appdata\local\temp\tmpzkddyn\1.png"></p>
+<p>​ <img src="../../img/2020-08-19-DockerGUIwsl/1.png" alt="file://c:\users\h4x3d\appdata\local\temp\tmpzkddyn\1.png"></p>
 <p>Run a new docker container using</p>
-<p><code> sudo docker run -it  86086b792ad1  /bin/bash</code></p>
+<p><code> sudo docker run -it 86086b792ad1 /bin/bash</code></p>
 <p>Now the current shell would be a archlinux shell which is inside a docker which is inside an archlinux wsl.</p>
 <p><strong>Map the DISPLAY again like we did before so docker would point to WSL2&rsquo;s ip address which in turn points to Windows hosts ip address.</strong></p>
 <hr>
-<p><em><strong>Inside docker linux shell</strong></em></p>
+<p><strong><em>Inside docker linux shell</em></strong></p>
 <p><code>export DISPLAY=&quot;`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0&quot;</code></p>
 <p><code>echo $DISPLAY</code></p>
 <h3 id="installing-some-test-applications">Installing some test applications</h3>
@@ -259,7 +259,7 @@ passwd testuser
 
 
           var disqus_config = function () {
-            this.page.url = '\/posts\/2020-08-19-dockerguiwsl\/';  
+            this.page.url = 'https:\/\/rushichaudhari.github.io\/posts\/2020-08-19-dockerguiwsl\/';  
             this.page.identifier = '\/posts\/2020-08-19-dockerguiwsl\/'; 
           };
 
@@ -893,7 +893,7 @@ passwd testuser
 </div>
 <script>
   $(document).ready(function () {
-    $.getJSON('/index.json', function (data) {
+    $.getJSON('https:\/\/rushichaudhari.github.io/index.json', function (data) {
       $('.ui.search').search({
         source: data,
         searchFields: ['title'],

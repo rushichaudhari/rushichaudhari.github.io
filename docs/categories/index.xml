@@ -2,287 +2,287 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on A collection of random ideas so I don&#39;t have to google again</title>
-    <link>/categories/</link>
+    <link>https://rushichaudhari.github.io/categories/</link>
     <description>Recent content in Categories on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Dec 2020 01:21:27 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Dec 2020 01:21:27 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>form</title>
-      <link>/categories/form/</link>
+      <link>https://rushichaudhari.github.io/categories/form/</link>
       <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
       
-      <guid>/categories/form/</guid>
+      <guid>https://rushichaudhari.github.io/categories/form/</guid>
       <description></description>
     </item>
     
     <item>
       <title>google</title>
-      <link>/categories/google/</link>
+      <link>https://rushichaudhari.github.io/categories/google/</link>
       <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
       
-      <guid>/categories/google/</guid>
+      <guid>https://rushichaudhari.github.io/categories/google/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>/categories/python/</link>
+      <link>https://rushichaudhari.github.io/categories/python/</link>
       <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
       
-      <guid>/categories/python/</guid>
+      <guid>https://rushichaudhari.github.io/categories/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>requests</title>
-      <link>/categories/requests/</link>
+      <link>https://rushichaudhari.github.io/categories/requests/</link>
       <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
       
-      <guid>/categories/requests/</guid>
+      <guid>https://rushichaudhari.github.io/categories/requests/</guid>
       <description></description>
     </item>
     
     <item>
       <title>selenium</title>
-      <link>/categories/selenium/</link>
+      <link>https://rushichaudhari.github.io/categories/selenium/</link>
       <pubDate>Tue, 22 Dec 2020 01:21:27 +0000</pubDate>
       
-      <guid>/categories/selenium/</guid>
+      <guid>https://rushichaudhari.github.io/categories/selenium/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Notes</title>
-      <link>/categories/notes/</link>
+      <link>https://rushichaudhari.github.io/categories/notes/</link>
       <pubDate>Sun, 20 Dec 2020 19:22:19 +0000</pubDate>
       
-      <guid>/categories/notes/</guid>
+      <guid>https://rushichaudhari.github.io/categories/notes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cms</title>
-      <link>/categories/cms/</link>
+      <link>https://rushichaudhari.github.io/categories/cms/</link>
       <pubDate>Sat, 28 Nov 2020 05:27:29 +0000</pubDate>
       
-      <guid>/categories/cms/</guid>
+      <guid>https://rushichaudhari.github.io/categories/cms/</guid>
       <description></description>
     </item>
     
     <item>
       <title>netlify</title>
-      <link>/categories/netlify/</link>
+      <link>https://rushichaudhari.github.io/categories/netlify/</link>
       <pubDate>Sat, 28 Nov 2020 05:27:29 +0000</pubDate>
       
-      <guid>/categories/netlify/</guid>
+      <guid>https://rushichaudhari.github.io/categories/netlify/</guid>
       <description></description>
     </item>
     
     <item>
       <title>appdata</title>
-      <link>/categories/appdata/</link>
+      <link>https://rushichaudhari.github.io/categories/appdata/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/appdata/</guid>
+      <guid>https://rushichaudhari.github.io/categories/appdata/</guid>
       <description></description>
     </item>
     
     <item>
       <title>debian</title>
-      <link>/categories/debian/</link>
+      <link>https://rushichaudhari.github.io/categories/debian/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/debian/</guid>
+      <guid>https://rushichaudhari.github.io/categories/debian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>digitalocean</title>
-      <link>/categories/digitalocean/</link>
+      <link>https://rushichaudhari.github.io/categories/digitalocean/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/digitalocean/</guid>
+      <guid>https://rushichaudhari.github.io/categories/digitalocean/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
-      <link>/categories/docker/</link>
+      <link>https://rushichaudhari.github.io/categories/docker/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/docker/</guid>
+      <guid>https://rushichaudhari.github.io/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>drive</title>
-      <link>/categories/drive/</link>
+      <link>https://rushichaudhari.github.io/categories/drive/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/drive/</guid>
+      <guid>https://rushichaudhari.github.io/categories/drive/</guid>
       <description></description>
     </item>
     
     <item>
       <title>emulator</title>
-      <link>/categories/emulator/</link>
+      <link>https://rushichaudhari.github.io/categories/emulator/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/emulator/</guid>
+      <guid>https://rushichaudhari.github.io/categories/emulator/</guid>
       <description></description>
     </item>
     
     <item>
       <title>firefox</title>
-      <link>/categories/firefox/</link>
+      <link>https://rushichaudhari.github.io/categories/firefox/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/firefox/</guid>
+      <guid>https://rushichaudhari.github.io/categories/firefox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>food</title>
-      <link>/categories/food/</link>
+      <link>https://rushichaudhari.github.io/categories/food/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/food/</guid>
+      <guid>https://rushichaudhari.github.io/categories/food/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hackrf</title>
-      <link>/categories/hackrf/</link>
+      <link>https://rushichaudhari.github.io/categories/hackrf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/hackrf/</guid>
+      <guid>https://rushichaudhari.github.io/categories/hackrf/</guid>
       <description></description>
     </item>
     
     <item>
       <title>i3wm</title>
-      <link>/categories/i3wm/</link>
+      <link>https://rushichaudhari.github.io/categories/i3wm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/i3wm/</guid>
+      <guid>https://rushichaudhari.github.io/categories/i3wm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kali</title>
-      <link>/categories/kali/</link>
+      <link>https://rushichaudhari.github.io/categories/kali/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/kali/</guid>
+      <guid>https://rushichaudhari.github.io/categories/kali/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
-      <link>/categories/linux/</link>
+      <link>https://rushichaudhari.github.io/categories/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/linux/</guid>
+      <guid>https://rushichaudhari.github.io/categories/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pcmanfm</title>
-      <link>/categories/pcmanfm/</link>
+      <link>https://rushichaudhari.github.io/categories/pcmanfm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/pcmanfm/</guid>
+      <guid>https://rushichaudhari.github.io/categories/pcmanfm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rtl-sdr</title>
-      <link>/categories/rtl-sdr/</link>
+      <link>https://rushichaudhari.github.io/categories/rtl-sdr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/rtl-sdr/</guid>
+      <guid>https://rushichaudhari.github.io/categories/rtl-sdr/</guid>
       <description></description>
     </item>
     
     <item>
       <title>snes</title>
-      <link>/categories/snes/</link>
+      <link>https://rushichaudhari.github.io/categories/snes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/snes/</guid>
+      <guid>https://rushichaudhari.github.io/categories/snes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>space</title>
-      <link>/categories/space/</link>
+      <link>https://rushichaudhari.github.io/categories/space/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/space/</guid>
+      <guid>https://rushichaudhari.github.io/categories/space/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ssd</title>
-      <link>/categories/ssd/</link>
+      <link>https://rushichaudhari.github.io/categories/ssd/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/ssd/</guid>
+      <guid>https://rushichaudhari.github.io/categories/ssd/</guid>
       <description></description>
     </item>
     
     <item>
       <title>symlink</title>
-      <link>/categories/symlink/</link>
+      <link>https://rushichaudhari.github.io/categories/symlink/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/symlink/</guid>
+      <guid>https://rushichaudhari.github.io/categories/symlink/</guid>
       <description></description>
     </item>
     
     <item>
       <title>temp</title>
-      <link>/categories/temp/</link>
+      <link>https://rushichaudhari.github.io/categories/temp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/temp/</guid>
+      <guid>https://rushichaudhari.github.io/categories/temp/</guid>
       <description></description>
     </item>
     
     <item>
       <title>thunar</title>
-      <link>/categories/thunar/</link>
+      <link>https://rushichaudhari.github.io/categories/thunar/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/thunar/</guid>
+      <guid>https://rushichaudhari.github.io/categories/thunar/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vegetarian</title>
-      <link>/categories/vegetarian/</link>
+      <link>https://rushichaudhari.github.io/categories/vegetarian/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/vegetarian/</guid>
+      <guid>https://rushichaudhari.github.io/categories/vegetarian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>VNC</title>
-      <link>/categories/vnc/</link>
+      <link>https://rushichaudhari.github.io/categories/vnc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/vnc/</guid>
+      <guid>https://rushichaudhari.github.io/categories/vnc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>vpn</title>
-      <link>/categories/vpn/</link>
+      <link>https://rushichaudhari.github.io/categories/vpn/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/categories/vpn/</guid>
+      <guid>https://rushichaudhari.github.io/categories/vpn/</guid>
       <description></description>
     </item>
     

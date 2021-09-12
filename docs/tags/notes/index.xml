@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on A collection of random ideas so I don&#39;t have to google again</title>
-    <link>/tags/notes/</link>
+    <link>https://rushichaudhari.github.io/tags/notes/</link>
     <description>Recent content in Notes on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 20 Dec 2020 19:22:19 +0000</lastBuildDate><atom:link href="/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Dec 2020 19:22:19 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Machine Learning resources</title>
-      <link>/posts/2020-12-20-my-machine-learning-resources/</link>
+      <link>https://rushichaudhari.github.io/posts/2020-12-20-my-machine-learning-resources/</link>
       <pubDate>Sun, 20 Dec 2020 19:22:19 +0000</pubDate>
       
-      <guid>/posts/2020-12-20-my-machine-learning-resources/</guid>
+      <guid>https://rushichaudhari.github.io/posts/2020-12-20-my-machine-learning-resources/</guid>
       <description>Machine Learning Concepts. Decision Theory / Risk Estimation Machine Learning #09 Statistical Decision Theory: Regression
 OLS Assumptions 7 Classical Assumptions of Ordinary Least Squares (OLS) Linear Regression - Statistics By Jim
 The Gauss-Markov Theorem and BLUE OLS Coefficient Estimates The Gauss-Markov Theorem and BLUE OLS Coefficient Estimates - Statistics By Jim
