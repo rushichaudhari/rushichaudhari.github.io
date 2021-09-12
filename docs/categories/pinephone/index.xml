@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pinephone on A collection of random ideas so I don&#39;t have to google again</title>
+    <link>https://rushichaudhari.github.io/categories/pinephone/</link>
+    <description>Recent content in pinephone on A collection of random ideas so I don&#39;t have to google again</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://rushichaudhari.github.io/categories/pinephone/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>To what extent can I get Indian Veg Food in Boston</title>
+      <link>https://rushichaudhari.github.io/posts/2021-09-12-nmcli-enterprise-wifi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-09-12-nmcli-enterprise-wifi/</guid>
+      <description># nmcli con add type wifi ifname wlan0 con-name CONNECTION_NAME ssid SSID # nmcli con edit id CONNECTION_NAME nmcli&amp;gt; set ipv4.method auto nmcli&amp;gt; set 802-1x.eap peap nmcli&amp;gt; set 802-1x.phase2-auth mschapv2 nmcli&amp;gt; set 802-1x.identity USERNAME nmcli&amp;gt; set 802-1x.password PASSWORD nmcli&amp;gt; set wifi-sec.key-mgmt wpa-eap nmcli&amp;gt; save nmcli&amp;gt; activate </description>
+    </item>
+    
+  </channel>
+</rss>

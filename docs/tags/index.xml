@@ -16,5 +16,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>arch</title>
+      <link>https://rushichaudhari.github.io/tags/arch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/arch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://rushichaudhari.github.io/tags/linux/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pinephone</title>
+      <link>https://rushichaudhari.github.io/tags/pinephone/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/pinephone/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
