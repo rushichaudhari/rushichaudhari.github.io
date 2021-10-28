@@ -70,3 +70,6 @@ hasCJKLanguage = true
 
   # options
   showSummaryCoverInPost = true
+
+  # Tracking
+  googleAnalytics = "G-GCQ3Y3DM3R"
