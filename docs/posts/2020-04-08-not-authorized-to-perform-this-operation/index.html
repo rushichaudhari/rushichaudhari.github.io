@@ -20,7 +20,7 @@ Loosen the polkit permissions in your system to allow your normal user to mount 
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/" />
 
@@ -31,8 +31,9 @@ Make sure polkit is installed.
 Loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:
 [Allow Unauthorized mounting/Unmounting] Identity=unix-group:plugdev;cdrom Action=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject* ResultAny=yes ResultInactive=yes ResultActive=yes You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+
+
 
 
 
@@ -170,16 +171,16 @@ Loosen the polkit permissions in your system to allow your normal user to mount 
       <article class="main"><p>Sometimes, when using i3wm I get this error when mounting a partition. But it works for other des like gnome/cinnamon.</p>
 <p>Make sure polkit is installed.</p>
 <p>Loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:</p>
-<pre><code>[Allow Unauthorized mounting/Unmounting]
+<pre tabindex="0"><code>[Allow Unauthorized mounting/Unmounting]
 Identity=unix-group:plugdev;cdrom
 Action=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject*
 ResultAny=yes
 ResultInactive=yes
 ResultActive=yes
 </code></pre><p>You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:</p>
-<pre><code>groups
+<pre tabindex="0"><code>groups
 </code></pre><p>If &ldquo;plugdev&rdquo; is not listed, then use:</p>
-<pre><code># gpasswd -a USER plugdev
+<pre tabindex="0"><code># gpasswd -a USER plugdev
 newgrp plugdev
 </code></pre><p><a href="http://forums.debian.net/viewtopic.php?f=10&amp;t=126872&amp;start=30#">http://forums.debian.net/viewtopic.php?f=10&amp;t=126872&amp;start=30#</a></p>
 </article>
@@ -280,6 +281,12 @@ newgrp plugdev
     
       
       
+      <a class="ui label" href="/tags/mozilla/" title="Mozilla">
+        Mozilla
+      </a>
+    
+      
+      
       <a class="ui label" href="/tags/notes/" title="Notes">
         Notes
       </a>
@@ -288,6 +295,12 @@ newgrp plugdev
       
       <a class="ui label" href="/tags/pinephone/" title="Pinephone">
         Pinephone
+      </a>
+    
+      
+      
+      <a class="ui label" href="/tags/thunderbird/" title="Thunderbird">
+        Thunderbird
       </a>
     
   </section>
@@ -451,6 +464,10 @@ newgrp plugdev
             
             </div>
           </div>
+        
+      
+        
+
         
       
         

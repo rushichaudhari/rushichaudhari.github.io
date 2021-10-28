@@ -19,7 +19,7 @@ Which had fields like To get started we need to capture the request. I&amp;rsquo
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/" />
 
@@ -29,8 +29,9 @@ Which had fields like To get started we need to capture the request. I&amp;rsquo
 I had created a google form using the default template shown below.
 Which had fields like To get started we need to capture the request. I&rsquo;ve used burp suite tool to capture, there are many alternative tools you can google." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+
+
 
 
 
@@ -182,9 +183,9 @@ Which had fields like To get started we need to capture the request. I&rsquo;ve 
 <iframe width="917" height="516" src="https://www.youtube.com/embed/gZtuqbEE6aY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h2 id="the-code">The CODE</h2>
 <p>For the URL to send request, replace the &lsquo;/viewform&rsquo; from the original URL when you open the form manually in browser with &lsquo;/formResponse&rsquo;,  In my case</p>
-<pre><code class="language-{r," data-lang="{r,">URL = &quot;https://docs.google.com/forms/d/e/1FAIpQLSc11NqG6fWqNn327qdb479z6QTrmC7QEwbvH7sB-CQ59iA_ZQ/formResponse&quot;
+<pre tabindex="0"><code class="language-{r," data-lang="{r,">URL = &quot;https://docs.google.com/forms/d/e/1FAIpQLSc11NqG6fWqNn327qdb479z6QTrmC7QEwbvH7sB-CQ59iA_ZQ/formResponse&quot;
 </code></pre><p>Copy the raw_headers which you get from burpsuite</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">raw_headers<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;&#39;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">raw_headers<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;&#39;
 </span><span style="color:#e6db74">Host: docs.google.com
 </span><span style="color:#e6db74">User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:77.0) Gecko/20100101 Firefox/77.0
 </span><span style="color:#e6db74">Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
@@ -199,27 +200,27 @@ Which had fields like To get started we need to capture the request. I&rsquo;ve 
 </span><span style="color:#e6db74">Upgrade-Insecure-Requests: 1
 </span><span style="color:#e6db74">&#39;&#39;&#39;</span>
 </code></pre></div><p>Cleaning and converting of the raw_headers into a dictionary</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">headrs<span style="color:#f92672">=</span> dict([[h<span style="color:#f92672">.</span>partition(<span style="color:#e6db74">&#39;:&#39;</span>)[<span style="color:#ae81ff">0</span>], h<span style="color:#f92672">.</span>partition(<span style="color:#e6db74">&#39;:&#39;</span>)[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>strip()] <span style="color:#66d9ef">for</span> h <span style="color:#f92672">in</span> raw_headers<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;/n&#39;</span>)])
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">headrs<span style="color:#f92672">=</span> dict([[h<span style="color:#f92672">.</span>partition(<span style="color:#e6db74">&#39;:&#39;</span>)[<span style="color:#ae81ff">0</span>], h<span style="color:#f92672">.</span>partition(<span style="color:#e6db74">&#39;:&#39;</span>)[<span style="color:#ae81ff">2</span>]<span style="color:#f92672">.</span>strip()] <span style="color:#66d9ef">for</span> h <span style="color:#f92672">in</span> raw_headers<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;/n&#39;</span>)])
 
 <span style="color:#75715e">#removing cookie and blank keys</span>
 <span style="color:#66d9ef">del</span> headrs[<span style="color:#e6db74">&#39;Cookie&#39;</span>]
 <span style="color:#66d9ef">del</span> headrs[<span style="color:#e6db74">&#39;&#39;</span>]
 </code></pre></div><p>Similarly raw_data is data sent as shown in burpsuite, copy that into raw_data</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">raw_data<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;entry.2092238618=test1&amp;entry.1556369182=test1</span><span style="color:#e6db74">%40g</span><span style="color:#e6db74">mail.com&amp;entry.479301265=asdasd&amp;entry.1753222212=Day+1&amp;entry.1753222212=Day+3&amp;entry.588393791=Vegetarian&amp;entry.2109138769=Yes&amp;entry.1753222212_sentinel=&amp;entry.588393791_sentinel=&amp;entry.2109138769_sentinel=&amp;fvv=1&amp;draftResponse=%5Bnull%2Cnull%2C</span><span style="color:#e6db74">%225050709467963863140%</span><span style="color:#e6db74">22%5D%0D%0A&amp;pageHistory=0&amp;fbzx=5050709467963863140&#39;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">raw_data<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;entry.2092238618=test1&amp;entry.1556369182=test1</span><span style="color:#e6db74">%40g</span><span style="color:#e6db74">mail.com&amp;entry.479301265=asdasd&amp;entry.1753222212=Day+1&amp;entry.1753222212=Day+3&amp;entry.588393791=Vegetarian&amp;entry.2109138769=Yes&amp;entry.1753222212_sentinel=&amp;entry.588393791_sentinel=&amp;entry.2109138769_sentinel=&amp;fvv=1&amp;draftResponse=%5Bnull%2Cnull%2C</span><span style="color:#e6db74">%225050709467963863140%</span><span style="color:#e6db74">22%5D%0D%0A&amp;pageHistory=0&amp;fbzx=5050709467963863140&#39;</span>
 
 </code></pre></div><p>The raw_data is <a href="https://www.w3schools.com/tags/ref_urlencode.ASP">url-encoded</a>, we need to url-decode it first</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">raw_data<span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>parse<span style="color:#f92672">.</span>unquote(raw_data)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python">raw_data<span style="color:#f92672">=</span> urllib<span style="color:#f92672">.</span>parse<span style="color:#f92672">.</span>unquote(raw_data)
 </code></pre></div><p>Cleaning and fetching the keys of raw_data</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">raw_data<span style="color:#f92672">=</span>raw_data<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;&amp;&#39;</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">raw_data<span style="color:#f92672">=</span>raw_data<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;&amp;&#39;</span>)
 data<span style="color:#f92672">=</span>{}
 <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> raw_data[:<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>]:
     data[x<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;=&#39;</span>)[<span style="color:#ae81ff">0</span>]]<span style="color:#f92672">=</span>x<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#39;=&#39;</span>)[<span style="color:#ae81ff">1</span>]
 
 data<span style="color:#f92672">=</span> {k: v <span style="color:#66d9ef">for</span> k, v <span style="color:#f92672">in</span> data<span style="color:#f92672">.</span>items() <span style="color:#66d9ef">if</span> v <span style="color:#f92672">is</span> <span style="color:#f92672">not</span> <span style="color:#e6db74">&#39;&#39;</span>}
-<span style="color:#66d9ef">print</span>(data<span style="color:#f92672">.</span>keys())
+print(data<span style="color:#f92672">.</span>keys())
 </code></pre></div><p>Next we generate a custom dictionary with the keys fetched and their respective values as custom values</p>
 <p><strong>Note:-</strong> For multiple values like checkboxes we can also pass as a list like <strong>&lsquo;entry.1753222212&rsquo;: [&lsquo;Day 1&rsquo;, &lsquo;Day 3&rsquo;]</strong> here.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#f92672">=</span> {
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">data <span style="color:#f92672">=</span> {
         <span style="color:#e6db74">&#34;entry.2092238618&#34;</span>:<span style="color:#e6db74">&#34;johnwick&#34;</span>,
         <span style="color:#e6db74">&#39;entry.1556369182&#39;</span>: <span style="color:#e6db74">&#39;johnw@gmail.com&#39;</span>,
         <span style="color:#e6db74">&#39;entry.479301265&#39;</span>: <span style="color:#e6db74">&#39;dheknyasorg&#39;</span>,
@@ -228,12 +229,12 @@ data<span style="color:#f92672">=</span> {k: v <span style="color:#66d9ef">for</
         <span style="color:#e6db74">&#39;entry.2109138769&#39;</span>: <span style="color:#e6db74">&#39;Yes&#39;</span>,
     }
 </code></pre></div><p>Now everything is ready, we only need to send a post request with our parameters.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># sending post request and saving response as response object </span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Python" data-lang="Python"><span style="color:#75715e"># sending post request and saving response as response object </span>
 r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(url <span style="color:#f92672">=</span> URL, data <span style="color:#f92672">=</span> data, headers<span style="color:#f92672">=</span>headrs) 
 
 <span style="color:#75715e"># status 200=success </span>
 resp <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>status_code 
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;The ResponseL is:</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">%</span>resp) 
+print(<span style="color:#e6db74">&#34;The ResponseL is:</span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">%</span>resp) 
 </code></pre></div><p>A response would get recorded in the google form if status_code is 200.</p>
 <p>Full code here <a href="https://github.com/rushic24/Automating-Forms-Google-Forms/tree/master/Method2-%20Post%20Requests">https://github.com/rushic24/Automating-Forms-Google-Forms/tree/master/Method2-%20Post%20Requests</a></p>
 </article>
@@ -352,6 +353,12 @@ resp <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>s
     
       
       
+      <a class="ui label" href="/tags/mozilla/" title="Mozilla">
+        Mozilla
+      </a>
+    
+      
+      
       <a class="ui label" href="/tags/notes/" title="Notes">
         Notes
       </a>
@@ -360,6 +367,12 @@ resp <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>s
       
       <a class="ui label" href="/tags/pinephone/" title="Pinephone">
         Pinephone
+      </a>
+    
+      
+      
+      <a class="ui label" href="/tags/thunderbird/" title="Thunderbird">
+        Thunderbird
       </a>
     
   </section>
@@ -523,6 +536,10 @@ resp <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>s
             
             </div>
           </div>
+        
+      
+        
+
         
       
         

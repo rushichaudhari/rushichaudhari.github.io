@@ -18,7 +18,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/" />
 
@@ -27,8 +27,9 @@
 <meta property="og:description" content="We Need  RTL SDR Dongle RTL SDR Software Computer  SDR works by receiving a analogue radio signal and then using an analog to digital converter to digitalise the signal. The digitalised signal can then be worked in digital processing software. We need GQRX -&gt; osx/ linux git clone https://github.com/csete/gqrx.git cd gqrx mkdir build cd build qmake .. make make install
  sudo apt-get update sudo apt install git cmake libusb-1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+
+
 
 
 
@@ -167,7 +168,7 @@
 <li>RTL SDR Software</li>
 <li>Computer</li>
 </ol>
-<pre><code>SDR works by receiving a analogue radio signal and then using an analog to digital converter to  digitalise the signal. The digitalised signal can then be worked in digital processing software.
+<pre tabindex="0"><code>SDR works by receiving a analogue radio signal and then using an analog to digital converter to  digitalise the signal. The digitalised signal can then be worked in digital processing software.
 
 We need
 GQRX  -&gt; osx/ linux
@@ -179,22 +180,22 @@ cd build
 qmake ..
 make
 make install</p>
-<pre><code>
+<pre tabindex="0"><code>
 </code></pre><p>sudo apt-get update
 sudo apt install git cmake libusb-1.0-0.dev build-essential</p>
-<pre><code>
+<pre tabindex="0"><code>
 ### Rtl2832u- osmocom driver
 </code></pre><p>git clone <a href="https://github.com/osmocom/rtl-sdr">https://github.com/osmocom/rtl-sdr</a>
 cd rtl-sdr
 mkdir build cd build cmake ..
 make
 make install</p>
-<pre><code>
+<pre tabindex="0"><code>
 ## Examples of rtl_fm used
 RTL_FM needs to be piped into an auto player that can play raw_audio such as sox or aplay
 </code></pre><p>sudo apt install sox
 rtl_fm -M wbfm -f 91.10M | play -r 32000 -t raw -e s -b 16 -c 1 -V1</p>
-<pre><code>
+<pre tabindex="0"><code>
 ## Calibrating RTL-SDR
 
 rtl-sdr is mass chinese manufactured device with poor crystal tolerance.
@@ -211,7 +212,7 @@ kalibrate is a linux tool to auto calibrate. It requires that there are local GS
 GSM signals are used because they transmit frequency correction data which calibrate can use to determine the clock offset.
 Let us scan for gsm 900 bands with 50db gain
 </code></pre><p>kal -s GSM900 -g 50 #using this you will get the offset range</p>
-<pre><code>
+<pre tabindex="0"><code>
 | GENERAL FREQUENCIES | Mhz  |
 | ------------- |:-------------:|
 |Amateur Radio  | 0.535-1605    |
@@ -368,6 +369,12 @@ In aviation, ACARS is a digital communication system for transmission of short m
     
       
       
+      <a class="ui label" href="/tags/mozilla/" title="Mozilla">
+        Mozilla
+      </a>
+    
+      
+      
       <a class="ui label" href="/tags/notes/" title="Notes">
         Notes
       </a>
@@ -376,6 +383,12 @@ In aviation, ACARS is a digital communication system for transmission of short m
       
       <a class="ui label" href="/tags/pinephone/" title="Pinephone">
         Pinephone
+      </a>
+    
+      
+      
+      <a class="ui label" href="/tags/thunderbird/" title="Thunderbird">
+        Thunderbird
       </a>
     
   </section>
@@ -539,6 +552,10 @@ In aviation, ACARS is a digital communication system for transmission of short m
             
             </div>
           </div>
+        
+      
+        
+
         
       
         

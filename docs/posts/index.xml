@@ -106,6 +106,16 @@ LSTMS predict T+1th term by previous k terms of time-series say k=2 So we need t
     </item>
     
     <item>
+      <title>My Thunderbird config</title>
+      <link>https://rushichaudhari.github.io/posts/2021-10-29-mythunderbird-config/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-10-29-mythunderbird-config/</guid>
+      <description>Why thunderbird?  Opensource Can write and export email filters  Extensions:  Disable sort  To quickly find all your filter setting files on Linux, run
+find ~/.thunderbird/ -name msgFilterRules.dat </description>
+    </item>
+    
+    <item>
       <title>Not authorized to perform this operation</title>
       <link>https://rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

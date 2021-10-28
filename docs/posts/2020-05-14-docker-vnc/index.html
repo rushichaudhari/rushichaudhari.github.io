@@ -19,7 +19,7 @@ aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils do
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.88.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/" />
 
@@ -29,8 +29,9 @@ aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils do
 Let us create a light-weight custom image with the tools needed. The following are the tools which I think are commonly used in kali you can add/remove a few from that list.
 aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils dos2unix enum4linux exploitdb ftp git gobuster hashcat hping3 hydra impacket-scripts john joomscan masscan metasploit-framework mimikatz nasm ncat netcat-traditional nikto nmap patator php powersploit proxychains python-pip python2 python3 recon-ng responder samba samdump2 smbclient smbmap snmp socat sqlmap sslscan theharvester vim wafw00f weevely wfuzz whois wordlists wpscan Creating Dockerfile" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+
+
 
 
 
@@ -167,7 +168,7 @@ aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils do
       <article class="main"><h3 id="this-guide-assumes-you-already-know-what-is-docker-and-docker-vncviewer-installed-on-your-system">This guide assumes you already know what is docker and docker, vncviewer installed on your system</h3>
 <p>The docker image given at <a href="https://hub.docker.com/search?q=&amp;type=image">https://hub.docker.com/search?q=&amp;type=image</a> is a blank kali image with 0 tools.</p>
 <p>Let us create a light-weight custom image with the tools needed. The following are the tools which I think are commonly used in kali you can add/remove a few from that list.</p>
-<pre><code>aircrack-ng
+<pre tabindex="0"><code>aircrack-ng
 crackmapexec
 crunch
 curl
@@ -223,7 +224,7 @@ wordlists
 wpscan
 </code></pre><p>Creating <b>Dockerfile</b></p>
 <p>The default password set for the VNC is 1234</p>
-<pre><code># Dockerfile kali-light
+<pre tabindex="0"><code># Dockerfile kali-light
 
 # Official base image
 FROM kalilinux/kali-rolling
@@ -257,14 +258,14 @@ WORKDIR /root
 <p><code>docker build -t mykali-light .</code></p>
 <h2 id="creating-the-host-data-volume">Creating the Host Data Volume</h2>
 <p>We need to create a shared directory to share data in the container. So whatever we paste inside ~/container-data will be available inside /root/data inside docker container.</p>
-<pre><code>mkdir ~/container-data
+<pre tabindex="0"><code>mkdir ~/container-data
 </code></pre><h2 id="running-docker-container">Running docker container</h2>
-<pre><code>docker run -p 5900:5900 --rm -i -t -v ~/container-data:/root/data/ mykali-light 
+<pre tabindex="0"><code>docker run -p 5900:5900 --rm -i -t -v ~/container-data:/root/data/ mykali-light 
 </code></pre><h2 id="connect-with-vnc-on-the-host-machine">Connect with VNC on the host machine</h2>
 <p><img src="../../img/2020-05-14-Docker-VNC/image-20200514151415924.png" alt="image-20200514151415924"></p>
 <p><img src="../../img/2020-05-14-Docker-VNC/image-20200514151439585.png" alt="image-20200514151439585"></p>
 <h4 id="inside-the-white-console-start-xfce4-session">Inside the white console start xfce4 session</h4>
-<pre><code>startxfce4
+<pre tabindex="0"><code>startxfce4
 </code></pre><p><img src="../../img/2020-05-14-Docker-VNC/image-20200514145259098.png" alt="image-20200514145259098"></p>
 <p><img src="../../img/2020-05-14-Docker-VNC/image-20200514151538620.png" alt="image-20200514151538620"></p>
 </article>
@@ -385,6 +386,12 @@ WORKDIR /root
     
       
       
+      <a class="ui label" href="/tags/mozilla/" title="Mozilla">
+        Mozilla
+      </a>
+    
+      
+      
       <a class="ui label" href="/tags/notes/" title="Notes">
         Notes
       </a>
@@ -393,6 +400,12 @@ WORKDIR /root
       
       <a class="ui label" href="/tags/pinephone/" title="Pinephone">
         Pinephone
+      </a>
+    
+      
+      
+      <a class="ui label" href="/tags/thunderbird/" title="Thunderbird">
+        Thunderbird
       </a>
     
   </section>
@@ -556,6 +569,10 @@ WORKDIR /root
             
             </div>
           </div>
+        
+      
+        
+
         
       
         
