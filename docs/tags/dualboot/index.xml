@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dualboot on A collection of random ideas so I don&#39;t have to google again</title>
+    <link>https://rushichaudhari.github.io/tags/dualboot/</link>
+    <description>Recent content in dualboot on A collection of random ideas so I don&#39;t have to google again</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/dualboot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Enable Secure Boot on Dualboot</title>
+      <link>https://rushichaudhari.github.io/posts/2021-11-01-enable-secure-boot-on-dualboot/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-11-01-enable-secure-boot-on-dualboot/</guid>
+      <description>Repo to https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Using_a_signed_boot_loader
+Tips  preloader-signed works with systemd boot If you have grub and want to move to systemd-boot refer this  </description>
+    </item>
+    
+  </channel>
+</rss>

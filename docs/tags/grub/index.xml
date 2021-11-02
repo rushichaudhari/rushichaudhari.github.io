@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>grub on A collection of random ideas so I don&#39;t have to google again</title>
+    <link>https://rushichaudhari.github.io/tags/grub/</link>
+    <description>Recent content in grub on A collection of random ideas so I don&#39;t have to google again</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/grub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Switch to Systemd From Grub</title>
+      <link>https://rushichaudhari.github.io/posts/2021-11-01-switch-to-systemd-from-grub/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-11-01-switch-to-systemd-from-grub/</guid>
+      <description>I have two efi partitions, p1 for windows and p4 for Arch
+sudo fdisk -l
+Add the efi entry in /etc/fstab
+get the UUID from sudo blkid
+Mount the /efi
+sudo mount /efi &amp;amp;&amp;amp; ls /efi
+The structure would look something like
+Install ucode for my amd machine it is
+sudo pacman -S amd-ucode
+Reinstall linux kernel
+sudo pacman -S linux linux-headers
+mkinitcpio -P
+Add the following in
+sudo nano /efi/loader/entries/arch.</description>
+    </item>
+    
+  </channel>
+</rss>

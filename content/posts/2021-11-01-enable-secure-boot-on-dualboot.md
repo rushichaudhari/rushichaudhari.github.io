@@ -9,6 +9,9 @@ tags: [boot, secure, dual, dualboot]
 
 ---
 
+
+## Repo to
+
 [https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Using_a_signed_boot_loader](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Using_a_signed_boot_loader)
 
 
