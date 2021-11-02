@@ -148,6 +148,21 @@ LSTMS predict T+1th term by previous k terms of time-series say k=2 So we need t
     </item>
     
     <item>
+      <title>Ml Pipelines on Kubeflow on Localhost</title>
+      <link>https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/</guid>
+      <description>What is Vagrant ? https://www.janbasktraining.com/blog/vagrant-tutorial/
+Install Vagrant
+sudo pacman -S vagrant vagrant plugin install vagrant-vbguest vagrant-share Note: There is also vagrant libvirt plugin for qemu
+vagrant plugin install vagrant-libvirt but this doesn&amp;rsquo;t work with kubeflow
+Install virtualbox
+sudo pacman -S virtualbox  for the linux kernel, choose virtualbox-host-modules-arch for any other kernel (including linux-lts), choose virtualbox-host-dkms  Load the vbox drv module
+sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot of space (50GB+)</description>
+    </item>
+    
+    <item>
       <title>My Thunderbird config</title>
       <link>https://rushichaudhari.github.io/posts/2021-10-29-mythunderbird-config/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>pinephone | A collection of random ideas so I don&#39;t have to google again</title>
+    <title>Ml Pipelines on Kubeflow on Localhost | A collection of random ideas so I don&#39;t have to google again</title>
 
     
 <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,19 +13,33 @@
 
 
 <meta name="author" content="rushi" />
-<meta name="description" content="" />
+<meta name="description" content="What is Vagrant ? https://www.janbasktraining.com/blog/vagrant-tutorial/
+Install Vagrant
+sudo pacman -S vagrant vagrant plugin install vagrant-vbguest vagrant-share Note: There is also vagrant libvirt plugin for qemu
+vagrant plugin install vagrant-libvirt but this doesn&amp;rsquo;t work with kubeflow
+Install virtualbox
+sudo pacman -S virtualbox  for the linux kernel, choose virtualbox-host-modules-arch for any other kernel (including linux-lts), choose virtualbox-host-dkms  Load the vbox drv module
+sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot of space (50GB&#43;)" />
 
 
 
 <meta name="generator" content="Hugo 0.88.1" />
 
-<link rel="canonical" href="https://rushichaudhari.github.io/tags/pinephone/" />
+<link rel="canonical" href="https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/" />
 
 
-<meta property="og:title" content="pinephone" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://rushichaudhari.github.io/tags/pinephone/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:title" content="Ml Pipelines on Kubeflow on Localhost" />
+<meta property="og:description" content="What is Vagrant ? https://www.janbasktraining.com/blog/vagrant-tutorial/
+Install Vagrant
+sudo pacman -S vagrant vagrant plugin install vagrant-vbguest vagrant-share Note: There is also vagrant libvirt plugin for qemu
+vagrant plugin install vagrant-libvirt but this doesn&rsquo;t work with kubeflow
+Install virtualbox
+sudo pacman -S virtualbox  for the linux kernel, choose virtualbox-host-modules-arch for any other kernel (including linux-lts), choose virtualbox-host-dkms  Load the vbox drv module
+sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot of space (50GB&#43;)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+
+
 
 
 
@@ -33,8 +47,14 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
-<meta name="twitter:title" content="pinephone"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Ml Pipelines on Kubeflow on Localhost"/>
+<meta name="twitter:description" content="What is Vagrant ? https://www.janbasktraining.com/blog/vagrant-tutorial/
+Install Vagrant
+sudo pacman -S vagrant vagrant plugin install vagrant-vbguest vagrant-share Note: There is also vagrant libvirt plugin for qemu
+vagrant plugin install vagrant-libvirt but this doesn&rsquo;t work with kubeflow
+Install virtualbox
+sudo pacman -S virtualbox  for the linux kernel, choose virtualbox-host-modules-arch for any other kernel (including linux-lts), choose virtualbox-host-dkms  Load the vbox drv module
+sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot of space (50GB&#43;)"/>
 
 
 <link rel="stylesheet" href="/css/semantic.min.css" />
@@ -86,7 +106,17 @@
   
 </style>
 
-     
+    
+
+
+  
+    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
+  
+
+
+
+
+
   </head>
 
   <body class="default">
@@ -115,7 +145,115 @@
           <div class="dream-max-width">
             
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui attached segment">
+      <header>
+        <h1 class="ui large header">
+          Ml Pipelines on Kubeflow on Localhost
+          <div class="sub header">
+            @
+            
+              
+                rushi
+              
+            
+
+            | 
+                Monday, Jan 1, 0001
+              
+
+            | 1 minutes read
+
+            | Update at
+              
+                Monday, Jan 1, 0001
+              
+          </div>
+        </h1>
+      </header>
+
+      <article class="main"><h2 id="what-is-vagrant-">What is Vagrant ?</h2>
+<p><a href="https://www.janbasktraining.com/blog/vagrant-tutorial/">https://www.janbasktraining.com/blog/vagrant-tutorial/</a></p>
+<p>Install Vagrant</p>
+<pre tabindex="0"><code>sudo pacman -S vagrant
+</code></pre><pre tabindex="0"><code>vagrant plugin install vagrant-vbguest vagrant-share
+</code></pre><p><strong>Note</strong>: There is also vagrant libvirt plugin for qemu</p>
+<pre tabindex="0"><code>vagrant plugin install vagrant-libvirt
+</code></pre><p>but this doesn&rsquo;t work with kubeflow</p>
+<p>Install virtualbox</p>
+<pre tabindex="0"><code>sudo pacman -S virtualbox
+</code></pre><ul>
+<li>for the linux kernel, choose virtualbox-host-modules-arch</li>
+<li>for any other kernel (including linux-lts), choose virtualbox-host-dkms</li>
+</ul>
+<p>Load the vbox drv module</p>
+<pre tabindex="0"><code>sudo modprobe vboxdrv
+</code></pre><p>Make sure to put path for Virtualbox where you have a lot of space (50GB+)</p>
+<p><img src="../../static/img/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/2021-11-01-23-08-45.png" alt=""></p>
+<p>Also give vagrant config sufficient space</p>
+<pre tabindex="0"><code>sudo export VAGRANT_HOME=/mnt/hdd2/Documents/.vagrant.d/
+</code></pre><pre tabindex="0"><code>mkdir kubeproj &amp;&amp; cd kubeproj
+</code></pre><p>Initialize minikf</p>
+<pre tabindex="0"><code>vagrant init arrikto/minikf
+</code></pre><pre tabindex="0"><code>vagrant up --provider='virtualbox' #not libvirtd
+</code></pre></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
+      
+          <a class="ui label">No Tags</a>
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/rushichaudhari.github.io\/posts\/2021-11-01-ml-pipelines-on-kubeflow-on-localhost\/';  
+            this.page.identifier = '\/posts\/2021-11-01-ml-pipelines-on-kubeflow-on-localhost\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'rushichaudhari' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+    
+    
+
+    
+
+  </div>
+  <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
+    
+    
+      <div class="ui segment toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-vagrant-">What is Vagrant ?</a></li>
+  </ul>
+</nav>
+      </div>
+    
+
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -591,46 +729,7 @@
   </section>
 </article>
 
-  </div>
-
-  
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-09-12-nmcli-enterprise-wifi/">
-    
-      <img src="/img/default1.jpg" alt="Adding wifi connection without GUI for enterprise wifi like at universities/ offices with PEAP" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="/posts/2021-09-12-nmcli-enterprise-wifi/">Adding wifi connection without GUI for enterprise wifi like at universities/ offices with PEAP</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Monday, Jan 1, 0001</p>
-    </div>
-    <div class="description">
-      # nmcli con add type wifi ifname wlan0 con-name CONNECTION_NAME ssid SSID # nmcli con edit id CONNECTION_NAME nmcli&gt; set ipv4.method auto nmcli&gt; set 802-1x.eap peap nmcli&gt; set 802-1x.phase2-auth mschapv2 nmcli&gt; set 802-1x.identity USERNAME nmcli&gt; set 802-1x.password PASSWORD nmcli&gt; set wifi-sec.key-mgmt wpa-eap nmcli&gt; save nmcli&gt; activate 
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-
-  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-    
-
-
-
-  </div>
+  </aside>
 </div>
 
           </div>
@@ -770,30 +869,6 @@
   </section>
 
   
-    
-      <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
-        <footer class="ui segment">
-          <div id="disqus_thread"></div>
-          <script>
-            
-
-
-            var disqus_config = function () {
-              this.page.url = 'https:\/\/rushichaudhari.github.io\/tags\/pinephone\/';  
-              this.page.identifier = '/'; 
-            };
-
-            (function() { 
-              var d = document, s = d.createElement('script');
-              s.src = 'https://' + 'rushichaudhari' + '.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </footer>
-      </section>
-    
   
 </div>
 
@@ -837,9 +912,35 @@
 <script src="/js/theme.js"></script>
 
     
-<script src="/js/imagesloaded.pkgd.min.js"></script>
-<script src="/js/masonry.pkgd.min.js"></script>
-<script src="/js/grid.js"></script>
+<script src="/js/html2canvas.min.js"></script>
+<script src="/js/post.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+     
+  
+
+  <script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    var lightTheme = "gruvbox-light"
+    var darkTheme = "gruvbox-dark"
+    var theme = isDark ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark ? '#333' : '')
+  }
+</script>
+
+
+
 
 
     
