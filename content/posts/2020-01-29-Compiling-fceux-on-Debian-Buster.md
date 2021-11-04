@@ -1,11 +1,15 @@
 ---
 layout: post
-title: 'Compiling fceux on Debian 10 buster'
+title: Compiling fceux on Debian 10 buster
 author: rushi
-categories: [emulator, snes, linux]
+categories:
+  - emulator
+  - snes
+  - linux
 cover: 'https://em.lbbcdn.com/wp-content/uploads/2014/05/fceux-logo-transparent.png'
 featured: false
 hidden: false
+id: 887287
 ---
 
 I came across this wonderful video <a href="https://www.youtube.com/watch?v=qv6UVOQ0F44">https://www.youtube.com/watch?v=qv6UVOQ0F44</a>. It took me into searching for its code to implement that. And here are a few.

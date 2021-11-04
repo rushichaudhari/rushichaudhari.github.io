@@ -1,10 +1,12 @@
 ---
 layout: post
-title: 'To what extent can I get Indian Veg Food in Boston'
+title: To what extent can I get Indian Veg Food in Boston
 author: rushi
-categories: [food, vegetarian]
-cover: '/img/2020-01-05-A-vegetarians-guide-in-boston/foodbanner.jpg'
-# tags: []
+categories:
+  - food
+  - vegetarian
+cover: /img/2020-01-05-A-vegetarians-guide-in-boston/foodbanner.jpg
+id: 887288
 ---
 
 <p><span style="font-size:35px;">U</span>nfortunately only 3-4% of citizens in the US are vegetarian. After rambling around nearby streets, I got to know veg stuff was obscured everywhere. Even Subway/McDonald's were no exception. So here is a dynamic N00Bs guide in becoming a Masterchef with vegetarian things available in Boston.<p>
