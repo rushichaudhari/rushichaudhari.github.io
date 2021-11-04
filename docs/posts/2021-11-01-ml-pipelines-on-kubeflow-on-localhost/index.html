@@ -190,14 +190,14 @@ sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot 
 <p>Load the vbox drv module</p>
 <pre tabindex="0"><code>sudo modprobe vboxdrv
 </code></pre><p>Make sure to put path for Virtualbox where you have a lot of space (50GB+)</p>
-<p><img src="../../img/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/2021-11-01-23-08-45.png" alt=""></p>
+<p><img src="/img/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/2021-11-01-23-08-45.png" alt=""></p>
 <p>Also give vagrant config sufficient space</p>
 <pre tabindex="0"><code>sudo export VAGRANT_HOME=/mnt/hdd2/Documents/.vagrant.d/
 </code></pre><pre tabindex="0"><code>mkdir kubeproj &amp;&amp; cd kubeproj
 </code></pre><p>Initialize minikf</p>
 <pre tabindex="0"><code>vagrant init arrikto/minikf
 </code></pre><p>create this file #necessary for virtualbox on Arch <a href="https://discuss.hashicorp.com/t/vagrant-2-2-18-osx-11-6-cannot-create-private-network/30984">source</a></p>
-<p><img src="img/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/2021-11-02-13-22-19.png" alt=""></p>
+<p><img src="/img/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/2021-11-02-13-22-19.png" alt=""></p>
 <pre tabindex="0"><code>vagrant up --provider='virtualbox' #not libvirtd
 </code></pre></article>
     </section>
