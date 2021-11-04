@@ -27,7 +27,7 @@ But...
 
 After a look into Network section I found something interesting.
 
-![image-20200702112605039](\img\2020-06-28-Trading-View-Scraping\image-20200702112605039.png)
+![image-20200702112605039](/img/2020-06-28-Trading-View-Scraping/image-20200702112605039.png)
 
 **websockets !!!**
 
