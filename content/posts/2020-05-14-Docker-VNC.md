@@ -1,12 +1,16 @@
 ---
 layout: post
-title:  "A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds"
+title: A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds
 author: rushi
-categories: [kali, docker, linux, VNC]
-cover: "/img/2020-05-14-Docker-VNC/image-20200514151538620.png"
+categories:
+  - kali
+  - docker
+  - linux
+  - VNC
+cover: /img/2020-05-14-Docker-VNC/image-20200514151538620.png
 featured: false
 hidden: false
-
+id: 887849
 ---
 
 
