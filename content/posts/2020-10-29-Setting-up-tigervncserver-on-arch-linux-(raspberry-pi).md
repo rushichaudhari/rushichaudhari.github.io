@@ -4,7 +4,7 @@ layout: post
 title:  "Setting up tigervncserver on arch linux (raspberry-pi)"
 author: rushi
 keywords: [vnc, tigervnc, arch]
-cover: "/img/2020-10-29-Setting-up-tigervncserver-on-arch-linux-(raspberry-pi)/fi_tigervnconarch.png"
+# cover: "/img/2020-10-29-Setting-up-tigervncserver-on-arch-linux-(raspberry-pi)/fi_tigervnconarch.png"
 featured: false
 hidden: false
 
