@@ -3,7 +3,7 @@ layout: post
 title: 'Running GUI apps from docker inside WSL2.0 as standalone application'
 author: rushi
 categories: [vpn, digitalocean]
-image: '/img/2020-08-19-DockerGUIwsl/spyderwsl.jpg'
+# cover: '/img/2020-08-19-DockerGUIwsl/spyderwsl.jpg'
 featured: true
 hidden: false
 ---

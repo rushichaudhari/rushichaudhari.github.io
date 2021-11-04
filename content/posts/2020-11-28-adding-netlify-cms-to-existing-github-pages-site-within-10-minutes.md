@@ -8,7 +8,7 @@ categories:
     - netlify
 featured: true
 hidden: false
-cover: /img/2020-08-19-DockerGUIwsl/spyderwsl.jpg
+# cover: /img/2020-08-19-DockerGUIwsl/spyderwsl.jpg
 ---
 
 <!--StartFragment-->
