@@ -8,13 +8,13 @@ featured: false
 hidden: false
 ---
 
-I came across this wonderful video <a href="https://www.youtube.com/watch?v=qv6UVOQ0F44">https://www.youtube.com/watch?v=qv6UVOQ0F44</a>. It took me into searching for its code to implement that. And here are a few.
+I came across this wonderful video [https://www.youtube.com/watch?v=qv6UVOQ0F44]("https://www.youtube.com/watch?v=qv6UVOQ0F44"). It took me into searching for its code to implement that. And here are a few.
 
 ##### https://github.com/Mario-brows/Brows-Super-Mario
 
 ##### https://github.com/lopatin96/Lua-SNES-GenNeurNetwork
 
-The main problem in them is they use <a href="https://github.com/h31nr1ch/BizHawk">BizHawk Emulator</a>, which I was not successful in compiling for my debian OS, Its stable only for windows machines. Then I found its alternative <a href="http://www.fceux.com/web/download.html">fceux</a> Which can handle lua scripts too!.
+The main problem in them is they use [BizHawk Emulator](https://github.com/h31nr1ch/BizHawk), which I was not successful in compiling for my debian OS, Its stable only for windows machines. Then I found its alternative [fceux](http://www.fceux.com/web/download.html) Which can handle lua scripts too!.
 
 The following steps are what I used to compile it successfully.
 
