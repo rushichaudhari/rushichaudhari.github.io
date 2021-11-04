@@ -165,15 +165,15 @@ Probably the data is being loaded up as SVG which is why it isn&rsquo;t being se
       <article class="main"><h1 id="how-i-webscraped-1-minute-stock-data-from-tradingview">How I webscraped 1 minute stock data from tradingview</h1>
 <p>After a long die-hard trying I managed to get 1 minute stock data for free. My previous tries were using selenium and beautifulsoup modules in python. But the data is highly obfuscated  so I was not able to find the exact HTML element to scrape. If you manage to do this using selenium please comment below.</p>
 <p>Probably the data is being loaded up as SVG which is why it isn&rsquo;t being seen in html inspect element.</p>
-<p><img src="/img/image-20200702112353396.png" alt="image-20200702112353396"></p>
+<p><img src="/img/2020-06-28-Trading-View-Scraping/image-20200702112353396.png" alt="image-20200702112353396"></p>
 <p>But&hellip;</p>
 <p>After a look into Network section I found something interesting.</p>
-<p><img src="%5Cimg%5C2020-06-28-Trading-View-Scraping%5Cimage-20200702112605039.png" alt="image-20200702112605039"></p>
+<p><img src="/img/2020-06-28-Trading-View-Scraping/image-20200702112605039.png" alt="image-20200702112605039"></p>
 <p><strong>websockets !!!</strong></p>
 <p>After observing the Headers</p>
-<p><img src="/img/image-20200702112714421.png" alt="image-20200702112714421"></p>
+<p><img src="/img/2020-06-28-Trading-View-Scraping/image-20200702112714421.png" alt="image-20200702112714421"></p>
 <p>And Messages</p>
-<p><img src="/img/image-20200702112933310.png" alt="image-20200702112933310"></p>
+<p><img src="/img/2020-06-28-Trading-View-Scraping/image-20200702112933310.png" alt="image-20200702112933310"></p>
 <p>I tried to send the same messages using websockets in python and it worked <strong>:)</strong> .</p>
 <p>Code at <a href="https://github.com/rushic24/tradingview-scraper">https://github.com/rushic24/tradingview-scraper</a>.</p>
 <h2 id="limitations">Limitations</h2>

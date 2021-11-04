@@ -21,7 +21,7 @@ After a long die-hard trying I managed to get 1 minute stock data for free. My p
 
 Probably the data is being loaded up as SVG which is why it isn't being seen in html inspect element. 
 
-![image-20200702112353396](/img/image-20200702112353396.png)
+![image-20200702112353396](/img/2020-06-28-Trading-View-Scraping/image-20200702112353396.png)
 
 But...
 
@@ -33,11 +33,11 @@ After a look into Network section I found something interesting.
 
 After observing the Headers 
 
-![image-20200702112714421](/img/image-20200702112714421.png)
+![image-20200702112714421](/img/2020-06-28-Trading-View-Scraping/image-20200702112714421.png)
 
 And Messages
 
-![image-20200702112933310](/img/image-20200702112933310.png)
+![image-20200702112933310](/img/2020-06-28-Trading-View-Scraping/image-20200702112933310.png)
 
 I tried to send the same messages using websockets in python and it worked **:)** .  
 
