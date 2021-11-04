@@ -21,4 +21,5 @@ jobs:
         files: 'content/posts/**/*.md'
         devto_key: ${{ secrets.DEVTO_TOKEN }}
         github_token: ${{ secrets.GH_TOKEN }}
+        branch: master
         conventional_commits: true
