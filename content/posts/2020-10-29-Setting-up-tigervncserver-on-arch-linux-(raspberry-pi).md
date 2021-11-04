@@ -70,4 +70,4 @@ $ sudo systemctl start vncserver@:1.service
 ```
 
 ## On tigervnc client
-![sadsad](../img/2020-10-29-Setting-up-tigervncserver-on-arch-linux-(raspberry-pi)/tigervncclient.png)
+![sadsad](/img/2020-10-29-Setting-up-tigervncserver-on-arch-linux-(raspberry-pi)/tigervncclient.png)

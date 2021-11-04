@@ -3,7 +3,7 @@ backend:
   repo: rushichaudhari/rushichaudhari.github.io
   branch: master
 publish_mode: editorial_workflow
-media_folder: "static/img"
+media_folder: "img"
 public_folder: "/img"
 collections:
   - name: "post"

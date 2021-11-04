@@ -12,7 +12,7 @@ hidden: false
 
 
 
-![46zcd9](static/img/2020-07-02-Automate-Forms-Without-Selenium/46zcd9.jpg)
+![46zcd9](img/2020-07-02-Automate-Forms-Without-Selenium/46zcd9.jpg)
 
 <span style="font-size:30px;">I</span>n the previous year, I had posted a script to fill google forms using selenium, and containerizing it with docker to run it parallelly. This is an alternative way to do the same using post requests.
 
@@ -20,13 +20,13 @@ I had created a google form using the default template shown below.
 
 
 
-![image-20200702100957610](static/img/2020-07-02-Automate-Forms-Without-Selenium/image-20200702100957610.png)
+![image-20200702100957610](img/2020-07-02-Automate-Forms-Without-Selenium/image-20200702100957610.png)
 
 
 
 #### Which had fields like
 
-![image-20200702101526822](static/img/2020-07-02-Automate-Forms-Without-Selenium/image-20200702101526822.png)
+![image-20200702101526822](img/2020-07-02-Automate-Forms-Without-Selenium/image-20200702101526822.png)
 
 
 
@@ -40,15 +40,15 @@ To get started we need to capture the request. I've used **burp suite** tool to 
 
 **Create a localhost proxy in burp**
 
-![image-20200702102944153](static/img/2020-07-02-Automate-Forms-Without-Selenium/image-20200702102944153.png)
+![image-20200702102944153](img/2020-07-02-Automate-Forms-Without-Selenium/image-20200702102944153.png)
 
 
 
 **Then in the browser settings, put the proxy as localhost**
 
-![2](static/img/2020-07-02-Automate-Forms-Without-Selenium/2.PNG)
+![2](img/2020-07-02-Automate-Forms-Without-Selenium/2.PNG)
 
-![3](static/img/2020-07-02-Automate-Forms-Without-Selenium/3.PNG)
+![3](img/2020-07-02-Automate-Forms-Without-Selenium/3.PNG)
 
 
 

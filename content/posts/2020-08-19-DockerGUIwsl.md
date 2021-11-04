@@ -35,15 +35,15 @@ https://sourceforge.net/projects/vcxsrv/
 
 After installing launch the **xlaunch.exe**, make sure disable access control is clicked to avoid permission error
 
-![https://techcommunity.microsoft.com/t5/image/serverpage/image-id/201596iBCB2B8DA889830E0/image-size/large?v=1.0&px=999](static/img/2020-08-19-DockerGUIwsl/disableaccesscontrol.jpg)
+![https://techcommunity.microsoft.com/t5/image/serverpage/image-id/201596iBCB2B8DA889830E0/image-size/large?v=1.0&px=999](img/2020-08-19-DockerGUIwsl/disableaccesscontrol.jpg)
 
 Also allow VcxSrv in the firewall
 
-![firewall.png](static/img/2020-08-19-DockerGUIwsl/firewall.jpg)
+![firewall.png](img/2020-08-19-DockerGUIwsl/firewall.jpg)
 
 Select multiple windows under display settings popup
 
-![image-20200819104058629](static/img/2020-08-19-DockerGUIwsl/image-20200819104058629.png)
+![image-20200819104058629](img/2020-08-19-DockerGUIwsl/image-20200819104058629.png)
 
 And start with no client.
 
@@ -81,7 +81,7 @@ Get the docker Image Id
 
 `sudo docker images`
 
-​ ![file://c:\users\h4x3d\appdata\local\temp\tmpzkddyn\1.png](static/img/2020-08-19-DockerGUIwsl/1.png)
+​ ![file://c:\users\h4x3d\appdata\local\temp\tmpzkddyn\1.png](img/2020-08-19-DockerGUIwsl/1.png)
 
 Run a new docker container using
 
@@ -122,17 +122,17 @@ Lets start gedit
 gedit
 ```
 
-![image-20200819110253538](static/img/2020-08-19-DockerGUIwsl/image-20200819110253538.png)
+![image-20200819110253538](img/2020-08-19-DockerGUIwsl/image-20200819110253538.png)
 
 ```
 chromium --no-sandbox
 ```
 
-![image-20200819110323238](static/img/2020-08-19-DockerGUIwsl/image-20200819110323238.png)
+![image-20200819110323238](img/2020-08-19-DockerGUIwsl/image-20200819110323238.png)
 
 `spyder3 `
 
-![image-20200819110354785](static/img/2020-08-19-DockerGUIwsl/image-20200819110354785.png)
+![image-20200819110354785](img/2020-08-19-DockerGUIwsl/image-20200819110354785.png)
 
 #### These all apps are not inside host windows neither inside WSL!!
 

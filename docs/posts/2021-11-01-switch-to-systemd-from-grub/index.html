@@ -196,14 +196,14 @@ sudo nano /efi/loader/entries/arch."/>
 
       <article class="main"><p>I have two efi partitions, p1 for windows and p4 for Arch</p>
 <p><code>sudo fdisk -l</code></p>
-<p><img src="static/img/2021-11-01-switch-to-systemd-from-grub/2021-11-01-20-04-58.png" alt="dsd"></p>
+<p><img src="img/2021-11-01-switch-to-systemd-from-grub/2021-11-01-20-04-58.png" alt="dsd"></p>
 <p>Add the efi entry in <code>/etc/fstab</code></p>
 <p>get the UUID from <code>sudo blkid</code></p>
-<p><img src="static/img/2021-11-01-switch-to-systemd-from-grub/2021-11-01-20-07-12.png" alt=""></p>
+<p><img src="img/2021-11-01-switch-to-systemd-from-grub/2021-11-01-20-07-12.png" alt=""></p>
 <p>Mount the /efi</p>
 <p><code>sudo mount /efi &amp;&amp; ls /efi</code></p>
 <p>The structure would look something like</p>
-<p><img src="static/img/2021-11-01-switch-to-systemd-from-grub/2021-11-01-20-10-09.png" alt=""></p>
+<p><img src="img/2021-11-01-switch-to-systemd-from-grub/2021-11-01-20-10-09.png" alt=""></p>
 <p>Install ucode
 for my amd machine it is</p>
 <p><code>sudo pacman -S amd-ucode</code></p>
@@ -213,7 +213,7 @@ for my amd machine it is</p>
 <p>Add the following in</p>
 <p><code>sudo nano /efi/loader/entries/arch.conf</code>
 (for more details <a href="https://wiki.archlinux.org/title/Systemd-boot#Loader_configuration">https://wiki.archlinux.org/title/Systemd-boot#Loader_configuration</a>)</p>
-<p><img src="static/img/2021-11-01-switch-to-systemd-from-grub/2021-11-01-20-16-30.png" alt=""></p>
+<p><img src="img/2021-11-01-switch-to-systemd-from-grub/2021-11-01-20-16-30.png" alt=""></p>
 <h3 id="reboot">Reboot!</h3>
 </article>
     </section>
