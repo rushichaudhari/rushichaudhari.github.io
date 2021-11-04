@@ -140,11 +140,11 @@ docker run -p 5900:5900 --rm -i -t -v ~/container-data:/root/data/ mykali-light
 
 ## Connect with VNC on the host machine
 
-![image-20200514151415924](../../img/2020-05-14-Docker-VNC/image-20200514151415924.png)
+![image-20200514151415924](static/img/2020-05-14-Docker-VNC/image-20200514151415924.png)
 
 
 
-![image-20200514151439585](../../img/2020-05-14-Docker-VNC/image-20200514151439585.png)
+![image-20200514151439585](static/img/2020-05-14-Docker-VNC/image-20200514151439585.png)
 
 
 
@@ -156,8 +156,8 @@ startxfce4
 
 
 
-![image-20200514145259098](../../img/2020-05-14-Docker-VNC/image-20200514145259098.png)
+![image-20200514145259098](static/img/2020-05-14-Docker-VNC/image-20200514145259098.png)
 
 
 
-![image-20200514151538620](../../img/2020-05-14-Docker-VNC/image-20200514151538620.png)
+![image-20200514151538620](static/img/2020-05-14-Docker-VNC/image-20200514151538620.png)

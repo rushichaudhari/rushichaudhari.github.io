@@ -20,4 +20,4 @@ https://github.com/rushic24/keep
 
 Add command: `keep new`
 
-![Example](../../img/2021-10-28-bookmark-linux-commands-keep/example1.png)
+![Example](static/img/2021-10-28-bookmark-linux-commands-keep/example1.png)
