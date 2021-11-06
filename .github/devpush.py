@@ -16,8 +16,8 @@ ALL_PREVIOUS_ARTICLES = requests.get(
 def check_if_article_exists(article):
     for a in ALL_PREVIOUS_ARTICLES:
         if a["title"] == article.title:
-            return True
-    return False
+            return a.id
+    return None
 
 
 class HugoArticle(object):
@@ -30,8 +30,7 @@ class HugoArticle(object):
             return ""
 
     def __init__(self, article, published=False, series=None):
-        # Get id, title, text and tags from hugo markdown files
-        self.id = article.id
+        # Get title, text and tags from hugo markdown files
         self.title = self.assign_if_not_none(article.metadata, "title")
         self.published = published
 
@@ -73,7 +72,8 @@ if __name__ == "__main__":
         this_dict = {"article": hugo_article.__dict__}
         data = json.dumps(this_dict)
 
-        if check_if_article_exists(hugo_article):
+        existing_post_id = check_if_article_exists(hugo_article)
+        if existing_post_id is not None:
             url=URL+"/"+hugo_article.id
             print(url)
             result = requests.put(
