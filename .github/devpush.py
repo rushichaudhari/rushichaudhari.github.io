@@ -45,6 +45,7 @@ class HugoArticle(object):
     def __init__(self, article, published=False, series=None):
         # Get title, text and tags from hugo markdown files
         self.title = self.assign_if_not_none(article.metadata, "title")
+        # Set this to truw if you want to post and publish the article without saving as draft
         self.published = published
 
         body_markdown = self.assign_if_not_none(article.content)
