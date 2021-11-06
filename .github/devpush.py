@@ -62,7 +62,6 @@ def get_article_from_file(filepath):
 if __name__ == "__main__":
     # execute only if run as a script
     print("Starting devpush")
-    url = URL
     files = glob.glob('content2/posts/*.md')
 
     sleeptime = 5
@@ -74,6 +73,8 @@ if __name__ == "__main__":
         data = json.dumps(this_dict)
 
         if check_if_article_exists(hugo_article):
+            url=URL+"/"+hugo_article.id
+            print(url)
             result = requests.put(
             url=url,
             json=json.loads(data),
@@ -81,7 +82,7 @@ if __name__ == "__main__":
             )
             print(result)
         else:
-            print(url=url+"/"+hugo_article.id)
+            url = URL
             result = requests.post(
                 url=url+"/"+hugo_article.id,
                 json=json.loads(data),
