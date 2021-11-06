@@ -10,13 +10,13 @@ URL = "https://dev.to/api/articles"
 
 ALL_PREVIOUS_ARTICLES = requests.get(
             url=URL+"/me/all",
-            headers={"api_key": 'U1NQsunnzVndq4gfrZ9tq4qm'},
+            headers={"api_key": os.environ["DEV_TO_API_KEY"]},
         ).json()
 
 def check_if_article_exists(article):
     for a in ALL_PREVIOUS_ARTICLES:
         if a["title"] == article.title:
-            print(a)
+            # print(a)
             return a['id']
     return None
 
@@ -61,9 +61,8 @@ def get_article_from_file(filepath):
 
 
 if __name__ == "__main__":
-    # execute only if run as a script
     print("Starting devpush")
-    files = glob.glob('content2/posts/*.md')
+    files = glob.glob('content/posts/*.md')
 
     sleeptime = 5
     print('DEVTO_TOKEN is ', os.environ["DEVTO_TOKEN"], os.environ["MARKDOWN_POSTS_PATH"], os.getcwd(), files)
@@ -76,18 +75,15 @@ if __name__ == "__main__":
         existing_post_id = check_if_article_exists(hugo_article)
         if existing_post_id is not None:
             url=URL+"/"+str(existing_post_id)
-            print(url)
             result = requests.put(
             url=url,
             json=json.loads(data),
             headers={"api_key": os.environ["DEVTO_TOKEN"]},
             )
-            print(result)
         else:
             result = requests.post(
                 url=URL,
                 json=json.loads(data),
                 headers={"api_key": os.environ["DEVTO_TOKEN"]},
             )
-            print(result.json())
         print(file)
