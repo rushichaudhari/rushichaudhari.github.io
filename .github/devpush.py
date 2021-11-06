@@ -99,14 +99,14 @@ if __name__ == "__main__":
                 json=json.loads(data),
                 headers={"api_key": os.environ["DEVTO_TOKEN"]},
                 )
-                print(result)
+                print(result.json())
             else:
                 result = requests.post(
                     url=URL,
                     json=json.loads(data),
                     headers={"api_key": os.environ["DEVTO_TOKEN"]},
                 )
-                print(result)
+                print(result.json())
             print(file)
         else:
             print(file, "no change")
