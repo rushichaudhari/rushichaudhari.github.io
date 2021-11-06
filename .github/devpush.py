@@ -58,11 +58,12 @@ class HugoArticle(object):
             body_markdown = body_markdown.replace(relative_image_path[1], image)
 
         self.body_markdown = body_markdown
-        self.tags = self.assign_if_not_none(article.metadata, "tags")
+        # dev.to doesn't allow more than 4 tags
+        self.tags = self.assign_if_not_none(article.metadata, "tags")[:4]
 
         # assign categories as tags if tags is none
         if self.tags is None:
-            self.tags = self.assign_if_not_none(article.metadata, "categories")
+            self.tags = self.assign_if_not_none(article.metadata, "categories")[:4]
 
         self.series = series
 
