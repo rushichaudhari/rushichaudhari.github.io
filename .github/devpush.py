@@ -53,7 +53,7 @@ if __name__ == "__main__":
     files = glob.glob('/content/posts/*.md')
 
     sleeptime = 5
-    print('devtotkej', os.environ["DEVTO_TOKEN"], os.environ["MARKDOWN_POSTS_PATH"], os.getcwd())
+    print('devtotkej', os.environ["DEVTO_TOKEN"], os.environ["MARKDOWN_POSTS_PATH"], os.getcwd(), files)
     for file in files:
         sleep(int(sleeptime))
         hugo_article = get_article_from_file(file)
