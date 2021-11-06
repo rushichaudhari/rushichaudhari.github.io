@@ -6,6 +6,11 @@ import os
 from time import sleep
 import re
 
+'''
+Hugo to DevTo
+This script transforms a Hugo article into a format that can be pushed to the DevTo server.
+'''
+
 URL = "https://dev.to/api/articles"
 
 ALL_PREVIOUS_ARTICLES = requests.get(
@@ -31,6 +36,7 @@ class HugoArticle(object):
             return ""
     
     def compare_already_existing_articles(self, title, body_markdown, tags):
+        # Set a flag no_change to skip POST/ PUT request if article already exists
         for a in ALL_PREVIOUS_ARTICLES:
             if "title" in a and "body_markdown" in a and a["title"] == title and  a["body_markdown"] == body_markdown:
                 return True
