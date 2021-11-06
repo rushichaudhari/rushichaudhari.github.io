@@ -52,9 +52,7 @@ if __name__ == "__main__":
     url = "https://dev.to/api/articles"
     files = glob.glob(os.environ["MARKDOWN_POSTS_PATH"])
 
-    sleeptime = os.environ["SLEEP_TIME"]
-    if not sleeptime:
-        sleeptime = 5
+    sleeptime = 5
 
     for file in files:
         sleep(int(sleeptime))
