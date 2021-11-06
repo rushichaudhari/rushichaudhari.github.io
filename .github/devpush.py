@@ -48,6 +48,7 @@ def get_article_from_file(filepath):
 
 if __name__ == "__main__":
     # execute only if run as a script
+    print("Starting devpush")
     url = "https://dev.to/api/articles"
     files = glob.glob(os.environ["MARKDOWN_POSTS_PATH"])
 
