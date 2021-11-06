@@ -16,6 +16,7 @@ ALL_PREVIOUS_ARTICLES = requests.get(
 def check_if_article_exists(article):
     for a in ALL_PREVIOUS_ARTICLES:
         if a["title"] == article.title:
+            print(a)
             return a.id
     return None
 
