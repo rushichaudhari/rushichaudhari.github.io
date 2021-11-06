@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
         existing_post_id = check_if_article_exists(hugo_article)
         if existing_post_id is not None:
-            url=URL+"/"+hugo_article.id
+            url=URL+"/"+existing_post_id
             print(url)
             result = requests.put(
             url=url,
@@ -84,9 +84,8 @@ if __name__ == "__main__":
             )
             print(result)
         else:
-            url = URL
             result = requests.post(
-                url=url+"/"+hugo_article.id,
+                url=URL,
                 json=json.loads(data),
                 headers={"api_key": os.environ["DEVTO_TOKEN"]},
             )
