@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "2021 11 06 Publishing HUGO Post to DevTo Using GitHub CI and CD Pipeline"
-date: November 6, 2021
+title: "Publishing HUGO Post to DevTo Using GitHub CI and CD Pipeline"
+date: 2021-11-06
 author: rushi
 cover: '/img/2021-11-06-Publishing-HUGO-Post-to-DevTo-using-GitHub-CI-and-CD-Pipeline/cover.png'
 # categories: []
