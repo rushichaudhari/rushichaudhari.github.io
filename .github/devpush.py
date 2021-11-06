@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
         existing_post_id = check_if_article_exists(hugo_article)
         if existing_post_id is not None:
-            url=URL+"/"+existing_post_id
+            url=URL+"/"+str(existing_post_id)
             print(url)
             result = requests.put(
             url=url,
