@@ -29,6 +29,12 @@ class HugoArticle(object):
             return self.assign_if_not_none(x[ind])
         else:
             return ""
+    
+    def compare_already_existing_articles(self, title, body_markdown, tags):
+        for a in ALL_PREVIOUS_ARTICLES:
+            if a["title"] == title and  a["body_markdown"] == body_markdown and a["tags"] == tags:
+                return True
+        return False
 
     def __init__(self, article, published=False, series=None):
         # Get title, text and tags from hugo markdown files
@@ -53,6 +59,8 @@ class HugoArticle(object):
 
         self.series = series
 
+        self.no_change = self.compare_already_existing_articles(self.title, self.body_markdown, self.tags)
+
 
 def get_article_from_file(filepath):
     with open(filepath, "r") as f:
@@ -73,14 +81,14 @@ if __name__ == "__main__":
         data = json.dumps(this_dict)
 
         existing_post_id = check_if_article_exists(hugo_article)
-        if existing_post_id is not None:
+        if existing_post_id is not None and not hugo_article.no_change:
             url=URL+"/"+str(existing_post_id)
             result = requests.put(
             url=url,
             json=json.loads(data),
             headers={"api_key": os.environ["DEVTO_TOKEN"]},
             )
-        else:
+        elif not hugo_article.no_change:
             result = requests.post(
                 url=URL,
                 json=json.loads(data),
