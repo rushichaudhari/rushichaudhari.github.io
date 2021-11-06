@@ -19,4 +19,5 @@ jobs:
       env:
         DEVTO_TOKEN: ${{ secrets.DEVTO_TOKEN }}
         SLEEP_TIME: ${{ secrets.SLEEP_TIME }}
+        MARKDOWN_POSTS_PATH: ${{secrets.MARKDOWN_POSTS_PATH}}
       run: chmod +x ./.github/devpush.py && ./.github/devpush.py
