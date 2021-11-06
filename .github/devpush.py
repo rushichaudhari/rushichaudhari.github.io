@@ -32,7 +32,7 @@ class HugoArticle(object):
     
     def compare_already_existing_articles(self, title, body_markdown, tags):
         for a in ALL_PREVIOUS_ARTICLES:
-            if "title" in a and "tags" in a and "body_markdown" in a and a["title"] == title and  a["body_markdown"] == body_markdown and a["tags"] == tags:
+            if "title" in a and "body_markdown" in a and a["title"] == title and  a["body_markdown"] == body_markdown:
                 return True
         return False
 
@@ -82,6 +82,7 @@ if __name__ == "__main__":
 
             this_dict = {"article": hugo_article.__dict__}
             data = json.dumps(this_dict)
+            print(data) 
 
             existing_post_id = check_if_article_exists(hugo_article)
             if existing_post_id is not None:
@@ -98,4 +99,5 @@ if __name__ == "__main__":
                     headers={"api_key": os.environ["DEVTO_TOKEN"]},
                 )
             print(file)
-        print(file, "no change")
+        else:
+            print(file, "no change")
