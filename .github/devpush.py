@@ -53,7 +53,7 @@ if __name__ == "__main__":
     files = glob.glob(os.environ["MARKDOWN_POSTS_PATH"])
 
     sleeptime = 5
-    print('devtotkej', os.enviorn["DEVTO_TOKEN"])
+    print('devtotkej', os.environ["DEVTO_TOKEN"])
     for file in files:
         sleep(int(sleeptime))
         hugo_article = get_article_from_file(file)
@@ -62,6 +62,6 @@ if __name__ == "__main__":
         result = requests.post(
             url=url,
             json=json.loads(data),
-            headers={"api_key": os.enviorn["DEVTO_TOKEN"]},
+            headers={"api_key": os.environ["DEVTO_TOKEN"]},
         )
         print(file)
