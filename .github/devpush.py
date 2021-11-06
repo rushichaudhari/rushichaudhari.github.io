@@ -30,7 +30,8 @@ class HugoArticle(object):
             return ""
 
     def __init__(self, article, published=False, series=None):
-        # Get title, text and tags from hugo markdown files
+        # Get id, title, text and tags from hugo markdown files
+        self.id = article.id
         self.title = self.assign_if_not_none(article.metadata, "title")
         self.published = published
 
