@@ -75,23 +75,27 @@ if __name__ == "__main__":
     sleeptime = 5
     print('DEVTO_TOKEN is ', os.environ["DEVTO_TOKEN"], os.environ["MARKDOWN_POSTS_PATH"], os.getcwd(), files)
     for file in files:
-        sleep(int(sleeptime))
         hugo_article = get_article_from_file(file)
-        this_dict = {"article": hugo_article.__dict__}
-        data = json.dumps(this_dict)
 
-        existing_post_id = check_if_article_exists(hugo_article)
-        if existing_post_id is not None and not hugo_article.no_change:
-            url=URL+"/"+str(existing_post_id)
-            result = requests.put(
-            url=url,
-            json=json.loads(data),
-            headers={"api_key": os.environ["DEVTO_TOKEN"]},
-            )
-        elif not hugo_article.no_change:
-            result = requests.post(
-                url=URL,
+        if not hugo_article.no_change:
+            sleep(int(sleeptime))
+
+            this_dict = {"article": hugo_article.__dict__}
+            data = json.dumps(this_dict)
+
+            existing_post_id = check_if_article_exists(hugo_article)
+            if existing_post_id is not None:
+                url=URL+"/"+str(existing_post_id)
+                result = requests.put(
+                url=url,
                 json=json.loads(data),
                 headers={"api_key": os.environ["DEVTO_TOKEN"]},
-            )
-        print(file)
+                )
+            else:
+                result = requests.post(
+                    url=URL,
+                    json=json.loads(data),
+                    headers={"api_key": os.environ["DEVTO_TOKEN"]},
+                )
+            print(file)
+        print(file, "no change")
