@@ -63,7 +63,7 @@ if __name__ == "__main__":
     # execute only if run as a script
     print("Starting devpush")
     url = URL
-    files = glob.glob('content2/posts/*.md')
+    files = glob.glob('content/posts/*.md')
 
     sleeptime = 5
     print('DEVTO_TOKEN is ', os.environ["DEVTO_TOKEN"], os.environ["MARKDOWN_POSTS_PATH"], os.getcwd(), files)
@@ -81,10 +81,9 @@ if __name__ == "__main__":
             )
         else:
             print(url=url+"/"+hugo_article.id)
-            result = requests.post(
+            requests.post(
                 url=url+"/"+hugo_article.id,
                 json=json.loads(data),
                 headers={"api_key": os.environ["DEVTO_TOKEN"]},
             )
-            print(result.json())
         print(file)
