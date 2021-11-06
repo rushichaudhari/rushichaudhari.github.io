@@ -22,7 +22,7 @@ cover: '/img/2020-01-05-A-vegetarians-guide-in-boston/foodbanner.jpg'
 <img src= "/img/2020-01-05-A-vegetarians-guide-in-boston/pavbhaji-1.jpg" style="height:250px;width:250px;"/>
 <img src= "/img/2020-01-05-A-vegetarians-guide-in-boston/pavbhaji-2.jpg" style="height:250px;width:250px;"/>
 <br><br>
-<h3>Pulao</h3>
+<h3>Pulao testc</h3>
 <img src= "/img/2020-01-05-A-vegetarians-guide-in-boston/pulao.jpg" style="height:250px;width:250px;"/>
 <br><br>
 <h3>Cauliflower</h3>
