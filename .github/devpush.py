@@ -32,7 +32,7 @@ class HugoArticle(object):
     
     def compare_already_existing_articles(self, title, body_markdown, tags):
         for a in ALL_PREVIOUS_ARTICLES:
-            if a["title"] == title and  a["body_markdown"] == body_markdown and a["tags"] == tags:
+            if "title" in a and "tags" in a and "body_markdown" in a and a["title"] == title and  a["body_markdown"] == body_markdown and a["tags"] == tags:
                 return True
         return False
 
