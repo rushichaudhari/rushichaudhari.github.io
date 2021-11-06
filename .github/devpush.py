@@ -10,7 +10,7 @@ URL = "https://dev.to/api/articles"
 
 ALL_PREVIOUS_ARTICLES = requests.get(
             url=URL+"/me/all",
-            headers={"api_key": os.environ["DEV_TO_API_KEY"]},
+            headers={"api_key": os.environ["DEVTO_TOKEN"]},
         ).json()
 
 def check_if_article_exists(article):
