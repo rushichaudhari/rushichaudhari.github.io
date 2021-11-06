@@ -74,7 +74,7 @@ if __name__ == "__main__":
         data = json.dumps(this_dict)
 
         if check_if_article_exists(hugo_article):
-            requests.put(
+            result = requests.put(
             url=url,
             json=json.loads(data),
             headers={"api_key": os.environ["DEVTO_TOKEN"]},
