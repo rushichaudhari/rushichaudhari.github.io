@@ -79,6 +79,7 @@ if __name__ == "__main__":
             json=json.loads(data),
             headers={"api_key": os.environ["DEVTO_TOKEN"]},
             )
+            print(result.json())
         else:
             print(url=url+"/"+hugo_article.id)
             result = requests.post(
