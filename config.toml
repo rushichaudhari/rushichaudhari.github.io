@@ -3,6 +3,9 @@ languageCode = "en-us"
 publishDir = "docs"
 title = "A collection of random ideas so I don't have to google again"
 theme = "dream"
+# relative urls enable
+relativeURLs = true
+
 
 disqusShortname = "rushichaudhari"
 
@@ -73,6 +76,3 @@ hasCJKLanguage = true
 
   # Tracking
   googleAnalytics = "G-GCQ3Y3DM3R"
-  
-  # relative urls enable
-  relativeURLs = true
