@@ -73,3 +73,6 @@ hasCJKLanguage = true
 
   # Tracking
   googleAnalytics = "G-GCQ3Y3DM3R"
+  
+  # relative urls enable
+  relativeURLs = true
