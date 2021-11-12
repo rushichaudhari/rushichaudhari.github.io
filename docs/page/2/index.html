@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.89.2" />
+<meta name="generator" content="Hugo 0.89.0" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/" />
 
@@ -628,6 +628,66 @@
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2021-09-12-nmcli-enterprise-wifi/">
+    
+      <img src="../../img/default2.jpg" alt="Adding wifi connection without GUI for enterprise wifi like at universities/ offices with PEAP" />
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2021-09-12-nmcli-enterprise-wifi/">Adding wifi connection without GUI for enterprise wifi like at universities/ offices with PEAP</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Monday, Jan 1, 0001</p>
+    </div>
+    <div class="description">
+      # nmcli con add type wifi ifname wlan0 con-name CONNECTION_NAME ssid SSID # nmcli con edit id CONNECTION_NAME nmcli&gt; set ipv4.method auto nmcli&gt; set 802-1x.eap peap nmcli&gt; set 802-1x.phase2-auth mschapv2 nmcli&gt; set 802-1x.identity USERNAME nmcli&gt; set 802-1x.password PASSWORD nmcli&gt; set wifi-sec.key-mgmt wpa-eap nmcli&gt; save nmcli&gt; activate 
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/">
+    
+      <img src="https://3fxtqy18kygf3on3bu39kh93-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/selenium-webdriver-tutorial.png" alt="Automate Google forms without selenium" />
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2020-07-02-automate-forms-without-selenium/">Automate Google forms without selenium</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Monday, Jan 1, 0001</p>
+    </div>
+    <div class="description">
+      In the previous year, I had posted a script to fill google forms using selenium, and containerizing it with docker to run it parallelly. This is an alternative way to do the same using post requests.
+I had created a google form using the default template shown below.
+Which had fields like To get started we need to capture the request. I&rsquo;ve used burp suite tool to capture, there are many alternative tools you can google.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>2 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2020-01-29-compiling-fceux-on-debian-buster/">
     
       <img src="https://em.lbbcdn.com/wp-content/uploads/2014/05/fceux-logo-transparent.png" alt="Compiling fceux on Debian 10 buster" />
@@ -711,41 +771,6 @@ LSTMS predict T+1th term by previous k terms of time-series say k=2 So we need t
     <div class="author">@&nbsp;rushi</div>
     <div class="reading-time">
       <i class="clock icon"></i>2 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/">
-    
-      <img src="" alt="Ml Pipelines on Kubeflow on Localhost" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/">Ml Pipelines on Kubeflow on Localhost</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Monday, Jan 1, 0001</p>
-    </div>
-    <div class="description">
-      What is Vagrant ? https://www.janbasktraining.com/blog/vagrant-tutorial/
-Install Vagrant
-sudo pacman -S vagrant vagrant plugin install vagrant-vbguest vagrant-share Note: There is also vagrant libvirt plugin for qemu
-vagrant plugin install vagrant-libvirt but this doesn&rsquo;t work with kubeflow
-Install virtualbox
-sudo pacman -S virtualbox  for the linux kernel, choose virtualbox-host-modules-arch for any other kernel (including linux-lts), choose virtualbox-host-dkms  Load the vbox drv module
-sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot of space (50GB+)
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
   </div>
 </article>
 
@@ -847,7 +872,7 @@ Loosen the polkit permissions in your system to allow your normal user to mount 
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/">
     
-      <img src="../../img/default2.jpg" alt="Running GUI apps from docker inside WSL2.0 as standalone application" />
+      <img src="../../img/default3.jpg" alt="Running GUI apps from docker inside WSL2.0 as standalone application" />
     
   </a>
 
@@ -881,7 +906,7 @@ Pre-requirements:
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/">
     
-      <img src="../../img/default3.jpg" alt="Setting up tigervncserver on arch linux (raspberry-pi)" />
+      <img src="../../img/default1.jpg" alt="Setting up tigervncserver on arch linux (raspberry-pi)" />
     
   </a>
 
@@ -895,36 +920,6 @@ Pre-requirements:
     <div class="description">
       Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
 $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should be executable: $ chmod +x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/">
-    
-      <img src="https://wickedcoolbite.com/wp-content/uploads/2014/08/256gb-enough-storage-600x350.jpeg" alt="SSD - things todo to save space on ssd C drive" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../posts/2020-04-10-ssd-savespace/">SSD - things todo to save space on ssd C drive</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Monday, Jan 1, 0001</p>
-    </div>
-    <div class="description">
-      Change cache location of Firefox You can do this by creating a new hidden preference.
- Type about:config into the location bar and press enter Accept the warning message that appears, you will be taken to a list of preferences Right-click somewhere in the list and select &ldquo;New &gt; String&rdquo; For the name of the preference type browser.cache.disk.parent_directory For its value type the path to where you want to store the cache Next locate the preference browser.
     </div>
   </div>
 

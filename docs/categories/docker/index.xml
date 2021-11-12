@@ -5,7 +5,18 @@
     <link>https://rushichaudhari.github.io/categories/docker/</link>
     <description>Recent content in docker on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://rushichaudhari.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Change Docker Storage Location</title>
+      <link>https://rushichaudhari.github.io/posts/2021-11-11-how-to-change-docker-storage-location/</link>
+      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-11-11-how-to-change-docker-storage-location/</guid>
+      <description>You can easily change the Docker default storage location by creating the daemon.json file and pointing to another location in that file.
+It happened to me several times that I didn’t have enough space in my root partition to store Docker containers and I had to move the Docker default storage location to another partition. In this post, I wrote down how to do that for my readership and future myself :)</description>
+    </item>
+    
     <item>
       <title>A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds</title>
       <link>https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/</link>

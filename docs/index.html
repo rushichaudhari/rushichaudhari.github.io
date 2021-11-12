@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.89.2" />
+<meta name="generator" content="Hugo 0.89.0" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/" />
 
@@ -687,6 +687,41 @@ Tips  preloader-signed works with systemd boot If you have grub and want to move
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/">
+    
+      <img src="" alt="Ml Pipelines on Kubeflow on Localhost" />
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="./posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/">Ml Pipelines on Kubeflow on Localhost</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Monday, Nov 1, 2021</p>
+    </div>
+    <div class="description">
+      What is Vagrant ? https://www.janbasktraining.com/blog/vagrant-tutorial/
+Install Vagrant
+sudo pacman -S vagrant vagrant plugin install vagrant-vbguest vagrant-share Note: There is also vagrant libvirt plugin for qemu
+vagrant plugin install vagrant-libvirt but this doesn&rsquo;t work with kubeflow
+Install virtualbox
+sudo pacman -S virtualbox  for the linux kernel, choose virtualbox-host-modules-arch for any other kernel (including linux-lts), choose virtualbox-host-dkms  Load the vbox drv module
+sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot of space (50GB+)
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-01-switch-to-systemd-from-grub/">
     
       <img src="" alt="Switch to Systemd From Grub" />
@@ -791,7 +826,7 @@ Probably the data is being loaded up as SVG which is why it isn&rsquo;t being se
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2020-12-20-my-machine-learning-resources/">
     
-      <img src="./img/default3.jpg" alt="My Machine Learning resources" />
+      <img src="./img/default4.jpg" alt="My Machine Learning resources" />
     
   </a>
 
@@ -825,7 +860,7 @@ PCA Math Principal Component Analysis (The Math) : Data Science Concepts
       <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/">
     
-      <img src="./img/default1.jpg" alt="Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes" />
+      <img src="./img/default4.jpg" alt="Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes" />
     
   </a>
 
@@ -856,6 +891,36 @@ Creating a Netlify Site … Relax! We’re just creating one, without actually u
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-11-how-to-change-docker-storage-location/">
+    
+      <img src="./img/2021-11-11-How-to-change-Docker-storage-location/2021-11-11-20-02-30.png" alt="How to Change Docker Storage Location" />
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="./posts/2021-11-11-how-to-change-docker-storage-location/">How to Change Docker Storage Location</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Wednesday, Nov 11, 2020</p>
+    </div>
+    <div class="description">
+      You can easily change the Docker default storage location by creating the daemon.json file and pointing to another location in that file.
+It happened to me several times that I didn’t have enough space in my root partition to store Docker containers and I had to move the Docker default storage location to another partition. In this post, I wrote down how to do that for my readership and future myself :)
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>3 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/">
     
       <img src="./img/2020-05-14-Docker-VNC/image-20200514151538620.png" alt="A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds" />
@@ -873,66 +938,6 @@ Creating a Netlify Site … Relax! We’re just creating one, without actually u
       This guide assumes you already know what is docker and docker, vncviewer installed on your system The docker image given at https://hub.docker.com/search?q=&amp;type=image is a blank kali image with 0 tools.
 Let us create a light-weight custom image with the tools needed. The following are the tools which I think are commonly used in kali you can add/remove a few from that list.
 aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils dos2unix enum4linux exploitdb ftp git gobuster hashcat hping3 hydra impacket-scripts john joomscan masscan metasploit-framework mimikatz nasm ncat netcat-traditional nikto nmap patator php powersploit proxychains python-pip python2 python3 recon-ng responder samba samdump2 smbclient smbmap snmp socat sqlmap sslscan theharvester vim wafw00f weevely wfuzz whois wordlists wpscan Creating Dockerfile
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>2 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-09-12-nmcli-enterprise-wifi/">
-    
-      <img src="./img/default4.jpg" alt="Adding wifi connection without GUI for enterprise wifi like at universities/ offices with PEAP" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="./posts/2021-09-12-nmcli-enterprise-wifi/">Adding wifi connection without GUI for enterprise wifi like at universities/ offices with PEAP</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Monday, Jan 1, 0001</p>
-    </div>
-    <div class="description">
-      # nmcli con add type wifi ifname wlan0 con-name CONNECTION_NAME ssid SSID # nmcli con edit id CONNECTION_NAME nmcli&gt; set ipv4.method auto nmcli&gt; set 802-1x.eap peap nmcli&gt; set 802-1x.phase2-auth mschapv2 nmcli&gt; set 802-1x.identity USERNAME nmcli&gt; set 802-1x.password PASSWORD nmcli&gt; set wifi-sec.key-mgmt wpa-eap nmcli&gt; save nmcli&gt; activate 
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/">
-    
-      <img src="https://3fxtqy18kygf3on3bu39kh93-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/selenium-webdriver-tutorial.png" alt="Automate Google forms without selenium" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="./posts/2020-07-02-automate-forms-without-selenium/">Automate Google forms without selenium</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Monday, Jan 1, 0001</p>
-    </div>
-    <div class="description">
-      In the previous year, I had posted a script to fill google forms using selenium, and containerizing it with docker to run it parallelly. This is an alternative way to do the same using post requests.
-I had created a google form using the default template shown below.
-Which had fields like To get started we need to capture the request. I&rsquo;ve used burp suite tool to capture, there are many alternative tools you can google.
     </div>
   </div>
 

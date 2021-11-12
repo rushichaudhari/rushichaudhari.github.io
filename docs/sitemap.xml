@@ -53,6 +53,9 @@
     <loc>https://rushichaudhari.github.io/categories/linux/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/</loc>
+    <lastmod>2021-11-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://rushichaudhari.github.io/tags/secure/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -113,6 +116,12 @@
     <loc>https://rushichaudhari.github.io/categories/netlify/</loc>
     <lastmod>2020-11-28T05:27:29+00:00</lastmod>
   </url><url>
+    <loc>https://rushichaudhari.github.io/categories/docker/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rushichaudhari.github.io/posts/2021-11-11-how-to-change-docker-storage-location/</loc>
+    <lastmod>2020-11-11T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/</loc>
   </url><url>
     <loc>https://rushichaudhari.github.io/posts/2021-09-12-nmcli-enterprise-wifi/</loc>
@@ -128,8 +137,6 @@
     <loc>https://rushichaudhari.github.io/categories/debian/</loc>
   </url><url>
     <loc>https://rushichaudhari.github.io/categories/digitalocean/</loc>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/categories/docker/</loc>
   </url><url>
     <loc>https://rushichaudhari.github.io/categories/drive/</loc>
   </url><url>
@@ -150,8 +157,6 @@
     <loc>https://rushichaudhari.github.io/tags/linux/</loc>
   </url><url>
     <loc>https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</loc>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/</loc>
   </url><url>
     <loc>https://rushichaudhari.github.io/tags/mozilla/</loc>
   </url><url>

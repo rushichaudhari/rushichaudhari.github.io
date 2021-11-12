@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ml Pipelines on Kubeflow on Localhost"
-date: November 1, 2021
+date: 2021-11-01
 author: rushi
 cover: ''
 # categories: []

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>secure | A collection of random ideas so I don&#39;t have to google again</title>
+    <title>How to Change Docker Storage Location | A collection of random ideas so I don&#39;t have to google again</title>
 
     
 <link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,19 +13,23 @@
 
 
 <meta name="author" content="rushi" />
-<meta name="description" content="" />
+<meta name="description" content="You can easily change the Docker default storage location by creating the daemon.json file and pointing to another location in that file.
+It happened to me several times that I didn’t have enough space in my root partition to store Docker containers and I had to move the Docker default storage location to another partition. In this post, I wrote down how to do that for my readership and future myself :)" />
 
 
 
 <meta name="generator" content="Hugo 0.89.0" />
 
-<link rel="canonical" href="https://rushichaudhari.github.io/tags/secure/" />
+<link rel="canonical" href="https://rushichaudhari.github.io/posts/2021-11-11-how-to-change-docker-storage-location/" />
 
 
-<meta property="og:title" content="secure" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://rushichaudhari.github.io/tags/secure/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:title" content="How to Change Docker Storage Location" />
+<meta property="og:description" content="You can easily change the Docker default storage location by creating the daemon.json file and pointing to another location in that file.
+It happened to me several times that I didn’t have enough space in my root partition to store Docker containers and I had to move the Docker default storage location to another partition. In this post, I wrote down how to do that for my readership and future myself :)" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-11-11-how-to-change-docker-storage-location/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-11-11T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-11-11T00:00:00+00:00" />
 
 
 
@@ -33,8 +37,9 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
-<meta name="twitter:title" content="secure"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="How to Change Docker Storage Location"/>
+<meta name="twitter:description" content="You can easily change the Docker default storage location by creating the daemon.json file and pointing to another location in that file.
+It happened to me several times that I didn’t have enough space in my root partition to store Docker containers and I had to move the Docker default storage location to another partition. In this post, I wrote down how to do that for my readership and future myself :)"/>
 
 
 <link rel="stylesheet" href="../../css/semantic.min.css" />
@@ -86,7 +91,17 @@
   
 </style>
 
-     
+    
+
+
+  
+    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
+  
+
+
+
+
+
   </head>
 
   <body class="default">
@@ -115,7 +130,144 @@
           <div class="dream-max-width">
             
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui top attached segment cover">
+      <div class="cover-img" style="background-image: url(/img/2021-11-11-How-to-change-Docker-storage-location/2021-11-11-20-02-30.png);"></div>
+    </section>
+    
+    <section class="ui attached segment">
+      <header>
+        <h1 class="ui large header">
+          How to Change Docker Storage Location
+          <div class="sub header">
+            @
+            
+              
+                rushi
+              
+            
+
+            | 
+                Wednesday, Nov 11, 2020
+              
+
+            | 3 minutes read
+
+            | Update at
+              
+                Wednesday, Nov 11, 2020
+              
+          </div>
+        </h1>
+      </header>
+
+      <article class="main"><p><em>You can easily change the Docker default storage location by creating the daemon.json file and pointing to another location in that file.</em></p>
+<p>It happened to me several times that I didn’t have enough space in my root partition to store Docker containers and I had to move the Docker default storage location to another partition. In this post, I wrote down how to do that for my readership and future myself :)</p>
+<p>Docker containers are relatively large (&gt; 1G) and by default Docker stores all containers in <code>/var/lib/docker</code>, which is located in the root partition of your Linux system. I usually have separate root and home partitions, and given that Linux doesn’t take much space, I allocate 15-30G for my root partition. This happened not to be enough to work with Docker and I had to move the Docker storage location to another larger partition. However, it turned out not to be easy.</p>
+<h2 id="do-not-do-this-to-move-docker-storage-location">Do NOT do this to move Docker storage location</h2>
+<p>These two solutions could have worked in the past as you may often find them online, but neither of them worked for me with Ubuntu-based Linux distros in 2018-2019 (Docker version &gt; 17).</p>
+<h3 id="1-symlink">1. Symlink</h3>
+<p>The first obvious idea was to symlink the default storage location to another partition:</p>
+<pre><code>sudo ln -s /mnt/newlocation /var/lib/docker
+</code></pre>
+<h3 id="2-docker_opts">2. DOCKER_OPTS</h3>
+<p>Another often posted solution is to stop Docker:</p>
+<pre><code>sudo systemctl stop docker
+</code></pre>
+<p>Edit the <code>/etc/default/docker</code> file by adding the new location with the <code>-g</code> in the <code>DOCKER_OPTS</code> line:</p>
+<pre><code>DOCKER_OPTS=&quot;-dns 8.8.8.8 -dns 8.8.4.4 -g /mnt/newlocation&quot;
+</code></pre>
+<p>Then start Docker again:</p>
+<pre><code>sudo systemctl start docker
+</code></pre>
+<p>After that Docker should use <code>/mnt/newlocation</code> as a new storage location.</p>
+<p><strong>UPDATE</strong>: It seems <strong>DOCKER_OPTS</strong> solution may work if you add the <code>$DOCKER_OPTS</code> variable to the <em>systemd</em> script <code>/lib/systemd/system/docker.service</code>:</p>
+<pre><code>ExecStart=/usr/bin/dockerd -H fd:// $DOCKER_OPTS
+</code></pre>
+<p>However, I have not tested it because the solution I describe below is simpler and probably more correct.</p>
+<h2 id="change-docker-storage-location-the-right-way">Change Docker storage location: THE RIGHT WAY!</h2>
+<p>Luckily, the right way to change Docker storage location was not more complicated than the two non-working options I have described above.</p>
+<p>You need to create a JSON file <code>/etc/docker/daemon.json</code> with the content pointing to the new storage location:</p>
+<pre><code>{
+&quot;data-root&quot;: &quot;/mnt/newlocation&quot;
+}
+</code></pre>
+<p>You can read more about <code>daemon.json</code> in <a href="https://docs.docker.com/config/daemon/#docker-daemon-directory">Docker docs</a>.</p>
+<p>Then, restart Docker or reboot the system:</p>
+<pre><code>sudo systemctl restart docker
+</code></pre>
+<p>If you get any error during the restart, pay attention to spaces in <code>daemon.json</code>. JSON files are sensitive to indentation and an extra or lacking space may cause an error. If Docker restarts fine, this new setting will make Docker place all new containers to the new location. However, old containers will stay in <code>/etc/default/docker</code>. I recommend removing all old containers:</p>
+<p>And downloaded them again:</p>
+<pre><code>docker pull &lt;container-name&gt;
+</code></pre>
+<h2 id="final-thoughts">Final thoughts</h2>
+<p>It is unfortunate that this simple solution with <code>daemon.json</code> was not the first I found when I tried to fix the “not enough space” issue due to Docker images taking too much space. So, I hope this blog post will save time some users who need to change their Docker storage location.</p>
+<p><a href="https://evodify.com/change-docker-storage-location/">Source https://evodify.com/change-docker-storage-location/</a></p>
+</article>
+    </section>
+
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
+      
+          <a class="ui label">No Tags</a>
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/rushichaudhari.github.io\/posts\/2021-11-11-how-to-change-docker-storage-location\/';  
+            this.page.identifier = '\/posts\/2021-11-11-how-to-change-docker-storage-location\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'rushichaudhari' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+    
+    
+
+    
+
+  </div>
+  <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
+    
+    
+      <div class="ui segment toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#do-not-do-this-to-move-docker-storage-location">Do NOT do this to move Docker storage location</a>
+      <ul>
+        <li><a href="#1-symlink">1. Symlink</a></li>
+        <li><a href="#2-docker_opts">2. DOCKER_OPTS</a></li>
+      </ul>
+    </li>
+    <li><a href="#change-docker-storage-location-the-right-way">Change Docker storage location: THE RIGHT WAY!</a></li>
+    <li><a href="#final-thoughts">Final thoughts</a></li>
+  </ul>
+</nav>
+      </div>
+    
+
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -621,47 +773,7 @@
   </section>
 </article>
 
-  </div>
-
-  
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-01-enable-secure-boot-on-dualboot/">
-    
-      <img src="../../img/2021-11-01-enable-secure-boot-on-dualboot/cover.jpg" alt="Enable Secure Boot on Dualboot" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../posts/2021-11-01-enable-secure-boot-on-dualboot/">Enable Secure Boot on Dualboot</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Monday, Nov 1, 2021</p>
-    </div>
-    <div class="description">
-      Repo to https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Using_a_signed_boot_loader
-Tips  preloader-signed works with systemd boot If you have grub and want to move to systemd-boot refer this  
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-
-  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-    
-
-
-
-  </div>
+  </aside>
 </div>
 
           </div>
@@ -801,30 +913,6 @@ Tips  preloader-signed works with systemd boot If you have grub and want to move
   </section>
 
   
-    
-      <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
-        <footer class="ui segment">
-          <div id="disqus_thread"></div>
-          <script>
-            
-
-
-            var disqus_config = function () {
-              this.page.url = 'https:\/\/rushichaudhari.github.io\/tags\/secure\/';  
-              this.page.identifier = '/'; 
-            };
-
-            (function() { 
-              var d = document, s = d.createElement('script');
-              s.src = 'https://' + 'rushichaudhari' + '.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </footer>
-      </section>
-    
   
 </div>
 
@@ -868,9 +956,35 @@ Tips  preloader-signed works with systemd boot If you have grub and want to move
 <script src="../../js/theme.js"></script>
 
     
-<script src="../../js/imagesloaded.pkgd.min.js"></script>
-<script src="../../js/masonry.pkgd.min.js"></script>
-<script src="../../js/grid.js"></script>
+<script src="../../js/html2canvas.min.js"></script>
+<script src="../../js/post.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+     
+  
+
+  <script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    var lightTheme = "gruvbox-light"
+    var darkTheme = "gruvbox-dark"
+    var theme = isDark ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark ? '#333' : '')
+  }
+</script>
+
+
+
 
 
     
