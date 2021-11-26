@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.89.0" />
+<meta name="generator" content="Hugo 0.89.4" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/" />
 
@@ -159,6 +159,12 @@
     
       
       
+      <a class="ui label" href="../../tags/autoencoders/" title="Autoencoders">
+        Autoencoders
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/boot/" title="Boot">
         Boot
       </a>
@@ -231,6 +237,12 @@
     
       
       
+      <a class="ui label" href="../../tags/machine-learning/" title="Machine Learning">
+        Machine Learning
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/mozilla/" title="Mozilla">
         Mozilla
       </a>
@@ -243,8 +255,20 @@
     
       
       
+      <a class="ui label" href="../../tags/pca/" title="Pca">
+        Pca
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/pinephone/" title="Pinephone">
         Pinephone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/python/" title="Python">
+        Python
       </a>
     
       
@@ -263,6 +287,12 @@
       
       <a class="ui label" href="../../tags/systemd/" title="Systemd">
         Systemd
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/tensorflow/" title="Tensorflow">
+        Tensorflow
       </a>
     
       
@@ -625,6 +655,70 @@
 
   
   
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/">
+    
+      <img src="../../img/default1.jpg" alt="Running GUI apps from docker inside WSL2.0 as standalone application" />
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2020-08-19-dockerguiwsl/">Running GUI apps from docker inside WSL2.0 as standalone application</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Monday, Jan 1, 0001</p>
+    </div>
+    <div class="description">
+      Another day, again my anaconda crashed for no reason. I decided to never use python on windows without linux vm/ docker.
+I already had my own docker image created here https://hub.docker.com/repository/docker/rushichaudhari/zipline1.3.0/
+but I wondered If I could use GUI in it, luckily I managed to do so.
+So here are the steps :-
+Pre-requirements:
+ Windows 10 WSL  For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on //build 2020 that they will release soon an improvement that will not require any third-party component to run Linux GUI Apps on Windows Desktop.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>3 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/">
+    
+      <img src="../../img/default1.jpg" alt="Setting up tigervncserver on arch linux (raspberry-pi)" />
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/">Setting up tigervncserver on arch linux (raspberry-pi)</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Monday, Jan 1, 0001</p>
+    </div>
+    <div class="description">
+      Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
+$nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should be executable: $ chmod +x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
+  </div>
+</article>
+
+    </div>
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">

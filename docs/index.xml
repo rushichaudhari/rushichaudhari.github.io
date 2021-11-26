@@ -6,7 +6,16 @@
     <description>Recent content on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pca VS AutoEncoders</title>
+      <link>https://rushichaudhari.github.io/posts/2021-11-25-pca-vs-autoencoders/</link>
+      <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-11-25-pca-vs-autoencoders/</guid>
+      <description>PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&amp;#34;integer&amp;#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&amp;#39;Design matrix size: {}&amp;#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz 32768/29515 [=================================] - 0s 0us/step 40960/29515 [=========================================] - 0s 0us/step Downloading data from https://storage.</description>
+    </item>
+    
     <item>
       <title>Publishing HUGO Post to DevTo Using GitHub CI and CD Pipeline</title>
       <link>https://rushichaudhari.github.io/posts/2021-11-06-publishing-hugo-post-to-devto-using-github-ci-and-cd-pipeline/</link>
@@ -118,6 +127,15 @@ Creating a Netlify Site … Relax! We’re just creating one, without actually u
       <guid>https://rushichaudhari.github.io/posts/2021-11-11-how-to-change-docker-storage-location/</guid>
       <description>You can easily change the Docker default storage location by creating the daemon.json file and pointing to another location in that file.
 It happened to me several times that I didn’t have enough space in my root partition to store Docker containers and I had to move the Docker default storage location to another partition. In this post, I wrote down how to do that for my readership and future myself :)</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://rushichaudhari.github.io/posts/2020-11-25-pca-vs-autoencoders/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2020-11-25-pca-vs-autoencoders/</guid>
+      <description></description>
     </item>
     
     <item>
