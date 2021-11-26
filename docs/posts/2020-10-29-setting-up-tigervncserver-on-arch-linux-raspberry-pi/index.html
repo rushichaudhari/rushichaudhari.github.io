@@ -18,7 +18,11 @@ $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;amp;&amp;gt;/dev/null The file 
 
 
 
+<<<<<<< HEAD
 <meta name="generator" content="Hugo 0.89.4" />
+=======
+<meta name="generator" content="Hugo 0.79.1" />
+>>>>>>> 8106e7dbd676c6537b565f3c21d0fe7812c82304
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
 
@@ -27,9 +31,8 @@ $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;amp;&amp;gt;/dev/null The file 
 <meta property="og:description" content="Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
 $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should be executable: $ chmod &#43;x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
-
-
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 
 
@@ -159,17 +162,17 @@ $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should b
       </header>
 
       <article class="main"><h2 id="installing-tigervnc">Installing tigervnc</h2>
-<pre tabindex="0"><code>sudo pacman -Ss tigervnc
+<pre><code>sudo pacman -Ss tigervnc
 </code></pre><h2 id="editing-the-environment-file">Editing the environment file</h2>
 <p>~/.vnc/xstartup functions like .xinitrc  and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:</p>
-<pre tabindex="0"><code>$nano ~/.vnc/xstartup
+<pre><code>$nano ~/.vnc/xstartup
 
 #!/bin/bash
 exec lxde &amp;&gt;/dev/null
 </code></pre><h2 id="the-file-should-be-executable">The file should be executable:</h2>
-<pre tabindex="0"><code>$ chmod +x ~/.vnc/xstartup
+<pre><code>$ chmod +x ~/.vnc/xstartup
 </code></pre><h2 id="adding-vncserver-options">Adding vncserver options</h2>
-<pre tabindex="0"><code>$ nano ~/.vnc/config
+<pre><code>$ nano ~/.vnc/config
 
 desktop=sandbox
 geometry=1920x1080
@@ -177,7 +180,7 @@ dpi=96
 SecurityTypes=none
 </code></pre><h2 id="starting-and-stopping-vncserver-via-systemd">Starting and stopping vncserver via systemd</h2>
 <p>To control vncserver with systemd, first, create systemd unit file for the user</p>
-<pre tabindex="0"><code>$ cat /etc/systemd/system/vncserver@:1.service
+<pre><code>$ cat /etc/systemd/system/vncserver@:1.service
 
 [Unit]
 Description=Remote desktop service (VNC)
@@ -196,7 +199,7 @@ ExecStop=/usr/bin/vncserver -kill %i
 WantedBy=multi-user.target
 </code></pre><p>where :1 is the $DISPLAY environment variable. Replace <strong>pi</strong> with the desired username and <strong>1440x900</strong> with the resolution you want to set.</p>
 <p>To start the service, run</p>
-<pre tabindex="0"><code>$ sudo systemctl start vncserver@:1.service
+<pre><code>$ sudo systemctl start vncserver@:1.service
 </code></pre><h2 id="on-tigervnc-client">On tigervnc client</h2>
 <p><img src="../../img/2020-10-29-Setting-up-tigervncserver-on-arch-linux-(raspberry-pi)/tigervncclient.png" alt="sadsad"></p>
 </article>
@@ -871,7 +874,7 @@ WantedBy=multi-user.target
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
+<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>
