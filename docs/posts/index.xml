@@ -6,7 +6,16 @@
     <description>Recent content in Posts on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alexa AI for reminding important emails and reminders</title>
+      <link>https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/</guid>
+      <description>Motivation :- It was the third time I missed reading my email and picking up shifts for my oncampus job. I did try creating labels and filtering them but that didn&amp;rsquo;t show any progress in improvement. It&amp;rsquo;s really stressful when I get the notification that something needs a response from me right away. I had to make sure that I was not missing this next time. It is then when I decided I need to build a system to process and remind me this.</description>
+    </item>
+    
     <item>
       <title>Pca VS AutoEncoders</title>
       <link>https://rushichaudhari.github.io/posts/2021-11-25-pca-vs-autoencoders/</link>
@@ -14,6 +23,17 @@
       
       <guid>https://rushichaudhari.github.io/posts/2021-11-25-pca-vs-autoencoders/</guid>
       <description>PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&amp;#34;integer&amp;#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&amp;#39;Design matrix size: {}&amp;#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz 32768/29515 [=================================] - 0s 0us/step 40960/29515 [=========================================] - 0s 0us/step Downloading data from https://storage.</description>
+    </item>
+    
+    <item>
+      <title>Stop Colab From Disconnecting</title>
+      <link>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</link>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</guid>
+      <description>Are you irritated by google colab automatically disconnecting after every 30mins ? Open your Chrome DevTools and enter the following JavaScript snippet in your console:
+function KeepClicking(){ console.log(&amp;quot;Clicking&amp;quot;); document.querySelector(&amp;quot;colab-connect-button&amp;quot;).click() } setInterval(KeepClicking,60000) This clicks the connect button every 60 seconds, there is no need to worry about colab being disconnected!
+This is different from the GPU time, colab can still disconnect you for long running background tasks on GPU. </description>
     </item>
     
     <item>

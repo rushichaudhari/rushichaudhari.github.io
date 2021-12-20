@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Alexa AI for reminding important emails and reminders | A collection of random ideas so I don&#39;t have to google again</title>
+
+    
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+
+<meta name="author" content="rushi" />
+<meta name="description" content="Motivation :- It was the third time I missed reading my email and picking up shifts for my oncampus job. I did try creating labels and filtering them but that didn&amp;rsquo;t show any progress in improvement. It&amp;rsquo;s really stressful when I get the notification that something needs a response from me right away. I had to make sure that I was not missing this next time. It is then when I decided I need to build a system to process and remind me this." />
+
+
+
+<meta name="generator" content="Hugo 0.89.4" />
+
+<link rel="canonical" href="https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/" />
+
+
+<meta property="og:title" content="Alexa AI for reminding important emails and reminders" />
+<meta property="og:description" content="Motivation :- It was the third time I missed reading my email and picking up shifts for my oncampus job. I did try creating labels and filtering them but that didn&rsquo;t show any progress in improvement. It&rsquo;s really stressful when I get the notification that something needs a response from me right away. I had to make sure that I was not missing this next time. It is then when I decided I need to build a system to process and remind me this." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-12-19T00:00:00+00:00" />
+
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+
+<meta name="twitter:title" content="Alexa AI for reminding important emails and reminders"/>
+<meta name="twitter:description" content="Motivation :- It was the third time I missed reading my email and picking up shifts for my oncampus job. I did try creating labels and filtering them but that didn&rsquo;t show any progress in improvement. It&rsquo;s really stressful when I get the notification that something needs a response from me right away. I had to make sure that I was not missing this next time. It is then when I decided I need to build a system to process and remind me this."/>
+
+
+<link rel="stylesheet" href="../../css/semantic.min.css" />
+<link rel="stylesheet" href="../../css/icomoon.css" />
+<link rel="stylesheet" href="../../css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="../../css/github-markdown.css" />
+<link rel="stylesheet" href="../../css/site.css" />
+
+<style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
+  a {
+    color: seagreen !important;
+  }
+  
+
+  
+  .inverted a,
+  .inverted a:hover {
+     color: darkseagreen !important;
+  }
+  
+
+  
+  body.default {
+    
+    background-color: #ccc;
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
+  
+
+  
+  body.dark {
+    
+    background-color: black;
+    
+
+    
+    background-image: url(/me/background-dark.jpg);
+    
+  }
+  
+</style>
+
+    
+
+
+  
+    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
+  
+
+
+
+
+
+  </head>
+
+  <body class="default">
+    
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/rushichaudhari.github.io'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
+  
+</nav>
+
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui attached segment">
+      <header>
+        <h1 class="ui large header">
+          Alexa AI for reminding important emails and reminders
+          <div class="sub header">
+            @
+            
+              
+                rushi
+              
+            
+
+            | 
+                Sunday, Dec 19, 2021
+              
+
+            | 3 minutes read
+
+            | Update at
+              
+                Sunday, Dec 19, 2021
+              
+          </div>
+        </h1>
+      </header>
+
+      <article class="main"><h2 id="motivation--">Motivation :-</h2>
+<p>It was the third time I missed reading my email and picking up shifts for my oncampus job. I did try creating labels and filtering them but that didn&rsquo;t show any progress in improvement. It&rsquo;s really stressful when I get the notification that something needs a response from me right away. I had to make sure that I was not missing this next time. It is then when I decided I need to build a system to process and remind me this.</p>
+<h3 id="high-level-view-">High level view:-</h3>
+<ul>
+<li>Create a rule in your work email to filter out the emails by text content/subject/sender&rsquo;s email and forward it to a personal email address</li>
+<li>The rule should look something like</li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/6279035/146694347-2c18cb5e-7493-4b09-a2b8-8a1908995dba.png" alt="2021-12-19_18-04"></p>
+<ul>
+<li>Create a rule in the personal email address to add a label to those emails. eg. I labelled as (RSO).</li>
+<li>Parsing and cleaning of the emails with the assigned labels :-)</li>
+<li>Deploying it on a raspberry pi server</li>
+</ul>
+<h2 id="setting-up-alexa_remote_controlsh-secretsyaml">Setting up alexa_remote_control.sh (secrets.yaml)</h2>
+<p>The alexa request is based on <a href="https://github.com/walthowd/ha-alexa-tts">https://github.com/walthowd/ha-alexa-tts</a>,
+There is a minor change make sure to add these <a href="https://github.com/rushic24/ha-alexa-tts/commit/e9b145a01c0792b82076554579fc46e6b60a3347">https://github.com/rushic24/ha-alexa-tts/commit/e9b145a01c0792b82076554579fc46e6b60a3347</a> if you want to try that script. I have aleady included that in this repo.</p>
+<p>Add your login credentials to the <code>homeassistant/secrets.yaml</code> file, with the keys alexa_email and alexa_password. I have kept a template to make those changes.</p>
+<p>Run the script interactively to pull your devices:</p>
+<p><code>./alexa_remote_control.sh -a</code></p>
+<p>And set that in <code>ALEXA_DEVICE_NAME</code> in <code>reademails.py</code></p>
+<p>If login fails look at <code>/tmp/.alexa.login</code>. Search for &ldquo;password&rdquo; and see if you are being prompted for the captcha. If so, you can attempt to login to Alexa manually from a browser (from the same IP) and see if that fixes the issue for you. It never did for me, so I logged in to <a href="https://alexa.amazon.com">https://alexa.amazon.com</a> with Chrome and used the cookies.txt</p>
+<p><a href="https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg?hl=en">Chrome cookies downloader extension</a> <br>
+<a href="https://addons.mozilla.org/en-US/firefox/addon/cookies-txt/">Firefox cookies downloader extension</a></p>
+<p>to export my amazon cookies to /tmp/.alexa.cookie. Other individuals have reported success using the same procedure, but only when using Firefox.</p>
+<p>Once you have <code>./alexa_remote_control.sh -a</code> returning your devices you can test TTS by running:</p>
+<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">./alexa_remote_control.sh -d &quot;My Dot Name&quot; -e speak:This_is_a_test!
+</code></pre><p><strong>Note:</strong> When trying out this script make sure to change the home directory (<code>HOME=&quot;/home/dockerpi&quot;</code> to your home) in <code>alexa_remote_control.sh</code>, and restore ie back to <code>HOME=&quot;/home/dockerpi&quot;</code> and also place a copy of that cookies.txt in <code>cookies/cookies.txt</code> for using it inside docker.</p>
+<h2 id="setting-up-gmail-api-credentials-credentialsjson-and-tokenpickle">Setting up Gmail API credentials (credentials.json and token.pickle)</h2>
+<p><a href="https://www.geeksforgeeks.org/how-to-read-emails-from-gmail-using-gmail-api-in-python/">Go through this geekforgeeks link</a> to set up Gmail API and downloading credentials.json. Use their template script to generate a <strong>token.pickle</strong> file. Move that to <code>homeassistant/token.pickle</code> for using in docker.</p>
+<h2 id="testing-docker">Testing docker</h2>
+<p>Build and run the docker container to test if everything works</p>
+<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">docker run --rm -it $(docker build -q .)
+</code></pre><h2 id="making-the-docker-container-as-service">Making the docker container as service</h2>
+<p>Create a service in <code>/etc/systemd/system/docker.reademails.service</code> with the template below</p>
+<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">[Unit]
+Description=read emails with RSO tag
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=0
+Restart=never
+ExecStartPre=docker build -t reademails_docker /home/pi/Documents/alexa-notify-important-emails
+ExecStart=docker run -t reademails_docker
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><h3 id="to-start-this-service-">To start this service:-</h3>
+<p><code>sudo systemctl start docker.reademails.service </code></p>
+<h3 id="to-start-this-service-at-every-boot-">To start this service at every boot:-</h3>
+<p><code>sudo systemctl enable docker.reademails.service</code></p>
+<h2 id="wrapping-things-up-before-reaching-this-stage-you-might-need-to-configure--">Wrapping things up, before reaching this stage you might need to configure :-</h2>
+<ul>
+<li>secrets.yaml</li>
+<li>cookies.txt</li>
+<li>credentials.json</li>
+<li>token.pickle</li>
+<li>HOME (only during generation of secrets/tokens)</li>
+<li>HOME (when creating a service)</li>
+<li>ALEXA_DEVICE_NAME, REFRESH_RATE, MAX_TIMES_REPEAT in <code>reademails.py</code></li>
+<li>The label variable (RSOLabelid), you can add a print statement <code>print(labels)</code> at the line above and select label accordingly in <code>reademails.py</code></li>
+</ul>
+<pre tabindex="0"><code class="language-{python}" data-lang="{python}">labels = service.users().labels().list(userId=&quot;me&quot;).execute()
+RSOLabelid = list(filter(lambda x: x[&quot;name&quot;] == &quot;RSO&quot;, labels[&quot;labels&quot;]))[0][&quot;id&quot;]
+</code></pre><h2 id="see-it-in-action-">See it in action :)</h2>
+<p><a href="https://user-images.githubusercontent.com/6279035/146694731-f55ce539-a4ba-40ea-a0eb-b2236114d9c6.mp4">https://user-images.githubusercontent.com/6279035/146694731-f55ce539-a4ba-40ea-a0eb-b2236114d9c6.mp4</a></p>
+<h1 id="cool-isnt-it-whats-next">Cool! isn&rsquo;t it? What&rsquo;s next?</h1>
+<h2 id="i-dont-like-the-voice-of-alexa-lets-build-something-like-corentinj-real-time-voice-cloninghttpsgithubcomcorentinjreal-time-voice-cloning-and-get-my-emails-read-in-morgan-freemans-voice-d">I don&rsquo;t like the voice of alexa, Lets build something like <a href="https://github.com/CorentinJ/Real-Time-Voice-Cloning">CorentinJ Real-Time-Voice-Cloning</a> and get my emails read in Morgan Freeman&rsquo;s voice :D</h2>
+<p>Github link: [https://github.com/rushic24/alexa-notify-important-emails][https://github.com/rushic24/alexa-notify-important-emails]</p>
+</article>
+    </section>
+
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
+      
+        
+          <a class="ui label" href="../../tags/python" title="python">python</a>
+        
+          <a class="ui label" href="../../tags/ai" title="AI">AI</a>
+        
+          <a class="ui label" href="../../tags/docker" title="docker">docker</a>
+        
+          <a class="ui label" href="../../tags/pi" title="pi">pi</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/rushichaudhari.github.io\/posts\/2021-12-19-alexa-remind-emails\/';  
+            this.page.identifier = '\/posts\/2021-12-19-alexa-remind-emails\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'rushichaudhari' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+    
+    
+
+    
+
+  </div>
+  <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
+    
+    
+      <div class="ui segment toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#motivation--">Motivation :-</a>
+      <ul>
+        <li><a href="#high-level-view-">High level view:-</a></li>
+      </ul>
+    </li>
+    <li><a href="#setting-up-alexa_remote_controlsh-secretsyaml">Setting up alexa_remote_control.sh (secrets.yaml)</a></li>
+    <li><a href="#setting-up-gmail-api-credentials-credentialsjson-and-tokenpickle">Setting up Gmail API credentials (credentials.json and token.pickle)</a></li>
+    <li><a href="#testing-docker">Testing docker</a></li>
+    <li><a href="#making-the-docker-container-as-service">Making the docker container as service</a>
+      <ul>
+        <li><a href="#to-start-this-service-">To start this service:-</a></li>
+        <li><a href="#to-start-this-service-at-every-boot-">To start this service at every boot:-</a></li>
+      </ul>
+    </li>
+    <li><a href="#wrapping-things-up-before-reaching-this-stage-you-might-need-to-configure--">Wrapping things up, before reaching this stage you might need to configure :-</a></li>
+    <li><a href="#see-it-in-action-">See it in action :)</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#i-dont-like-the-voice-of-alexa-lets-build-something-like-corentinj-real-time-voice-cloninghttpsgithubcomcorentinjreal-time-voice-cloning-and-get-my-emails-read-in-morgan-freemans-voice-d">I don&rsquo;t like the voice of alexa, Lets build something like <a href="https://github.com/CorentinJ/Real-Time-Voice-Cloning">CorentinJ Real-Time-Voice-Cloning</a> and get my emails read in Morgan Freeman&rsquo;s voice :D</a></li>
+  </ul>
+</nav>
+      </div>
+    
+
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="../../me/yy.jpg">
+      
+    </div>
+
+    
+    <div class="ui medium header">
+    
+      A collection of random ideas so I don&#39;t have to google again
+      <div class="sub header" style="margin-top: 0.5rem;"></div>
+    
+    </div>
+    
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="../../posts">
+        <i class="archive icon" title="Archives"></i>
+      </a>
+      
+      <a class="item" href="../../tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="../../categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      
+      
+      <a class="ui label" href="../../tags/ai/" title="Ai">
+        Ai
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/arch/" title="Arch">
+        Arch
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/autoencoders/" title="Autoencoders">
+        Autoencoders
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/boot/" title="Boot">
+        Boot
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/cd/" title="Cd">
+        Cd
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/ci/" title="Ci">
+        Ci
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/commands/" title="Commands">
+        Commands
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/devto/" title="Devto">
+        Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/docker/" title="Docker">
+        Docker
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/dual/" title="Dual">
+        Dual
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/dualboot/" title="Dualboot">
+        Dualboot
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/github/" title="Github">
+        Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/grub/" title="Grub">
+        Grub
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/hugo/" title="Hugo">
+        Hugo
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/keep/" title="Keep">
+        Keep
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/linux/" title="Linux">
+        Linux
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/machine-learning/" title="Machine Learning">
+        Machine Learning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/mozilla/" title="Mozilla">
+        Mozilla
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/notes/" title="Notes">
+        Notes
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pca/" title="Pca">
+        Pca
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pi/" title="Pi">
+        Pi
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pinephone/" title="Pinephone">
+        Pinephone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/python/" title="Python">
+        Python
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/save/" title="Save">
+        Save
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/secure/" title="Secure">
+        Secure
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/systemd/" title="Systemd">
+        Systemd
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/tensorflow/" title="Tensorflow">
+        Tensorflow
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/thunderbird/" title="Thunderbird">
+        Thunderbird
+      </a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+      
+      
+      
+      
+
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/appdata/" title="Appdata">
+              Appdata
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-04-10-ssd-savespace/">SSD - things todo to save space on ssd C drive</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/arch/" title="Arch">
+              Arch
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-11-01-enable-secure-boot-on-dualboot/">Enable Secure Boot on Dualboot</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-11-01-switch-to-systemd-from-grub/">Switch to Systemd From Grub</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/bash/" title="Bash">
+              Bash
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-10-28-bookmark-linux-commands-keep/">Bookmark Linux Commands using Keep</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/cms/" title="Cms">
+              Cms
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/">Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/debian/" title="Debian">
+              Debian
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-04-08-not-authorized-to-perform-this-operation/">Not authorized to perform this operation</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/digitalocean/" title="Digitalocean">
+              Digitalocean
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-04-08-imp-links/">Imp links for few scripts or codes</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-08-19-dockerguiwsl/">Running GUI apps from docker inside WSL2.0 as standalone application</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+
+      
+        <div class="title">
+          <a class="item" href="../../categories" style="padding-left: 0.5rem;">......</a>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="../../index.xml">
+        <i class=" rss square icon" title="RSS"></i>
+      </a>
+    </div>
+  
+  
+    <div class="item">
+      <a href="mailto:rushic24@gmail.com">
+        <i class=" mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/rushic24" target="_blank">
+        <i class=" github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2018 - 2021 A collection of random ideas so I don&#39;t have to google again</p>
+    
+
+    
+  </section>
+</article>
+
+  </aside>
+</div>
+
+          </div>
+        </section>
+        <section class="back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
+  
+  
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">关于我</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>g1eny0ung 的 ❤️ 博客</p>
+<p>记录一些 🌈 生活上，技术上的事</p>
+<p><del>一名大四学生</del></p>
+<p><del>马上</del>（已经）毕业于 🏫 大连东软信息学院</p>
+<p>职业是前端工程师</p>
+<p>业余时间会做开源和 Apple App (OSX &amp; iOS)</p>
+<p>主要的技术栈是：</p>
+<ul>
+<li>JavaScript &amp; TypeScript</li>
+<li>React.js</li>
+<li>Electron</li>
+<li>Rust</li>
+</ul>
+<p>写着玩（写过）：</p>
+<ul>
+<li>Java &amp; Clojure &amp; CLJS</li>
+<li>OCaml &amp; Reason &amp; ReScript</li>
+<li>Dart &amp; Swift</li>
+</ul>
+<p>目前在 <a href="https://pingcap.com">PingCAP</a> 工作</p>
+<p>&ndash; 2020 年 09 月 09 日更新</p>
+
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">我的一些开源项目</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <ul>
+<li><a href="https://github.com/ilime/Petal">Petal 🌺</a> ➡️ <a href="https://douban.fm/">豆瓣 FM</a> 桌面版</li>
+<li><a href="https://github.com/g1eny0ung/hugo-theme-dream">hugo-theme-dream 🌱</a> ➡️ <a href="https://gohugo.io">HUGO</a> 的博客主题，当然，也是你现在看到的博客主题</li>
+<li><a href="https://github.com/g1eny0ung/Alfred-Colors-workflow">Alfred-Colors-workflow</a> ➡️ Alfred 插件：CSS 颜色格式转换 hex &lt;=&gt; rgb &lt;=&gt; hsl</li>
+<li><a href="https://github.com/g1eny0ung/github-colorful-contributions-graph">github-colorful-contributions-graph</a> ➡️ 改变 GitHub 贡献面板颜色的 Chrome 插件</li>
+<li><a href="https://github.com/dayjs/day.dart">day.dart</a> ➡️ ⏰ Day.js in dart.</li>
+</ul>
+<p><a href="https://github.com/g1eny0ung">等等等等</a></p>
+
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">其他</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>如果你喜欢我的开源项目或者它们可以给你带来帮助，可以赏一杯咖啡 ☕ 给我。~</p>
+<p>If you like my open source projects or they can help you. You can <a href="../../posts/buy-me-a-coffee">buy me a coffee ☕</a>.~</p>
+<p><strong>PayPal</strong>：</p>
+<p><a href="https://paypal.me/g1eny0ung">https://paypal.me/g1eny0ung</a></p>
+<p><strong>Patreon</strong>:</p>
+<p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
+<p><strong>微信赞赏码</strong>：</p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
+<blockquote>
+<p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
+<p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>
+</blockquote>
+
+        </div>
+      </article>
+    </section>
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui bottom attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="../../index.xml">
+        <i class="large rss square icon" title="RSS"></i>
+      </a>
+    </div>
+  
+  
+    <div class="item">
+      <a href="mailto:rushic24@gmail.com">
+        <i class="large mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/rushic24" target="_blank">
+        <i class="large github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+  window.backgroundDark = "black"
+  window.backgroundImageDark = "/me/background-dark.jpg"
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  null 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/semantic.min.js"></script>
+<script src="../../js/jquery.overlayScrollbars.min.js"></script>
+<script src="../../js/header.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/theme.js"></script>
+
+    
+<script src="../../js/html2canvas.min.js"></script>
+<script src="../../js/post.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+     
+  
+
+  <script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    var lightTheme = "gruvbox-light"
+    var darkTheme = "gruvbox-dark"
+    var theme = isDark ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark ? '#333' : '')
+  }
+</script>
+
+
+
+
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="Search" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/rushichaudhari.github.io/index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="../../js/search.js"></script>
+
+    
+
+    
+  </body>
+</html>

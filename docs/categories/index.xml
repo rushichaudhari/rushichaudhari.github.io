@@ -6,22 +6,31 @@
     <description>Recent content in Categories on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>arch</title>
-      <link>https://rushichaudhari.github.io/categories/arch/</link>
-      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <title>docker</title>
+      <link>https://rushichaudhari.github.io/categories/docker/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rushichaudhari.github.io/categories/arch/</guid>
+      <guid>https://rushichaudhari.github.io/categories/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>linux</title>
       <link>https://rushichaudhari.github.io/categories/linux/</link>
-      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arch</title>
+      <link>https://rushichaudhari.github.io/categories/arch/</link>
+      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/categories/arch/</guid>
       <description></description>
     </item>
     
@@ -103,15 +112,6 @@
       <pubDate>Sat, 28 Nov 2020 05:27:29 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/categories/netlify/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://rushichaudhari.github.io/categories/docker/</link>
-      <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/categories/docker/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on A collection of random ideas so I don&#39;t have to google again</title>
+    <link>https://rushichaudhari.github.io/tags/ai/</link>
+    <description>Recent content in AI on A collection of random ideas so I don&#39;t have to google again</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alexa AI for reminding important emails and reminders</title>
+      <link>https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/</link>
+      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/</guid>
+      <description>Motivation :- It was the third time I missed reading my email and picking up shifts for my oncampus job. I did try creating labels and filtering them but that didn&amp;rsquo;t show any progress in improvement. It&amp;rsquo;s really stressful when I get the notification that something needs a response from me right away. I had to make sure that I was not missing this next time. It is then when I decided I need to build a system to process and remind me this.</description>
+    </item>
+    
+  </channel>
+</rss>
