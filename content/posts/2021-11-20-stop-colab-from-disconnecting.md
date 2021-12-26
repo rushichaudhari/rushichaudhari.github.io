@@ -3,7 +3,6 @@ layout: post
 title: 'Stop Colab From Disconnecting'
 date: 2021-11-20
 author: rushi
-cover: ''
 # categories: []
 tags: [colab, google, colaboratory, python, disconnect]
 draft: true

@@ -3,7 +3,6 @@ layout: post
 title: "Switch to Systemd From Grub"
 date: 2021-11-01
 author: rushi
-cover: ''
 categories: ['arch', 'linux']
 tags: ['systemd', 'grub']
 # draft: true

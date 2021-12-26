@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.89.4" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/" />
 
@@ -25,10 +25,10 @@
 <meta property="og:title" content="Alexa AI for reminding important emails and reminders" />
 <meta property="og:description" content="Motivation :- It was the third time I missed reading my email and picking up shifts for my oncampus job. I did try creating labels and filtering them but that didn&rsquo;t show any progress in improvement. It&rsquo;s really stressful when I get the notification that something needs a response from me right away. I had to make sure that I was not missing this next time. It is then when I decided I need to build a system to process and remind me this." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 <meta property="article:published_time" content="2021-12-19T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-12-19T00:00:00+00:00" />
-
 
 
 
@@ -169,27 +169,27 @@
 <li>Deploying it on a raspberry pi server</li>
 </ul>
 <h2 id="setting-up-alexa_remote_controlsh-secretsyaml">Setting up alexa_remote_control.sh (secrets.yaml)</h2>
-<p>The alexa request is based on <a href="https://github.com/walthowd/ha-alexa-tts">https://github.com/walthowd/ha-alexa-tts</a>,
+<p>The alexa request is based on <a href="https://github.com/walthowd/ha-alexa-tts,">https://github.com/walthowd/ha-alexa-tts,</a>
 There is a minor change make sure to add these <a href="https://github.com/rushic24/ha-alexa-tts/commit/e9b145a01c0792b82076554579fc46e6b60a3347">https://github.com/rushic24/ha-alexa-tts/commit/e9b145a01c0792b82076554579fc46e6b60a3347</a> if you want to try that script. I have aleady included that in this repo.</p>
 <p>Add your login credentials to the <code>homeassistant/secrets.yaml</code> file, with the keys alexa_email and alexa_password. I have kept a template to make those changes.</p>
 <p>Run the script interactively to pull your devices:</p>
 <p><code>./alexa_remote_control.sh -a</code></p>
 <p>And set that in <code>ALEXA_DEVICE_NAME</code> in <code>reademails.py</code></p>
 <p>If login fails look at <code>/tmp/.alexa.login</code>. Search for &ldquo;password&rdquo; and see if you are being prompted for the captcha. If so, you can attempt to login to Alexa manually from a browser (from the same IP) and see if that fixes the issue for you. It never did for me, so I logged in to <a href="https://alexa.amazon.com">https://alexa.amazon.com</a> with Chrome and used the cookies.txt</p>
-<p><a href="https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg?hl=en">Chrome cookies downloader extension</a> <br>
+<p><a href="https://chrome.google.com/webstore/detail/cookiestxt/njabckikapfpffapmjgojcnbfjonfjfg?hl=en">Chrome cookies downloader extension</a><br>
 <a href="https://addons.mozilla.org/en-US/firefox/addon/cookies-txt/">Firefox cookies downloader extension</a></p>
 <p>to export my amazon cookies to /tmp/.alexa.cookie. Other individuals have reported success using the same procedure, but only when using Firefox.</p>
 <p>Once you have <code>./alexa_remote_control.sh -a</code> returning your devices you can test TTS by running:</p>
-<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">./alexa_remote_control.sh -d &quot;My Dot Name&quot; -e speak:This_is_a_test!
+<pre><code class="language-{bash}" data-lang="{bash}">./alexa_remote_control.sh -d &quot;My Dot Name&quot; -e speak:This_is_a_test!
 </code></pre><p><strong>Note:</strong> When trying out this script make sure to change the home directory (<code>HOME=&quot;/home/dockerpi&quot;</code> to your home) in <code>alexa_remote_control.sh</code>, and restore ie back to <code>HOME=&quot;/home/dockerpi&quot;</code> and also place a copy of that cookies.txt in <code>cookies/cookies.txt</code> for using it inside docker.</p>
 <h2 id="setting-up-gmail-api-credentials-credentialsjson-and-tokenpickle">Setting up Gmail API credentials (credentials.json and token.pickle)</h2>
 <p><a href="https://www.geeksforgeeks.org/how-to-read-emails-from-gmail-using-gmail-api-in-python/">Go through this geekforgeeks link</a> to set up Gmail API and downloading credentials.json. Use their template script to generate a <strong>token.pickle</strong> file. Move that to <code>homeassistant/token.pickle</code> for using in docker.</p>
 <h2 id="testing-docker">Testing docker</h2>
 <p>Build and run the docker container to test if everything works</p>
-<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">docker run --rm -it $(docker build -q .)
+<pre><code class="language-{bash}" data-lang="{bash}">docker run --rm -it $(docker build -q .)
 </code></pre><h2 id="making-the-docker-container-as-service">Making the docker container as service</h2>
 <p>Create a service in <code>/etc/systemd/system/docker.reademails.service</code> with the template below</p>
-<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">[Unit]
+<pre><code class="language-{bash}" data-lang="{bash}">[Unit]
 Description=read emails with RSO tag
 After=docker.service
 Requires=docker.service
@@ -217,7 +217,7 @@ WantedBy=multi-user.target
 <li>ALEXA_DEVICE_NAME, REFRESH_RATE, MAX_TIMES_REPEAT in <code>reademails.py</code></li>
 <li>The label variable (RSOLabelid), you can add a print statement <code>print(labels)</code> at the line above and select label accordingly in <code>reademails.py</code></li>
 </ul>
-<pre tabindex="0"><code class="language-{python}" data-lang="{python}">labels = service.users().labels().list(userId=&quot;me&quot;).execute()
+<pre><code class="language-{python}" data-lang="{python}">labels = service.users().labels().list(userId=&quot;me&quot;).execute()
 RSOLabelid = list(filter(lambda x: x[&quot;name&quot;] == &quot;RSO&quot;, labels[&quot;labels&quot;]))[0][&quot;id&quot;]
 </code></pre><h2 id="see-it-in-action-">See it in action :)</h2>
 <p><a href="https://user-images.githubusercontent.com/6279035/146694731-f55ce539-a4ba-40ea-a0eb-b2236114d9c6.mp4">https://user-images.githubusercontent.com/6279035/146694731-f55ce539-a4ba-40ea-a0eb-b2236114d9c6.mp4</a></p>
@@ -381,18 +381,6 @@ RSOLabelid = list(filter(lambda x: x[&quot;name&quot;] == &quot;RSO&quot;, label
     
       
       
-      <a class="ui label" href="../../tags/colab/" title="Colab">
-        Colab
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
-        Colaboratory
-      </a>
-    
-      
-      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -401,12 +389,6 @@ RSOLabelid = list(filter(lambda x: x[&quot;name&quot;] == &quot;RSO&quot;, label
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
-        Disconnect
       </a>
     
       
@@ -431,12 +413,6 @@ RSOLabelid = list(filter(lambda x: x[&quot;name&quot;] == &quot;RSO&quot;, label
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/google/" title="Google">
-        Google
       </a>
     
       
@@ -960,7 +936,7 @@ RSOLabelid = list(filter(lambda x: x[&quot;name&quot;] == &quot;RSO&quot;, label
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
+<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

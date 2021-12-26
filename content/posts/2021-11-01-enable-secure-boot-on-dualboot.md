@@ -3,7 +3,6 @@ layout: post
 title: "Enable Secure Boot on Dualboot"
 author: rushi
 date: 2021-11-01
-cover: '/img/2021-11-01-enable-secure-boot-on-dualboot/cover.jpg'
 categories: [linux, arch]
 tags: [boot, secure, dual, dualboot]
 

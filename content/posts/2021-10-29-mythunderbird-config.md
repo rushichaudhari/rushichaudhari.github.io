@@ -3,7 +3,6 @@ layout: post
 title: 'My Thunderbird config'
 author: rushi
 categories: [softwares]
-cover: ''
 tags: [mozilla, thunderbird]
 ---
 

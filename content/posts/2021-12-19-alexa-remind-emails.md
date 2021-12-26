@@ -3,7 +3,6 @@ layout: post
 title: "Alexa AI for reminding important emails and reminders"
 date: 2021-12-19
 author: rushi
-cover: ''
 categories: [linux, docker]
 tags: [python, AI, docker, pi]
 ---

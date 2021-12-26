@@ -4,7 +4,6 @@ title: "Bookmark Linux Commands using Keep"
 date: 2021-10-28
 author: rushi
 categories: [linux, bash]
-cover: ""
 featured: false
 hidden: false
 tags: [keep, save, commands]
