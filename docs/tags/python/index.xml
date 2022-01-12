@@ -6,7 +6,17 @@
     <description>Recent content in python on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lets Clone the Voice of Priyanka Chopra Jonas</title>
+      <link>https://rushichaudhari.github.io/posts/2022-01-12-lets-clone-the-voice-of-priyanka-chopra-jonas/</link>
+      <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-01-12-lets-clone-the-voice-of-priyanka-chopra-jonas/</guid>
+      <description>I had decided to get my email reminders using any celebrity&amp;rsquo;s voice in my previous post Alexa AI for reminding important emails and reminders. Here is a small step towards it :D
+If you don&amp;rsquo;t know how Priyanka Chopra sounds like, here is a real sample     Sample synthesized voice 1   Sample synthesized voice 2   Sample synthesized voice 3   Real voice of Amitabh Bachchan     Sample synthesized voice for Amitabh Bachchan This one is more robotic.</description>
+    </item>
+    
     <item>
       <title>Alexa AI for reminding important emails and reminders</title>
       <link>https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/</link>
