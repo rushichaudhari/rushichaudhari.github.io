@@ -21,7 +21,7 @@ I had decided to get my email reminders using any celebrity's voice in my previo
 
 <p>
     <audio class="player" controls preload="none">
-        <source src="/static/img/2022-01-12-Lets-clone-the-voice-of-Priyanka-Chopra-Jonas/slept.wav" type="audio/mp3">
+        <source src="/img/2022-01-12-Lets-clone-the-voice-of-Priyanka-Chopra-Jonas/slept.wav" type="audio/mp3">
     </audio>
 </p>
 
@@ -29,7 +29,7 @@ I had decided to get my email reminders using any celebrity's voice in my previo
 
 <p>
     <audio class="player" controls preload="none">
-        <source src="/static/img/2022-01-12-Lets-clone-the-voice-of-Priyanka-Chopra-Jonas/cycling.wav" type="audio/mp3">
+        <source src="/img/2022-01-12-Lets-clone-the-voice-of-Priyanka-Chopra-Jonas/cycling.wav" type="audio/mp3">
     </audio>
 </p>
 
@@ -37,7 +37,7 @@ I had decided to get my email reminders using any celebrity's voice in my previo
 
 <p>
     <audio class="player" controls preload="none">
-        <source src="/static/img/2022-01-12-Lets-clone-the-voice-of-Priyanka-Chopra-Jonas/hopeexp.wav" type="audio/mp3">
+        <source src="/img/2022-01-12-Lets-clone-the-voice-of-Priyanka-Chopra-Jonas/hopeexp.wav" type="audio/mp3">
     </audio>
 </p>
 
@@ -53,7 +53,7 @@ This one is more robotic. I'm still searching for more dataset for this, and onc
 
 <p>
     <audio class="player" controls preload="none">
-        <source src="/static/img/2022-01-12-Lets-clone-the-voice-of-Priyanka-Chopra-Jonas/amitabh_bachchan_love_the_game.wav" type="audio/mp3">
+        <source src="/img/2022-01-12-Lets-clone-the-voice-of-Priyanka-Chopra-Jonas/amitabh_bachchan_love_the_game.wav" type="audio/mp3">
     </audio>
 </p>
 
@@ -68,7 +68,7 @@ This one is more robotic. I'm still searching for more dataset for this, and onc
 ### References:
 
 - https://github.com/BenAAndrew/Voice-Cloning-App/releases/tag/v1.0.4
-- You might also need to finetune the hifigan using [this notebook](/static/img/2022-01-12-Lets-clone-the-voice-of-Priyanka-Chopra-Jonas/HiFi_GAN_Fine_Tuning.ipynb) or [colab link](https://colab.research.google.com/drive/1ume3953K2K-EdNL90vNqPNSWM1KRuwqp) to remove the robotic voice 
+- You might also need to finetune the hifigan using [this notebook](/img/2022-01-12-Lets-clone-the-voice-of-Priyanka-Chopra-Jonas/HiFi_GAN_Fine_Tuning.ipynb) or [colab link](https://colab.research.google.com/drive/1ume3953K2K-EdNL90vNqPNSWM1KRuwqp) to remove the robotic voice 
 
 
 **Note: This codebase is a rabbit hole, and It's too difficult for me to write everything to get started with this, please go through the docs and github issues if you face any difficulties**
