@@ -3,6 +3,7 @@
 layout: post
 title:  "LSTMS for stock price predictions, worth it ?"
 author: rushi
+date: 2020-07-03
 categories: [python, requests, selenium, google, form]
 cover: "/img/2020-07-03-LSTM-Stock-Prediction-worth-it/image-20200703211002786.png"
 featured: false

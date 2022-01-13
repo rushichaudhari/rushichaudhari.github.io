@@ -18,6 +18,16 @@ Probably the data is being loaded up as SVG which is why it isn&amp;rsquo;t bein
     </item>
     
     <item>
+      <title>LSTMS for stock price predictions, worth it ?</title>
+      <link>https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</link>
+      <pubDate>Fri, 03 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</guid>
+      <description>The internet is now flooded with “predicting stock market prices using LSTM”. I went through 9 articles that I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed promising results. But none of them showed their real-life use-case; the question is is it beneficial?
+LSTMS predict T+1th term by previous k terms of time-series, say k=2, So we need to have T and T-1 to predict T+2 so suppose my X for input is Open, High, Low, Close, Volume, and Y would be the next day’s Close</description>
+    </item>
+    
+    <item>
       <title>Automate Google forms without selenium</title>
       <link>https://rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -26,16 +36,6 @@ Probably the data is being loaded up as SVG which is why it isn&amp;rsquo;t bein
       <description>In the previous year, I had posted a script to fill google forms using selenium, and containerizing it with docker to run it parallelly. This is an alternative way to do the same using post requests.
 I had created a google form using the default template shown below.
 Which had fields like To get started we need to capture the request. I&amp;rsquo;ve used burp suite tool to capture, there are many alternative tools you can google.</description>
-    </item>
-    
-    <item>
-      <title>LSTMS for stock price predictions, worth it ?</title>
-      <link>https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</guid>
-      <description>The internet is now flooded with “predicting stock market prices using LSTM”. I went through 9 articles that I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed promising results. But none of them showed their real-life use-case; the question is is it beneficial?
-LSTMS predict T+1th term by previous k terms of time-series, say k=2, So we need to have T and T-1 to predict T+2 so suppose my X for input is Open, High, Low, Close, Volume, and Y would be the next day’s Close</description>
     </item>
     
   </channel>
