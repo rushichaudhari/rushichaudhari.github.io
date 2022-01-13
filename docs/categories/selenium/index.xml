@@ -34,8 +34,8 @@ Which had fields like To get started we need to capture the request. I&amp;rsquo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</guid>
-      <description>The internet is now flooded with &amp;ldquo;predicting stock market prices using LSTM&amp;rdquo;. I went through 9 articles which I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed good results. But none of them showed their real-life use-case, The question is really helpful?
-LSTMS predict T+1th term by previous k terms of time-series say k=2 So we need to have T and T-1 to predict T+2</description>
+      <description>The internet is now flooded with “predicting stock market prices using LSTM”. I went through 9 articles that I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed promising results. But none of them showed their real-life use-case; the question is is it beneficial?
+LSTMS predict T+1th term by previous k terms of time-series, say k=2, So we need to have T and T-1 to predict T+2 so suppose my X for input is Open, High, Low, Close, Volume, and Y would be the next day’s Close</description>
     </item>
     
   </channel>

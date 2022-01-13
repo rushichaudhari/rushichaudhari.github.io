@@ -7,6 +7,7 @@ tags:
     - linux
     - pinephone
     - arch
+draft: true
 ---
 
 ```

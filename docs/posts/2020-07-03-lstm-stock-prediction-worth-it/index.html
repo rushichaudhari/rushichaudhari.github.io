@@ -13,8 +13,8 @@
 
 
 <meta name="author" content="rushi" />
-<meta name="description" content="The internet is now flooded with &amp;ldquo;predicting stock market prices using LSTM&amp;rdquo;. I went through 9 articles which I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed good results. But none of them showed their real-life use-case, The question is really helpful?
-LSTMS predict T&#43;1th term by previous k terms of time-series say k=2 So we need to have T and T-1 to predict T&#43;2" />
+<meta name="description" content="The internet is now flooded with “predicting stock market prices using LSTM”. I went through 9 articles that I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed promising results. But none of them showed their real-life use-case; the question is is it beneficial?
+LSTMS predict T&#43;1th term by previous k terms of time-series, say k=2, So we need to have T and T-1 to predict T&#43;2 so suppose my X for input is Open, High, Low, Close, Volume, and Y would be the next day’s Close" />
 
 
 
@@ -24,8 +24,8 @@ LSTMS predict T&#43;1th term by previous k terms of time-series say k=2 So we ne
 
 
 <meta property="og:title" content="LSTMS for stock price predictions, worth it ?" />
-<meta property="og:description" content="The internet is now flooded with &ldquo;predicting stock market prices using LSTM&rdquo;. I went through 9 articles which I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed good results. But none of them showed their real-life use-case, The question is really helpful?
-LSTMS predict T&#43;1th term by previous k terms of time-series say k=2 So we need to have T and T-1 to predict T&#43;2" />
+<meta property="og:description" content="The internet is now flooded with “predicting stock market prices using LSTM”. I went through 9 articles that I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed promising results. But none of them showed their real-life use-case; the question is is it beneficial?
+LSTMS predict T&#43;1th term by previous k terms of time-series, say k=2, So we need to have T and T-1 to predict T&#43;2 so suppose my X for input is Open, High, Low, Close, Volume, and Y would be the next day’s Close" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/" />
 <meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
@@ -37,8 +37,8 @@ LSTMS predict T&#43;1th term by previous k terms of time-series say k=2 So we ne
 <meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 <meta name="twitter:title" content="LSTMS for stock price predictions, worth it ?"/>
-<meta name="twitter:description" content="The internet is now flooded with &ldquo;predicting stock market prices using LSTM&rdquo;. I went through 9 articles which I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed good results. But none of them showed their real-life use-case, The question is really helpful?
-LSTMS predict T&#43;1th term by previous k terms of time-series say k=2 So we need to have T and T-1 to predict T&#43;2"/>
+<meta name="twitter:description" content="The internet is now flooded with “predicting stock market prices using LSTM”. I went through 9 articles that I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed promising results. But none of them showed their real-life use-case; the question is is it beneficial?
+LSTMS predict T&#43;1th term by previous k terms of time-series, say k=2, So we need to have T and T-1 to predict T&#43;2 so suppose my X for input is Open, High, Low, Close, Volume, and Y would be the next day’s Close"/>
 
 
 <link rel="stylesheet" href="../../css/semantic.min.css" />
@@ -161,23 +161,18 @@ LSTMS predict T&#43;1th term by previous k terms of time-series say k=2 So we ne
         </h1>
       </header>
 
-      <article class="main"><p><span style="font-size:50px;">T</span>he internet is now flooded with &ldquo;predicting stock market prices using LSTM&rdquo;. I went through 9 articles which I found on websites like medium, KDnuggets, etc.
-And I realized almost 6-7 out of them showed good results. But none of them showed their real-life use-case, The question is really helpful?</p>
-<p>LSTMS predict T+1th term by previous k terms of time-series
-say k=2
-So we need to have T and T-1 to predict T+2</p>
-<p>so suppose my X for input is Open, High, Low, Close, Volume
-and Y would be next day&rsquo;s Close</p>
-<p>I need to have OHLCV values of the previous 2 days to predict the next day&rsquo;s Close.
-This means If I need to know tomorrow&rsquo;s close, I need to wait till the current day ends to get its OHLCV values i.e. it predicts only 1 candlestick in the future.</p>
-<p>One article was like using previous k days Close to predict next days Close.
-so for T+1, I would give it T&rsquo;s and (T-1)&rsquo;s Close as inputs and
-for T+2; T&rsquo;s, and (predicted_T+1)&rsquo;s close as input.
-This is again not useful because if there is an error in T+1; it gets propagated in the next sequence, and also logically we cannot predict movements based on only closing prices. OHLCV may work because it might detect few candlestick patterns like Doji, Harami, etc, and also consider volume.</p>
-<p>LSTM&rsquo;s in those articles showed good predictions, because they predict only single value instead of a range of values. So are they worth for a single candlestick? Because even indicators like moving averages give a proper estimate for single candlestick.</p>
-<p>I think there should be a different approach to use LSTMS, for which unfortunately I didn&rsquo;t find any article. Please comment down below if you find something.</p>
-<p>I am not an expert in these fields — I am just putting forward the conclusions I got to after my explorations with this topic,
-so feel free to point out anything I missed. Thank you for your time.</p>
+      <article class="main"><p><span style="font-size:50px;">T</span>he internet is now flooded with “predicting stock market prices using LSTM”. I went through 9 articles that I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed promising results. But none of them showed their real-life use-case; the question is is it beneficial?</p>
+<p>LSTMS predict T+1th term by previous k terms of time-series, say k=2, So we need to have T and T-1 to predict T+2
+so suppose my X for input is Open, High, Low, Close, Volume, and Y would be the next day’s Close</p>
+<p>=&gt; I need to have OHLCV values of the previous two days to predict the next day’s Close</p>
+<p>=&gt; If I need to know tomorrow’s Close, I need to wait till the current day ends to get its OHLCV values, i.e. it predicts only one candlestick in the future.</p>
+<p>=&gt; One article was like using previous k days Close to predict next days Close.</p>
+<p>So for T+1, I would give it T’s and (T-1)’s Close as inputs and for T+2; T’s, and (predicted_T+1)’s Close as input.</p>
+<p>Again, this is not useful because if there is an error in T+1, it gets propagated in the following sequence</p>
+<p>Also, logically, we cannot predict movements based on only closing prices. OHLCV may work because it might detect a few candlestick patterns like Doji, Harami, etc., and consider volume.</p>
+<p>LSTM’s in those articles showed good predictions because they predict only a single value instead of a range of values. So are they worth a single candlestick? Because even indicators like moving averages give a proper estimate for a single candlestick.</p>
+<p>I think there should be a different approach to using LSTMS; I didn’t find any article. Please comment down below if you see something.
+I am not an expert in these fields — I am just putting forward the conclusions I got to after my explorations with this topic, so feel free to point out anything I missed. Thank you for your time.</p>
 </article>
     </section>
 
@@ -603,14 +598,6 @@ so feel free to point out anything I missed. Thank you for your time.</p>
             
             </div>
           </div>
-        
-      
-        
-
-        
-      
-        
-
         
       
         
