@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSH on A collection of random ideas so I don&#39;t have to google again</title>
+    <link>https://rushichaudhari.github.io/tags/ssh/</link>
+    <description>Recent content in SSH on A collection of random ideas so I don&#39;t have to google again</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cool Stuff to Do With SSH</title>
+      <link>https://rushichaudhari.github.io/posts/2022-02-05-cool-stuff-to-do-with-ssh/</link>
+      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-02-05-cool-stuff-to-do-with-ssh/</guid>
+      <description>Watch Netflix from restricted regions Use: Some Netflix shows are only available in India, Let us proxy through some Indian server to watch Netflix
+# In terminal 1 # 9050 is default port for proxychains socksproxy # something@someIP should be some Indian server ssh something@someIP -D 9050 # In terminal 2 proxychains firefox # Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux</description>
+    </item>
+    
+  </channel>
+</rss>
