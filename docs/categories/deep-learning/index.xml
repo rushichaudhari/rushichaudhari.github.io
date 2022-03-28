@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>deep learning on A collection of random ideas so I don&#39;t have to google again</title>
+    <link>https://rushichaudhari.github.io/categories/deep-learning/</link>
+    <description>Recent content in deep learning on A collection of random ideas so I don&#39;t have to google again</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running the Real Time Voice Cloning in Docker on Arch Linux</title>
+      <link>https://rushichaudhari.github.io/posts/2021-12-24-real-time-voice-cloning-docker-arch/</link>
+      <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-12-24-real-time-voice-cloning-docker-arch/</guid>
+      <description>I came across this awesome project called Real Time Voice Cloning by Corentin Jemine and I wanted to give it a shot. I’m currently working on a Arch linux machine with GPU, that could easily run the toolbox, but I wanted an easy way to get everything setup. Docker would do the trick as far as getting it setup, and then through forwarding the X Window System via SSH, I could view and control the program locally as it ran remotely.</description>
+    </item>
+    
+  </channel>
+</rss>
