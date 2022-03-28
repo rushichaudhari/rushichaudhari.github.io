@@ -6,7 +6,22 @@
     <description>Recent content in clone on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/clone/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 26 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/clone/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Cloned the Voice of Priyanka Chopra Jonas</title>
+      <link>https://rushichaudhari.github.io/posts/2022-01-01-how-i-cloned-the-voice-of-priyanka-chopra-jonas/</link>
+      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-01-01-how-i-cloned-the-voice-of-priyanka-chopra-jonas/</guid>
+      <description>As I was working on finetuning stuff for the Real Time Voice Cloning (the one by CorentinJ). I came across this interesting project.
+repo used: https://github.com/BenAAndrew/Voice-Cloning-App
+Sample of the original voice to compare: https://youtu.be/ojU-KG_7qFA
+Results: Output 1:
+  Output 2:
+  Output 3:
+  </description>
+    </item>
+    
     <item>
       <title>Running the Real Time Voice Cloning in Docker on Arch Linux</title>
       <link>https://rushichaudhari.github.io/posts/2021-12-24-real-time-voice-cloning-docker-arch/</link>

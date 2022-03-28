@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.95.0" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/tags/docker/" />
 
@@ -25,9 +25,8 @@
 <meta property="og:title" content="docker" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://rushichaudhari.github.io/tags/docker/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-<meta property="og:updated_time" content="2021-12-19T00:00:00+00:00" />
+<meta property="og:url" content="https://rushichaudhari.github.io/tags/docker/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+
 
 
 
@@ -190,14 +189,44 @@
     
       
       
+      <a class="ui label" href="../../tags/clone/" title="Clone">
+        Clone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
     
       
       
+      <a class="ui label" href="../../tags/corentinj/" title="Corentinj">
+        Corentinj
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -222,6 +251,12 @@
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -304,8 +339,8 @@
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -324,6 +359,12 @@
       
       <a class="ui label" href="../../tags/thunderbird/" title="Thunderbird">
         Thunderbird
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/voice/" title="Voice">
+        Voice
       </a>
     
       
@@ -382,6 +423,12 @@
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">2022 03 27 Colab Equivalent Pytorch Docker With GPU</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">
@@ -478,8 +525,8 @@
             <i class="dropdown icon"></i>
             
             
-            <a class="item" href="../../categories/digitalocean/" title="Digitalocean">
-              Digitalocean
+            <a class="item" href="../../categories/deep-learning/" title="Deep Learning">
+              Deep Learning
             </a>
           </div>
           <div class="content">
@@ -487,18 +534,26 @@
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="../../posts/2020-04-08-imp-links/">Imp links for few scripts or codes</a>
+                  <a class="item" href="../../posts/2022-01-01-how-i-cloned-the-voice-of-priyanka-chopra-jonas/">How I Cloned the Voice of Priyanka Chopra Jonas</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="../../posts/2020-08-19-dockerguiwsl/">Running GUI apps from docker inside WSL2.0 as standalone application</a>
+                  <a class="item" href="../../posts/2021-12-24-real-time-voice-cloning-docker-arch/">Running the Real Time Voice Cloning in Docker on Arch Linux</a>
                 </div>
               </div>
             
             </div>
           </div>
+        
+      
+        
+
+        
+      
+        
+
         
       
         
@@ -684,6 +739,101 @@
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">2022 03 27 Colab Equivalent Pytorch Docker With GPU</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Sunday, Mar 27, 2022</p>
+    </div>
+    <div class="description">
+      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &#34;host&#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+Reason?
+Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-01-01-how-i-cloned-the-voice-of-priyanka-chopra-jonas/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2022-01-01-how-i-cloned-the-voice-of-priyanka-chopra-jonas/">How I Cloned the Voice of Priyanka Chopra Jonas</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Sunday, Dec 26, 2021</p>
+    </div>
+    <div class="description">
+      As I was working on finetuning stuff for the Real Time Voice Cloning (the one by CorentinJ). I came across this interesting project.
+repo used: https://github.com/BenAAndrew/Voice-Cloning-App
+Sample of the original voice to compare: https://youtu.be/ojU-KG_7qFA
+Results: Output 1:
+  Output 2:
+  Output 3:
+  
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2021-12-24-real-time-voice-cloning-docker-arch/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2021-12-24-real-time-voice-cloning-docker-arch/">Running the Real Time Voice Cloning in Docker on Arch Linux</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Friday, Dec 24, 2021</p>
+    </div>
+    <div class="description">
+      I came across this awesome project called Real Time Voice Cloning by Corentin Jemine and I wanted to give it a shot. I’m currently working on a Arch linux machine with GPU, that could easily run the toolbox, but I wanted an easy way to get everything setup. Docker would do the trick as far as getting it setup, and then through forwarding the X Window System via SSH, I could view and control the program locally as it ran remotely.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>5 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/">
     
       
@@ -792,7 +942,7 @@
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

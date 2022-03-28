@@ -18,7 +18,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.95.0" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2022-02-05-cool-stuff-to-do-with-ssh/" />
 
@@ -27,10 +27,10 @@
 <meta property="og:description" content="Watch Netflix from restricted regions Use: Some Netflix shows are only available in India, Let us proxy through some Indian server to watch Netflix
 # In terminal 1 # 9050 is default port for proxychains socksproxy # something@someIP should be some Indian server ssh something@someIP -D 9050 # In terminal 2 proxychains firefox # Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-02-05-cool-stuff-to-do-with-ssh/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-02-05-cool-stuff-to-do-with-ssh/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-02-05T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-02-05T00:00:00+00:00" />
+
 
 
 
@@ -160,16 +160,16 @@
 
       <article class="main"><h2 id="watch-netflix-from-restricted-regions">Watch Netflix from restricted regions</h2>
 <p>Use: Some Netflix shows are only available in India, Let us proxy through some Indian server to watch Netflix</p>
-<pre><code># In terminal 1 
+<pre tabindex="0"><code># In terminal 1 
 # 9050 is default port for proxychains socksproxy
 # something@someIP should be some Indian server
 ssh something@someIP -D 9050
-</code></pre><pre><code># In terminal 2
+</code></pre><pre tabindex="0"><code># In terminal 2
 proxychains firefox
 # Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D
 </code></pre><h2 id="vnc-over-ssh-tunnel">VNC over SSH tunnel</h2>
 <p><strong>Best alternative if Anydesk/ Teamviewer fails on linux</strong></p>
-<pre><code># The first thing to do is create the tunnel that routes packets from localhost (at port 9000) to the remote host (at port 5901) through port 22
+<pre tabindex="0"><code># The first thing to do is create the tunnel that routes packets from localhost (at port 9000) to the remote host (at port 5901) through port 22
 
 ssh -L 9000:localhost:5901 USER@REMOTE_IP
 </code></pre><ul>
@@ -177,13 +177,13 @@ ssh -L 9000:localhost:5901 USER@REMOTE_IP
 <li>You can also use REMOTEIP:5901 in vncviewer without ssh tunneling, but ssh makes it more secure :D</li>
 </ul>
 <h2 id="transfer-files-over-ssh">Transfer files over SSH</h2>
-<pre><code>tar -cvf somedir | ssh USER@REMOTEIP &quot;tar -xf -&quot;
+<pre tabindex="0"><code>tar -cvf somedir | ssh USER@REMOTEIP &#34;tar -xf -&#34;
 </code></pre><h2 id="vnc-over-ssh-tunnel-over-tor-no-public-ip">VNC over SSH tunnel over Tor (no public ip)</h2>
 <ul>
 <li>Start vncserver on port 5901 on the server</li>
 <li>Binding 9000 of local machine with 5901 in remote, use the command below to bind</li>
 </ul>
-<pre><code>sudo proxychains ssh -L 9000:localhost:5901 root@ziuvhhwxme30i.onion
+<pre tabindex="0"><code>sudo proxychains ssh -L 9000:localhost:5901 root@ziuvhhwxme30i.onion
 </code></pre><ul>
 <li>Test localhost:9000 in vncviewer</li>
 </ul>
@@ -324,14 +324,44 @@ ssh -L 9000:localhost:5901 USER@REMOTE_IP
     
       
       
+      <a class="ui label" href="../../tags/clone/" title="Clone">
+        Clone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
     
       
       
+      <a class="ui label" href="../../tags/corentinj/" title="Corentinj">
+        Corentinj
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -356,6 +386,12 @@ ssh -L 9000:localhost:5901 USER@REMOTE_IP
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -438,8 +474,8 @@ ssh -L 9000:localhost:5901 USER@REMOTE_IP
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -458,6 +494,12 @@ ssh -L 9000:localhost:5901 USER@REMOTE_IP
       
       <a class="ui label" href="../../tags/thunderbird/" title="Thunderbird">
         Thunderbird
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/voice/" title="Voice">
+        Voice
       </a>
     
       
@@ -516,6 +558,12 @@ ssh -L 9000:localhost:5901 USER@REMOTE_IP
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">2022 03 27 Colab Equivalent Pytorch Docker With GPU</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">
@@ -612,8 +660,8 @@ ssh -L 9000:localhost:5901 USER@REMOTE_IP
             <i class="dropdown icon"></i>
             
             
-            <a class="item" href="../../categories/digitalocean/" title="Digitalocean">
-              Digitalocean
+            <a class="item" href="../../categories/deep-learning/" title="Deep Learning">
+              Deep Learning
             </a>
           </div>
           <div class="content">
@@ -621,18 +669,26 @@ ssh -L 9000:localhost:5901 USER@REMOTE_IP
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="../../posts/2020-04-08-imp-links/">Imp links for few scripts or codes</a>
+                  <a class="item" href="../../posts/2022-01-01-how-i-cloned-the-voice-of-priyanka-chopra-jonas/">How I Cloned the Voice of Priyanka Chopra Jonas</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="../../posts/2020-08-19-dockerguiwsl/">Running GUI apps from docker inside WSL2.0 as standalone application</a>
+                  <a class="item" href="../../posts/2021-12-24-real-time-voice-cloning-docker-arch/">Running the Real Time Voice Cloning in Docker on Arch Linux</a>
                 </div>
               </div>
             
             </div>
           </div>
+        
+      
+        
+
+        
+      
+        
+
         
       
         
@@ -887,7 +943,7 @@ ssh -L 9000:localhost:5901 USER@REMOTE_IP
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

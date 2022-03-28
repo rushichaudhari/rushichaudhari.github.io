@@ -18,7 +18,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.95.0" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/" />
 
@@ -27,8 +27,9 @@
 <meta property="og:description" content="Change cache location of Firefox You can do this by creating a new hidden preference.
  Type about:config into the location bar and press enter Accept the warning message that appears, you will be taken to a list of preferences Right-click somewhere in the list and select &ldquo;New &gt; String&rdquo; For the name of the preference type browser.cache.disk.parent_directory For its value type the path to where you want to store the cache Next locate the preference browser." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+
+
 
 
 
@@ -174,13 +175,13 @@
 <h2 id="symlink-appdata-folders">Symlink AppData folders</h2>
 <p>Windows applications often store their data and settings in an AppData folder, and each Windows user account has its own. It is located under C:\Users&lt;username&gt; which stores caches of various applications.</p>
 <p>Move all the files/hidden files/sub folders from the <code>C:\Users\Nikhil\AppData\Local</code> to to your <code>D:\AppData\Local</code> directory and create a symlink.</p>
-<pre><code>mklink /d C:\Users\Nikhil\AppData\Local D:\AppData\Local
+<pre tabindex="0"><code>mklink /d C:\Users\Nikhil\AppData\Local D:\AppData\Local
 </code></pre><h2 id="move-ms-office-to-some-other-drive-or-install">Move MS Office to some other drive [or install]</h2>
 <p>source: <a href="https://www.youtube.com/watch?v=CIBNlTpByoY&amp;t=36s">https://www.youtube.com/watch?v=CIBNlTpByoY&amp;t=36s</a></p>
 <p>For 64bit</p>
-<pre><code>MKLINK /J &quot;C:\Program Files\Microsoft Office\root&quot; &quot;U:\Program Files\Microsoft Office\root&quot;
+<pre tabindex="0"><code>MKLINK /J &#34;C:\Program Files\Microsoft Office\root&#34; &#34;U:\Program Files\Microsoft Office\root&#34;
 </code></pre><p>For 32 bit [x86]</p>
-<pre><code>MKLINK /J &quot;C:\Program Files (x86)\Microsoft Office\root&quot; &quot;U:\Program Files (x86)\Microsoft Office\root&quot;
+<pre tabindex="0"><code>MKLINK /J &#34;C:\Program Files (x86)\Microsoft Office\root&#34; &#34;U:\Program Files (x86)\Microsoft Office\root&#34;
 </code></pre></article>
     </section>
 
@@ -313,14 +314,44 @@
     
       
       
+      <a class="ui label" href="../../tags/clone/" title="Clone">
+        Clone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
     
       
       
+      <a class="ui label" href="../../tags/corentinj/" title="Corentinj">
+        Corentinj
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -345,6 +376,12 @@
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -427,8 +464,8 @@
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -447,6 +484,12 @@
       
       <a class="ui label" href="../../tags/thunderbird/" title="Thunderbird">
         Thunderbird
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/voice/" title="Voice">
+        Voice
       </a>
     
       
@@ -505,6 +548,12 @@
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">2022 03 27 Colab Equivalent Pytorch Docker With GPU</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">
@@ -601,8 +650,8 @@
             <i class="dropdown icon"></i>
             
             
-            <a class="item" href="../../categories/digitalocean/" title="Digitalocean">
-              Digitalocean
+            <a class="item" href="../../categories/deep-learning/" title="Deep Learning">
+              Deep Learning
             </a>
           </div>
           <div class="content">
@@ -610,18 +659,26 @@
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="../../posts/2020-04-08-imp-links/">Imp links for few scripts or codes</a>
+                  <a class="item" href="../../posts/2022-01-01-how-i-cloned-the-voice-of-priyanka-chopra-jonas/">How I Cloned the Voice of Priyanka Chopra Jonas</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="../../posts/2020-08-19-dockerguiwsl/">Running GUI apps from docker inside WSL2.0 as standalone application</a>
+                  <a class="item" href="../../posts/2021-12-24-real-time-voice-cloning-docker-arch/">Running the Real Time Voice Cloning in Docker on Arch Linux</a>
                 </div>
               </div>
             
             </div>
           </div>
+        
+      
+        
+
+        
+      
+        
+
         
       
         
@@ -876,7 +933,7 @@
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

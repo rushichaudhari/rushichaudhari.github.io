@@ -6,7 +6,25 @@
     <description>Recent content in Categories on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 05 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 27 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>arch</title>
+      <link>https://rushichaudhari.github.io/categories/arch/</link>
+      <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/categories/arch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://rushichaudhari.github.io/categories/docker/</link>
+      <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>linux</title>
       <link>https://rushichaudhari.github.io/categories/linux/</link>
@@ -26,20 +44,20 @@
     </item>
     
     <item>
-      <title>docker</title>
-      <link>https://rushichaudhari.github.io/categories/docker/</link>
-      <pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate>
+      <title>deep learning</title>
+      <link>https://rushichaudhari.github.io/categories/deep-learning/</link>
+      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rushichaudhari.github.io/categories/docker/</guid>
+      <guid>https://rushichaudhari.github.io/categories/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>arch</title>
-      <link>https://rushichaudhari.github.io/categories/arch/</link>
-      <pubDate>Mon, 01 Nov 2021 00:00:00 +0000</pubDate>
+      <title>pytorch</title>
+      <link>https://rushichaudhari.github.io/categories/pytorch/</link>
+      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://rushichaudhari.github.io/categories/arch/</guid>
+      <guid>https://rushichaudhari.github.io/categories/pytorch/</guid>
       <description></description>
     </item>
     

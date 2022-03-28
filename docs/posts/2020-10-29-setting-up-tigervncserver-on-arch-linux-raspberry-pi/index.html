@@ -18,7 +18,7 @@ $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;amp;&amp;gt;/dev/null The file 
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.95.0" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
 
@@ -27,8 +27,9 @@ $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;amp;&amp;gt;/dev/null The file 
 <meta property="og:description" content="Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
 $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should be executable: $ chmod &#43;x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+
+
 
 
 
@@ -158,17 +159,17 @@ $nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should b
       </header>
 
       <article class="main"><h2 id="installing-tigervnc">Installing tigervnc</h2>
-<pre><code>sudo pacman -Ss tigervnc
+<pre tabindex="0"><code>sudo pacman -Ss tigervnc
 </code></pre><h2 id="editing-the-environment-file">Editing the environment file</h2>
 <p>~/.vnc/xstartup functions like .xinitrc  and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:</p>
-<pre><code>$nano ~/.vnc/xstartup
+<pre tabindex="0"><code>$nano ~/.vnc/xstartup
 
 #!/bin/bash
 exec lxde &amp;&gt;/dev/null
 </code></pre><h2 id="the-file-should-be-executable">The file should be executable:</h2>
-<pre><code>$ chmod +x ~/.vnc/xstartup
+<pre tabindex="0"><code>$ chmod +x ~/.vnc/xstartup
 </code></pre><h2 id="adding-vncserver-options">Adding vncserver options</h2>
-<pre><code>$ nano ~/.vnc/config
+<pre tabindex="0"><code>$ nano ~/.vnc/config
 
 desktop=sandbox
 geometry=1920x1080
@@ -176,7 +177,7 @@ dpi=96
 SecurityTypes=none
 </code></pre><h2 id="starting-and-stopping-vncserver-via-systemd">Starting and stopping vncserver via systemd</h2>
 <p>To control vncserver with systemd, first, create systemd unit file for the user</p>
-<pre><code>$ cat /etc/systemd/system/vncserver@:1.service
+<pre tabindex="0"><code>$ cat /etc/systemd/system/vncserver@:1.service
 
 [Unit]
 Description=Remote desktop service (VNC)
@@ -187,7 +188,7 @@ Type=simple
 User=pi
 PAMName=login
 PIDFile=/home/%u/.vnc/%H%i.pid
-ExecStartPre=/bin/sh -c '/usr/bin/vncserver -kill %i &gt; /dev/null 2&gt;&amp;1 || :'
+ExecStartPre=/bin/sh -c &#39;/usr/bin/vncserver -kill %i &gt; /dev/null 2&gt;&amp;1 || :&#39;
 ExecStart=/usr/bin/vncserver %i -geometry 1440x900 -alwaysshared -fg
 ExecStop=/usr/bin/vncserver -kill %i
 
@@ -195,7 +196,7 @@ ExecStop=/usr/bin/vncserver -kill %i
 WantedBy=multi-user.target
 </code></pre><p>where :1 is the $DISPLAY environment variable. Replace <strong>pi</strong> with the desired username and <strong>1440x900</strong> with the resolution you want to set.</p>
 <p>To start the service, run</p>
-<pre><code>$ sudo systemctl start vncserver@:1.service
+<pre tabindex="0"><code>$ sudo systemctl start vncserver@:1.service
 </code></pre><h2 id="on-tigervnc-client">On tigervnc client</h2>
 <p><img src="../../img/2020-10-29-Setting-up-tigervncserver-on-arch-linux-(raspberry-pi)/tigervncclient.png" alt="sadsad"></p>
 </article>
@@ -333,14 +334,44 @@ WantedBy=multi-user.target
     
       
       
+      <a class="ui label" href="../../tags/clone/" title="Clone">
+        Clone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
     
       
       
+      <a class="ui label" href="../../tags/corentinj/" title="Corentinj">
+        Corentinj
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -365,6 +396,12 @@ WantedBy=multi-user.target
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -447,8 +484,8 @@ WantedBy=multi-user.target
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -467,6 +504,12 @@ WantedBy=multi-user.target
       
       <a class="ui label" href="../../tags/thunderbird/" title="Thunderbird">
         Thunderbird
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/voice/" title="Voice">
+        Voice
       </a>
     
       
@@ -525,6 +568,12 @@ WantedBy=multi-user.target
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">2022 03 27 Colab Equivalent Pytorch Docker With GPU</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">
@@ -621,8 +670,8 @@ WantedBy=multi-user.target
             <i class="dropdown icon"></i>
             
             
-            <a class="item" href="../../categories/digitalocean/" title="Digitalocean">
-              Digitalocean
+            <a class="item" href="../../categories/deep-learning/" title="Deep Learning">
+              Deep Learning
             </a>
           </div>
           <div class="content">
@@ -630,18 +679,26 @@ WantedBy=multi-user.target
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="../../posts/2020-04-08-imp-links/">Imp links for few scripts or codes</a>
+                  <a class="item" href="../../posts/2022-01-01-how-i-cloned-the-voice-of-priyanka-chopra-jonas/">How I Cloned the Voice of Priyanka Chopra Jonas</a>
                 </div>
               </div>
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="../../posts/2020-08-19-dockerguiwsl/">Running GUI apps from docker inside WSL2.0 as standalone application</a>
+                  <a class="item" href="../../posts/2021-12-24-real-time-voice-cloning-docker-arch/">Running the Real Time Voice Cloning in Docker on Arch Linux</a>
                 </div>
               </div>
             
             </div>
           </div>
+        
+      
+        
+
+        
+      
+        
+
         
       
         
@@ -896,7 +953,7 @@ WantedBy=multi-user.target
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>
