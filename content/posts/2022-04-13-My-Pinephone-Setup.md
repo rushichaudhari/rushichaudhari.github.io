@@ -3,13 +3,10 @@ layout: post
 title: "My Pinephone Setup"
 date: 2022-04-14
 author: rushi
-# cover: ''
+cover: '/img/2022-04-13-My-Pinephone-Setup/pinephone.jpg'
 categories: [docker, linux, pinephone]
 tags: [docker, linux, pinephone, android]
 ---
-
-![pinephone](/img/2022-04-13-My-Pinephone-Setup/pinephone.jpg)
-
 
 The Pinephone<sup>[[1]](#links)</sup> is my first Linux smartphone. I've been waiting for this since 2018. I feel the more android is advancing the more it is getting IOS'ish. Android was not meant to be this way. The reason it became popular early was it being opensource, and developer friendly. That era allowed bootloader unlocking, developing custom and newer kernels, tweaking the UI. Newer android has become too much bloatish and restrictive.
 For instance if we see miracast, android dropped miracast support for non samsung devices after android 8.0! i.e. even though the hardware had feature, for poor business reasons it was removed.
