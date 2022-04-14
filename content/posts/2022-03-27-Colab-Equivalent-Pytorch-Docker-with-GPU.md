@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2022 03 27 Colab Equivalent Pytorch Docker With GPU"
+title: "Colab Equivalent Pytorch Docker With GPU"
 date: 2022-03-27
 author: rushi
 # cover: ''

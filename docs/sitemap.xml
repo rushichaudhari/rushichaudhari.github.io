@@ -1,274 +1,478 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/</loc>
+    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/tags/arch/</loc>
+    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/categories/arch/</loc>
+    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/categories/</loc>
+    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
+  </url>
+  
   <url>
     <loc>https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/</loc>
-    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/tags/arch/</loc>
-    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/categories/arch/</loc>
-    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/categories/</loc>
-    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/docker/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/docker/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2022-02-05-cool-stuff-to-do-with-ssh/</loc>
     <lastmod>2022-02-05T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/linux/</loc>
     <lastmod>2022-02-05T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/linux/</loc>
     <lastmod>2022-02-05T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/ssh/</loc>
     <lastmod>2022-02-05T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/ssh/</loc>
     <lastmod>2022-02-05T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2022-01-12-lets-clone-the-voice-of-priyanka-chopra-jonas/</loc>
     <lastmod>2022-01-12T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/python/</loc>
     <lastmod>2022-01-12T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/voice-cloning/</loc>
     <lastmod>2022-01-12T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/clone/</loc>
     <lastmod>2021-12-24T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/corentinj/</loc>
     <lastmod>2021-12-24T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/deep-learning/</loc>
     <lastmod>2021-12-24T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/pytorch/</loc>
     <lastmod>2021-12-24T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2021-12-24-real-time-voice-cloning-docker-arch/</loc>
     <lastmod>2021-12-24T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/voice/</loc>
     <lastmod>2021-12-24T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/ai/</loc>
     <lastmod>2021-12-19T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/</loc>
     <lastmod>2021-12-19T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/pi/</loc>
     <lastmod>2021-12-19T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/autoencoders/</loc>
     <lastmod>2021-11-25T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/machine-learning/</loc>
     <lastmod>2021-11-25T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/pca/</loc>
     <lastmod>2021-11-25T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2021-11-25-pca-vs-autoencoders/</loc>
     <lastmod>2021-11-25T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/tensorflow/</loc>
     <lastmod>2021-11-25T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/cd/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/ci/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/devto/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/github/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/hugo/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2021-11-06-publishing-hugo-post-to-devto-using-github-ci-and-cd-pipeline/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/boot/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/dual/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/dualboot/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2021-11-01-enable-secure-boot-on-dualboot/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/grub/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/secure/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2021-11-01-switch-to-systemd-from-grub/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/systemd/</loc>
     <lastmod>2021-11-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/bash/</loc>
     <lastmod>2021-10-28T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2021-10-28-bookmark-linux-commands-keep/</loc>
     <lastmod>2021-10-28T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/commands/</loc>
     <lastmod>2021-10-28T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/keep/</loc>
     <lastmod>2021-10-28T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/save/</loc>
     <lastmod>2021-10-28T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/form/</loc>
     <lastmod>2020-12-22T01:21:27+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/google/</loc>
     <lastmod>2020-12-22T01:21:27+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/python/</loc>
     <lastmod>2020-12-22T01:21:27+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/requests/</loc>
     <lastmod>2020-12-22T01:21:27+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/selenium/</loc>
     <lastmod>2020-12-22T01:21:27+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-06-28-trading-view-scraping/</loc>
     <lastmod>2020-12-22T01:21:27+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-12-20-my-machine-learning-resources/</loc>
     <lastmod>2020-12-20T19:22:19+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/notes/</loc>
     <lastmod>2020-12-20T19:22:19+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/notes/</loc>
     <lastmod>2020-12-20T19:22:19+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/</loc>
     <lastmod>2020-11-28T05:27:29+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/cms/</loc>
     <lastmod>2020-11-28T05:27:29+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/netlify/</loc>
     <lastmod>2020-11-28T05:27:29+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2021-11-11-how-to-change-docker-storage-location/</loc>
     <lastmod>2020-11-11T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/</loc>
     <lastmod>2020-07-03T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-11-25-pca-vs-autoencoders/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2021-09-12-nmcli-enterprise-wifi/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/appdata/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-01-29-compiling-fceux-on-debian-buster/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/debian/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/digitalocean/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/drive/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/emulator/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/firefox/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/hackrf/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/i3wm/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-04-08-imp-links/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/kali/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/mozilla/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2021-10-29-mythunderbird-config/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-04-08-not-authorized-to-perform-this-operation/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/pcmanfm/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/pinephone/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/pinephone/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/rtl-sdr/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-10-29-setting-up-tigervncserver-on-arch-linux-raspberry-pi/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/snes/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/softwares/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/space/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/ssd/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/symlink/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/temp/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/thunar/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/tags/thunderbird/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/vnc/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/vpn/</loc>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/wifi/</loc>
   </url>
+  
 </urlset>

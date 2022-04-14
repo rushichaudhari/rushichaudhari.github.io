@@ -19,7 +19,7 @@ The following steps are what I used to compile it successfully." />
 
 
 
-<meta name="generator" content="Hugo 0.95.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-01-29-compiling-fceux-on-debian-buster/" />
 
@@ -29,9 +29,8 @@ The following steps are what I used to compile it successfully." />
 https://github.com/Mario-brows/Brows-Super-Mario https://github.com/lopatin96/Lua-SNES-GenNeurNetwork The main problem in them is they use BizHawk Emulator, which I was not successful in compiling for my debian OS, Its stable only for windows machines. Then I found its alternative fceux Which can handle lua scripts too!.
 The following steps are what I used to compile it successfully." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-01-29-compiling-fceux-on-debian-buster/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
-
-
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-01-29-compiling-fceux-on-debian-buster/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 
 
@@ -171,20 +170,20 @@ The following steps are what I used to compile it successfully."/>
 <p>The main problem in them is they use <a href="https://github.com/h31nr1ch/BizHawk">BizHawk Emulator</a>, which I was not successful in compiling for my debian OS, Its stable only for windows machines. Then I found its alternative <a href="http://www.fceux.com/web/download.html">fceux</a> Which can handle lua scripts too!.</p>
 <p>The following steps are what I used to compile it successfully.</p>
 <p>Download the FCEUX src. from their website</p>
-<pre tabindex="0"><code>sudo apt-get install libsdl1.2-dev scons libgtk-3-dev liblua5.1-0-dev libgd-dev
+<pre><code>sudo apt-get install libsdl1.2-dev scons libgtk-3-dev liblua5.1-0-dev libgd-dev
 tar xzvf fceux-2.2.3.src.tar.gz
 cd fceux-2.2.3
 </code></pre><p>Open SConstruct</p>
-<pre tabindex="0"><code>vim SConstruct
+<pre><code>vim SConstruct
 </code></pre><p>Make sure gtk3 is used</p>
-<pre tabindex="0"><code>BoolVariable(&#39;GTK&#39;, &#39;Enable GTK2 GUI (SDL only)&#39;, 0),
-BoolVariable(&#39;GTK3&#39;, &#39;Enable GTK3 GUI (SDL only)&#39;, 1),
+<pre><code>BoolVariable('GTK', 'Enable GTK2 GUI (SDL only)', 0),
+BoolVariable('GTK3', 'Enable GTK3 GUI (SDL only)', 1),
 </code></pre><p>To compile</p>
-<pre tabindex="0"><code>scons
+<pre><code>scons
 </code></pre><p>This will take around 5-10mins. Onc done Install it.</p>
-<pre tabindex="0"><code>sudo scons install
+<pre><code>sudo scons install
 </code></pre><p>Adding fceux in application drawer.</p>
-<pre tabindex="0"><code>sudo cp fceux.desktop /usr/share/applications
+<pre><code>sudo cp fceux.desktop /usr/share/applications
 sudo cp fceux.png /usr/share/pixmaps
 </code></pre><p>After reboot you can see fceux in application drawer, or type fceux in terminal to run without rebooting.
 I will be uploading my experiences with that mario script soon once I configure :)</p>
@@ -448,8 +447,8 @@ I will be uploading my experiences with that mario script soon once I configure 
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="SSH">
-        SSH
+      <a class="ui label" href="../../tags/ssh/" title="Ssh">
+        Ssh
       </a>
     
       
@@ -535,7 +534,7 @@ I will be uploading my experiences with that mario script soon once I configure 
             
               <div class="item">
                 <div class="content">
-                  <a class="item" href="../../posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">2022 03 27 Colab Equivalent Pytorch Docker With GPU</a>
+                  <a class="item" href="../../posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">Colab Equivalent Pytorch Docker With GPU</a>
                 </div>
               </div>
             
@@ -911,7 +910,7 @@ I will be uploading my experiences with that mario script soon once I configure 
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
+<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>
