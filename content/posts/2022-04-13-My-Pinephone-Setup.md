@@ -80,38 +80,40 @@ My Pinephone setup is curated specifically for me, that's my favorite thing abou
 
 ## Links
 
-[1] [pine64.org/pinephone](pine64.org/pinephone)
+[1] [pine64.org/pinephone](https://www.pine64.org/pinephone)
 
 [2] [indiatoday.in/technology/news/story/
 google-is-killing-android-apk-in-play-store-developers-will-have-to-put-apps-in-app-bundles-1821687-2021-07-01](https://www.indiatoday.in/technology/news/story/google-is-killing-android-apk-in-play-store-developers-will-have-to-put-apps-in-app-bundles-1821687-2021-07-01)
 
-[3] [sciencefocus.com/space/what-tech-would-the-apollo-11-mission-have-today/](sciencefocus.com/space/what-tech-would-the-apollo-11-mission-have-today/)
+[3] [sciencefocus.com/space/what-tech-would-the-apollo-11-mission-have-today/](https://www.sciencefocus.com/space/what-tech-would-the-apollo-11-mission-have-today/)
 
-[4] [github.com/dreemurrs-embedded/Pine64-Arch](github.com/dreemurrs-embedded/Pine64-Arch)
+[4] [github.com/dreemurrs-embedded/Pine64-Arch](https://www.github.com/dreemurrs-embedded/Pine64-Arch)
 
-[5] [sxmo.org](sxmo.org)
+[5] [sxmo.org](https://www.sxmo.org)
 
-[6] [github.com/replydev/cotp](sxmo.org)
+[6] [github.com/replydev/cotp](https://www.sxmo.org)
 
-[7] [github.com/orkohunter/keep](github.com/orkohunter/keep)
+[7] [github.com/orkohunter/keep](https://www.github.com/orkohunter/keep)
 
-[8] [github.com/fcambus/ansiweather](github.com/fcambus/ansiweather)
+[8] [github.com/fcambus/ansiweather](https://www.github.com/fcambus/ansiweather)
 
-[9] [github.com/martanne/vis](github.com/martanne/vis)
+[9] [github.com/martanne/vis](https://www.github.com/martanne/vis)
 
-[10] [lightandmatter.com/when/when.html](lightandmatter.com/when/when.html)
+[10] [lightandmatter.com/when/when.html](https://www.lightandmatter.com/when/when.html)
 
-[11] [gihtub.com/JotaRandom/epdfview](gihtub.com/JotaRandom/epdfview)
+[11] [gihtub.com/JotaRandom/epdfview](https://www.gihtub.com/JotaRandom/epdfview)
 
-[12] [sr.ht/~exec64/imv](sr.ht/~exec64/imv)
+[12] [sr.ht/~exec64/imv](https://www.sr.ht/~exec64/imv)
 
-[13] [newsboat.org](newsboat.org)
+[13] [newsboat.org](https://www.newsboat.org)
 
-[14] [qutebrowser.org](qutebrowser.org)
+[14] [qutebrowser.org](https://www.qutebrowser.org)
 
-[15] [libreoffice.org](libreoffice.org)
+[15] [libreoffice.org](https://www.libreoffice.org)
 
-[16] [nextcloud.com](nextcloud.com)
+[16] [nextcloud.com](https://www.nextcloud.com)
 
-[17] [git.sr.ht/~anjan/sxmo-userscripts/](git.sr.ht/~anjan/sxmo-userscripts/)
+[17] [git.sr.ht/~anjan/sxmo-userscripts/](https://www.git.sr.ht/~anjan/sxmo-userscripts/)
+
+[18] [hamblingreen.gitlab.io](https://hamblingreen.gitlab.io)
  
