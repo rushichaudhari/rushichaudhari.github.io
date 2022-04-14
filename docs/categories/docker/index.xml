@@ -6,7 +6,16 @@
     <description>Recent content in docker on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Pinephone Setup</title>
+      <link>https://rushichaudhari.github.io/posts/2022-04-13-my-pinephone-setup/</link>
+      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-04-13-my-pinephone-setup/</guid>
+      <description>The Pinephone[1] is my first Linux smartphone. I&amp;rsquo;ve been waiting for this since 2018. I feel the more android is advancing the more it is getting IOS&amp;rsquo;ish. Android was not meant to be this way. The reason it became popular early was it being opensource, and developer friendly. That era allowed bootloader unlocking, developing custom and newer kernels, tweaking the UI. Newer android has become too much bloatish and restrictive. For instance if we see miracast, android dropped miracast support for non samsung devices after android 8.</description>
+    </item>
+    
     <item>
       <title>Colab Equivalent Pytorch Docker With GPU</title>
       <link>https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/</link>

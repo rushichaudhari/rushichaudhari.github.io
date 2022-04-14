@@ -27,7 +27,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rushichaudhari.github.io/" />
 <meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-<meta property="og:updated_time" content="2022-03-27T00:00:00+00:00" />
+<meta property="og:updated_time" content="2022-04-14T00:00:00+00:00" />
 
 
 
@@ -156,6 +156,12 @@
       
       <a class="ui label" href="./tags/ai/" title="Ai">
         Ai
+      </a>
+    
+      
+      
+      <a class="ui label" href="./tags/android/" title="Android">
+        Android
       </a>
     
       
@@ -711,6 +717,35 @@
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-04-13-my-pinephone-setup/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="./posts/2022-04-13-my-pinephone-setup/">My Pinephone Setup</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Thursday, Apr 14, 2022</p>
+    </div>
+    <div class="description">
+      The Pinephone[1] is my first Linux smartphone. I&rsquo;ve been waiting for this since 2018. I feel the more android is advancing the more it is getting IOS&rsquo;ish. Android was not meant to be this way. The reason it became popular early was it being opensource, and developer friendly. That era allowed bootloader unlocking, developing custom and newer kernels, tweaking the UI. Newer android has become too much bloatish and restrictive. For instance if we see miracast, android dropped miracast support for non samsung devices after android 8.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>6 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">
     
       
@@ -969,48 +1004,6 @@ vagrant plugin install vagrant-libvirt but this doesn&rsquo;t work with kubeflow
 Install virtualbox
 sudo pacman -S virtualbox  for the linux kernel, choose virtualbox-host-modules-arch for any other kernel (including linux-lts), choose virtualbox-host-dkms  Load the vbox drv module
 sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot of space (50GB+)
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-01-switch-to-systemd-from-grub/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="./posts/2021-11-01-switch-to-systemd-from-grub/">Switch to Systemd From Grub</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Monday, Nov 1, 2021</p>
-    </div>
-    <div class="description">
-      I have two efi partitions, p1 for windows and p4 for Arch
-sudo fdisk -l
-Add the efi entry in /etc/fstab
-get the UUID from sudo blkid
-Mount the /efi
-sudo mount /efi &amp;&amp; ls /efi
-The structure would look something like
-Install ucode for my amd machine it is
-sudo pacman -S amd-ucode
-Reinstall linux kernel
-sudo pacman -S linux linux-headers
-mkinitcpio -P
-Add the following in
-sudo nano /efi/loader/entries/arch.
     </div>
   </div>
 

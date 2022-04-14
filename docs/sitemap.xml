@@ -4,7 +4,62 @@
   
   <url>
     <loc>https://rushichaudhari.github.io/</loc>
-    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/tags/android/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/categories/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/tags/docker/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/categories/docker/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/tags/linux/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/categories/linux/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/posts/2022-04-13-my-pinephone-setup/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/tags/pinephone/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/categories/pinephone/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/posts/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/tags/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,47 +73,12 @@
   </url>
   
   <url>
-    <loc>https://rushichaudhari.github.io/categories/</loc>
-    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/</loc>
     <lastmod>2022-03-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://rushichaudhari.github.io/tags/docker/</loc>
-    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/categories/docker/</loc>
-    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/posts/</loc>
-    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/tags/</loc>
-    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://rushichaudhari.github.io/posts/2022-02-05-cool-stuff-to-do-with-ssh/</loc>
-    <lastmod>2022-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/tags/linux/</loc>
-    <lastmod>2022-02-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/categories/linux/</loc>
     <lastmod>2022-02-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -401,14 +421,6 @@
   
   <url>
     <loc>https://rushichaudhari.github.io/categories/pcmanfm/</loc>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/tags/pinephone/</loc>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/categories/pinephone/</loc>
   </url>
   
   <url>

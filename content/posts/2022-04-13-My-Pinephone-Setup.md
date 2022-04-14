@@ -4,9 +4,8 @@ title: "My Pinephone Setup"
 date: 2022-04-14
 author: rushi
 # cover: ''
-categories: [docker, linux]
-# tags: []
-draft: true
+categories: [docker, linux, pinephone]
+tags: [docker, linux, pinephone, android]
 ---
 
 ![pinephone](/img/2022-04-13-My-Pinephone-Setup/pinephone.jpg)

@@ -27,7 +27,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rushichaudhari.github.io/" />
 <meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-<meta property="og:updated_time" content="2022-03-27T00:00:00+00:00" />
+<meta property="og:updated_time" content="2022-04-14T00:00:00+00:00" />
 
 
 
@@ -156,6 +156,12 @@
       
       <a class="ui label" href="../../tags/ai/" title="Ai">
         Ai
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/android/" title="Android">
+        Android
       </a>
     
       
@@ -711,6 +717,48 @@
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-01-switch-to-systemd-from-grub/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2021-11-01-switch-to-systemd-from-grub/">Switch to Systemd From Grub</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Monday, Nov 1, 2021</p>
+    </div>
+    <div class="description">
+      I have two efi partitions, p1 for windows and p4 for Arch
+sudo fdisk -l
+Add the efi entry in /etc/fstab
+get the UUID from sudo blkid
+Mount the /efi
+sudo mount /efi &amp;&amp; ls /efi
+The structure would look something like
+Install ucode for my amd machine it is
+sudo pacman -S amd-ucode
+Reinstall linux kernel
+sudo pacman -S linux linux-headers
+mkinitcpio -P
+Add the following in
+sudo nano /efi/loader/entries/arch.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2021-10-28-bookmark-linux-commands-keep/">
     
       
@@ -980,37 +1028,6 @@ aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils do
     <div class="author">@&nbsp;rushi</div>
     <div class="reading-time">
       <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2020-07-02-automate-forms-without-selenium/">
-    
-      <img src="https://3fxtqy18kygf3on3bu39kh93-wpengine.netdna-ssl.com/wp-content/uploads/2019/07/selenium-webdriver-tutorial.png" alt="Automate Google forms without selenium" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../posts/2020-07-02-automate-forms-without-selenium/">Automate Google forms without selenium</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Monday, Jan 1, 0001</p>
-    </div>
-    <div class="description">
-      In the previous year, I had posted a script to fill google forms using selenium, and containerizing it with docker to run it parallelly. This is an alternative way to do the same using post requests.
-I had created a google form using the default template shown below.
-Which had fields like To get started we need to capture the request. I&rsquo;ve used burp suite tool to capture, there are many alternative tools you can google.
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>2 minutes read</div>
   </div>
 </article>
 

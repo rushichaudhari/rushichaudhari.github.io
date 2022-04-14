@@ -6,20 +6,20 @@
     <description>Recent content in Tags on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>arch</title>
-      <link>https://rushichaudhari.github.io/tags/arch/</link>
-      <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
+      <title>android</title>
+      <link>https://rushichaudhari.github.io/tags/android/</link>
+      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://rushichaudhari.github.io/tags/arch/</guid>
+      <guid>https://rushichaudhari.github.io/tags/android/</guid>
       <description></description>
     </item>
     
     <item>
       <title>docker</title>
       <link>https://rushichaudhari.github.io/tags/docker/</link>
-      <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/tags/docker/</guid>
       <description></description>
@@ -28,9 +28,27 @@
     <item>
       <title>linux</title>
       <link>https://rushichaudhari.github.io/tags/linux/</link>
-      <pubDate>Sat, 05 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pinephone</title>
+      <link>https://rushichaudhari.github.io/tags/pinephone/</link>
+      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/pinephone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arch</title>
+      <link>https://rushichaudhari.github.io/tags/arch/</link>
+      <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/arch/</guid>
       <description></description>
     </item>
     
@@ -283,15 +301,6 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/tags/mozilla/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pinephone</title>
-      <link>https://rushichaudhari.github.io/tags/pinephone/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/tags/pinephone/</guid>
       <description></description>
     </item>
     
