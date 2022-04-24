@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Convert Browser Requests to Python | A collection of random ideas so I don&#39;t have to google again</title>
+
+    
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+
+<meta name="author" content="rushi" />
+<meta name="description" content="Scraping dynamic content these days is bit difficult as there are wide variety of authentication mechanisms and web server needs correct headers, session, cookies to authenticate the request. If we need to quickly scrape content just for once, implementing authenticationis an overhead. Instead, we can manually login to the website, capture an authenticated request and use it for scraping other pages by changing url/form parameters.
+curl &amp;#39;https://www.glassdoor.com/member/home/index.htm&amp;#39; -H &amp;#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99." />
+
+
+
+<meta name="generator" content="Hugo 0.96.0" />
+
+<link rel="canonical" href="https://rushichaudhari.github.io/posts/2022-04-24-convert-browser-requests-to-python/" />
+
+
+<meta property="og:title" content="Convert Browser Requests to Python" />
+<meta property="og:description" content="Scraping dynamic content these days is bit difficult as there are wide variety of authentication mechanisms and web server needs correct headers, session, cookies to authenticate the request. If we need to quickly scrape content just for once, implementing authenticationis an overhead. Instead, we can manually login to the website, capture an authenticated request and use it for scraping other pages by changing url/form parameters.
+curl &#39;https://www.glassdoor.com/member/home/index.htm&#39; -H &#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-04-24-convert-browser-requests-to-python/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-04-24T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-04-24T00:00:00+00:00" />
+
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+
+<meta name="twitter:title" content="Convert Browser Requests to Python"/>
+<meta name="twitter:description" content="Scraping dynamic content these days is bit difficult as there are wide variety of authentication mechanisms and web server needs correct headers, session, cookies to authenticate the request. If we need to quickly scrape content just for once, implementing authenticationis an overhead. Instead, we can manually login to the website, capture an authenticated request and use it for scraping other pages by changing url/form parameters.
+curl &#39;https://www.glassdoor.com/member/home/index.htm&#39; -H &#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99."/>
+
+
+<link rel="stylesheet" href="../../css/semantic.min.css" />
+<link rel="stylesheet" href="../../css/icomoon.css" />
+<link rel="stylesheet" href="../../css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="../../css/github-markdown.css" />
+<link rel="stylesheet" href="../../css/site.css" />
+
+<style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
+  a {
+    color: seagreen !important;
+  }
+  
+
+  
+  .inverted a,
+  .inverted a:hover {
+     color: darkseagreen !important;
+  }
+  
+
+  
+  body.default {
+    
+    background-color: #ccc;
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
+  
+
+  
+  body.dark {
+    
+    background-color: black;
+    
+
+    
+    background-image: url(/me/background-dark.jpg);
+    
+  }
+  
+</style>
+
+    
+
+
+  
+    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
+  
+
+
+
+
+
+  </head>
+
+  <body class="default">
+    
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/rushichaudhari.github.io'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
+  
+</nav>
+
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui attached segment">
+      <header>
+        <h1 class="ui large header">
+          Convert Browser Requests to Python
+          <div class="sub header">
+            @
+            
+              
+                rushi
+              
+            
+
+            | 
+                Sunday, Apr 24, 2022
+              
+
+            | 2 minutes read
+
+            | Update at
+              
+                Sunday, Apr 24, 2022
+              
+          </div>
+        </h1>
+      </header>
+
+      <article class="main"><p>Scraping dynamic content these days is bit difficult as there are wide variety of authentication mechanisms and web server needs correct headers, session, cookies to authenticate the request.
+If we need to quickly scrape content just for once, implementing authenticationis an overhead.
+Instead, we can manually login to the website, capture an authenticated request and use it for scraping other pages by changing url/form parameters.</p>
+<p><img src="../../img/2022-04-24-Convert-Browser-Requests-to-Python/copyascurl.png" alt="copyascurl"></p>
+<pre tabindex="0"><code>curl &#39;https://www.glassdoor.com/member/home/index.htm&#39; -H &#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.0) Gecko/20100101 Firefox/99.0&#39; -H &#39;Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8&#39; -H &#39;Accept-Language: en-US,en;q=0.5&#39; -H &#39;Accept-Encoding: gzip, deflate, br&#39; -H &#39;Upgrade-Insecure-Requests: 1&#39; -H &#39;Sec-Fetch-Dest: document&#39; -H &#39;Sec-Fetch-Mode: navigate&#39; -H &#39;Sec-Fetch-Site: none&#39; -H &#39;Sec-Fetch-User: ?1&#39; -H &#39;Connection: keep-alive&#39; -H &#39;Cookie: gdId=59f52fd0-681b-4750-ac87-0ea4e2bb0022; trs=https%3A%2F%2Fwww.google.com%2F:SEO:SEO:2022-02-15+16%3A44%3A37.155:undefined:undefined; _ga_RC95PMVB3H=GS1.1.1650832075.5.1.1650833390.58; _ga=GA1.2.265189994.1644972280; indeedCtk=1frvvq2lvu2tu802; OptanonConsent=isGpcEnabled=0&amp;datestamp=Sun+Apr+24+2022+16%3A49%3A50+GMT-0400+(Eastern+Daylight+Time)&amp;version=6.28.0&amp;isIABGlobal=false&amp;hosts=&amp;consentId=8921df85-6810-4e33-afbb-cd8ea605584e&amp;interactionCount=1&amp;landingPath=NotLandingPage&amp;groups=C0001%3A1%2CC0003%3A1%2CC0002%3A1%2CC0004%3A1%2CC0017%3A1&amp;AwaitingReconsent=false; _optionalConsent=true; _gcl_au=1.1.1818918612.1644972281; _rdt_uuid=1644972281407.f5052179-d989-406e-a45e-7d8d1017658d; __pdst=fc73b917e87046f3b97dc0bcb186c197; _pin_unauth=dWlkPVlqQTVPVGswTTJJdFpERmxZaTAwWTJZM0xXRXdNMll0WkRBNU9HWmpNV1kxTW1OaQ; _fbp=fb.1.1644972282445.736884998; ki_t=1644972283026%3B1650826872059%3B1650833392791%3B4%3B21; ki_r=; ki_s=213982%3A0.0.0.0.0%3B218147%3A1.0.0.0.2%3B221866%3A1.0.0.0.2; G_ENABLED_IDPS=google; _ga_RJF0GNZNXE=GS1.1.1650832075.4.1.1650833388.60; ki_u=b065e512-b505-4d32-6336-368b; AWSALB=lfGXf6RPXqEc7DzpDWiTmonAdzDeoaafSEPkTJfJCmjOWeAh/kfWRaJ0Upd/mCg1h86c4/5b8J6TlbLOfjlYlyDJ9q62mSZ5JFPfi21EoQqCOyXdYEoh+bM4fb8Z; AWSALBCORS=lfGXf6RPXqEc7DzpDWiTmonAdzDeoaafSEPkTJfJCmjOWeAh/kfWRaJ0Upd/mCg1h86c4/5b8J6TlbLOfjlYlyDJ9q62mSZ5JFPfi21EoQqCOyXdYEoh+bM4fb8Z; uc=44095BCBCAA84CA8700087558251F8903E1CA4A6360EDA1E2C00A6590E30A18380C5D41326111692A7DF74D2890A12CA5FCCCAABF9C11752C1BDA6A782A87CF3E6D097AC9E142A6F116191301BB3ABA90133EE10977699B2A81216B1011091A89D4876A22D5C5581608F3AFB5DED204B9404C0100A45E493FF01E1D8B559A9AFD3E798B0A7EEF48AE6F031BF682DB63B; at=wbK6TJE7CIEYBRu3BpiLgffHz2VBlCqnWeOhneIWaLKBKo9Y3I81ZUwi7UoSZ6UlRvR-xPhVHq84jhGxhJIsOwHRbZTga2oiqEn04ep_H94Nxvpnqzid8Aq2XOgRaQ_rO_-W1Jd-37UBSfQ-HoJc55jzyYrf2SEph4YZ3DDLsrLBKg0wKvuq4x1uE9UC-ewFU8S-RQ4-DmHJEW0lP6Zb_B4QMhkKBICj1h0Hfz5quqxKf7kW1FOMwv32_F5uHBjpO-JXwbsUNSGReQNGchAwZlb0tmW269MqD0TKOzW5pjMd9E2fMUCAOXZ2Frazi4LrQDL-WJN9XHFuBEdJrY-YmgzmGQVHJEXSbk9YqglgD_v8daVTmWne-NdLeT1EXkPySz8RQY6etCuZW5fjoxYhDAjvmKvKh7l-wxmDMxkb68At-TCSXZGsLl4Vd05xBuSlNDxNuaHhkfYmn-aK5OGPnfei9HIfBTijKLndpiNIUo13wBPXOx3AMRhp-km3Lq4SeQiTMKiZ2mIz0VwyLqHVHaozLApsqMHiIaohA0WmyMFKNed6DDczvDQ_9v0-C1TY2q-7hORoRlpLn9aqLG7TPhiy3_zIFQG6Lq3RuKkVgGWNdJ7eB1XyURzlgfRaBGYR4yWas1AR-Ltw6C9g0OSJCrpV9sGGPVKRiLGyTFAYkc6YlOPkpRGhdydeuGNo2xZ-5OuK9QpcGa9bigeB6rEb3f0ECD6Hno7PB7kVW5MOLqsy1wCb5pbDJov_pCcuEo9vaFcLtrKSscTeD9mqgphnyChp2jkJ7s8fhZEXnlixqRYcQ3weYNxUuOaVRTJlXVuB3pW0ipjeQPSrPyLmtmkvMTME5BDak-dEOEr7o2UH55XdljxsaoHvR5xbbNc; fpvc=1; JSESSIONID=C70C3AD88C1CAA3656156B250FB611C2; GSESSIONID=59f52fd0-681b-4750-ac87-0ea4e2bb0022+1650826866332; cass=1; gdsid=1650826866332:1650833147425:E75A578A96103E2990B8D19FEC7FCD68; _gid=GA1.2.1549114559.1650826869; asst=1650833147.2; alr=https%3A%2F%2Fwww.google.com%2F; __cf_bm=toYQnKBfg0B4Zb2yWOlSWWkwCmrvPXrit_lomX_Bx0U-1650833147-0-ATRAw/uge7rEJLVhZMAURWrZmFg0fme0b6C2KjUmaCqoKllvB/+ov42au/V8g19wRvK4v5blQzuSNVG42ZDPAYs=; SameSite=None; bs=6YFiSL-CrQmuCRENEQSbBQ:9Y7jayT3y1qqRk_f3un-Haz_MP2OgXpzSPXOR6-1K-S0lyulHk4NLUqcbs2tx1zF2MQQ5MDfGwkddbHYAb2UvvvOzoErN3DoEsD_UhEKgrY:gH0JZN0DYiXDEHZlh8aXQHEyDtNqtN5zNCU1ae7Yo3k; _dc_gtm_UA-2595786-1=1&#39; -H &#39;TE: trailers&#39;
+</code></pre><p>We can directly convert it to python requests using uncurl.</p>
+<p><code>pip install uncurl</code></p>
+<p>Install clipit (a clipboard manager utility)</p>
+<p>For Arch linux:
+<code>yay -S clipit</code></p>
+<pre tabindex="0"><code>$  clipit -c | uncurl                                                       1 ↵
+
+requests.get(&#34;https://www.glassdoor.com/member/home/index.htm&#34;,
+    headers={
+        &#34;Accept&#34;: &#34;text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8&#34;,
+        &#34;Accept-Encoding&#34;: &#34;gzip, deflate, br&#34;,
+        &#34;Accept-Language&#34;: &#34;en-US,en;q=0.5&#34;,
+        &#34;Connection&#34;: &#34;keep-alive&#34;,
+        &#34;Sec-Fetch-Dest&#34;: &#34;document&#34;,
+        &#34;Sec-Fetch-Mode&#34;: &#34;navigate&#34;,
+        &#34;Sec-Fetch-Site&#34;: &#34;none&#34;,
+        &#34;Sec-Fetch-User&#34;: &#34;?1&#34;,
+        &#34;TE&#34;: &#34;trailers&#34;,
+        &#34;Upgrade-Insecure-Requests&#34;: &#34;1&#34;,
+        &#34;User-Agent&#34;: &#34;Mozilla/5.0 (X11; Linux x86_64; rv:99.0) Gecko/20100101 Firefox/99.0&#34;
+    },
+    cookies={
+        &#34;AWSALB&#34;: &#34;lfGXf6RPXqEc7DzpDWiTmonAdzDeoaafSEPkTJfJCmjOWeAh/kfWRaJ0Upd/mCg1h86c4/5b8J6TlbLOfjlYlyDJ9q62mSZ5JFPfi21EoQqCOyXdYEoh+bM4fb8Z&#34;,
+        &#34;AWSALBCORS&#34;: &#34;lfGXf6RPXqEc7DzpDWiTmonAdzDeoaafSEPkTJfJCmjOWeAh/kfWRaJ0Upd/mCg1h86c4/5b8J6TlbLOfjlYlyDJ9q62mSZ5JFPfi21EoQqCOyXdYEoh+bM4fb8Z&#34;,
+        &#34;GSESSIONID&#34;: &#34;59f52fd0-681b-4750-ac87-0ea4e2bb0022+1650826866332&#34;,
+        &#34;G_ENABLED_IDPS&#34;: &#34;google&#34;,
+        &#34;JSESSIONID&#34;: &#34;C70C3AD88C1CAA3656156B250FB611C2&#34;,
+        &#34;OptanonConsent&#34;: &#34;isGpcEnabled=0&amp;datestamp=Sun+Apr+24+2022+16%3A49%3A50+GMT-0400+(Eastern+Daylight+Time)&amp;version=6.28.0&amp;isIABGlobal=false&amp;hosts=&amp;consentId=8921df85-6810-4e33-afbb-cd8ea605584e&amp;interactionCount=1&amp;landingPath=NotLandingPage&amp;groups=C0001%3A1%2CC0003%3A1%2CC0002%3A1%2CC0004%3A1%2CC0017%3A1&amp;AwaitingReconsent=false&#34;,
+        &#34;__cf_bm&#34;: &#34;toYQnKBfg0B4Zb2yWOlSWWkwCmrvPXrit_lomX_Bx0U-1650833147-0-ATRAw/uge7rEJLVhZMAURWrZmFg0fme0b6C2KjUmaCqoKllvB/+ov42au/V8g19wRvK4v5blQzuSNVG42ZDPAYs=&#34;,
+        &#34;__pdst&#34;: &#34;fc73b917e87046f3b97dc0bcb186c197&#34;,
+        &#34;_dc_gtm_UA-2595786-1&#34;: &#34;1&#34;,
+        &#34;_fbp&#34;: &#34;fb.1.1644972282445.736884998&#34;,
+        &#34;_ga&#34;: &#34;GA1.2.265189994.1644972280&#34;,
+        &#34;_ga_RC95PMVB3H&#34;: &#34;GS1.1.1650832075.5.1.1650833390.58&#34;,
+        &#34;_ga_RJF0GNZNXE&#34;: &#34;GS1.1.1650832075.4.1.1650833388.60&#34;,
+        &#34;_gcl_au&#34;: &#34;1.1.1818918612.1644972281&#34;,
+        &#34;_gid&#34;: &#34;GA1.2.1549114559.1650826869&#34;,
+        &#34;_optionalConsent&#34;: &#34;true&#34;,
+        &#34;_pin_unauth&#34;: &#34;dWlkPVlqQTVPVGswTTJJdFpERmxZaTAwWTJZM0xXRXdNMll0WkRBNU9HWmpNV1kxTW1OaQ&#34;,
+        &#34;_rdt_uuid&#34;: &#34;1644972281407.f5052179-d989-406e-a45e-7d8d1017658d&#34;,
+        &#34;alr&#34;: &#34;https%3A%2F%2Fwww.google.com%2F&#34;,
+        &#34;asst&#34;: &#34;1650833147.2&#34;,
+        &#34;at&#34;: &#34;wbK6TJE7CIEYBRu3BpiLgffHz2VBlCqnWeOhneIWaLKBKo9Y3I81ZUwi7UoSZ6UlRvR-xPhVHq84jhGxhJIsOwHRbZTga2oiqEn04ep_H94Nxvpnqzid8Aq2XOgRaQ_rO_-W1Jd-37UBSfQ-HoJc55jzyYrf2SEph4YZ3DDLsrLBKg0wKvuq4x1uE9UC-ewFU8S-RQ4-DmHJEW0lP6Zb_B4QMhkKBICj1h0Hfz5quqxKf7kW1FOMwv32_F5uHBjpO-JXwbsUNSGReQNGchAwZlb0tmW269MqD0TKOzW5pjMd9E2fMUCAOXZ2Frazi4LrQDL-WJN9XHFuBEdJrY-YmgzmGQVHJEXSbk9YqglgD_v8daVTmWne-NdLeT1EXkPySz8RQY6etCuZW5fjoxYhDAjvmKvKh7l-wxmDMxkb68At-TCSXZGsLl4Vd05xBuSlNDxNuaHhkfYmn-aK5OGPnfei9HIfBTijKLndpiNIUo13wBPXOx3AMRhp-km3Lq4SeQiTMKiZ2mIz0VwyLqHVHaozLApsqMHiIaohA0WmyMFKNed6DDczvDQ_9v0-C1TY2q-7hORoRlpLn9aqLG7TPhiy3_zIFQG6Lq3RuKkVgGWNdJ7eB1XyURzlgfRaBGYR4yWas1AR-Ltw6C9g0OSJCrpV9sGGPVKRiLGyTFAYkc6YlOPkpRGhdydeuGNo2xZ-5OuK9QpcGa9bigeB6rEb3f0ECD6Hno7PB7kVW5MOLqsy1wCb5pbDJov_pCcuEo9vaFcLtrKSscTeD9mqgphnyChp2jkJ7s8fhZEXnlixqRYcQ3weYNxUuOaVRTJlXVuB3pW0ipjeQPSrPyLmtmkvMTME5BDak-dEOEr7o2UH55XdljxsaoHvR5xbbNc&#34;,
+        &#34;bs&#34;: &#34;6YFiSL-CrQmuCRENEQSbBQ:9Y7jayT3y1qqRk_f3un-Haz_MP2OgXpzSPXOR6-1K-S0lyulHk4NLUqcbs2tx1zF2MQQ5MDfGwkddbHYAb2UvvvOzoErN3DoEsD_UhEKgrY:gH0JZN0DYiXDEHZlh8aXQHEyDtNqtN5zNCU1ae7Yo3k&#34;,
+        &#34;cass&#34;: &#34;1&#34;,
+        &#34;fpvc&#34;: &#34;1&#34;,
+        &#34;gdId&#34;: &#34;59f52fd0-681b-4750-ac87-0ea4e2bb0022&#34;,
+        &#34;gdsid&#34;: &#34;1650826866332:1650833147425:E75A578A96103E2990B8D19FEC7FCD68&#34;,
+        &#34;indeedCtk&#34;: &#34;1frvvq2lvu2tu802&#34;,
+        &#34;ki_r&#34;: &#34;&#34;,
+        &#34;ki_s&#34;: &#34;213982%3A0.0.0.0.0%3B218147%3A1.0.0.0.2%3B221866%3A1.0.0.0.2&#34;,
+        &#34;ki_t&#34;: &#34;1644972283026%3B1650826872059%3B1650833392791%3B4%3B21&#34;,
+        &#34;ki_u&#34;: &#34;b065e512-b505-4d32-6336-368b&#34;,
+        &#34;trs&#34;: &#34;https%3A%2F%2Fwww.google.com%2F:SEO:SEO:2022-02-15+16%3A44%3A37.155:undefined:undefined&#34;,
+        &#34;uc&#34;: &#34;44095BCBCAA84CA8700087558251F8903E1CA4A6360EDA1E2C00A6590E30A18380C5D41326111692A7DF74D2890A12CA5FCCCAABF9C11752C1BDA6A782A87CF3E6D097AC9E142A6F116191301BB3ABA90133EE10977699B2A81216B1011091A89D4876A22D5C5581608F3AFB5DED204B9404C0100A45E493FF01E1D8B559A9AFD3E798B0A7EEF48AE6F031BF682DB63B&#34;
+    },
+    auth=(),
+)
+</code></pre><p>There is no need to manually specify the request headers!</p>
+</article>
+    </section>
+
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
+      
+        
+          <a class="ui label" href="../../tags/python" title="Python">Python</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/rushichaudhari.github.io\/posts\/2022-04-24-convert-browser-requests-to-python\/';  
+            this.page.identifier = '\/posts\/2022-04-24-convert-browser-requests-to-python\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'rushichaudhari' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+    
+    
+
+    
+
+  </div>
+  <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
+    
+    
+
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="../../me/yy.jpg">
+      
+    </div>
+
+    
+    <div class="ui medium header">
+    
+      A collection of random ideas so I don&#39;t have to google again
+      <div class="sub header" style="margin-top: 0.5rem;"></div>
+    
+    </div>
+    
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="../../posts">
+        <i class="archive icon" title="Archives"></i>
+      </a>
+      
+      <a class="item" href="../../tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="../../categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      
+      
+      <a class="ui label" href="../../tags/ai/" title="Ai">
+        Ai
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/android/" title="Android">
+        Android
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/arch/" title="Arch">
+        Arch
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/autoencoders/" title="Autoencoders">
+        Autoencoders
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/boot/" title="Boot">
+        Boot
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/cd/" title="Cd">
+        Cd
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/ci/" title="Ci">
+        Ci
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/clone/" title="Clone">
+        Clone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/commands/" title="Commands">
+        Commands
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/corentinj/" title="Corentinj">
+        Corentinj
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/devto/" title="Devto">
+        Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/docker/" title="Docker">
+        Docker
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/dual/" title="Dual">
+        Dual
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/dualboot/" title="Dualboot">
+        Dualboot
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/github/" title="Github">
+        Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/grub/" title="Grub">
+        Grub
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/hugo/" title="Hugo">
+        Hugo
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/keep/" title="Keep">
+        Keep
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/linux/" title="Linux">
+        Linux
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/machine-learning/" title="Machine Learning">
+        Machine Learning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/mozilla/" title="Mozilla">
+        Mozilla
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/notes/" title="Notes">
+        Notes
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pca/" title="Pca">
+        Pca
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pi/" title="Pi">
+        Pi
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pinephone/" title="Pinephone">
+        Pinephone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/python/" title="Python">
+        Python
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/save/" title="Save">
+        Save
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/secure/" title="Secure">
+        Secure
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/systemd/" title="Systemd">
+        Systemd
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/tensorflow/" title="Tensorflow">
+        Tensorflow
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/thunderbird/" title="Thunderbird">
+        Thunderbird
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/voice/" title="Voice">
+        Voice
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/voice-cloning/" title="Voice Cloning">
+        Voice Cloning
+      </a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+      
+      
+      
+      
+
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/appdata/" title="Appdata">
+              Appdata
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-04-10-ssd-savespace/">SSD - things todo to save space on ssd C drive</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/arch/" title="Arch">
+              Arch
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">Colab Equivalent Pytorch Docker With GPU</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-11-01-enable-secure-boot-on-dualboot/">Enable Secure Boot on Dualboot</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-11-01-switch-to-systemd-from-grub/">Switch to Systemd From Grub</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/bash/" title="Bash">
+              Bash
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-10-28-bookmark-linux-commands-keep/">Bookmark Linux Commands using Keep</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/cms/" title="Cms">
+              Cms
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/">Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/debian/" title="Debian">
+              Debian
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-04-08-not-authorized-to-perform-this-operation/">Not authorized to perform this operation</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/deep-learning/" title="Deep Learning">
+              Deep Learning
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-01-01-how-i-cloned-the-voice-of-priyanka-chopra-jonas/">How I Cloned the Voice of Priyanka Chopra Jonas</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-12-24-real-time-voice-cloning-docker-arch/">Running the Real Time Voice Cloning in Docker on Arch Linux</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+
+      
+        <div class="title">
+          <a class="item" href="../../categories" style="padding-left: 0.5rem;">......</a>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="../../index.xml">
+        <i class=" rss square icon" title="RSS"></i>
+      </a>
+    </div>
+  
+  
+    <div class="item">
+      <a href="mailto:rushic24@gmail.com">
+        <i class=" mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/rushic24" target="_blank">
+        <i class=" github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2018 - 2022 A collection of random ideas so I don&#39;t have to google again</p>
+    
+
+    
+  </section>
+</article>
+
+  </aside>
+</div>
+
+          </div>
+        </section>
+        <section class="back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
+  
+  
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">关于我</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>g1eny0ung 的 ❤️ 博客</p>
+<p>记录一些 🌈 生活上，技术上的事</p>
+<p><del>一名大四学生</del></p>
+<p><del>马上</del>（已经）毕业于 🏫 大连东软信息学院</p>
+<p>职业是前端工程师</p>
+<p>业余时间会做开源和 Apple App (OSX &amp; iOS)</p>
+<p>主要的技术栈是：</p>
+<ul>
+<li>JavaScript &amp; TypeScript</li>
+<li>React.js</li>
+<li>Electron</li>
+<li>Rust</li>
+</ul>
+<p>写着玩（写过）：</p>
+<ul>
+<li>Java &amp; Clojure &amp; CLJS</li>
+<li>OCaml &amp; Reason &amp; ReScript</li>
+<li>Dart &amp; Swift</li>
+</ul>
+<p>目前在 <a href="https://pingcap.com">PingCAP</a> 工作</p>
+<p>&ndash; 2020 年 09 月 09 日更新</p>
+
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">我的一些开源项目</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <ul>
+<li><a href="https://github.com/ilime/Petal">Petal 🌺</a> ➡️ <a href="https://douban.fm/">豆瓣 FM</a> 桌面版</li>
+<li><a href="https://github.com/g1eny0ung/hugo-theme-dream">hugo-theme-dream 🌱</a> ➡️ <a href="https://gohugo.io">HUGO</a> 的博客主题，当然，也是你现在看到的博客主题</li>
+<li><a href="https://github.com/g1eny0ung/Alfred-Colors-workflow">Alfred-Colors-workflow</a> ➡️ Alfred 插件：CSS 颜色格式转换 hex &lt;=&gt; rgb &lt;=&gt; hsl</li>
+<li><a href="https://github.com/g1eny0ung/github-colorful-contributions-graph">github-colorful-contributions-graph</a> ➡️ 改变 GitHub 贡献面板颜色的 Chrome 插件</li>
+<li><a href="https://github.com/dayjs/day.dart">day.dart</a> ➡️ ⏰ Day.js in dart.</li>
+</ul>
+<p><a href="https://github.com/g1eny0ung">等等等等</a></p>
+
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">其他</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>如果你喜欢我的开源项目或者它们可以给你带来帮助，可以赏一杯咖啡 ☕ 给我。~</p>
+<p>If you like my open source projects or they can help you. You can <a href="../../posts/buy-me-a-coffee">buy me a coffee ☕</a>.~</p>
+<p><strong>PayPal</strong>：</p>
+<p><a href="https://paypal.me/g1eny0ung">https://paypal.me/g1eny0ung</a></p>
+<p><strong>Patreon</strong>:</p>
+<p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
+<p><strong>微信赞赏码</strong>：</p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
+<blockquote>
+<p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
+<p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>
+</blockquote>
+
+        </div>
+      </article>
+    </section>
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui bottom attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="../../index.xml">
+        <i class="large rss square icon" title="RSS"></i>
+      </a>
+    </div>
+  
+  
+    <div class="item">
+      <a href="mailto:rushic24@gmail.com">
+        <i class="large mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/rushic24" target="_blank">
+        <i class="large github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+  window.backgroundDark = "black"
+  window.backgroundImageDark = "/me/background-dark.jpg"
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  null 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/semantic.min.js"></script>
+<script src="../../js/jquery.overlayScrollbars.min.js"></script>
+<script src="../../js/header.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/theme.js"></script>
+
+    
+<script src="../../js/html2canvas.min.js"></script>
+<script src="../../js/post.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+     
+  
+
+  <script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    var lightTheme = "gruvbox-light"
+    var darkTheme = "gruvbox-dark"
+    var theme = isDark ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark ? '#333' : '')
+  }
+</script>
+
+
+
+
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="Search" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/rushichaudhari.github.io/index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="../../js/search.js"></script>
+
+    
+
+    
+  </body>
+</html>

@@ -23,7 +23,7 @@ sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot 
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.96.0" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/" />
 
@@ -37,10 +37,10 @@ Install virtualbox
 sudo pacman -S virtualbox  for the linux kernel, choose virtualbox-host-modules-arch for any other kernel (including linux-lts), choose virtualbox-host-dkms  Load the vbox drv module
 sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot of space (50GB&#43;)" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-11-01T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-11-01T00:00:00+00:00" />
+
 
 
 
@@ -176,29 +176,29 @@ sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot 
       <article class="main"><h2 id="what-is-vagrant-">What is Vagrant ?</h2>
 <p><a href="https://www.janbasktraining.com/blog/vagrant-tutorial/">https://www.janbasktraining.com/blog/vagrant-tutorial/</a></p>
 <p>Install Vagrant</p>
-<pre><code>sudo pacman -S vagrant
-</code></pre><pre><code>vagrant plugin install vagrant-vbguest vagrant-share
+<pre tabindex="0"><code>sudo pacman -S vagrant
+</code></pre><pre tabindex="0"><code>vagrant plugin install vagrant-vbguest vagrant-share
 </code></pre><p><strong>Note</strong>: There is also vagrant libvirt plugin for qemu</p>
-<pre><code>vagrant plugin install vagrant-libvirt
+<pre tabindex="0"><code>vagrant plugin install vagrant-libvirt
 </code></pre><p>but this doesn&rsquo;t work with kubeflow</p>
 <p>Install virtualbox</p>
-<pre><code>sudo pacman -S virtualbox
+<pre tabindex="0"><code>sudo pacman -S virtualbox
 </code></pre><ul>
 <li>for the linux kernel, choose virtualbox-host-modules-arch</li>
 <li>for any other kernel (including linux-lts), choose virtualbox-host-dkms</li>
 </ul>
 <p>Load the vbox drv module</p>
-<pre><code>sudo modprobe vboxdrv
+<pre tabindex="0"><code>sudo modprobe vboxdrv
 </code></pre><p>Make sure to put path for Virtualbox where you have a lot of space (50GB+)</p>
 <p><img src="../../img/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/2021-11-01-23-08-45.png" alt=""></p>
 <p>Also give vagrant config sufficient space</p>
-<pre><code>sudo export VAGRANT_HOME=/mnt/hdd2/Documents/.vagrant.d/
-</code></pre><pre><code>mkdir kubeproj &amp;&amp; cd kubeproj
+<pre tabindex="0"><code>sudo export VAGRANT_HOME=/mnt/hdd2/Documents/.vagrant.d/
+</code></pre><pre tabindex="0"><code>mkdir kubeproj &amp;&amp; cd kubeproj
 </code></pre><p>Initialize minikf</p>
-<pre><code>vagrant init arrikto/minikf
+<pre tabindex="0"><code>vagrant init arrikto/minikf
 </code></pre><p>create this file #necessary for virtualbox on Arch <a href="https://discuss.hashicorp.com/t/vagrant-2-2-18-osx-11-6-cannot-create-private-network/30984">source</a></p>
 <p><img src="../../img/2021-11-01-ml-pipelines-on-kubeflow-on-localhost/2021-11-02-13-22-19.png" alt=""></p>
-<pre><code>vagrant up --provider='virtualbox' #not libvirtd
+<pre tabindex="0"><code>vagrant up --provider=&#39;virtualbox&#39; #not libvirtd
 </code></pre></article>
     </section>
 
@@ -341,6 +341,18 @@ sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot 
     
       
       
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -355,6 +367,12 @@ sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot 
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -379,6 +397,12 @@ sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot 
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -461,8 +485,8 @@ sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot 
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -653,6 +677,12 @@ sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot 
           </div>
           <div class="content">
             <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-01-01-how-i-cloned-the-voice-of-priyanka-chopra-jonas/">How I Cloned the Voice of Priyanka Chopra Jonas</a>
+                </div>
+              </div>
             
               <div class="item">
                 <div class="content">
@@ -924,7 +954,7 @@ sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot 
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

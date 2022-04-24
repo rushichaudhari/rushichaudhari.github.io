@@ -6,7 +6,17 @@
     <description>Recent content in python on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Dec 2020 01:21:27 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert Browser Requests to Python</title>
+      <link>https://rushichaudhari.github.io/posts/2022-04-24-convert-browser-requests-to-python/</link>
+      <pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-04-24-convert-browser-requests-to-python/</guid>
+      <description>Scraping dynamic content these days is bit difficult as there are wide variety of authentication mechanisms and web server needs correct headers, session, cookies to authenticate the request. If we need to quickly scrape content just for once, implementing authenticationis an overhead. Instead, we can manually login to the website, capture an authenticated request and use it for scraping other pages by changing url/form parameters.
+curl &amp;#39;https://www.glassdoor.com/member/home/index.htm&amp;#39; -H &amp;#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.</description>
+    </item>
+    
     <item>
       <title>Webscraping 1 minute stock data from tradingview</title>
       <link>https://rushichaudhari.github.io/posts/2020-06-28-trading-view-scraping/</link>

@@ -6,7 +6,17 @@
     <description>Recent content in python on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Convert Browser Requests to Python</title>
+      <link>https://rushichaudhari.github.io/posts/2022-04-24-convert-browser-requests-to-python/</link>
+      <pubDate>Sun, 24 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-04-24-convert-browser-requests-to-python/</guid>
+      <description>Scraping dynamic content these days is bit difficult as there are wide variety of authentication mechanisms and web server needs correct headers, session, cookies to authenticate the request. If we need to quickly scrape content just for once, implementing authenticationis an overhead. Instead, we can manually login to the website, capture an authenticated request and use it for scraping other pages by changing url/form parameters.
+curl &amp;#39;https://www.glassdoor.com/member/home/index.htm&amp;#39; -H &amp;#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.</description>
+    </item>
+    
     <item>
       <title>Lets Clone the Voice of Priyanka Chopra Jonas</title>
       <link>https://rushichaudhari.github.io/posts/2022-01-12-lets-clone-the-voice-of-priyanka-chopra-jonas/</link>
@@ -33,6 +43,17 @@ If you don&amp;rsquo;t know how Priyanka Chopra sounds like, here is a real samp
       
       <guid>https://rushichaudhari.github.io/posts/2021-11-25-pca-vs-autoencoders/</guid>
       <description>PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&amp;#34;integer&amp;#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&amp;#39;Design matrix size: {}&amp;#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz 32768/29515 [=================================] - 0s 0us/step 40960/29515 [=========================================] - 0s 0us/step Downloading data from https://storage.</description>
+    </item>
+    
+    <item>
+      <title>Stop Colab From Disconnecting</title>
+      <link>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</link>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</guid>
+      <description>Are you irritated by google colab automatically disconnecting after every 30mins ? Open your Chrome DevTools and enter the following JavaScript snippet in your console:
+function KeepClicking(){ console.log(&amp;#34;Clicking&amp;#34;); document.querySelector(&amp;#34;colab-connect-button&amp;#34;).click() } setInterval(KeepClicking,60000) This clicks the connect button every 60 seconds, there is no need to worry about colab being disconnected!
+This is different from the GPU time, colab can still disconnect you for long running background tasks on GPU. </description>
     </item>
     
   </channel>
