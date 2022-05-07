@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Why Do We Need an Opensource Face Detection APIs? | A collection of random ideas so I don&#39;t have to google again</title>
+
+    
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+
+<meta name="author" content="rushi" />
+<meta name="description" content="A comparison of different Face Detection APIs in the industry Why do we need an opensource face detection APIs ? Consider we have around 80,000 videos which consists of around a total of 72 million frames. Below is an analysis of how different competitor’s face detection APIs would cost for 72 million frames. Some people have a myth that opensource models don’t work that well compared to these premium services. I’ve also shared a few test screenshots on how even premium service give false positives." />
+
+
+
+<meta name="generator" content="Hugo 0.98.0" />
+
+<link rel="canonical" href="https://rushichaudhari.github.io/posts/2022-05-06-why-do-we-need-an-opensource-face-detection-apis/" />
+
+
+<meta property="og:title" content="Why Do We Need an Opensource Face Detection APIs?" />
+<meta property="og:description" content="A comparison of different Face Detection APIs in the industry Why do we need an opensource face detection APIs ? Consider we have around 80,000 videos which consists of around a total of 72 million frames. Below is an analysis of how different competitor’s face detection APIs would cost for 72 million frames. Some people have a myth that opensource models don’t work that well compared to these premium services. I’ve also shared a few test screenshots on how even premium service give false positives." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-05-06-why-do-we-need-an-opensource-face-detection-apis/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-05-06T00:00:00+00:00" />
+
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+
+<meta name="twitter:title" content="Why Do We Need an Opensource Face Detection APIs?"/>
+<meta name="twitter:description" content="A comparison of different Face Detection APIs in the industry Why do we need an opensource face detection APIs ? Consider we have around 80,000 videos which consists of around a total of 72 million frames. Below is an analysis of how different competitor’s face detection APIs would cost for 72 million frames. Some people have a myth that opensource models don’t work that well compared to these premium services. I’ve also shared a few test screenshots on how even premium service give false positives."/>
+
+
+<link rel="stylesheet" href="../../css/semantic.min.css" />
+<link rel="stylesheet" href="../../css/icomoon.css" />
+<link rel="stylesheet" href="../../css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="../../css/github-markdown.css" />
+<link rel="stylesheet" href="../../css/site.css" />
+
+<style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
+  a {
+    color: seagreen !important;
+  }
+  
+
+  
+  .inverted a,
+  .inverted a:hover {
+     color: darkseagreen !important;
+  }
+  
+
+  
+  body.default {
+    
+    background-color: #ccc;
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
+  
+
+  
+  body.dark {
+    
+    background-color: black;
+    
+
+    
+    background-image: url(/me/background-dark.jpg);
+    
+  }
+  
+</style>
+
+    
+
+
+  
+    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
+  
+
+
+
+
+
+  </head>
+
+  <body class="default">
+    
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/rushichaudhari.github.io'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
+  
+</nav>
+
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui attached segment">
+      <header>
+        <h1 class="ui large header">
+          Why Do We Need an Opensource Face Detection APIs?
+          <div class="sub header">
+            @
+            
+              
+                rushi
+              
+            
+
+            | 
+                Friday, May 6, 2022
+              
+
+            | 3 minutes read
+
+            | Update at
+              
+                Friday, May 6, 2022
+              
+          </div>
+        </h1>
+      </header>
+
+      <article class="main"><h1 id="a-comparison-of-different-face-detection-apis-in-the-industry">A comparison of different Face Detection APIs in the industry</h1>
+<h2 id="why-do-we-need-an-opensource-face-detection-apis-">Why do we need an opensource face detection APIs ?</h2>
+<p>Consider we have around 80,000 videos which consists of around a total of 72 million frames.
+Below is an analysis of how different competitor’s face detection APIs would cost for 72 million frames. Some people have a myth that opensource models don’t work that well compared to these premium services. I’ve also shared a few test screenshots on how even premium service give false positives.</p>
+<h1 id="google-cloud-vision">Google Cloud Vision</h1>
+<p><a href="https://cloud.google.com/vision/pricing">Pricing | Cloud Vision API | Google Cloud</a></p>
+<p>They charge $1.0/block for more than 5,000,000 units</p>
+<p>1000 units in one block</p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled.png" alt="Untitled"></p>
+<p>Total API cost = 1.5 * 5,000,000/1000 + 0.6 * 67,000,000/1000 = 47700 (for facial detection feature)</p>
+<h2 id="each-feature-has-a-cost"><strong>Each feature has a cost</strong></h2>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%201.png" alt="Untitled"></p>
+<h2 id="how-it-looks"><strong>How it looks</strong></h2>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%202.png" alt="Untitled"></p>
+<p><a href="https://www.businessinsider.com/google-cloud-vision-api-wont-tag-images-by-gender-2020-2#:~:text=Google%20emailed%20Cloud%20Vision%20API,Insider's%20homepage%20for%20more%20stories.">https://www.businessinsider.com/google-cloud-vision-api-wont-tag-images-by-gender-2020-2#:~:text=Google%20emailed%20Cloud%20Vision%20API,Insider&rsquo;s%20homepage%20for%20more%20stories.</a></p>
+<h2 id="notes"><strong>Notes:</strong></h2>
+<p>Doesn’t support age/gender/race prediction</p>
+<p>Has brand/logo detection</p>
+<hr>
+<h1 id="aws-reckognition">AWS reckognition</h1>
+<p><a href="https://aws.amazon.com/rekognition/pricing/">Amazon Rekognition - Pricing - AWS</a></p>
+<h2 id="label-detection"><strong>label detection</strong></h2>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%203.png" alt="Untitled"></p>
+<h2 id="image-detection-pricing">Image detection pricing</h2>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%204.png" alt="Untitled"></p>
+<p>Group 1: CompareFaces, IndexFaces, SearchFacebyImage, SearchFaces APIs.</p>
+<p>Group 2: DetectFaces, DetectModerationLabels, DetectLabels, DetectText, RecognizeCelebrities, DetectProtectiveEquipment APIs.</p>
+<p>0.001 * 1,000,000 + 0.008 * 4,000,000 + 0.006 * 30,000,000 + 0.004 * 35,000,000 = $<strong>353,000</strong></p>
+<h2 id="video-detection-pricing"><strong>video detection pricing</strong></h2>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%205.png" alt="Untitled"></p>
+<p>1 video = 0.5min = 40000 min for 80k videos</p>
+<p>= $<strong>8000</strong> for each feature needed</p>
+<hr>
+<h1 id="microsoft-vision-api">Microsoft Vision API</h1>
+<p><a href="https://azure.microsoft.com/en-us/services/cognitive-services/computer-vision/">Computer Vision | Microsoft Azure</a></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%206.png" alt="Untitled"></p>
+<h3 id="feature">Feature</h3>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%207.png" alt="Untitled"></p>
+<p>= 0.54 * 72,000,000 / 1000 = $<strong>38,880</strong> per feature</p>
+<hr>
+<h1 id="inferdo">Inferdo</h1>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%208.png" alt="Untitled"></p>
+<p><strong>Notes:-</strong></p>
+<p>Has only age, gender detection</p>
+<hr>
+<h1 id="kairos">KairOs</h1>
+<p><a href="https://www.kairos.com/demos">Kairos Facial Recognition Demos</a></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%209.png" alt="Untitled"></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2010.png" alt="Untitled"></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2011.png" alt="Untitled"></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2012.png" alt="Untitled"></p>
+<p>$249 plan ⇒</p>
+<p>249 + 0.002*72,000,000 = $<strong>144249</strong></p>
+<h3 id="notes-1">Notes:</h3>
+<p>Performance looks same like open source alternatives</p>
+<hr>
+<h2 id="face">Face++</h2>
+<p><a href="https://www.faceplusplus.com/body-outlining/">Body Outlining</a></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2013.png" alt="Untitled"></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2014.png" alt="Untitled"></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2015.png" alt="Untitled"></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2016.png" alt="Untitled"></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2017.png" alt="Untitled"></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2018.png" alt="Untitled"></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2019.png" alt="Untitled"></p>
+<h3 id="notes-2">Notes:</h3>
+<p>Face++ has highly accurate results, better than amazon/ google vision
+We would still need 75 million*1.5 queries to use this</p>
+<p>For $1000, a month would have 2,628,288 seconds, i.e at max we could do 2,628,288 queries with a single QPS</p>
+<p>If we have 64 QPS, it should be 75,000,000/64 = <strong>1,171,875 seconds = 12 days</strong></p>
+<p>Which again goes for like $100<em>12</em>64 = $<strong>76800</strong></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2020.png" alt="Untitled"></p>
+<hr>
+<h1 id="conclusion">Conclusion</h1>
+<p>For video data, only amazon rekognition API looks cheaper ($0.1/min)</p>
+<p>But the AWS API is slower (more than 8min/video) to process than my local machine itself, so it cannot be completed within 15 days</p>
+<p>Also, the AWS API doesn’t have that great results compared to face++, it is more or like my opensource models</p>
+<p><strong>Coming back to my version, It takes around 1min/video to process on GPU using the current system.</strong></p>
+<p>For 80k videos = 80kmins</p>
+<p>Considering I parallelize using 4GPUs, It should be 80,000/4 = 20,000 mins = 14 days</p>
+<p><strong>If we look at GPU instances</strong></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2021.png" alt="Untitled"></p>
+<p>1 GPU could run 2 models ⇒ 4 can run 8 (g5.12xlarge)</p>
+<p>80000/4 = 20000 mins = 14 days = 350 hrs * $5.672 = $<strong>1985.2</strong></p>
+<p><strong>If we look at CPU instances (c6gd.12xlarge)</strong></p>
+<p>But I’m thinking as CPU servers should be cheaper, Using 48 vcpus, and considering 4vcpus for each process, total scripts I can run in parallel = 48/4 = 12</p>
+<p>It should be 80,000 mins ⇒ 80,000/12 = 6,666.66 mins = 5 days</p>
+<p>5 days = 120 hrs = 120*1.8432 = $<strong>222</strong></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2022.png" alt="Untitled"></p>
+<p><img src="../../img/2022-05-06-Why-do-we-need-an-opensource-face-detection-APIs/Untitled%2023.png" alt="Untitled"></p>
+<h3 id="-all-costs-dont-include-the-storage-costs">* All costs don’t include the storage costs.</h3>
+<hr>
+<h2 id="project-link-httpsgithubcomrushic24opencvideoanalysishttpsgithubcomrushic24opencvideoanalysis">Project link: <a href="https://github.com/rushic24/OpenCVideoAnalysis">https://github.com/rushic24/OpenCVideoAnalysis</a></h2>
+</article>
+    </section>
+
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
+      
+        
+          <a class="ui label" href="../../tags/face-detection" title="face detection">face detection</a>
+        
+          <a class="ui label" href="../../tags/video-analysis" title="video analysis">video analysis</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/rushichaudhari.github.io\/posts\/2022-05-06-why-do-we-need-an-opensource-face-detection-apis\/';  
+            this.page.identifier = '\/posts\/2022-05-06-why-do-we-need-an-opensource-face-detection-apis\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'rushichaudhari' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+    
+    
+
+    
+
+  </div>
+  <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
+    
+    
+      <div class="ui segment toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-do-we-need-an-opensource-face-detection-apis-">Why do we need an opensource face detection APIs ?</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#each-feature-has-a-cost"><strong>Each feature has a cost</strong></a></li>
+    <li><a href="#how-it-looks"><strong>How it looks</strong></a></li>
+    <li><a href="#notes"><strong>Notes:</strong></a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#label-detection"><strong>label detection</strong></a></li>
+    <li><a href="#image-detection-pricing">Image detection pricing</a></li>
+    <li><a href="#video-detection-pricing"><strong>video detection pricing</strong></a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#feature">Feature</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#notes-1">Notes:</a></li>
+      </ul>
+    </li>
+    <li><a href="#face">Face++</a>
+      <ul>
+        <li><a href="#notes-2">Notes:</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#-all-costs-dont-include-the-storage-costs">* All costs don’t include the storage costs.</a></li>
+      </ul>
+    </li>
+    <li><a href="#project-link-httpsgithubcomrushic24opencvideoanalysishttpsgithubcomrushic24opencvideoanalysis">Project link: <a href="https://github.com/rushic24/OpenCVideoAnalysis">https://github.com/rushic24/OpenCVideoAnalysis</a></a></li>
+  </ul>
+</nav>
+      </div>
+    
+
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="../../me/yy.jpg">
+      
+    </div>
+
+    
+    <div class="ui medium header">
+    
+      A collection of random ideas so I don&#39;t have to google again
+      <div class="sub header" style="margin-top: 0.5rem;"></div>
+    
+    </div>
+    
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="../../posts">
+        <i class="archive icon" title="Archives"></i>
+      </a>
+      
+      <a class="item" href="../../tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="../../categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      
+      
+      <a class="ui label" href="../../tags/ai/" title="Ai">
+        Ai
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/android/" title="Android">
+        Android
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/arch/" title="Arch">
+        Arch
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/autoencoders/" title="Autoencoders">
+        Autoencoders
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/boot/" title="Boot">
+        Boot
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/cd/" title="Cd">
+        Cd
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/ci/" title="Ci">
+        Ci
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/clone/" title="Clone">
+        Clone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/commands/" title="Commands">
+        Commands
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/corentinj/" title="Corentinj">
+        Corentinj
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/devto/" title="Devto">
+        Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/docker/" title="Docker">
+        Docker
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/dual/" title="Dual">
+        Dual
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/dualboot/" title="Dualboot">
+        Dualboot
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/face-detection/" title="Face Detection">
+        Face Detection
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/github/" title="Github">
+        Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/grub/" title="Grub">
+        Grub
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/hugo/" title="Hugo">
+        Hugo
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/keep/" title="Keep">
+        Keep
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/linux/" title="Linux">
+        Linux
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/machine-learning/" title="Machine Learning">
+        Machine Learning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/mozilla/" title="Mozilla">
+        Mozilla
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/notes/" title="Notes">
+        Notes
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pca/" title="Pca">
+        Pca
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pi/" title="Pi">
+        Pi
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pinephone/" title="Pinephone">
+        Pinephone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/python/" title="Python">
+        Python
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/save/" title="Save">
+        Save
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/secure/" title="Secure">
+        Secure
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/systemd/" title="Systemd">
+        Systemd
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/tensorflow/" title="Tensorflow">
+        Tensorflow
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/thunderbird/" title="Thunderbird">
+        Thunderbird
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/video-analysis/" title="Video Analysis">
+        Video Analysis
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/voice/" title="Voice">
+        Voice
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/voice-cloning/" title="Voice Cloning">
+        Voice Cloning
+      </a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+      
+      
+      
+      
+
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/appdata/" title="Appdata">
+              Appdata
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-04-10-ssd-savespace/">SSD - things todo to save space on ssd C drive</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/arch/" title="Arch">
+              Arch
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">Colab Equivalent Pytorch Docker With GPU</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-11-01-enable-secure-boot-on-dualboot/">Enable Secure Boot on Dualboot</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-11-01-switch-to-systemd-from-grub/">Switch to Systemd From Grub</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/bash/" title="Bash">
+              Bash
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-10-28-bookmark-linux-commands-keep/">Bookmark Linux Commands using Keep</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/cms/" title="Cms">
+              Cms
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/">Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/debian/" title="Debian">
+              Debian
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-04-08-not-authorized-to-perform-this-operation/">Not authorized to perform this operation</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/deep-learning/" title="Deep Learning">
+              Deep Learning
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-12-24-real-time-voice-cloning-docker-arch/">Running the Real Time Voice Cloning in Docker on Arch Linux</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+
+      
+        <div class="title">
+          <a class="item" href="../../categories" style="padding-left: 0.5rem;">......</a>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="../../index.xml">
+        <i class=" rss square icon" title="RSS"></i>
+      </a>
+    </div>
+  
+  
+    <div class="item">
+      <a href="mailto:rushic24@gmail.com">
+        <i class=" mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/rushic24" target="_blank">
+        <i class=" github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2018 - 2022 A collection of random ideas so I don&#39;t have to google again</p>
+    
+
+    
+  </section>
+</article>
+
+  </aside>
+</div>
+
+          </div>
+        </section>
+        <section class="back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
+  
+  
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">关于我</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>g1eny0ung 的 ❤️ 博客</p>
+<p>记录一些 🌈 生活上，技术上的事</p>
+<p><del>一名大四学生</del></p>
+<p><del>马上</del>（已经）毕业于 🏫 大连东软信息学院</p>
+<p>职业是前端工程师</p>
+<p>业余时间会做开源和 Apple App (OSX &amp; iOS)</p>
+<p>主要的技术栈是：</p>
+<ul>
+<li>JavaScript &amp; TypeScript</li>
+<li>React.js</li>
+<li>Electron</li>
+<li>Rust</li>
+</ul>
+<p>写着玩（写过）：</p>
+<ul>
+<li>Java &amp; Clojure &amp; CLJS</li>
+<li>OCaml &amp; Reason &amp; ReScript</li>
+<li>Dart &amp; Swift</li>
+</ul>
+<p>目前在 <a href="https://pingcap.com">PingCAP</a> 工作</p>
+<p>&ndash; 2020 年 09 月 09 日更新</p>
+
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">我的一些开源项目</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <ul>
+<li><a href="https://github.com/ilime/Petal">Petal 🌺</a> ➡️ <a href="https://douban.fm/">豆瓣 FM</a> 桌面版</li>
+<li><a href="https://github.com/g1eny0ung/hugo-theme-dream">hugo-theme-dream 🌱</a> ➡️ <a href="https://gohugo.io">HUGO</a> 的博客主题，当然，也是你现在看到的博客主题</li>
+<li><a href="https://github.com/g1eny0ung/Alfred-Colors-workflow">Alfred-Colors-workflow</a> ➡️ Alfred 插件：CSS 颜色格式转换 hex &lt;=&gt; rgb &lt;=&gt; hsl</li>
+<li><a href="https://github.com/g1eny0ung/github-colorful-contributions-graph">github-colorful-contributions-graph</a> ➡️ 改变 GitHub 贡献面板颜色的 Chrome 插件</li>
+<li><a href="https://github.com/dayjs/day.dart">day.dart</a> ➡️ ⏰ Day.js in dart.</li>
+</ul>
+<p><a href="https://github.com/g1eny0ung">等等等等</a></p>
+
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">其他</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>如果你喜欢我的开源项目或者它们可以给你带来帮助，可以赏一杯咖啡 ☕ 给我。~</p>
+<p>If you like my open source projects or they can help you. You can <a href="../../posts/buy-me-a-coffee">buy me a coffee ☕</a>.~</p>
+<p><strong>PayPal</strong>：</p>
+<p><a href="https://paypal.me/g1eny0ung">https://paypal.me/g1eny0ung</a></p>
+<p><strong>Patreon</strong>:</p>
+<p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
+<p><strong>微信赞赏码</strong>：</p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
+<blockquote>
+<p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
+<p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>
+</blockquote>
+
+        </div>
+      </article>
+    </section>
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui bottom attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="../../index.xml">
+        <i class="large rss square icon" title="RSS"></i>
+      </a>
+    </div>
+  
+  
+    <div class="item">
+      <a href="mailto:rushic24@gmail.com">
+        <i class="large mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/rushic24" target="_blank">
+        <i class="large github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+  window.backgroundDark = "black"
+  window.backgroundImageDark = "/me/background-dark.jpg"
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  null 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/semantic.min.js"></script>
+<script src="../../js/jquery.overlayScrollbars.min.js"></script>
+<script src="../../js/header.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/theme.js"></script>
+
+    
+<script src="../../js/html2canvas.min.js"></script>
+<script src="../../js/post.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+     
+  
+
+  <script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    var lightTheme = "gruvbox-light"
+    var darkTheme = "gruvbox-dark"
+    var theme = isDark ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark ? '#333' : '')
+  }
+</script>
+
+
+
+
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="Search" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/rushichaudhari.github.io/index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="../../js/search.js"></script>
+
+    
+
+    
+  </body>
+</html>

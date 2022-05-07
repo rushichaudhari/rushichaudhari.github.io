@@ -6,7 +6,25 @@
     <description>Recent content in Tags on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>face detection</title>
+      <link>https://rushichaudhari.github.io/tags/face-detection/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/face-detection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>video analysis</title>
+      <link>https://rushichaudhari.github.io/tags/video-analysis/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/video-analysis/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>python</title>
       <link>https://rushichaudhari.github.io/tags/python/</link>
@@ -82,18 +100,9 @@
     <item>
       <title>clone</title>
       <link>https://rushichaudhari.github.io/tags/clone/</link>
-      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/tags/clone/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>voice</title>
-      <link>https://rushichaudhari.github.io/tags/voice/</link>
-      <pubDate>Sun, 26 Dec 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/tags/voice/</guid>
       <description></description>
     </item>
     
@@ -103,6 +112,15 @@
       <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/tags/corentinj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>voice</title>
+      <link>https://rushichaudhari.github.io/tags/voice/</link>
+      <pubDate>Fri, 24 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/voice/</guid>
       <description></description>
     </item>
     
@@ -157,42 +175,6 @@
       <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/tags/tensorflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>colab</title>
-      <link>https://rushichaudhari.github.io/tags/colab/</link>
-      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/tags/colab/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>colaboratory</title>
-      <link>https://rushichaudhari.github.io/tags/colaboratory/</link>
-      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/tags/colaboratory/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>disconnect</title>
-      <link>https://rushichaudhari.github.io/tags/disconnect/</link>
-      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/tags/disconnect/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>google</title>
-      <link>https://rushichaudhari.github.io/tags/google/</link>
-      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/tags/google/</guid>
       <description></description>
     </item>
     

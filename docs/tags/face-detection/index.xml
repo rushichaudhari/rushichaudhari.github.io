@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>face detection on A collection of random ideas so I don&#39;t have to google again</title>
+    <link>https://rushichaudhari.github.io/tags/face-detection/</link>
+    <description>Recent content in face detection on A collection of random ideas so I don&#39;t have to google again</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/face-detection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Do We Need an Opensource Face Detection APIs?</title>
+      <link>https://rushichaudhari.github.io/posts/2022-05-06-why-do-we-need-an-opensource-face-detection-apis/</link>
+      <pubDate>Fri, 06 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-05-06-why-do-we-need-an-opensource-face-detection-apis/</guid>
+      <description>A comparison of different Face Detection APIs in the industry Why do we need an opensource face detection APIs ? Consider we have around 80,000 videos which consists of around a total of 72 million frames. Below is an analysis of how different competitor’s face detection APIs would cost for 72 million frames. Some people have a myth that opensource models don’t work that well compared to these premium services. I’ve also shared a few test screenshots on how even premium service give false positives.</description>
+    </item>
+    
+  </channel>
+</rss>
