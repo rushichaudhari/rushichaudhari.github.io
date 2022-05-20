@@ -13,26 +13,26 @@
 
 
 <meta name="author" content="rushi" />
-<meta name="description" content="Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;#34;3&amp;#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &amp;#34;host&amp;#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+<meta name="description" content="Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;quot;3&amp;quot; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &amp;quot;host&amp;quot; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works" />
 
 
 
-<meta name="generator" content="Hugo 0.98.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/" />
 
 
 <meta property="og:title" content="Colab Equivalent Pytorch Docker With GPU" />
-<meta property="og:description" content="Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &#34;host&#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+<meta property="og:description" content="Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &quot;3&quot; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &quot;host&quot; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 <meta property="article:published_time" content="2022-03-27T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-03-27T00:00:00+00:00" />
-
 
 
 
@@ -40,7 +40,7 @@ Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works" />
 <meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 <meta name="twitter:title" content="Colab Equivalent Pytorch Docker With GPU"/>
-<meta name="twitter:description" content="Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &#34;host&#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+<meta name="twitter:description" content="Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &quot;3&quot; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &quot;host&quot; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works"/>
 
@@ -162,14 +162,14 @@ Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works"/>
       </header>
 
       <article class="main"><h2 id="dockerfile">Dockerfile</h2>
-<pre tabindex="0"><code>FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel
+<pre><code>FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel
 WORKDIR /root
 RUN pip install jupyter jupyterlab
 EXPOSE 8888
 COPY . .
 CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root
 </code></pre><h2 id="docker-composeyml">docker-compose.yml</h2>
-<pre tabindex="0"><code>version: &#34;3&#34;
+<pre><code>version: &quot;3&quot;
 services:
   main:
     build: .
@@ -177,7 +177,7 @@ services:
       - .:/root
     ports:
       - 8888:8888
-    network_mode: &#34;host&#34;
+    network_mode: &quot;host&quot;
     privileged: true
     deploy:
       resources:
@@ -342,6 +342,18 @@ torchdata works</p>
     
       
       
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -356,6 +368,12 @@ torchdata works</p>
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -386,6 +404,12 @@ torchdata works</p>
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -468,8 +492,8 @@ torchdata works</p>
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="SSH">
-        SSH
+      <a class="ui label" href="../../tags/ssh/" title="Ssh">
+        Ssh
       </a>
     
       
@@ -506,6 +530,12 @@ torchdata works</p>
       
       <a class="ui label" href="../../tags/voice-cloning/" title="Voice Cloning">
         Voice Cloning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/wayland/" title="Wayland">
+        Wayland
       </a>
     
   </section>
@@ -941,7 +971,7 @@ torchdata works</p>
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
+<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

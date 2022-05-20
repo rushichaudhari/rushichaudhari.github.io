@@ -23,7 +23,7 @@
       
       <guid>https://rushichaudhari.github.io/posts/2022-04-24-convert-browser-requests-to-python/</guid>
       <description>Scraping dynamic content these days is bit difficult as there are wide variety of authentication mechanisms and web server needs correct headers, session, cookies to authenticate the request. If we need to quickly scrape content just for once, implementing authenticationis an overhead. Instead, we can manually login to the website, capture an authenticated request and use it for scraping other pages by changing url/form parameters.
-curl &amp;#39;https://www.glassdoor.com/member/home/index.htm&amp;#39; -H &amp;#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.</description>
+curl &#39;https://www.glassdoor.com/member/home/index.htm&#39; -H &#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.</description>
     </item>
     
     <item>

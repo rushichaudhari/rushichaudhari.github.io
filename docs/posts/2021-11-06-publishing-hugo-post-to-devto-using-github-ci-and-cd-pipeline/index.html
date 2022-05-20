@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.98.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2021-11-06-publishing-hugo-post-to-devto-using-github-ci-and-cd-pipeline/" />
 
@@ -25,10 +25,10 @@
 <meta property="og:title" content="Publishing HUGO Post to DevTo Using GitHub CI and CD Pipeline" />
 <meta property="og:description" content="Why this tool?  There are aleady a few github actions available like publish-devto and markdown-to-devto They seem to be failing despite of the valid data in the markdown file. For a large amount of posts there was no option to add a break and the API got overflowed.  Steps to set up Creating API Keys in Dev.To Login to dev.to and then go to accounts and create new api key." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-11-06-publishing-hugo-post-to-devto-using-github-ci-and-cd-pipeline/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-11-06-publishing-hugo-post-to-devto-using-github-ci-and-cd-pipeline/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 <meta property="article:published_time" content="2021-11-06T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-11-06T00:00:00+00:00" />
-
 
 
 
@@ -173,7 +173,7 @@
 <p>By default it is <code>content/posts/*.md</code></p>
 <h3 id="script-to-push-to-devto">Script to push to dev.to</h3>
 <p><strong>devpush.py</strong></p>
-<pre tabindex="0"><code>import json
+<pre><code>import json
 import requests
 import frontmatter
 import glob
@@ -181,23 +181,23 @@ import os
 from time import sleep
 import re
 
-&#39;&#39;&#39;
+'''
 Hugo to DevTo
 This script transforms a Hugo article into a format that can be pushed to the DevTo server.
-&#39;&#39;&#39;
+'''
 
-URL = &#34;https://dev.to/api/articles&#34;
+URL = &quot;https://dev.to/api/articles&quot;
 
 ALL_PREVIOUS_ARTICLES = requests.get(
-            url=URL+&#34;/me/all&#34;,
-            headers={&#34;api_key&#34;: os.environ[&#34;DEVTO_TOKEN&#34;]},
+            url=URL+&quot;/me/all&quot;,
+            headers={&quot;api_key&quot;: os.environ[&quot;DEVTO_TOKEN&quot;]},
         ).json()
 
 def check_if_article_exists(article):
     for a in ALL_PREVIOUS_ARTICLES:
-        if a[&#34;title&#34;] == article.title:
+        if a[&quot;title&quot;] == article.title:
             # print(a)
-            return a[&#39;id&#39;]
+            return a['id']
     return None
 
 
@@ -208,37 +208,37 @@ class HugoArticle(object):
         elif x is not None and ind is not None and ind in x:
             return self.assign_if_not_none(x[ind])
         else:
-            return &#34;&#34;
+            return &quot;&quot;
     
     def compare_already_existing_articles(self, title, body_markdown, tags):
         # Set a flag no_change to skip POST/ PUT request if article already exists
         for a in ALL_PREVIOUS_ARTICLES:
-            if &#34;title&#34; in a and &#34;body_markdown&#34; in a and a[&#34;title&#34;] == title and  a[&#34;body_markdown&#34;] == body_markdown:
+            if &quot;title&quot; in a and &quot;body_markdown&quot; in a and a[&quot;title&quot;] == title and  a[&quot;body_markdown&quot;] == body_markdown:
                 return True
         return False
 
     def __init__(self, article, published=False, series=None):
         # Get title, text and tags from hugo markdown files
-        self.title = self.assign_if_not_none(article.metadata, &#34;title&#34;)
+        self.title = self.assign_if_not_none(article.metadata, &quot;title&quot;)
 
         # Set this to truw if you want to post and publish the article without saving as draft
         self.published = published
 
         body_markdown = self.assign_if_not_none(article.content)
-        relative_image_paths = re.findall(&#34;\!\[(.*?)\]\(\/img\/(.*?)\)&#34;, body_markdown)
+        relative_image_paths = re.findall(&quot;\!\[(.*?)\]\(\/img\/(.*?)\)&quot;, body_markdown)
         for relative_image_path in relative_image_paths:
             image = os.path.join(
-                &#34;https://raw.githubusercontent.com/rushichaudhari/rushichaudhari.github.io/main/static/img&#34;,
+                &quot;https://raw.githubusercontent.com/rushichaudhari/rushichaudhari.github.io/main/static/img&quot;,
                 relative_image_path[1],
             )
             body_markdown = body_markdown.replace(relative_image_path[1], image)
 
         self.body_markdown = body_markdown
-        self.tags = self.assign_if_not_none(article.metadata, &#34;tags&#34;)
+        self.tags = self.assign_if_not_none(article.metadata, &quot;tags&quot;)
 
         # assign categories as tags if tags is none
         if self.tags is None:
-            self.tags = self.assign_if_not_none(article.metadata, &#34;categories&#34;)
+            self.tags = self.assign_if_not_none(article.metadata, &quot;categories&quot;)
 
         self.series = series
 
@@ -246,46 +246,46 @@ class HugoArticle(object):
 
 
 def get_article_from_file(filepath):
-    with open(filepath, &#34;r&#34;) as f:
+    with open(filepath, &quot;r&quot;) as f:
         article = frontmatter.load(f)
         return HugoArticle(article)
 
 
-if __name__ == &#34;__main__&#34;:
-    print(&#34;Starting devpush&#34;)
-    files = glob.glob(&#39;content/posts/*.md&#39;)
+if __name__ == &quot;__main__&quot;:
+    print(&quot;Starting devpush&quot;)
+    files = glob.glob('content/posts/*.md')
 
     sleeptime = 5
-    print(&#39;DEVTO_TOKEN is &#39;, os.environ[&#34;DEVTO_TOKEN&#34;], os.getcwd(), files)
+    print('DEVTO_TOKEN is ', os.environ[&quot;DEVTO_TOKEN&quot;], os.getcwd(), files)
     for file in files:
         hugo_article = get_article_from_file(file)
 
         if not hugo_article.no_change:
             sleep(int(sleeptime))
 
-            this_dict = {&#34;article&#34;: hugo_article.__dict__}
+            this_dict = {&quot;article&quot;: hugo_article.__dict__}
             data = json.dumps(this_dict)
             print(data) 
 
             existing_post_id = check_if_article_exists(hugo_article)
             if existing_post_id is not None:
-                url=URL+&#34;/&#34;+str(existing_post_id)
+                url=URL+&quot;/&quot;+str(existing_post_id)
                 result = requests.put(
                 url=url,
                 json=json.loads(data),
-                headers={&#34;api_key&#34;: os.environ[&#34;DEVTO_TOKEN&#34;]},
+                headers={&quot;api_key&quot;: os.environ[&quot;DEVTO_TOKEN&quot;]},
                 )
             else:
                 result = requests.post(
                     url=URL,
                     json=json.loads(data),
-                    headers={&#34;api_key&#34;: os.environ[&#34;DEVTO_TOKEN&#34;]},
+                    headers={&quot;api_key&quot;: os.environ[&quot;DEVTO_TOKEN&quot;]},
                 )
             print(file)
         else:
-            print(file, &#34;no change&#34;)
+            print(file, &quot;no change&quot;)
 </code></pre><h3 id="the-workflow-file-will-be-something-like">The workflow file will be something like</h3>
-<pre tabindex="0"><code>name: publish
+<pre><code>name: publish
 on:
   push:
     branches:
@@ -294,7 +294,7 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    if: &#34;! contains(toJSON(github.event.commits.*.message), &#39;[skip ci]&#39;)&#34;   # Skip CI if the commit message has [skip ci]
+    if: &quot;! contains(toJSON(github.event.commits.*.message), '[skip ci]')&quot;   # Skip CI if the commit message has [skip ci]
 
     steps:
     - uses: actions/checkout@v2
@@ -321,7 +321,7 @@ jobs:
 <ul>
 <li>This script handles conversion of relative paths to raw.githubusercontent paths, to do this all the relative image paths should start with</li>
 </ul>
-<pre tabindex="0"><code>/img and not like ../../static/img
+<pre><code>/img and not like ../../static/img
 
 e.g. 
 
@@ -501,6 +501,18 @@ e.g.
     
       
       
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -515,6 +527,12 @@ e.g.
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -545,6 +563,12 @@ e.g.
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -627,8 +651,8 @@ e.g.
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="SSH">
-        SSH
+      <a class="ui label" href="../../tags/ssh/" title="Ssh">
+        Ssh
       </a>
     
       
@@ -665,6 +689,12 @@ e.g.
       
       <a class="ui label" href="../../tags/voice-cloning/" title="Voice Cloning">
         Voice Cloning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/wayland/" title="Wayland">
+        Wayland
       </a>
     
   </section>
@@ -1100,7 +1130,7 @@ e.g.
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
+<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

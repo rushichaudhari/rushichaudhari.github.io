@@ -22,7 +22,7 @@ Pre-requirements:
 
 
 
-<meta name="generator" content="Hugo 0.98.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/" />
 
@@ -35,9 +35,8 @@ So here are the steps :-
 Pre-requirements:
  Windows 10 WSL  For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on //build 2020 that they will release soon an improvement that will not require any third-party component to run Linux GUI Apps on Windows Desktop." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
-
-
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-08-19-dockerguiwsl/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 
 
@@ -186,7 +185,7 @@ Pre-requirements:
 <p>The first step is to install the third-part display manager called <strong>VcXsrv Windows X Server</strong> available at:</p>
 <p><a href="https://sourceforge.net/projects/vcxsrv/">https://sourceforge.net/projects/vcxsrv/</a></p>
 <p>After installing launch the <strong>xlaunch.exe</strong>, make sure disable access control is clicked to avoid permission error</p>
-<p><img src="../../img/2020-08-19-DockerGUIwsl/disableaccesscontrol.jpg" alt="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/201596iBCB2B8DA889830E0/image-size/large?v=1.0&amp;px=999"></p>
+<p><img src="../../img/2020-08-19-DockerGUIwsl/disableaccesscontrol.jpg" alt="https://techcommunity.microsoft.com/t5/image/serverpage/image-id/201596iBCB2B8DA889830E0/image-size/large?v=1.0&px=999"></p>
 <p>Also allow VcxSrv in the firewall</p>
 <p><img src="../../img/2020-08-19-DockerGUIwsl/firewall.jpg" alt="firewall.png"></p>
 <p>Select multiple windows under display settings popup</p>
@@ -219,17 +218,17 @@ Pre-requirements:
 <p><code>export DISPLAY=&quot;`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0&quot;</code></p>
 <p><code>echo $DISPLAY</code></p>
 <h3 id="installing-some-test-applications">Installing some test applications</h3>
-<pre tabindex="0"><code>pacman -S chromium gedit python python3-pip neofetch
+<pre><code>pacman -S chromium gedit python python3-pip neofetch
 pacman -S qt5-base libxcb #libraries needed for spyder
 pip3 install spyder
 </code></pre><p>Some applications like chromium doesn&rsquo;t work on root user create a temp user if needed, switch to this user before running that application.</p>
-<pre tabindex="0"><code>useradd -m -G wheel -s /bin/bash testuser
+<pre><code>useradd -m -G wheel -s /bin/bash testuser
 passwd testuser
 </code></pre><p>Make sure that <strong>XLaunch</strong> is running on windows host before starting any app.</p>
 <p>Lets start gedit</p>
-<pre tabindex="0"><code>gedit
+<pre><code>gedit
 </code></pre><p><img src="../../img/2020-08-19-DockerGUIwsl/image-20200819110253538.png" alt="image-20200819110253538"></p>
-<pre tabindex="0"><code>chromium --no-sandbox
+<pre><code>chromium --no-sandbox
 </code></pre><p><img src="../../img/2020-08-19-DockerGUIwsl/image-20200819110323238.png" alt="image-20200819110323238"></p>
 <p><code>spyder3 </code></p>
 <p><img src="../../img/2020-08-19-DockerGUIwsl/image-20200819110354785.png" alt="image-20200819110354785"></p>
@@ -387,6 +386,18 @@ passwd testuser
     
       
       
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -401,6 +412,12 @@ passwd testuser
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -431,6 +448,12 @@ passwd testuser
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -513,8 +536,8 @@ passwd testuser
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="SSH">
-        SSH
+      <a class="ui label" href="../../tags/ssh/" title="Ssh">
+        Ssh
       </a>
     
       
@@ -551,6 +574,12 @@ passwd testuser
       
       <a class="ui label" href="../../tags/voice-cloning/" title="Voice Cloning">
         Voice Cloning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/wayland/" title="Wayland">
+        Wayland
       </a>
     
   </section>
@@ -986,7 +1015,7 @@ passwd testuser
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
+<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

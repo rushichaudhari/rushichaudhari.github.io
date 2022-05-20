@@ -6,7 +6,25 @@
     <description>Recent content in Categories on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://rushichaudhari.github.io/categories/linux/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pinephone</title>
+      <link>https://rushichaudhari.github.io/categories/pinephone/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/categories/pinephone/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>opencv</title>
       <link>https://rushichaudhari.github.io/categories/opencv/</link>
@@ -31,24 +49,6 @@
       <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/categories/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://rushichaudhari.github.io/categories/linux/</link>
-      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pinephone</title>
-      <link>https://rushichaudhari.github.io/categories/pinephone/</link>
-      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/categories/pinephone/</guid>
       <description></description>
     </item>
     

@@ -6,7 +6,17 @@
     <description>Recent content in Posts on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Wayvnc Arch Linux (Pinephone)</title>
+      <link>https://rushichaudhari.github.io/posts/2022-05-19-wayvnc-arch-linux/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-05-19-wayvnc-arch-linux/</guid>
+      <description>Traditionally we have been using Xorg or X11 as the display server on linux. Wayland is a similar display server which aims to be a modern and more optimized. I&amp;rsquo;m not much used to wayland and this is a guide for using wayvnc, a vnc server for wayland. Any vnc client like tigervnc/ realvncviewer can be used.
+# Install wayvnc sudo pacman -S wayvnc Create a config with the authentication info and load it using the &amp;ndash;config command line option or place it at the default location $HOME/.</description>
+    </item>
+    
     <item>
       <title>Why Do We Need an Opensource Face Detection APIs?</title>
       <link>https://rushichaudhari.github.io/posts/2022-05-06-why-do-we-need-an-opensource-face-detection-apis/</link>
@@ -23,7 +33,7 @@
       
       <guid>https://rushichaudhari.github.io/posts/2022-04-24-convert-browser-requests-to-python/</guid>
       <description>Scraping dynamic content these days is bit difficult as there are wide variety of authentication mechanisms and web server needs correct headers, session, cookies to authenticate the request. If we need to quickly scrape content just for once, implementing authenticationis an overhead. Instead, we can manually login to the website, capture an authenticated request and use it for scraping other pages by changing url/form parameters.
-curl &amp;#39;https://www.glassdoor.com/member/home/index.htm&amp;#39; -H &amp;#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.</description>
+curl &#39;https://www.glassdoor.com/member/home/index.htm&#39; -H &#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.</description>
     </item>
     
     <item>
@@ -41,7 +51,7 @@ curl &amp;#39;https://www.glassdoor.com/member/home/index.htm&amp;#39; -H &amp;#
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/</guid>
-      <description>Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;#34;3&amp;#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &amp;#34;host&amp;#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+      <description>Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;quot;3&amp;quot; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &amp;quot;host&amp;quot; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works</description>
     </item>
@@ -91,6 +101,17 @@ If you don&amp;rsquo;t know how Priyanka Chopra sounds like, here is a real samp
       
       <guid>https://rushichaudhari.github.io/posts/2021-11-25-pca-vs-autoencoders/</guid>
       <description>PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&amp;#34;integer&amp;#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&amp;#39;Design matrix size: {}&amp;#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz 32768/29515 [=================================] - 0s 0us/step 40960/29515 [=========================================] - 0s 0us/step Downloading data from https://storage.</description>
+    </item>
+    
+    <item>
+      <title>Stop Colab From Disconnecting</title>
+      <link>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</link>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</guid>
+      <description>Are you irritated by google colab automatically disconnecting after every 30mins ? Open your Chrome DevTools and enter the following JavaScript snippet in your console:
+function KeepClicking(){ console.log(&amp;quot;Clicking&amp;quot;); document.querySelector(&amp;quot;colab-connect-button&amp;quot;).click() } setInterval(KeepClicking,60000) This clicks the connect button every 60 seconds, there is no need to worry about colab being disconnected!
+This is different from the GPU time, colab can still disconnect you for long running background tasks on GPU. </description>
     </item>
     
     <item>
@@ -305,7 +326,7 @@ Loosen the polkit permissions in your system to allow your normal user to mount 
       
       <guid>https://rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/</guid>
       <description>We Need  RTL SDR Dongle RTL SDR Software Computer  SDR works by receiving a analogue radio signal and then using an analog to digital converter to digitalise the signal. The digitalised signal can then be worked in digital processing software. We need GQRX -&amp;gt; osx/ linux git clone https://github.com/csete/gqrx.git cd gqrx mkdir build cd build qmake .. make make install
-sudo apt-get update sudo apt install git cmake libusb-1.</description>
+ sudo apt-get update sudo apt install git cmake libusb-1.</description>
     </item>
     
     <item>

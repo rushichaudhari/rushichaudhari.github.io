@@ -6,7 +6,34 @@
     <description>Recent content in Tags on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux</title>
+      <link>https://rushichaudhari.github.io/tags/linux/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pinephone</title>
+      <link>https://rushichaudhari.github.io/tags/pinephone/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/pinephone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wayland</title>
+      <link>https://rushichaudhari.github.io/tags/wayland/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/wayland/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>face detection</title>
       <link>https://rushichaudhari.github.io/tags/face-detection/</link>
@@ -49,24 +76,6 @@
       <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://rushichaudhari.github.io/tags/linux/</link>
-      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pinephone</title>
-      <link>https://rushichaudhari.github.io/tags/pinephone/</link>
-      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/tags/pinephone/</guid>
       <description></description>
     </item>
     
@@ -175,6 +184,42 @@
       <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>colab</title>
+      <link>https://rushichaudhari.github.io/tags/colab/</link>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/colab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>colaboratory</title>
+      <link>https://rushichaudhari.github.io/tags/colaboratory/</link>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/colaboratory/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>disconnect</title>
+      <link>https://rushichaudhari.github.io/tags/disconnect/</link>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/disconnect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google</title>
+      <link>https://rushichaudhari.github.io/tags/google/</link>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/google/</guid>
       <description></description>
     </item>
     

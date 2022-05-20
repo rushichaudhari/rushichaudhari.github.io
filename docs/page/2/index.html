@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.98.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/" />
 
@@ -25,8 +25,9 @@
 <meta property="og:title" content="A collection of random ideas so I don&#39;t have to google again" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://rushichaudhari.github.io/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-
+<meta property="og:url" content="https://rushichaudhari.github.io/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:updated_time" content="2022-05-19T00:00:00+00:00" />
 
 
 
@@ -201,6 +202,18 @@
     
       
       
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -215,6 +228,12 @@
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -245,6 +264,12 @@
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -327,8 +352,8 @@
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="SSH">
-        SSH
+      <a class="ui label" href="../../tags/ssh/" title="Ssh">
+        Ssh
       </a>
     
       
@@ -365,6 +390,12 @@
       
       <a class="ui label" href="../../tags/voice-cloning/" title="Voice Cloning">
         Voice Cloning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/wayland/" title="Wayland">
+        Wayland
       </a>
     
   </section>
@@ -732,6 +763,66 @@
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2021-11-20-stop-colab-from-disconnecting/">Stop Colab From Disconnecting</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Saturday, Nov 20, 2021</p>
+    </div>
+    <div class="description">
+      Are you irritated by google colab automatically disconnecting after every 30mins ? Open your Chrome DevTools and enter the following JavaScript snippet in your console:
+function KeepClicking(){ console.log(&quot;Clicking&quot;); document.querySelector(&quot;colab-connect-button&quot;).click() } setInterval(KeepClicking,60000) This clicks the connect button every 60 seconds, there is no need to worry about colab being disconnected!
+This is different from the GPU time, colab can still disconnect you for long running background tasks on GPU. 
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-06-publishing-hugo-post-to-devto-using-github-ci-and-cd-pipeline/">
+    
+      <img src="../../img/2021-11-06-Publishing-HUGO-Post-to-DevTo-using-GitHub-CI-and-CD-Pipeline/cover.png" alt="Publishing HUGO Post to DevTo Using GitHub CI and CD Pipeline" />
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2021-11-06-publishing-hugo-post-to-devto-using-github-ci-and-cd-pipeline/">Publishing HUGO Post to DevTo Using GitHub CI and CD Pipeline</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Saturday, Nov 6, 2021</p>
+    </div>
+    <div class="description">
+      Why this tool?  There are aleady a few github actions available like publish-devto and markdown-to-devto They seem to be failing despite of the valid data in the markdown file. For a large amount of posts there was no option to add a break and the API got overflowed.  Steps to set up Creating API Keys in Dev.To Login to dev.to and then go to accounts and create new api key.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>3 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-01-enable-secure-boot-on-dualboot/">
     
       
@@ -994,65 +1085,6 @@ It happened to me several times that I didn’t have enough space in my root par
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/">
-    
-      <img src="../../img/2020-07-03-LSTM-Stock-Prediction-worth-it/image-20200703211002786.png" alt="LSTMS for stock price predictions, worth it ?" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../posts/2020-07-03-lstm-stock-prediction-worth-it/">LSTMS for stock price predictions, worth it ?</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Friday, Jul 3, 2020</p>
-    </div>
-    <div class="description">
-      The internet is now flooded with “predicting stock market prices using LSTM”. I went through 9 articles that I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed promising results. But none of them showed their real-life use-case; the question is is it beneficial?
-LSTMS predict T+1th term by previous k terms of time-series, say k=2, So we need to have T and T-1 to predict T+2 so suppose my X for input is Open, High, Low, Close, Volume, and Y would be the next day’s Close
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>2 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2020-11-25-pca-vs-autoencoders/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../posts/2020-11-25-pca-vs-autoencoders/"></a>
-    </h2>
-    <div class="meta">
-      <p class="date">Monday, Jan 1, 0001</p>
-    </div>
-    <div class="description">
-      
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>0 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
 
   <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
     
@@ -1154,7 +1186,7 @@ LSTMS predict T+1th term by previous k terms of time-series, say k=2, So we need
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
+<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

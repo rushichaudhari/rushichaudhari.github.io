@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.98.0" />
+<meta name="generator" content="Hugo 0.79.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/" />
 
@@ -25,8 +25,9 @@
 <meta property="og:title" content="A collection of random ideas so I don&#39;t have to google again" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://rushichaudhari.github.io/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-
+<meta property="og:url" content="https://rushichaudhari.github.io/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:updated_time" content="2022-05-19T00:00:00+00:00" />
 
 
 
@@ -201,6 +202,18 @@
     
       
       
+      <a class="ui label" href="./tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="./tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="./tags/commands/" title="Commands">
         Commands
       </a>
@@ -215,6 +228,12 @@
       
       <a class="ui label" href="./tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="./tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -245,6 +264,12 @@
       
       <a class="ui label" href="./tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="./tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -327,8 +352,8 @@
     
       
       
-      <a class="ui label" href="./tags/ssh/" title="SSH">
-        SSH
+      <a class="ui label" href="./tags/ssh/" title="Ssh">
+        Ssh
       </a>
     
       
@@ -365,6 +390,12 @@
       
       <a class="ui label" href="./tags/voice-cloning/" title="Voice Cloning">
         Voice Cloning
+      </a>
+    
+      
+      
+      <a class="ui label" href="./tags/wayland/" title="Wayland">
+        Wayland
       </a>
     
   </section>
@@ -732,6 +763,36 @@
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-05-19-wayvnc-arch-linux/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="./posts/2022-05-19-wayvnc-arch-linux/">Wayvnc Arch Linux (Pinephone)</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Thursday, May 19, 2022</p>
+    </div>
+    <div class="description">
+      Traditionally we have been using Xorg or X11 as the display server on linux. Wayland is a similar display server which aims to be a modern and more optimized. I&rsquo;m not much used to wayland and this is a guide for using wayvnc, a vnc server for wayland. Any vnc client like tigervnc/ realvncviewer can be used.
+# Install wayvnc sudo pacman -S wayvnc Create a config with the authentication info and load it using the &ndash;config command line option or place it at the default location $HOME/.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2022-05-06-why-do-we-need-an-opensource-face-detection-apis/">
     
       
@@ -776,7 +837,7 @@
     </div>
     <div class="description">
       Scraping dynamic content these days is bit difficult as there are wide variety of authentication mechanisms and web server needs correct headers, session, cookies to authenticate the request. If we need to quickly scrape content just for once, implementing authenticationis an overhead. Instead, we can manually login to the website, capture an authenticated request and use it for scraping other pages by changing url/form parameters.
-curl &#39;https://www.glassdoor.com/member/home/index.htm&#39; -H &#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.
+curl 'https://www.glassdoor.com/member/home/index.htm' -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.
     </div>
   </div>
 
@@ -834,7 +895,7 @@ curl &#39;https://www.glassdoor.com/member/home/index.htm&#39; -H &#39;User-Agen
       <p class="date">Sunday, Mar 27, 2022</p>
     </div>
     <div class="description">
-      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &#34;host&#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &quot;3&quot; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &quot;host&quot; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
     </div>
@@ -996,35 +1057,6 @@ If you don&rsquo;t know how Priyanka Chopra sounds like, here is a real sample  
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-06-publishing-hugo-post-to-devto-using-github-ci-and-cd-pipeline/">
-    
-      <img src="./img/2021-11-06-Publishing-HUGO-Post-to-DevTo-using-GitHub-CI-and-CD-Pipeline/cover.png" alt="Publishing HUGO Post to DevTo Using GitHub CI and CD Pipeline" />
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="./posts/2021-11-06-publishing-hugo-post-to-devto-using-github-ci-and-cd-pipeline/">Publishing HUGO Post to DevTo Using GitHub CI and CD Pipeline</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Saturday, Nov 6, 2021</p>
-    </div>
-    <div class="description">
-      Why this tool?  There are aleady a few github actions available like publish-devto and markdown-to-devto They seem to be failing despite of the valid data in the markdown file. For a large amount of posts there was no option to add a break and the API got overflowed.  Steps to set up Creating API Keys in Dev.To Login to dev.to and then go to accounts and create new api key.
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>3 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
 
   <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
     
@@ -1116,7 +1148,7 @@ If you don&rsquo;t know how Priyanka Chopra sounds like, here is a real sample  
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<img class="ui image" src="./me/微信赞赏码.jpeg" alt="wechat" />
+<p><img class="ui image" src="./me/微信赞赏码.jpeg" alt="wechat" /></p>
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="./posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="./posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

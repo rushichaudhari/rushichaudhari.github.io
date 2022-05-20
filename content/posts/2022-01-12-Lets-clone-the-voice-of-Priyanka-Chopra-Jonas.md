@@ -67,8 +67,21 @@ This one is more robotic. I'm still searching for more dataset for this, and onc
 
 ### References:
 
-- This work is trained on a reworked version of Tacotron2 model here https://github.com/BenAAndrew/Voice-Cloning-App
 - You might also need to finetune the hifigan using [this notebook](/img/2022-01-12-Lets-clone-the-voice-of-Priyanka-Chopra-Jonas/HiFi_GAN_Fine_Tuning.ipynb) or [colab link](https://colab.research.google.com/drive/1ume3953K2K-EdNL90vNqPNSWM1KRuwqp) to remove the robotic voice 
 
+- [https://github.com/rushic24/Voice-Cloning-Notebooks](https://github.com/rushic24/Voice-Cloning-Notebooks)
 
-**Note: This codebase is a rabbit hole, and It's too difficult for me to write everything to get started with this, please go through the docs and github issues if you face any difficulties**
+- [https://github.com/BenAAndrew/Voice-Cloning-App](https://github.com/BenAAndrew/Voice-Cloning-App) 
+
+**Note: This codebase is a rabbit hole, and It's too difficult for me to write everything to get started with this, please go through the docs and github issues of tacotron implementations if you face any difficulties**
+
+---
+
+# Update!!
+There was no interface for using these models in real world applications.
+
+- The model is now live on huggingface spaces [here](https://huggingface.co/spaces/rushic24/Priyanka-Chopra-TTS)
+
+- To use it as a voice assistant an API has been created [here](https://huggingface.co/spaces/rushic24/Priyanka-Chopra-TTS/blob/main/api_app.py)
+
+- Want to use custom audio models in PDFs/ Ebooks? [Here is a custom pdf reader written in QT](https://github.com/rushic24/Qt5PDFViewer-with-custom-tts)
