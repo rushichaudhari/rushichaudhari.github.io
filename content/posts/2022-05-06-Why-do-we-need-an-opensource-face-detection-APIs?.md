@@ -6,6 +6,7 @@ author: rushi
 # cover: ''
 categories: [python, opencv]
 tags: [face detection, video analysis]
+featured: true
 ---
 
 # A comparison of different Face Detection APIs in the industry

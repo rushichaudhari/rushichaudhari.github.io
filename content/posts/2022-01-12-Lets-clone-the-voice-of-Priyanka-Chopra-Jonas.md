@@ -7,6 +7,7 @@ author: rushi
 # categories: []
 tags: ['voice cloning', 'python']
 # draft: true
+featured: true
 ---
 
 I had decided to get my email reminders using any celebrity's voice in my previous post [Alexa AI for reminding important emails and reminders](https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/). Here is a small step towards it :D 
@@ -85,3 +86,5 @@ There was no interface for using these models in real world applications.
 - To use it as a voice assistant an API has been created [here](https://huggingface.co/spaces/rushic24/Priyanka-Chopra-TTS/blob/main/api_app.py)
 
 - Want to use custom audio models in PDFs/ Ebooks? [Here is a custom pdf reader written in QT](https://github.com/rushic24/Qt5PDFViewer-with-custom-tts)
+
+## Custom AI assistant demo [here](https://odysee.com/@rushi:2/Mycroft-AI-custom-tts:3)

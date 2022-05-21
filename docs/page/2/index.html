@@ -202,18 +202,6 @@
     
       
       
-      <a class="ui label" href="../../tags/colab/" title="Colab">
-        Colab
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
-        Colaboratory
-      </a>
-    
-      
-      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -228,12 +216,6 @@
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
-        Disconnect
       </a>
     
       
@@ -264,12 +246,6 @@
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/google/" title="Google">
-        Google
       </a>
     
       
@@ -763,37 +739,6 @@
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../posts/2021-11-20-stop-colab-from-disconnecting/">Stop Colab From Disconnecting</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Saturday, Nov 20, 2021</p>
-    </div>
-    <div class="description">
-      Are you irritated by google colab automatically disconnecting after every 30mins ? Open your Chrome DevTools and enter the following JavaScript snippet in your console:
-function KeepClicking(){ console.log(&quot;Clicking&quot;); document.querySelector(&quot;colab-connect-button&quot;).click() } setInterval(KeepClicking,60000) This clicks the connect button every 60 seconds, there is no need to worry about colab being disconnected!
-This is different from the GPU time, colab can still disconnect you for long running background tasks on GPU. 
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-06-publishing-hugo-post-to-devto-using-github-ci-and-cd-pipeline/">
     
       <img src="../../img/2021-11-06-Publishing-HUGO-Post-to-DevTo-using-GitHub-CI-and-CD-Pipeline/cover.png" alt="Publishing HUGO Post to DevTo Using GitHub CI and CD Pipeline" />
@@ -1080,6 +1025,36 @@ It happened to me several times that I didn’t have enough space in my root par
     <div class="author">@&nbsp;rushi</div>
     <div class="reading-time">
       <i class="clock icon"></i>3 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2020-07-03-lstm-stock-prediction-worth-it/">
+    
+      <img src="../../img/2020-07-03-LSTM-Stock-Prediction-worth-it/image-20200703211002786.png" alt="LSTMS for stock price predictions, worth it ?" />
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2020-07-03-lstm-stock-prediction-worth-it/">LSTMS for stock price predictions, worth it ?</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Friday, Jul 3, 2020</p>
+    </div>
+    <div class="description">
+      The internet is now flooded with “predicting stock market prices using LSTM”. I went through 9 articles that I found on websites like medium, KDnuggets, etc. And I realized almost 6-7 out of them showed promising results. But none of them showed their real-life use-case; the question is is it beneficial?
+LSTMS predict T+1th term by previous k terms of time-series, say k=2, So we need to have T and T-1 to predict T+2 so suppose my X for input is Open, High, Low, Close, Volume, and Y would be the next day’s Close
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>2 minutes read</div>
   </div>
 </article>
 
