@@ -334,6 +334,12 @@
     
       
       
+      <a class="ui label" href="./tags/recommender/" title="Recommender">
+        Recommender
+      </a>
+    
+      
+      
       <a class="ui label" href="./tags/save/" title="Save">
         Save
       </a>
@@ -548,6 +554,24 @@
               <div class="item">
                 <div class="content">
                   <a class="item" href="./posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/">Apache Hadoop Stack: MapReduce, Pig, Spark, Hive</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="./posts/2022-06-19-collaborative-filtering-on-amazon-products-with-pyspark/">Collaborative Filtering on Amazon Products With PySpark</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="./posts/2022-06-19-golden-hour-of-publishing-comments/">Golden Hour of Publishing Comments</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="./posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/">Modeling and Analysis of One Finger QWERTY Keyboard Typing Using Fiit&#39;s and Zipf&#39;s Laws</a>
                 </div>
               </div>
             
@@ -812,6 +836,35 @@
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-06-19-collaborative-filtering-on-amazon-products-with-pyspark/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="./posts/2022-06-19-collaborative-filtering-on-amazon-products-with-pyspark/">Collaborative Filtering on Amazon Products With PySpark</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Sunday, Jun 19, 2022</p>
+    </div>
+    <div class="description">
+      Goals Recommend top 5 products for an user: RMSE = 1.22 Data set description  This is a list of over 34,000 consumer reviews for Amazon products like the Kindle, Fire TV Stick, and more provided by Datafiniti&rsquo;s Product Database. The dataset includes basic product information, rating, review text, and more for each product. Note that this is a sample of a large dataset. The full dataset is available through Datafiniti.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>4 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2022-06-19-golden-hour-of-publishing-comments/">
     
       <img src="./img/2022-06-19-Golden-hour-of-publishing-comments/cover.png" alt="Golden Hour of Publishing Comments" />
@@ -1038,36 +1091,6 @@ curl 'https://www.glassdoor.com/member/home/index.htm' -H 'User-Agent: Mozilla/5
       Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &quot;3&quot; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &quot;host&quot; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2022-02-05-cool-stuff-to-do-with-ssh/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="./posts/2022-02-05-cool-stuff-to-do-with-ssh/">Cool Stuff to Do With SSH</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Saturday, Feb 5, 2022</p>
-    </div>
-    <div class="description">
-      Watch Netflix from restricted regions Use: Some Netflix shows are only available in India, Let us proxy through some Indian server to watch Netflix
-# In terminal 1 # 9050 is default port for proxychains socksproxy # something@someIP should be some Indian server ssh something@someIP -D 9050 # In terminal 2 proxychains firefox # Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux
     </div>
   </div>
 

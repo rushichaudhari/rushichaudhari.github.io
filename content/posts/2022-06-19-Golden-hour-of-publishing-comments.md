@@ -4,8 +4,8 @@ title: "Golden Hour of Publishing Comments"
 date: 2022-06-19
 author: rushi
 cover: '/img/2022-06-19-Golden-hour-of-publishing-comments/cover.png'
-# categories: []
-# tags: []
+categories: ["python", "data-science"]
+tags: ["python"]
 ---
 
 **Hacker News is a site similar to Reddit where user-submitted stories (known as "posts") are voted on and commented on.

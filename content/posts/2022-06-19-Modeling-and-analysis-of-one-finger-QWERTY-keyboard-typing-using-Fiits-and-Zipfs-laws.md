@@ -4,8 +4,8 @@ title: "Modeling and Analysis of One Finger QWERTY Keyboard Typing Using Fiit's 
 date: 2022-06-19
 author: rushi
 # cover: ''
-# categories: []
-# tags: []
+categories: ["python", "data-science"]
+tags: ["python"]
 ---
 
 ## Goals

@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://rushichaudhari.github.io/posts/2022-06-19-collaborative-filtering-on-amazon-products-with-pyspark/</loc>
+    <lastmod>2022-06-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/data-science/</loc>
     <lastmod>2022-06-19T00:00:00+00:00</lastmod>
   </url>
@@ -53,7 +58,17 @@
   </url>
   
   <url>
+    <loc>https://rushichaudhari.github.io/tags/python/</loc>
+    <lastmod>2022-06-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://rushichaudhari.github.io/categories/python/</loc>
+    <lastmod>2022-06-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/tags/recommender/</loc>
     <lastmod>2022-06-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -144,11 +159,6 @@
   
   <url>
     <loc>https://rushichaudhari.github.io/posts/2022-04-24-convert-browser-requests-to-python/</loc>
-    <lastmod>2022-04-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/tags/python/</loc>
     <lastmod>2022-04-24T00:00:00+00:00</lastmod>
   </url>
   

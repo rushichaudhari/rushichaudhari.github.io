@@ -6,7 +6,35 @@
     <description>Recent content in python on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Collaborative Filtering on Amazon Products With PySpark</title>
+      <link>https://rushichaudhari.github.io/posts/2022-06-19-collaborative-filtering-on-amazon-products-with-pyspark/</link>
+      <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-06-19-collaborative-filtering-on-amazon-products-with-pyspark/</guid>
+      <description>Goals Recommend top 5 products for an user: RMSE = 1.22 Data set description  This is a list of over 34,000 consumer reviews for Amazon products like the Kindle, Fire TV Stick, and more provided by Datafiniti&amp;rsquo;s Product Database. The dataset includes basic product information, rating, review text, and more for each product. Note that this is a sample of a large dataset. The full dataset is available through Datafiniti.</description>
+    </item>
+    
+    <item>
+      <title>Golden Hour of Publishing Comments</title>
+      <link>https://rushichaudhari.github.io/posts/2022-06-19-golden-hour-of-publishing-comments/</link>
+      <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-06-19-golden-hour-of-publishing-comments/</guid>
+      <description>Hacker News is a site similar to Reddit where user-submitted stories (known as &amp;ldquo;posts&amp;rdquo;) are voted on and commented on. In the tech and startup worlds, Hacker News is immensely popular, and pieces that reach the top of the site&amp;rsquo;s listings can get hundreds of thousands of views.
+We&amp;rsquo;ll compare these two types of posts to determine the following: 1. Do &amp;lsquo;Ask HN&amp;rsquo; or &amp;lsquo;Show HN&amp;rsquo; posts receive more comments on average?</description>
+    </item>
+    
+    <item>
+      <title>Modeling and Analysis of One Finger QWERTY Keyboard Typing Using Fiit&#39;s and Zipf&#39;s Laws</title>
+      <link>https://rushichaudhari.github.io/posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/</link>
+      <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/</guid>
+      <description>Goals 1. Modeling the keyboard 2. Fiit&amp;rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&amp;rsquo;s law parameter estimation &amp;amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &amp;#39;qwertyuiop&amp;#39; line2 = &amp;#39;asdfghjkl&amp;#39; line3 = &amp;#39;zxcvbnm&amp;#39; # Define a keyboard as a list of keys.</description>
+    </item>
+    
     <item>
       <title>Convert Browser Requests to Python</title>
       <link>https://rushichaudhari.github.io/posts/2022-04-24-convert-browser-requests-to-python/</link>
