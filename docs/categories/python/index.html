@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/categories/python/" />
 
@@ -27,7 +27,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rushichaudhari.github.io/categories/python/" />
 <meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-<meta property="og:updated_time" content="2022-05-06T00:00:00+00:00" />
+<meta property="og:updated_time" content="2022-06-19T00:00:00+00:00" />
 
 
 
@@ -256,6 +256,18 @@
     
       
       
+      <a class="ui label" href="../../tags/hadoop/" title="Hadoop">
+        Hadoop
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/hive/" title="Hive">
+        Hive
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/hugo/" title="Hugo">
         Hugo
       </a>
@@ -304,6 +316,12 @@
     
       
       
+      <a class="ui label" href="../../tags/pig/" title="Pig">
+        Pig
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/pinephone/" title="Pinephone">
         Pinephone
       </a>
@@ -324,6 +342,12 @@
       
       <a class="ui label" href="../../tags/secure/" title="Secure">
         Secure
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/spark/" title="Spark">
+        Spark
       </a>
     
       
@@ -514,6 +538,30 @@
             <i class="dropdown icon"></i>
             
             
+            <a class="item" href="../../categories/data-science/" title="Data Science">
+              Data Science
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/">Apache Hadoop Stack: MapReduce, Pig, Spark, Hive</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
             <a class="item" href="../../categories/debian/" title="Debian">
               Debian
             </a>
@@ -533,26 +581,6 @@
       
         
 
-        
-          <div class="title">
-            <i class="dropdown icon"></i>
-            
-            
-            <a class="item" href="../../categories/deep-learning/" title="Deep Learning">
-              Deep Learning
-            </a>
-          </div>
-          <div class="content">
-            <div class="ui list">
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="../../posts/2021-12-24-real-time-voice-cloning-docker-arch/">Running the Real Time Voice Cloning in Docker on Arch Linux</a>
-                </div>
-              </div>
-            
-            </div>
-          </div>
         
       
         
@@ -751,6 +779,35 @@
   </div>
 
   
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/">Apache Hadoop Stack: MapReduce, Pig, Spark, Hive</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Sunday, Jun 19, 2022</p>
+    </div>
+    <div class="description">
+      Apache Hadoop Stack: MapReduce, Pig, Spark, Hive 1. HDFS CLI: load input data list all directories hadoop fs -ls make a new directory to store movie data hadoop fs -mkdir movieData copy data file from local to hdfs hadoop fs -copyFromLocal u.data movieData/u.data 2. MapReduce with Python: movies sorted by rating counts script from mrjob.job import MRJob from mrjob.step import MRStep class RatingsBreakdown(MRJob): def steps(self): return [ MRStep(mapper=self.mapper_get_movie, combiner=self.combiner_count_ratings, reducer=self.reducer_count_ratings), MRStep(reducer=self.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>6 minutes read</div>
+  </div>
+</article>
+
+    </div>
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">

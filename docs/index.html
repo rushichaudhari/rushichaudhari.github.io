@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.1" />
+<meta name="generator" content="Hugo 0.79.0" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/" />
 
@@ -27,7 +27,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rushichaudhari.github.io/" />
 <meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-<meta property="og:updated_time" content="2022-05-24T00:00:00+00:00" />
+<meta property="og:updated_time" content="2022-06-19T00:00:00+00:00" />
 
 
 
@@ -256,6 +256,18 @@
     
       
       
+      <a class="ui label" href="./tags/hadoop/" title="Hadoop">
+        Hadoop
+      </a>
+    
+      
+      
+      <a class="ui label" href="./tags/hive/" title="Hive">
+        Hive
+      </a>
+    
+      
+      
       <a class="ui label" href="./tags/hugo/" title="Hugo">
         Hugo
       </a>
@@ -304,6 +316,12 @@
     
       
       
+      <a class="ui label" href="./tags/pig/" title="Pig">
+        Pig
+      </a>
+    
+      
+      
       <a class="ui label" href="./tags/pinephone/" title="Pinephone">
         Pinephone
       </a>
@@ -324,6 +342,12 @@
       
       <a class="ui label" href="./tags/secure/" title="Secure">
         Secure
+      </a>
+    
+      
+      
+      <a class="ui label" href="./tags/spark/" title="Spark">
+        Spark
       </a>
     
       
@@ -514,6 +538,30 @@
             <i class="dropdown icon"></i>
             
             
+            <a class="item" href="./categories/data-science/" title="Data Science">
+              Data Science
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="./posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/">Apache Hadoop Stack: MapReduce, Pig, Spark, Hive</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
             <a class="item" href="./categories/debian/" title="Debian">
               Debian
             </a>
@@ -533,26 +581,6 @@
       
         
 
-        
-          <div class="title">
-            <i class="dropdown icon"></i>
-            
-            
-            <a class="item" href="./categories/deep-learning/" title="Deep Learning">
-              Deep Learning
-            </a>
-          </div>
-          <div class="content">
-            <div class="ui list">
-            
-              <div class="item">
-                <div class="content">
-                  <a class="item" href="./posts/2021-12-24-real-time-voice-cloning-docker-arch/">Running the Real Time Voice Cloning in Docker on Arch Linux</a>
-                </div>
-              </div>
-            
-            </div>
-          </div>
         
       
         
@@ -752,6 +780,94 @@
 
   
   
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="./posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/">Apache Hadoop Stack: MapReduce, Pig, Spark, Hive</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Sunday, Jun 19, 2022</p>
+    </div>
+    <div class="description">
+      Apache Hadoop Stack: MapReduce, Pig, Spark, Hive 1. HDFS CLI: load input data list all directories hadoop fs -ls make a new directory to store movie data hadoop fs -mkdir movieData copy data file from local to hdfs hadoop fs -copyFromLocal u.data movieData/u.data 2. MapReduce with Python: movies sorted by rating counts script from mrjob.job import MRJob from mrjob.step import MRStep class RatingsBreakdown(MRJob): def steps(self): return [ MRStep(mapper=self.mapper_get_movie, combiner=self.combiner_count_ratings, reducer=self.reducer_count_ratings), MRStep(reducer=self.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>6 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-06-19-golden-hour-of-publishing-comments/">
+    
+      <img src="./img/2022-06-19-Golden-hour-of-publishing-comments/cover.png" alt="Golden Hour of Publishing Comments" />
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="./posts/2022-06-19-golden-hour-of-publishing-comments/">Golden Hour of Publishing Comments</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Sunday, Jun 19, 2022</p>
+    </div>
+    <div class="description">
+      Hacker News is a site similar to Reddit where user-submitted stories (known as &ldquo;posts&rdquo;) are voted on and commented on. In the tech and startup worlds, Hacker News is immensely popular, and pieces that reach the top of the site&rsquo;s listings can get hundreds of thousands of views.
+We&rsquo;ll compare these two types of posts to determine the following: 1. Do &lsquo;Ask HN&rsquo; or &lsquo;Show HN&rsquo; posts receive more comments on average?
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>7 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="./posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/">Modeling and Analysis of One Finger QWERTY Keyboard Typing Using Fiit&#39;s and Zipf&#39;s Laws</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Sunday, Jun 19, 2022</p>
+    </div>
+    <div class="description">
+      Goals 1. Modeling the keyboard 2. Fiit&rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&rsquo;s law parameter estimation &amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &#39;qwertyuiop&#39; line2 = &#39;asdfghjkl&#39; line3 = &#39;zxcvbnm&#39; # Define a keyboard as a list of keys.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>10 minutes read</div>
+  </div>
+</article>
+
+    </div>
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
@@ -959,94 +1075,6 @@ Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
     <div class="author">@&nbsp;rushi</div>
     <div class="reading-time">
       <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2022-01-12-lets-clone-the-voice-of-priyanka-chopra-jonas/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="./posts/2022-01-12-lets-clone-the-voice-of-priyanka-chopra-jonas/">Lets Clone the Voice of Priyanka Chopra Jonas</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Wednesday, Jan 12, 2022</p>
-    </div>
-    <div class="description">
-      I had decided to get my email reminders using any celebrity&rsquo;s voice in my previous post Alexa AI for reminding important emails and reminders. Here is a small step towards it :D
-If you don&rsquo;t know how Priyanka Chopra sounds like, here is a real sample     Sample synthesized voice 1   Sample synthesized voice 2   Sample synthesized voice 3   Real voice of Amitabh Bachchan     Sample synthesized voice for Amitabh Bachchan This one is more robotic.
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>2 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-12-24-real-time-voice-cloning-docker-arch/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="./posts/2021-12-24-real-time-voice-cloning-docker-arch/">Running the Real Time Voice Cloning in Docker on Arch Linux</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Friday, Dec 24, 2021</p>
-    </div>
-    <div class="description">
-      I came across this awesome project called Real Time Voice Cloning by Corentin Jemine and I wanted to give it a shot. I’m currently working on a Arch linux machine with GPU, that could easily run the toolbox, but I wanted an easy way to get everything setup. Docker would do the trick as far as getting it setup, and then through forwarding the X Window System via SSH, I could view and control the program locally as it ran remotely.
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>5 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-12-19-alexa-remind-emails/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="./posts/2021-12-19-alexa-remind-emails/">Alexa AI for reminding important emails and reminders</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Sunday, Dec 19, 2021</p>
-    </div>
-    <div class="description">
-      Motivation :- It was the third time I missed reading my email and picking up shifts for my oncampus job. I did try creating labels and filtering them but that didn&rsquo;t show any progress in improvement. It&rsquo;s really stressful when I get the notification that something needs a response from me right away. I had to make sure that I was not missing this next time. It is then when I decided I need to build a system to process and remind me this.
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>3 minutes read</div>
   </div>
 </article>
 

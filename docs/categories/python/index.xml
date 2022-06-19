@@ -6,7 +6,16 @@
     <description>Recent content in python on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Apache Hadoop Stack: MapReduce, Pig, Spark, Hive</title>
+      <link>https://rushichaudhari.github.io/posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/</link>
+      <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/</guid>
+      <description>Apache Hadoop Stack: MapReduce, Pig, Spark, Hive 1. HDFS CLI: load input data list all directories hadoop fs -ls make a new directory to store movie data hadoop fs -mkdir movieData copy data file from local to hdfs hadoop fs -copyFromLocal u.data movieData/u.data 2. MapReduce with Python: movies sorted by rating counts script from mrjob.job import MRJob from mrjob.step import MRStep class RatingsBreakdown(MRJob): def steps(self): return [ MRStep(mapper=self.mapper_get_movie, combiner=self.combiner_count_ratings, reducer=self.reducer_count_ratings), MRStep(reducer=self.</description>
+    </item>
+    
     <item>
       <title>Why Do We Need an Opensource Face Detection APIs?</title>
       <link>https://rushichaudhari.github.io/posts/2022-05-06-why-do-we-need-an-opensource-face-detection-apis/</link>
