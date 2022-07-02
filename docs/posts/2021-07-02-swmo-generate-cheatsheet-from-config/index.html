@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SWMO Generate Cheatsheet From Config | A collection of random ideas so I don&#39;t have to google again</title>
+
+    
+<link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+
+
+
+<meta name="author" content="rushi" />
+<meta name="description" content="generate_keys_cheatsheet.py # Will generate a keys.txt, go to https://carbon.now.sh and generate a carbon.png from keys.txt import os import sys import re import pandas as pd from rich import print from tabulate import tabulate # FIXME: there must be a more pythonesque way to do this! def get_category(conf, name): for cat in conf: if cat[&amp;#34;category-name&amp;#34;] == name: return cat cat={ } cat[&amp;#34;category-name&amp;#34;] = name cat[&amp;#34;bindings&amp;#34;] = [ ] conf.append(cat) return cat token_pattern = re." />
+
+
+
+<meta name="generator" content="Hugo 0.79.0" />
+
+<link rel="canonical" href="https://rushichaudhari.github.io/posts/2021-07-02-swmo-generate-cheatsheet-from-config/" />
+
+
+<meta property="og:title" content="SWMO Generate Cheatsheet From Config" />
+<meta property="og:description" content="generate_keys_cheatsheet.py # Will generate a keys.txt, go to https://carbon.now.sh and generate a carbon.png from keys.txt import os import sys import re import pandas as pd from rich import print from tabulate import tabulate # FIXME: there must be a more pythonesque way to do this! def get_category(conf, name): for cat in conf: if cat[&#34;category-name&#34;] == name: return cat cat={ } cat[&#34;category-name&#34;] = name cat[&#34;bindings&#34;] = [ ] conf.append(cat) return cat token_pattern = re." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-07-02-swmo-generate-cheatsheet-from-config/" />
+<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="article:published_time" content="2022-07-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-02T00:00:00+00:00" />
+
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+
+<meta name="twitter:title" content="SWMO Generate Cheatsheet From Config"/>
+<meta name="twitter:description" content="generate_keys_cheatsheet.py # Will generate a keys.txt, go to https://carbon.now.sh and generate a carbon.png from keys.txt import os import sys import re import pandas as pd from rich import print from tabulate import tabulate # FIXME: there must be a more pythonesque way to do this! def get_category(conf, name): for cat in conf: if cat[&#34;category-name&#34;] == name: return cat cat={ } cat[&#34;category-name&#34;] = name cat[&#34;bindings&#34;] = [ ] conf.append(cat) return cat token_pattern = re."/>
+
+
+<link rel="stylesheet" href="../../css/semantic.min.css" />
+<link rel="stylesheet" href="../../css/icomoon.css" />
+<link rel="stylesheet" href="../../css/OverlayScrollbars.min.css" />
+<link rel="stylesheet" href="../../css/github-markdown.css" />
+<link rel="stylesheet" href="../../css/site.css" />
+
+<style>
+  a:hover {
+    text-decoration: underline; 
+  }
+
+  
+  a {
+    color: seagreen !important;
+  }
+  
+
+  
+  .inverted a,
+  .inverted a:hover {
+     color: darkseagreen !important;
+  }
+  
+
+  
+  body.default {
+    
+    background-color: #ccc;
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
+  
+
+  
+  body.dark {
+    
+    background-color: black;
+    
+
+    
+    background-image: url(/me/background-dark.jpg);
+    
+  }
+  
+</style>
+
+    
+
+
+  
+    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
+  
+
+
+
+
+
+  </head>
+
+  <body class="default">
+    
+<nav class="ui secondary menu dream-menu">
+
+  <div class="item">
+    <i class="large link bullseye icon dream-flip-toggle" title="Flip it!"></i>
+  </div>
+  <div class="item">
+    <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/rushichaudhari.github.io'"></i>
+  </div>
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
+  
+</nav>
+
+    <div class="flip-container">
+      <div class="flipper">
+        <section class="front">
+          <div class="dream-max-width">
+            
+<div class="ui centered relaxed grid dream-grid">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui attached segment">
+      <header>
+        <h1 class="ui large header">
+          SWMO Generate Cheatsheet From Config
+          <div class="sub header">
+            @
+            
+              
+                rushi
+              
+            
+
+            | 
+                Saturday, Jul 2, 2022
+              
+
+            | 4 minutes read
+
+            | Update at
+              
+                Saturday, Jul 2, 2022
+              
+          </div>
+        </h1>
+      </header>
+
+      <article class="main"><h1 id="generate_keys_cheatsheetpy">generate_keys_cheatsheet.py</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Will generate a keys.txt, go to https://carbon.now.sh and generate a carbon.png from keys.txt</span>
+<span style="color:#f92672">import</span> os
+<span style="color:#f92672">import</span> sys
+<span style="color:#f92672">import</span> re
+<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">from</span> rich <span style="color:#f92672">import</span> <span style="color:#66d9ef">print</span>
+<span style="color:#f92672">from</span> tabulate <span style="color:#f92672">import</span> tabulate
+
+<span style="color:#75715e"># FIXME: there must be a more pythonesque way to do this!</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_category</span>(conf, name):
+    <span style="color:#66d9ef">for</span> cat <span style="color:#f92672">in</span> conf:
+        <span style="color:#66d9ef">if</span> cat[<span style="color:#e6db74">&#34;category-name&#34;</span>] <span style="color:#f92672">==</span> name:
+            <span style="color:#66d9ef">return</span> cat
+    cat<span style="color:#f92672">=</span>{ }
+    cat[<span style="color:#e6db74">&#34;category-name&#34;</span>] <span style="color:#f92672">=</span> name
+    cat[<span style="color:#e6db74">&#34;bindings&#34;</span>] <span style="color:#f92672">=</span> [ ]
+    conf<span style="color:#f92672">.</span>append(cat)
+    <span style="color:#66d9ef">return</span> cat
+
+token_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^(\S+)\s+(.*)$&#34;</span>)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_token</span>(line):
+    line <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>strip()
+    m <span style="color:#f92672">=</span> token_pattern<span style="color:#f92672">.</span>match(line)
+    <span style="color:#66d9ef">if</span> m:
+        t1, t2 <span style="color:#f92672">=</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>), m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">2</span>)
+    <span style="color:#66d9ef">else</span>:
+        t1 <span style="color:#f92672">=</span> t2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+    <span style="color:#66d9ef">return</span> t1, t2
+
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">check_for</span>(pattern, line, annotation):
+    <span style="color:#66d9ef">if</span> re<span style="color:#f92672">.</span>search(pattern, line, re<span style="color:#f92672">.</span>IGNORECASE):
+        <span style="color:#66d9ef">print</span>(annotation)
+
+<span style="color:#75715e"># parsing the sway config file:</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_bindsym</span>():
+    bindsym_dummy <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#bindsym-dummy&#34;</span>
+
+    conf<span style="color:#f92672">=</span>[ ]
+    <span style="color:#66d9ef">with</span> open(my_globals[<span style="color:#e6db74">&#39;config_file&#39;</span>], <span style="color:#e6db74">&#34;r&#34;</span>) <span style="color:#66d9ef">as</span> fp:
+        <span style="color:#66d9ef">while</span> True:
+            line <span style="color:#f92672">=</span> fp<span style="color:#f92672">.</span>readline()
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> line:
+                <span style="color:#66d9ef">break</span>
+            <span style="color:#66d9ef">if</span> my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>]:
+                sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(line)
+            orig_line <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>strip()
+            token, line <span style="color:#f92672">=</span> get_token(line)
+            <span style="color:#66d9ef">if</span> token <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;####&#34;</span>:
+                cat, desc <span style="color:#f92672">=</span> get_token(line)
+                <span style="color:#66d9ef">if</span> cat <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">or</span> desc <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>:
+                    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;{my_globals[&#39;progName&#39;]}: can&#39;t recognise &#39;{orig_line}&#39;&#34;</span>, file<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>stderr)
+                    sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
+                category <span style="color:#f92672">=</span> get_category(conf, cat)
+                <span style="color:#75715e"># look for next bindsym or #bindsym-dummy line:</span>
+                <span style="color:#66d9ef">while</span> True:
+                    line <span style="color:#f92672">=</span> fp<span style="color:#f92672">.</span>readline()
+                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> line:
+                        sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(f<span style="color:#e6db74">&#34;{my_globals[&#39;progName&#39;]}: Unexpected EOF - missing &#39;bindsym&#39; for &#39;{orig_line}&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+                        sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
+                    <span style="color:#66d9ef">if</span> my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>]:
+                        sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(line)
+                    token, line <span style="color:#f92672">=</span> get_token(line)
+                    <span style="color:#66d9ef">if</span> token <span style="color:#f92672">in</span> ( <span style="color:#e6db74">&#34;bindsym&#34;</span>, <span style="color:#e6db74">&#34;bindcode&#34;</span>, bindsym_dummy):
+                        <span style="color:#66d9ef">break</span>
+                <span style="color:#66d9ef">if</span> token <span style="color:#f92672">==</span> bindsym_dummy:
+                    shortcut <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+                    command <span style="color:#f92672">=</span> line
+                <span style="color:#66d9ef">else</span>:
+                    <span style="color:#75715e"># skip any --locked or other options:</span>
+                    shortcut <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;--&#34;</span>
+                    <span style="color:#66d9ef">while</span> shortcut[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;--&#34;</span>:
+                        shortcut, line <span style="color:#f92672">=</span> get_token(line)
+                    command <span style="color:#f92672">=</span> line
+                item <span style="color:#f92672">=</span> { }
+                item[<span style="color:#e6db74">&#34;name&#34;</span>] <span style="color:#f92672">=</span> desc
+                item[<span style="color:#e6db74">&#34;shortcut&#34;</span>] <span style="color:#f92672">=</span> shortcut
+                item[<span style="color:#e6db74">&#34;command&#34;</span>] <span style="color:#f92672">=</span> command
+                <span style="color:#66d9ef">if</span> my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>]:
+                    sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(str(item))
+                category[<span style="color:#e6db74">&#34;bindings&#34;</span>]<span style="color:#f92672">.</span>append(item)
+    <span style="color:#66d9ef">return</span> conf
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_annotated_config</span>():
+    <span style="color:#66d9ef">with</span> open(my_globals[<span style="color:#e6db74">&#39;config_file&#39;</span>], <span style="color:#e6db74">&#34;r&#34;</span>) <span style="color:#66d9ef">as</span> fp:
+        <span style="color:#66d9ef">while</span> True:
+            line <span style="color:#f92672">=</span> fp<span style="color:#f92672">.</span>readline()
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> line:
+                <span style="color:#66d9ef">break</span>
+            check_for(<span style="color:#e6db74">&#34;bindsym .* exec </span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">$term&#34;</span>,                 line,<span style="color:#e6db74">&#34;    #### _Run Terminal&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* kill$&#34;</span>,                        line,<span style="color:#e6db74">&#34;    #### _Window Kill&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* exec </span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">$menu&#34;</span>,                 line,<span style="color:#e6db74">&#34;    #### _Run Program Launcher&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* reload$&#34;</span>,                      line,<span style="color:#e6db74">&#34;    #### _Mode Reload sway&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* exec swaynag .*exit shortcut&#34;</span>, line,<span style="color:#e6db74">&#34;    #### _Mode Exit sway&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* focus left&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Focus left&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* focus right&#34;</span>,                  line,<span style="color:#e6db74">&#34;    #### _Window Focus right&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* focus up&#34;</span>,                     line,<span style="color:#e6db74">&#34;    #### _Window Focus up&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* focus down&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Focus down&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* move left$&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Move window left&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* move right$&#34;</span>,                  line,<span style="color:#e6db74">&#34;    #### _Window Move window right&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* move up$&#34;</span>,                     line,<span style="color:#e6db74">&#34;    #### _Window Move window up&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* move down$&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Move window down&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 1&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 1&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 2&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 2&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 3&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 3&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 4&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 4&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 1&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 1&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 2&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 2&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 3&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 3&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 4&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 4&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* splith$&#34;</span>,                      line,<span style="color:#e6db74">&#34;    #### _Window Horizontal split&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* splitv$&#34;</span>,                      line,<span style="color:#e6db74">&#34;    #### _Window Vertical split&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* layout stacking&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### W_orkspace Stacked layout&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* layout tabbed&#34;</span>,                line,<span style="color:#e6db74">&#34;    #### W_orkspace Tabbed layout&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* layout toggle split&#34;</span>,          line,<span style="color:#e6db74">&#34;    #### W_orkspace Toggle layout&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* fullscreen$&#34;</span>,                  line,<span style="color:#e6db74">&#34;    #### _Window Fullscreen&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* floating toggle&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### W_orkspace Toggle focus with floating&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* focus mode_toggle&#34;</span>,            line,<span style="color:#e6db74">&#34;    #### W_orkspace Swap focus with floating&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* focus parent&#34;</span>,                 line,<span style="color:#e6db74">&#34;    #### _Window Focus parent&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* move scratchpad&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### _Window Move to scratchpad&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* scratchpad show&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### W_orkspace Show next scratchpad&#34;</span>)
+            check_for(<span style="color:#e6db74">&#34;bindsym .* mode </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">resize</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">&#34;</span>,              line,<span style="color:#e6db74">&#34;#### _Mode Resize Mode (Esc to exit)&#34;</span>)
+
+            sys<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>write(line)
+
+my_globals <span style="color:#f92672">=</span> { }
+my_globals[<span style="color:#e6db74">&#39;focused&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+my_globals[<span style="color:#e6db74">&#39;dirName&#39;</span>], my_globals[<span style="color:#e6db74">&#39;progName&#39;</span>] <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>split(sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">0</span>])
+my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>] <span style="color:#f92672">=</span> False
+my_globals[<span style="color:#e6db74">&#39;notify&#39;</span>] <span style="color:#f92672">=</span> True
+my_globals[<span style="color:#e6db74">&#39;lock&#39;</span>] <span style="color:#f92672">=</span> False
+my_globals[<span style="color:#e6db74">&#39;config_file&#39;</span>] <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getenv(<span style="color:#e6db74">&#34;HOME&#34;</span>)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/.config/sway/config&#34;</span>
+
+config <span style="color:#f92672">=</span> read_bindsym()
+
+f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;keys.txt&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>)
+<span style="color:#75715e"># print(config)</span>
+<span style="color:#66d9ef">for</span> cat <span style="color:#f92672">in</span> config:
+    title <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;[bold red] {cat[&#39;category-name&#39;]} [/bold red]&#34;</span>
+    <span style="color:#66d9ef">print</span>(title)
+    cf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(cat[<span style="color:#e6db74">&#39;bindings&#39;</span>], columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;name&#34;</span>, <span style="color:#e6db74">&#34;shortcut&#34;</span>])
+    table <span style="color:#f92672">=</span> tabulate(cf, headers<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;keys&#39;</span>, tablefmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;psql&#39;</span>)
+    <span style="color:#75715e"># os.system(f&#34;/home/alarm/Documents/herbe/herbe \&#34;{title}\n{table}\&#34;&#34;)</span>
+    f<span style="color:#f92672">.</span>write(title<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+    f<span style="color:#f92672">.</span>write(table)
+f<span style="color:#f92672">.</span>close()
+</code></pre></div><h1 id="in-sway-config-add">In sway config add</h1>
+<pre><code># show cheatsheet
+bindsym $mod+s exec feh -x --zoom fill --scale-down --auto-zoom --no-menus --on-last-slide quit --title &quot;cheat&quot; /home/alarm/.local/share/bin/carbon.png
+
+# make cheatsheet window floating and centered
+for_window [title=&quot;cheat&quot;] floating enable, move position center
+</code></pre></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
+      
+        
+          <a class="ui label" href="../../tags/linux" title="linux">linux</a>
+        
+          <a class="ui label" href="../../tags/sway" title="sway">sway</a>
+        
+          <a class="ui label" href="../../tags/wayland" title="wayland">wayland</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/rushichaudhari.github.io\/posts\/2021-07-02-swmo-generate-cheatsheet-from-config\/';  
+            this.page.identifier = '\/posts\/2021-07-02-swmo-generate-cheatsheet-from-config\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'rushichaudhari' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+    
+    
+
+    
+
+  </div>
+  <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
+    
+    
+
+    <article class="dream-header">
+  <section class="ui top attached center aligned segment">
+    <div class="ui small circular image">
+      
+        <img src="../../me/yy.jpg">
+      
+    </div>
+
+    
+    <div class="ui medium header">
+    
+      A collection of random ideas so I don&#39;t have to google again
+      <div class="sub header" style="margin-top: 0.5rem;"></div>
+    
+    </div>
+    
+
+    <div class="ui horizontal list">
+      
+      <a class="item" href="../../posts">
+        <i class="archive icon" title="Archives"></i>
+      </a>
+      
+      <a class="item" href="../../tags">
+        <i class="tags icon" title="All Tags"></i>
+      </a>
+      <a class="item" href="../../categories">
+        <i class="th list icon" title="All Categories"></i>
+      </a>
+    </div>
+  </section>
+
+  
+  <section class="ui attached center aligned segment dream-tags">
+    
+      
+      
+      <a class="ui label" href="../../tags/ai/" title="Ai">
+        Ai
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/android/" title="Android">
+        Android
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/arch/" title="Arch">
+        Arch
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/autoencoders/" title="Autoencoders">
+        Autoencoders
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/boot/" title="Boot">
+        Boot
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/cd/" title="Cd">
+        Cd
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/ci/" title="Ci">
+        Ci
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/clone/" title="Clone">
+        Clone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/commands/" title="Commands">
+        Commands
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/corentinj/" title="Corentinj">
+        Corentinj
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/devto/" title="Devto">
+        Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/docker/" title="Docker">
+        Docker
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/dual/" title="Dual">
+        Dual
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/dualboot/" title="Dualboot">
+        Dualboot
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/face-detection/" title="Face Detection">
+        Face Detection
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/github/" title="Github">
+        Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/grub/" title="Grub">
+        Grub
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/hadoop/" title="Hadoop">
+        Hadoop
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/hive/" title="Hive">
+        Hive
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/hugo/" title="Hugo">
+        Hugo
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/keep/" title="Keep">
+        Keep
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/linux/" title="Linux">
+        Linux
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/machine-learning/" title="Machine Learning">
+        Machine Learning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/mozilla/" title="Mozilla">
+        Mozilla
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/notes/" title="Notes">
+        Notes
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pca/" title="Pca">
+        Pca
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pi/" title="Pi">
+        Pi
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pig/" title="Pig">
+        Pig
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/pinephone/" title="Pinephone">
+        Pinephone
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/python/" title="Python">
+        Python
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/recommender/" title="Recommender">
+        Recommender
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/save/" title="Save">
+        Save
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/secure/" title="Secure">
+        Secure
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/spark/" title="Spark">
+        Spark
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/ssh/" title="Ssh">
+        Ssh
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/sway/" title="Sway">
+        Sway
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/systemd/" title="Systemd">
+        Systemd
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/tensorflow/" title="Tensorflow">
+        Tensorflow
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/thinkpad/" title="Thinkpad">
+        Thinkpad
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/thunderbird/" title="Thunderbird">
+        Thunderbird
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/video-analysis/" title="Video Analysis">
+        Video Analysis
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/voice/" title="Voice">
+        Voice
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/voice-cloning/" title="Voice Cloning">
+        Voice Cloning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/wayland/" title="Wayland">
+        Wayland
+      </a>
+    
+  </section>
+  
+
+  
+  <section class="ui attached segment dream-categories">
+    <div class="ui accordion">
+      
+      
+      
+      
+      
+
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/appdata/" title="Appdata">
+              Appdata
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-04-10-ssd-savespace/">SSD - things todo to save space on ssd C drive</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/arch/" title="Arch">
+              Arch
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-05-24-t490-fan-speed-configuration-with-thinkfan/">T490 Fan Speed Configuration With Thinkfan</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">Colab Equivalent Pytorch Docker With GPU</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-11-01-enable-secure-boot-on-dualboot/">Enable Secure Boot on Dualboot</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-11-01-switch-to-systemd-from-grub/">Switch to Systemd From Grub</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/bash/" title="Bash">
+              Bash
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2021-10-28-bookmark-linux-commands-keep/">Bookmark Linux Commands using Keep</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/cms/" title="Cms">
+              Cms
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-11-28-adding-netlify-cms-to-existing-github-pages-site-within-10-minutes/">Adding Netlify CMS to Existing GitHub Pages Site Within 10 Minutes</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/data-science/" title="Data Science">
+              Data Science
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/">Apache Hadoop Stack: MapReduce, Pig, Spark, Hive</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-06-19-collaborative-filtering-on-amazon-products-with-pyspark/">Collaborative Filtering on Amazon Products With PySpark</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-06-19-golden-hour-of-publishing-comments/">Golden Hour of Publishing Comments</a>
+                </div>
+              </div>
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/">Modeling and Analysis of One Finger QWERTY Keyboard Typing Using Fiit&#39;s and Zipf&#39;s Laws</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+          <div class="title">
+            <i class="dropdown icon"></i>
+            
+            
+            <a class="item" href="../../categories/debian/" title="Debian">
+              Debian
+            </a>
+          </div>
+          <div class="content">
+            <div class="ui list">
+            
+              <div class="item">
+                <div class="content">
+                  <a class="item" href="../../posts/2020-04-08-not-authorized-to-perform-this-operation/">Not authorized to perform this operation</a>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+        
+
+        
+      
+
+      
+        <div class="title">
+          <a class="item" href="../../categories" style="padding-left: 0.5rem;">......</a>
+        </div>
+      
+    </div>
+  </section>
+  
+
+  <section class="ui attached segment header-socials">
+    <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="../../index.xml">
+        <i class=" rss square icon" title="RSS"></i>
+      </a>
+    </div>
+  
+  
+    <div class="item">
+      <a href="mailto:rushic24@gmail.com">
+        <i class=" mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/rushic24" target="_blank">
+        <i class=" github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+  </section>
+
+  <section class="ui bottom attached center aligned segment">
+    
+      <p>© 2018 - 2022 A collection of random ideas so I don&#39;t have to google again</p>
+    
+
+    
+  </section>
+</article>
+
+  </aside>
+</div>
+
+          </div>
+        </section>
+        <section class="back">
+          <div class="dream-max-width">
+            <div class="ui centered relaxed grid dream-grid dream-back">
+  
+  
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">关于我</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>g1eny0ung 的 ❤️ 博客</p>
+<p>记录一些 🌈 生活上，技术上的事</p>
+<p><del>一名大四学生</del></p>
+<p><del>马上</del>（已经）毕业于 🏫 大连东软信息学院</p>
+<p>职业是前端工程师</p>
+<p>业余时间会做开源和 Apple App (OSX &amp; iOS)</p>
+<p>主要的技术栈是：</p>
+<ul>
+<li>JavaScript &amp; TypeScript</li>
+<li>React.js</li>
+<li>Electron</li>
+<li>Rust</li>
+</ul>
+<p>写着玩（写过）：</p>
+<ul>
+<li>Java &amp; Clojure &amp; CLJS</li>
+<li>OCaml &amp; Reason &amp; ReScript</li>
+<li>Dart &amp; Swift</li>
+</ul>
+<p>目前在 <a href="https://pingcap.com">PingCAP</a> 工作</p>
+<p>&ndash; 2020 年 09 月 09 日更新</p>
+
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">我的一些开源项目</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <ul>
+<li><a href="https://github.com/ilime/Petal">Petal 🌺</a> ➡️ <a href="https://douban.fm/">豆瓣 FM</a> 桌面版</li>
+<li><a href="https://github.com/g1eny0ung/hugo-theme-dream">hugo-theme-dream 🌱</a> ➡️ <a href="https://gohugo.io">HUGO</a> 的博客主题，当然，也是你现在看到的博客主题</li>
+<li><a href="https://github.com/g1eny0ung/Alfred-Colors-workflow">Alfred-Colors-workflow</a> ➡️ Alfred 插件：CSS 颜色格式转换 hex &lt;=&gt; rgb &lt;=&gt; hsl</li>
+<li><a href="https://github.com/g1eny0ung/github-colorful-contributions-graph">github-colorful-contributions-graph</a> ➡️ 改变 GitHub 贡献面板颜色的 Chrome 插件</li>
+<li><a href="https://github.com/dayjs/day.dart">day.dart</a> ➡️ ⏰ Day.js in dart.</li>
+</ul>
+<p><a href="https://github.com/g1eny0ung">等等等等</a></p>
+
+        </div>
+      </article>
+    </section>
+  
+    <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+      <article>
+        <div class="ui top attached segment">
+          <h3 class="ui header">其他</h3>
+        </div>
+        <div class="ui bottom attached segment markdown-body">
+          <p>如果你喜欢我的开源项目或者它们可以给你带来帮助，可以赏一杯咖啡 ☕ 给我。~</p>
+<p>If you like my open source projects or they can help you. You can <a href="../../posts/buy-me-a-coffee">buy me a coffee ☕</a>.~</p>
+<p><strong>PayPal</strong>：</p>
+<p><a href="https://paypal.me/g1eny0ung">https://paypal.me/g1eny0ung</a></p>
+<p><strong>Patreon</strong>:</p>
+<p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
+<p><strong>微信赞赏码</strong>：</p>
+<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<blockquote>
+<p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
+<p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>
+</blockquote>
+
+        </div>
+      </article>
+    </section>
+  
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    <article>
+      <div class="ui top attached segment">
+        <h3 class="ui header">Social Links</h3>
+      </div>
+      <div class="ui bottom attached segment">
+        <nav class="ui secondary menu dream-menu dream-socials">
+  
+    <div class="item">
+      <a href="../../index.xml">
+        <i class="large rss square icon" title="RSS"></i>
+      </a>
+    </div>
+  
+  
+    <div class="item">
+      <a href="mailto:rushic24@gmail.com">
+        <i class="large mail icon" title="Email"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class="item">
+      <a href="https://github.com/rushic24" target="_blank">
+        <i class="large github icon" title="GitHub"></i>
+      </a>
+    </div>
+  
+
+  
+
+  
+</nav>
+
+      </div>
+    </article>
+  </section>
+
+  <section class="sixteen wide mobile eight wide tablet four wide computer column dream-column">
+    
+  </section>
+
+  
+  
+</div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+  window.backgroundDark = "black"
+  window.backgroundImageDark = "/me/background-dark.jpg"
+  window.darkNav =  true 
+  window.hasTwitterEmbed =  null 
+
+  if (window.hasTwitterEmbed) {
+    
+    window.twttr = (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {}
+      if (d.getElementById(id)) return t
+      js = d.createElement(s)
+      js.id = id
+      js.src = 'https://platform.twitter.com/widgets.js'
+      fjs.parentNode.insertBefore(js, fjs)
+
+      t._e = []
+      t.ready = function (f) {
+        t._e.push(f)
+      }
+
+      return t
+    })(document, 'script', 'twitter-wjs')
+  }
+</script>
+<script src="../../js/jquery.min.js"></script>
+<script src="../../js/semantic.min.js"></script>
+<script src="../../js/jquery.overlayScrollbars.min.js"></script>
+<script src="../../js/header.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/theme.js"></script>
+
+    
+<script src="../../js/html2canvas.min.js"></script>
+<script src="../../js/post.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+     
+  
+
+  <script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    var lightTheme = "gruvbox-light"
+    var darkTheme = "gruvbox-dark"
+    var theme = isDark ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark ? '#333' : '')
+  }
+</script>
+
+
+
+
+
+    
+      <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="Search" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/rushichaudhari.github.io/index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="../../js/search.js"></script>
+
+    
+
+    
+  </body>
+</html>

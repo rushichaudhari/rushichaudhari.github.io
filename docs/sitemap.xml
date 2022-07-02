@@ -4,16 +4,51 @@
   
   <url>
     <loc>https://rushichaudhari.github.io/</loc>
-    <lastmod>2022-06-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/</loc>
-    <lastmod>2022-06-19T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://rushichaudhari.github.io/categories/</loc>
+    <lastmod>2022-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/tags/linux/</loc>
+    <lastmod>2022-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/categories/linux/</loc>
+    <lastmod>2022-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/posts/</loc>
+    <lastmod>2022-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/tags/sway/</loc>
+    <lastmod>2022-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/posts/2021-07-02-swmo-generate-cheatsheet-from-config/</loc>
+    <lastmod>2022-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/tags/</loc>
+    <lastmod>2022-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/tags/wayland/</loc>
+    <lastmod>2022-07-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rushichaudhari.github.io/posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/</loc>
     <lastmod>2022-06-19T00:00:00+00:00</lastmod>
   </url>
   
@@ -53,11 +88,6 @@
   </url>
   
   <url>
-    <loc>https://rushichaudhari.github.io/posts/</loc>
-    <lastmod>2022-06-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://rushichaudhari.github.io/tags/python/</loc>
     <lastmod>2022-06-19T00:00:00+00:00</lastmod>
   </url>
@@ -78,27 +108,12 @@
   </url>
   
   <url>
-    <loc>https://rushichaudhari.github.io/tags/</loc>
-    <lastmod>2022-06-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://rushichaudhari.github.io/tags/arch/</loc>
     <lastmod>2022-05-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://rushichaudhari.github.io/categories/arch/</loc>
-    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/tags/linux/</loc>
-    <lastmod>2022-05-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/categories/linux/</loc>
     <lastmod>2022-05-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -124,11 +139,6 @@
   
   <url>
     <loc>https://rushichaudhari.github.io/categories/pinephone/</loc>
-    <lastmod>2022-05-19T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://rushichaudhari.github.io/tags/wayland/</loc>
     <lastmod>2022-05-19T00:00:00+00:00</lastmod>
   </url>
   
