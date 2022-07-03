@@ -27,7 +27,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rushichaudhari.github.io/" />
 <meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-<meta property="og:updated_time" content="2022-07-02T00:00:00+00:00" />
+<meta property="og:updated_time" content="2022-06-19T00:00:00+00:00" />
 
 
 
@@ -813,35 +813,6 @@
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-07-02-swmo-generate-cheatsheet-from-config/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="./posts/2021-07-02-swmo-generate-cheatsheet-from-config/">SWMO Generate Cheatsheet From Config</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Saturday, Jul 2, 2022</p>
-    </div>
-    <div class="description">
-      generate_keys_cheatsheet.py # Will generate a keys.txt, go to https://carbon.now.sh and generate a carbon.png from keys.txt import os import sys import re import pandas as pd from rich import print from tabulate import tabulate # FIXME: there must be a more pythonesque way to do this! def get_category(conf, name): for cat in conf: if cat[&#34;category-name&#34;] == name: return cat cat={ } cat[&#34;category-name&#34;] = name cat[&#34;bindings&#34;] = [ ] conf.append(cat) return cat token_pattern = re.
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>4 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/">
     
       
@@ -1102,6 +1073,37 @@ curl 'https://www.glassdoor.com/member/home/index.htm' -H 'User-Agent: Mozilla/5
     <div class="author">@&nbsp;rushi</div>
     <div class="reading-time">
       <i class="clock icon"></i>6 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="./posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">Colab Equivalent Pytorch Docker With GPU</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Sunday, Mar 27, 2022</p>
+    </div>
+    <div class="description">
+      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &quot;3&quot; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &quot;host&quot; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+Reason?
+Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
   </div>
 </article>
 

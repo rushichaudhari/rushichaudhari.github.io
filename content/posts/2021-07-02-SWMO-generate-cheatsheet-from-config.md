@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SWMO Generate Cheatsheet From Config"
+title: "Pretty pop up cheatsheet for SWMO"
 date: 2021-07-02
 author: rushi
 # cover: ''
@@ -8,6 +8,11 @@ categories: ["linux"]
 tags: ["linux", "sway", "wayland"]
 ---
 
+I had recently moved to awesomewm from i3wm, some default keybindings were different and It had a really cool command to access cheatsheet which looked like below 
+
+![image](/img/2021-07-02-SWMO-generate-cheatsheet-from-config/2021-07-02-22-09-13.png)
+
+Then I got a linux phone where swaywm was highly popular in development, I couldn't find anything good enough to create that cheatsheet like the one found in awesomewm. This script allows me to parse the swaywm config, and create a cheatsheet. It can later be made more pretty through  https://carbon.now.sh/.
 # generate_keys_cheatsheet.py
 
 ```python

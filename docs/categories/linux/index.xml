@@ -6,16 +6,7 @@
     <description>Recent content in linux on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>SWMO Generate Cheatsheet From Config</title>
-      <link>https://rushichaudhari.github.io/posts/2021-07-02-swmo-generate-cheatsheet-from-config/</link>
-      <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/posts/2021-07-02-swmo-generate-cheatsheet-from-config/</guid>
-      <description>generate_keys_cheatsheet.py # Will generate a keys.txt, go to https://carbon.now.sh and generate a carbon.png from keys.txt import os import sys import re import pandas as pd from rich import print from tabulate import tabulate # FIXME: there must be a more pythonesque way to do this! def get_category(conf, name): for cat in conf: if cat[&amp;#34;category-name&amp;#34;] == name: return cat cat={ } cat[&amp;#34;category-name&amp;#34;] = name cat[&amp;#34;bindings&amp;#34;] = [ ] conf.append(cat) return cat token_pattern = re.</description>
-    </item>
-    
+    <lastBuildDate>Tue, 24 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>T490 Fan Speed Configuration With Thinkfan</title>
       <link>https://rushichaudhari.github.io/posts/2022-05-24-t490-fan-speed-configuration-with-thinkfan/</link>
@@ -106,6 +97,16 @@ sudo nano /efi/loader/entries/arch.</description>
       <guid>https://rushichaudhari.github.io/posts/2021-10-28-bookmark-linux-commands-keep/</guid>
       <description>Why keep ?  opensource can export commands from ~/.keep/commands.json  My branch now supports running commands with id https://github.com/rushic24/keep
 Add command: keep new</description>
+    </item>
+    
+    <item>
+      <title>Pretty pop up cheatsheet for SWMO</title>
+      <link>https://rushichaudhari.github.io/posts/2021-07-02-swmo-generate-cheatsheet-from-config/</link>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-07-02-swmo-generate-cheatsheet-from-config/</guid>
+      <description>I had recently moved to awesomewm from i3wm, some default keybindings were different and It had a really cool command to access cheatsheet which looked like below
+Then I got a linux phone where swaywm was highly popular in development, I couldn&amp;rsquo;t find anything good enough to create that cheatsheet like the one found in awesomewm. This script allows me to parse the swaywm config, and create a cheatsheet. It can later be made more pretty through https://carbon.</description>
     </item>
     
     <item>

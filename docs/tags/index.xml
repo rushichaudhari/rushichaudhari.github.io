@@ -6,34 +6,7 @@
     <description>Recent content in Tags on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>linux</title>
-      <link>https://rushichaudhari.github.io/tags/linux/</link>
-      <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sway</title>
-      <link>https://rushichaudhari.github.io/tags/sway/</link>
-      <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/tags/sway/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>wayland</title>
-      <link>https://rushichaudhari.github.io/tags/wayland/</link>
-      <pubDate>Sat, 02 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/tags/wayland/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Sun, 19 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hadoop</title>
       <link>https://rushichaudhari.github.io/tags/hadoop/</link>
@@ -98,6 +71,15 @@
     </item>
     
     <item>
+      <title>linux</title>
+      <link>https://rushichaudhari.github.io/tags/linux/</link>
+      <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>thinkpad</title>
       <link>https://rushichaudhari.github.io/tags/thinkpad/</link>
       <pubDate>Tue, 24 May 2022 00:00:00 +0000</pubDate>
@@ -112,6 +94,15 @@
       <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/tags/pinephone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wayland</title>
+      <link>https://rushichaudhari.github.io/tags/wayland/</link>
+      <pubDate>Thu, 19 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/wayland/</guid>
       <description></description>
     </item>
     
@@ -373,6 +364,15 @@
       <pubDate>Thu, 28 Oct 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/tags/save/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sway</title>
+      <link>https://rushichaudhari.github.io/tags/sway/</link>
+      <pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/tags/sway/</guid>
       <description></description>
     </item>
     
