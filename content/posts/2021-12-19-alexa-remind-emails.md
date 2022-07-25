@@ -56,7 +56,7 @@ Once you have `./alexa_remote_control.sh -a` returning your devices you can test
 
 ## Testing docker
 
-Build and run the docker container to test if everything works
+Build and run the [docker](https://www.scaler.com/topics/what-is-docker/) container to test if everything works
 
 ```{bash}
 docker run --rm -it $(docker build -q .)
