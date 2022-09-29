@@ -20,7 +20,7 @@ This file requires three main items:" />
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.99.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2022-05-24-t490-fan-speed-configuration-with-thinkfan/" />
 
@@ -31,10 +31,10 @@ It works like a charm, but we need to configure it a bit for silence. Let&rsquo;
 1. Install the necessary package sudo apt install thinkfan 2. Create the configuration file After installing the package we need to create a config file in the following directory: /etc/thinkfan.conf
 This file requires three main items:" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-05-24-t490-fan-speed-configuration-with-thinkfan/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-05-24-t490-fan-speed-configuration-with-thinkfan/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-24T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-05-24T00:00:00+00:00" />
+
 
 
 
@@ -171,7 +171,7 @@ This file requires three main items:"/>
       <article class="main"><p>I love Thinkpads. They are robust and durable. And no need to mention about their world class keyboards!</p>
 <p>It works like a charm, but we need to configure it a bit for silence. Let&rsquo;s start!</p>
 <h3 id="1-install-the-necessary-package">1. Install the necessary package</h3>
-<pre><code>sudo apt install thinkfan
+<pre tabindex="0"><code>sudo apt install thinkfan
 </code></pre><h3 id="httpsdevtouguremirmustafathinkpad-l14-fan-speed-configuration-with-thinkfan-4ch52-create-the-configuration-file2-create-the-configuration-file"><a href="https://dev.to/uguremirmustafa/thinkpad-l14-fan-speed-configuration-with-thinkfan-4ch5#2-create-the-configuration-file"></a>2. Create the configuration file</h3>
 <p>After installing the package we need to create a config file in the following directory: <code>/etc/thinkfan.conf</code></p>
 <p>This file requires three main items:</p>
@@ -183,10 +183,10 @@ This file requires three main items:"/>
 <p>In order to provide fan information, we write this line:</p>
 <p><code>tp_fan /proc/acpi/ibm/fan</code></p>
 <p>For the temperature information we should scan the sensors of the device.</p>
-<pre><code>find /sys/devices -type f -name 'temp*_input'
+<pre tabindex="0"><code>find /sys/devices -type f -name &#39;temp*_input&#39;
 </code></pre><p>Enter fullscreen mode Exit fullscreen mode</p>
 <p>Running this comman should give you something like this but <strong>without hwmon</strong> keyword. <strong>Don&rsquo;t forget to add it</strong> in front of each line.</p>
-<pre><code>hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon4/temp6_input
+<pre tabindex="0"><code>hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon4/temp6_input
 hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon4/temp3_input
 hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon4/temp7_input
 hwmon /sys/devices/platform/thinkpad_hwmon/hwmon/hwmon4/temp4_input
@@ -201,7 +201,7 @@ hwmon /sys/devices/pci0000:00/0000:00:08.1/0000:06:00.0/hwmon/hwmon8/temp1_input
 hwmon /sys/devices/virtual/thermal/thermal_zone0/hwmon5/temp1_input
 </code></pre><p>Enter fullscreen mode Exit fullscreen mode</p>
 <p>After adding these lines to the configuration, we need to add our fan speed data for each temperature level. This is a sane configuration for daily usage but <strong>use at your own risk.</strong></p>
-<pre><code># speed level | start temp | end temp
+<pre tabindex="0"><code># speed level | start temp | end temp
 
 (0, 0,  55)
 (1, 48, 60)
@@ -213,18 +213,18 @@ hwmon /sys/devices/virtual/thermal/thermal_zone0/hwmon5/temp1_input
 </code></pre><p>Now the config file is ready!</p>
 <h3 id="3-enable-acpi_fancontrol">3. Enable acpi_fancontrol</h3>
 <p>We need to enable <code>acpi_fancontrol</code> on kernel module options! Add this line to <code>/etc/modprobe.d/thinkpad_acpi.conf</code> file:</p>
-<pre><code>options thinkpad_acpi fan_control=1
+<pre tabindex="0"><code>options thinkpad_acpi fan_control=1
 </code></pre><p>Enter fullscreen mode Exit fullscreen mode</p>
 <p>Activate kernel settings by running this:</p>
-<pre><code>sudo modprobe -r thinkpad_acpi &amp;&amp; sudo modprobe thinkpad_acpi
+<pre tabindex="0"><code>sudo modprobe -r thinkpad_acpi &amp;&amp; sudo modprobe thinkpad_acpi
 </code></pre><p>Enter fullscreen mode Exit fullscreen mode</p>
 <h3 id="4-enable-the-thinkpanservice">4. Enable the thinkpan.service</h3>
 <p>In order to start the service any time you boot up your machine, we need to enable it!</p>
-<pre><code>sudo systemctl enable --now thinkfan.service
+<pre tabindex="0"><code>sudo systemctl enable --now thinkfan.service
 </code></pre><p>Enter fullscreen mode Exit fullscreen mode</p>
 <h3 id="5-done">5. Done!</h3>
 <p>You can check if the service is running or not with this command:</p>
-<pre><code>sudo systemctl status thinkfan.service
+<pre tabindex="0"><code>sudo systemctl status thinkfan.service
 </code></pre></article>
     </section>
 
@@ -537,8 +537,8 @@ hwmon /sys/devices/virtual/thermal/thermal_zone0/hwmon5/temp1_input
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -1060,7 +1060,7 @@ hwmon /sys/devices/virtual/thermal/thermal_zone0/hwmon5/temp1_input
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

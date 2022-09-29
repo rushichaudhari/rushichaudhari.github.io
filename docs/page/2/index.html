@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.99.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/" />
 
@@ -25,9 +25,8 @@
 <meta property="og:title" content="A collection of random ideas so I don&#39;t have to google again" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://rushichaudhari.github.io/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-<meta property="og:updated_time" content="2022-06-19T00:00:00+00:00" />
+<meta property="og:url" content="https://rushichaudhari.github.io/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+
 
 
 
@@ -358,8 +357,8 @@
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -813,6 +812,37 @@
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/">Colab Equivalent Pytorch Docker With GPU</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Sunday, Mar 27, 2022</p>
+    </div>
+    <div class="description">
+      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &#34;host&#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+Reason?
+Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2022-02-05-cool-stuff-to-do-with-ssh/">
     
       
@@ -1094,36 +1124,6 @@ sudo nano /efi/loader/entries/arch.
 
     </div>
   
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-10-28-bookmark-linux-commands-keep/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../posts/2021-10-28-bookmark-linux-commands-keep/">Bookmark Linux Commands using Keep</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Thursday, Oct 28, 2021</p>
-    </div>
-    <div class="description">
-      Why keep ?  opensource can export commands from ~/.keep/commands.json  My branch now supports running commands with id https://github.com/rushic24/keep
-Add command: keep new
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
 
   <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
     
@@ -1225,7 +1225,7 @@ Add command: keep new
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

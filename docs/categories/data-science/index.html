@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.99.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/categories/data-science/" />
 
@@ -25,9 +25,8 @@
 <meta property="og:title" content="data-science" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://rushichaudhari.github.io/categories/data-science/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-<meta property="og:updated_time" content="2022-06-19T00:00:00+00:00" />
+<meta property="og:url" content="https://rushichaudhari.github.io/categories/data-science/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+
 
 
 
@@ -358,8 +357,8 @@
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -826,7 +825,7 @@
       <p class="date">Sunday, Jun 19, 2022</p>
     </div>
     <div class="description">
-      Apache Hadoop Stack: MapReduce, Pig, Spark, Hive 1. HDFS CLI: load input data list all directories hadoop fs -ls make a new directory to store movie data hadoop fs -mkdir movieData copy data file from local to hdfs hadoop fs -copyFromLocal u.data movieData/u.data 2. MapReduce with Python: movies sorted by rating counts script from mrjob.job import MRJob from mrjob.step import MRStep class RatingsBreakdown(MRJob): def steps(self): return [ MRStep(mapper=self.mapper_get_movie, combiner=self.combiner_count_ratings, reducer=self.reducer_count_ratings), MRStep(reducer=self.
+      Apache Hadoop Stack: MapReduce, Pig, Spark, Hive 1. HDFS CLI: load input data list all directories hadoop fs -ls make a new directory to store movie data hadoop fs -mkdir movieData copy data file from local to hdfs hadoop fs -copyFromLocal u.data movieData/u.data 2. MapReduce with Python: movies sorted by rating counts script  from mrjob.job import MRJob from mrjob.step import MRStep  class RatingsBreakdown(MRJob):  def steps(self):  return [  MRStep(mapper=self.
     </div>
   </div>
 
@@ -914,7 +913,7 @@ We&rsquo;ll compare these two types of posts to determine the following: 1. Do &
       <p class="date">Sunday, Jun 19, 2022</p>
     </div>
     <div class="description">
-      Goals 1. Modeling the keyboard 2. Fiit&rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&rsquo;s law parameter estimation &amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &#39;qwertyuiop&#39; line2 = &#39;asdfghjkl&#39; line3 = &#39;zxcvbnm&#39; # Define a keyboard as a list of keys.
+      Goals 1. Modeling the keyboard 2. Fiit&rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&rsquo;s law parameter estimation &amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &#39;qwertyuiop&#39; line2 = &#39;asdfghjkl&#39; line3 = &#39;zxcvbnm&#39;  # Define a keyboard as a list of keys.
     </div>
   </div>
 
@@ -1008,7 +1007,7 @@ We&rsquo;ll compare these two types of posts to determine the following: 1. Do &
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

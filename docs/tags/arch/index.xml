@@ -25,7 +25,7 @@ This file requires three main items:</description>
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/</guid>
-      <description>Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;quot;3&amp;quot; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &amp;quot;host&amp;quot; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+      <description>Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;#34;3&amp;#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &amp;#34;host&amp;#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works</description>
     </item>

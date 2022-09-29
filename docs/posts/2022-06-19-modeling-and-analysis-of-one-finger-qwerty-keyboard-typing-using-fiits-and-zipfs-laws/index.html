@@ -13,22 +13,22 @@
 
 
 <meta name="author" content="rushi" />
-<meta name="description" content="Goals 1. Modeling the keyboard 2. Fiit&amp;rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&amp;rsquo;s law parameter estimation &amp;amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &amp;#39;qwertyuiop&amp;#39; line2 = &amp;#39;asdfghjkl&amp;#39; line3 = &amp;#39;zxcvbnm&amp;#39; # Define a keyboard as a list of keys." />
+<meta name="description" content="Goals 1. Modeling the keyboard 2. Fiit&amp;rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&amp;rsquo;s law parameter estimation &amp;amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &amp;#39;qwertyuiop&amp;#39; line2 = &amp;#39;asdfghjkl&amp;#39; line3 = &amp;#39;zxcvbnm&amp;#39;  # Define a keyboard as a list of keys." />
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.99.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/" />
 
 
 <meta property="og:title" content="Modeling and Analysis of One Finger QWERTY Keyboard Typing Using Fiit&#39;s and Zipf&#39;s Laws" />
-<meta property="og:description" content="Goals 1. Modeling the keyboard 2. Fiit&rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&rsquo;s law parameter estimation &amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &#39;qwertyuiop&#39; line2 = &#39;asdfghjkl&#39; line3 = &#39;zxcvbnm&#39; # Define a keyboard as a list of keys." />
+<meta property="og:description" content="Goals 1. Modeling the keyboard 2. Fiit&rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&rsquo;s law parameter estimation &amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &#39;qwertyuiop&#39; line2 = &#39;asdfghjkl&#39; line3 = &#39;zxcvbnm&#39;  # Define a keyboard as a list of keys." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-06-19T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-06-19T00:00:00+00:00" />
+
 
 
 
@@ -36,7 +36,7 @@
 <meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 <meta name="twitter:title" content="Modeling and Analysis of One Finger QWERTY Keyboard Typing Using Fiit&#39;s and Zipf&#39;s Laws"/>
-<meta name="twitter:description" content="Goals 1. Modeling the keyboard 2. Fiit&rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&rsquo;s law parameter estimation &amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &#39;qwertyuiop&#39; line2 = &#39;asdfghjkl&#39; line3 = &#39;zxcvbnm&#39; # Define a keyboard as a list of keys."/>
+<meta name="twitter:description" content="Goals 1. Modeling the keyboard 2. Fiit&rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&rsquo;s law parameter estimation &amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &#39;qwertyuiop&#39; line2 = &#39;asdfghjkl&#39; line3 = &#39;zxcvbnm&#39;  # Define a keyboard as a list of keys."/>
 
 
 <link rel="stylesheet" href="../../css/semantic.min.css" />
@@ -164,43 +164,43 @@
 <p><img src="../../img/2022-06-19-Modeling-and-analysis-of-one-finger-QWERTY-keyboard-typing-using-Fiits-and-Zipfs-laws/2022-06-19-12-48-48.png" alt="png"></p>
 <h4 id="4-zipfs-law-parameter-estimation--average-typing-time-of-1000-most-frequent-words-071">4. Zipf&rsquo;s law parameter estimation &amp; average typing time of 1000 most frequent words: 0.71</h4>
 <p><img src="../../img/2022-06-19-Modeling-and-analysis-of-one-finger-QWERTY-keyboard-typing-using-Fiits-and-Zipfs-laws/2022-06-19-12-50-37.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
-<span style="color:#f92672">import</span> math
-<span style="color:#f92672">import</span> numpy
-numpy<span style="color:#f92672">.</span>set_printoptions(precision<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
-<span style="color:#f92672">import</span> scipy.stats <span style="color:#f92672">as</span> stats
-<span style="color:#f92672">import</span> statsmodels.api <span style="color:#f92672">as</span> sm
-<span style="color:#f92672">from</span> statsmodels.graphics.regressionplots <span style="color:#f92672">import</span> abline_plot
-<span style="color:#f92672">import</span> seaborn <span style="color:#f92672">as</span> sns
-</code></pre></div><h3 id="1-keyboard-modeling">1. Keyboard modeling</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Define keyboard</span>
-line1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;qwertyuiop&#39;</span>
-line2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;asdfghjkl&#39;</span>
-line3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;zxcvbnm&#39;</span>
-
-<span style="color:#75715e"># Define a keyboard as a list of keys.</span>
-<span style="color:#75715e"># Each key also mentions its position in the keyboard (line number, column number)</span>
-keyboard  <span style="color:#f92672">=</span> [(i, (<span style="color:#ae81ff">0</span>, ni)) <span style="color:#66d9ef">for</span> ni, i <span style="color:#f92672">in</span> enumerate(line1)] <span style="color:#f92672">+</span> [(i, (<span style="color:#ae81ff">1</span>, ni)) <span style="color:#66d9ef">for</span> ni, i <span style="color:#f92672">in</span> enumerate(line2)] <span style="color:#f92672">+</span> [(i, (<span style="color:#ae81ff">2</span>, ni)) <span style="color:#66d9ef">for</span> ni, i <span style="color:#f92672">in</span> enumerate(line3)]
-
-<span style="color:#75715e"># Define empty matrices to hold the results</span>
-ids <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">26</span>))
-Ds <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">26</span>))
-W <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
-
-alphabet <span style="color:#f92672">=</span> line1 <span style="color:#f92672">+</span> line2 <span style="color:#f92672">+</span> line3
-</code></pre></div><p>Fitts’ law predicts the time MT required to select a target of size W that is located D away:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#66d9ef">as</span> plt
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> math
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy
+</span></span><span style="display:flex;"><span>numpy<span style="color:#f92672">.</span>set_printoptions(precision<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> scipy.stats <span style="color:#66d9ef">as</span> stats
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> statsmodels.api <span style="color:#66d9ef">as</span> sm
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> statsmodels.graphics.regressionplots <span style="color:#f92672">import</span> abline_plot
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> seaborn <span style="color:#66d9ef">as</span> sns
+</span></span></code></pre></div><h3 id="1-keyboard-modeling">1. Keyboard modeling</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Define keyboard</span>
+</span></span><span style="display:flex;"><span>line1 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;qwertyuiop&#39;</span>
+</span></span><span style="display:flex;"><span>line2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;asdfghjkl&#39;</span>
+</span></span><span style="display:flex;"><span>line3 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;zxcvbnm&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define a keyboard as a list of keys.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Each key also mentions its position in the keyboard (line number, column number)</span>
+</span></span><span style="display:flex;"><span>keyboard  <span style="color:#f92672">=</span> [(i, (<span style="color:#ae81ff">0</span>, ni)) <span style="color:#66d9ef">for</span> ni, i <span style="color:#f92672">in</span> enumerate(line1)] <span style="color:#f92672">+</span> [(i, (<span style="color:#ae81ff">1</span>, ni)) <span style="color:#66d9ef">for</span> ni, i <span style="color:#f92672">in</span> enumerate(line2)] <span style="color:#f92672">+</span> [(i, (<span style="color:#ae81ff">2</span>, ni)) <span style="color:#66d9ef">for</span> ni, i <span style="color:#f92672">in</span> enumerate(line3)]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Define empty matrices to hold the results</span>
+</span></span><span style="display:flex;"><span>ids <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">26</span>))
+</span></span><span style="display:flex;"><span>Ds <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>zeros((<span style="color:#ae81ff">26</span>, <span style="color:#ae81ff">26</span>))
+</span></span><span style="display:flex;"><span>W <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>alphabet <span style="color:#f92672">=</span> line1 <span style="color:#f92672">+</span> line2 <span style="color:#f92672">+</span> line3
+</span></span></code></pre></div><p>Fitts’ law predicts the time MT required to select a target of size W that is located D away:
 $MT = a + b\cdot\log_{2}\left ( 1+\frac{D}{W} \right )$, where ID = $\log_{2}\left ( 1+\frac{D}{W} \right )$ is the index of difficulty</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Get the index of difficulty (ID) for each key combination</span>
-<span style="color:#66d9ef">for</span> ns, keystart <span style="color:#f92672">in</span> enumerate(alphabet):
-    <span style="color:#66d9ef">for</span> ne, keyend <span style="color:#f92672">in</span> enumerate(alphabet):
-        xs, ys, xe, ye <span style="color:#f92672">=</span> keyboard[ns][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">5</span><span style="color:#f92672">*</span>keyboard[ns][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>], keyboard[ns][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>], keyboard[ne][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">5</span><span style="color:#f92672">*</span>keyboard[ne][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>], keyboard[ne][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>]
-        <span style="color:#75715e"># Compute euclidian distance between the startkey and endkey</span>
-        D <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>sqrt((xe <span style="color:#f92672">-</span> xs)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> (ye <span style="color:#f92672">-</span> ys)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)
-        Ds[ns, ne] <span style="color:#f92672">=</span> D
-        <span style="color:#75715e"># Use Fitts&#39; law formula</span>
-        ids[ns, ne] <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>log2(<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> D<span style="color:#f92672">/</span>W)
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ids
-</code></pre></div><pre><code>array([[0.  , 1.  , 1.58, 2.  , 2.32, 2.58, 2.81, 3.  , 3.17, 3.32, 1.05,
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Get the index of difficulty (ID) for each key combination</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> ns, keystart <span style="color:#f92672">in</span> enumerate(alphabet):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> ne, keyend <span style="color:#f92672">in</span> enumerate(alphabet):
+</span></span><span style="display:flex;"><span>        xs, ys, xe, ye <span style="color:#f92672">=</span> keyboard[ns][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">5</span><span style="color:#f92672">*</span>keyboard[ns][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>], keyboard[ns][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>], keyboard[ne][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">/</span><span style="color:#ae81ff">5</span><span style="color:#f92672">*</span>keyboard[ne][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>], keyboard[ne][<span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Compute euclidian distance between the startkey and endkey</span>
+</span></span><span style="display:flex;"><span>        D <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>sqrt((xe <span style="color:#f92672">-</span> xs)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> (ye <span style="color:#f92672">-</span> ys)<span style="color:#f92672">**</span><span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        Ds[ns, ne] <span style="color:#f92672">=</span> D
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Use Fitts&#39; law formula</span>
+</span></span><span style="display:flex;"><span>        ids[ns, ne] <span style="color:#f92672">=</span> math<span style="color:#f92672">.</span>log2(<span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> D<span style="color:#f92672">/</span>W)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>ids
+</span></span></code></pre></div><pre><code>array([[0.  , 1.  , 1.58, 2.  , 2.32, 2.58, 2.81, 3.  , 3.17, 3.32, 1.05,
         1.44, 1.85, 2.18, 2.46, 2.7 , 2.9 , 3.08, 3.24, 1.66, 1.88, 2.15,
         2.4 , 2.63, 2.83, 3.02],
        [1.  , 0.  , 1.  , 1.58, 2.  , 2.32, 2.58, 2.81, 3.  , 3.17, 1.12,
@@ -280,54 +280,54 @@ $MT = a + b\cdot\log_{2}\left ( 1+\frac{D}{W} \right )$, where ID = $\log_{2}\le
         2.  , 1.58, 1.  , 0.  ]])
 </code></pre>
 <h3 id="2-fiits-law-parameter-estimation">2. Fiit&rsquo;s law parameter estimation</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># This function opens the file, and reads the startkey, endkey, and duration of each typing stroke</span>
-<span style="color:#75715e"># and returns the index of difficulty ID, and time required </span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_keystrokes</span>(filename, ids):
-    ID, MT <span style="color:#f92672">=</span> [], []
-    <span style="color:#66d9ef">with</span> open(filename, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> _file:
-        startime <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        <span style="color:#66d9ef">for</span> n, line <span style="color:#f92672">in</span> enumerate(_file):
-            <span style="color:#75715e">#print(n, line)</span>
-            <span style="color:#66d9ef">try</span>:
-                startkey, stopkey, time <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;,&#34;</span>)
-                <span style="color:#75715e">#print(startkey, stopkey, time)</span>
-                time <span style="color:#f92672">=</span> float(time<span style="color:#f92672">.</span>rsplit(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)[<span style="color:#ae81ff">0</span>])
-                <span style="color:#75715e"># if startkey == &#39;None&#39;:</span>
-                <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-                    startime <span style="color:#f92672">=</span> time
-                    <span style="color:#66d9ef">continue</span>
-                startkey <span style="color:#f92672">=</span> startkey<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;&#39;&#34;</span>)[<span style="color:#ae81ff">1</span>]
-                stopkey <span style="color:#f92672">=</span> stopkey<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;&#39;&#34;</span>)[<span style="color:#ae81ff">1</span>]
-                <span style="color:#66d9ef">if</span> startkey <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> alphabet <span style="color:#f92672">or</span> stopkey <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> alphabet:
-                    <span style="color:#66d9ef">continue</span>
-                ns <span style="color:#f92672">=</span> alphabet<span style="color:#f92672">.</span>index(startkey)
-                ne <span style="color:#f92672">=</span> alphabet<span style="color:#f92672">.</span>index(stopkey)
-                mt <span style="color:#f92672">=</span> time <span style="color:#f92672">-</span> startime
-                MT<span style="color:#f92672">.</span>append(mt)
-                ID<span style="color:#f92672">.</span>append(ids[ns, ne])
-                startime <span style="color:#f92672">=</span> time
-            <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">IndexError</span>:
-                <span style="color:#66d9ef">pass</span>
-            
-    <span style="color:#66d9ef">return</span> ID, MT
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Estimate the parameters of Fitts&#39; law</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">analyse_keystrokes</span>(ID, MT, ax):
-    ax<span style="color:#f92672">.</span>plot(ID, MT, <span style="color:#e6db74">&#39;o&#39;</span>)
-    X <span style="color:#f92672">=</span> ID
-    y <span style="color:#f92672">=</span> MT
-    X <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>add_constant(X)
-    model <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>OLS(y, X)<span style="color:#f92672">.</span>fit()
-    predictions <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X)
-
-    <span style="color:#66d9ef">print</span>(model<span style="color:#f92672">.</span>summary())
-    abline_plot(model_results<span style="color:#f92672">=</span>model, ax<span style="color:#f92672">=</span>ax)
-
-    <span style="color:#66d9ef">return</span> (model<span style="color:#f92672">.</span>rsquared, model<span style="color:#f92672">.</span>conf_int())
-</code></pre></div><p>View of the file</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
-
-pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;keystrokes.csv&#39;</span>)
-</code></pre></div><div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># This function opens the file, and reads the startkey, endkey, and duration of each typing stroke</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># and returns the index of difficulty ID, and time required </span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_keystrokes</span>(filename, ids):
+</span></span><span style="display:flex;"><span>    ID, MT <span style="color:#f92672">=</span> [], []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(filename, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> _file:
+</span></span><span style="display:flex;"><span>        startime <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> n, line <span style="color:#f92672">in</span> enumerate(_file):
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">#print(n, line)</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                startkey, stopkey, time <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;,&#34;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">#print(startkey, stopkey, time)</span>
+</span></span><span style="display:flex;"><span>                time <span style="color:#f92672">=</span> float(time<span style="color:#f92672">.</span>rsplit(<span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#39;</span>)[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># if startkey == &#39;None&#39;:</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>                    startime <span style="color:#f92672">=</span> time
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>                startkey <span style="color:#f92672">=</span> startkey<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;&#39;&#34;</span>)[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>                stopkey <span style="color:#f92672">=</span> stopkey<span style="color:#f92672">.</span>split(<span style="color:#e6db74">&#34;&#39;&#34;</span>)[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> startkey <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> alphabet <span style="color:#f92672">or</span> stopkey <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> alphabet:
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>                ns <span style="color:#f92672">=</span> alphabet<span style="color:#f92672">.</span>index(startkey)
+</span></span><span style="display:flex;"><span>                ne <span style="color:#f92672">=</span> alphabet<span style="color:#f92672">.</span>index(stopkey)
+</span></span><span style="display:flex;"><span>                mt <span style="color:#f92672">=</span> time <span style="color:#f92672">-</span> startime
+</span></span><span style="display:flex;"><span>                MT<span style="color:#f92672">.</span>append(mt)
+</span></span><span style="display:flex;"><span>                ID<span style="color:#f92672">.</span>append(ids[ns, ne])
+</span></span><span style="display:flex;"><span>                startime <span style="color:#f92672">=</span> time
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">IndexError</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>            
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> ID, MT
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Estimate the parameters of Fitts&#39; law</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">analyse_keystrokes</span>(ID, MT, ax):
+</span></span><span style="display:flex;"><span>    ax<span style="color:#f92672">.</span>plot(ID, MT, <span style="color:#e6db74">&#39;o&#39;</span>)
+</span></span><span style="display:flex;"><span>    X <span style="color:#f92672">=</span> ID
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">=</span> MT
+</span></span><span style="display:flex;"><span>    X <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>add_constant(X)
+</span></span><span style="display:flex;"><span>    model <span style="color:#f92672">=</span> sm<span style="color:#f92672">.</span>OLS(y, X)<span style="color:#f92672">.</span>fit()
+</span></span><span style="display:flex;"><span>    predictions <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>predict(X)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(model<span style="color:#f92672">.</span>summary())
+</span></span><span style="display:flex;"><span>    abline_plot(model_results<span style="color:#f92672">=</span>model, ax<span style="color:#f92672">=</span>ax)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> (model<span style="color:#f92672">.</span>rsquared, model<span style="color:#f92672">.</span>conf_int())
+</span></span></code></pre></div><p>View of the file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;keystrokes.csv&#39;</span>)
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -534,20 +534,20 @@ pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># How well Fitts&#39; model fits: graphical representation, a goodness of fit of choice, and the uncertainty with regards to estimated parameters</span>
-fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure()
-ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">111</span>)
-ID, MT <span style="color:#f92672">=</span> get_keystrokes(<span style="color:#e6db74">&#39;keystrokes.csv&#39;</span>, ids)
-analyse_keystrokes(ID, MT, ax)
-ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;regression plot&#39;</span>)
-plt<span style="color:#f92672">.</span>show()
-
-fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure()
-ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">111</span>)
-sns<span style="color:#f92672">.</span>regplot(x<span style="color:#f92672">=</span>ID, y<span style="color:#f92672">=</span>MT, x_ci<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ci&#39;</span>, ci<span style="color:#f92672">=</span><span style="color:#ae81ff">95</span>)
-ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;95</span><span style="color:#e6db74">% c</span><span style="color:#e6db74">onfidence regression plot&#39;</span>)
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><pre><code>                            OLS Regression Results                            
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># How well Fitts&#39; model fits: graphical representation, a goodness of fit of choice, and the uncertainty with regards to estimated parameters</span>
+</span></span><span style="display:flex;"><span>fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure()
+</span></span><span style="display:flex;"><span>ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">111</span>)
+</span></span><span style="display:flex;"><span>ID, MT <span style="color:#f92672">=</span> get_keystrokes(<span style="color:#e6db74">&#39;keystrokes.csv&#39;</span>, ids)
+</span></span><span style="display:flex;"><span>analyse_keystrokes(ID, MT, ax)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;regression plot&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure()
+</span></span><span style="display:flex;"><span>ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">111</span>)
+</span></span><span style="display:flex;"><span>sns<span style="color:#f92672">.</span>regplot(x<span style="color:#f92672">=</span>ID, y<span style="color:#f92672">=</span>MT, x_ci<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ci&#39;</span>, ci<span style="color:#f92672">=</span><span style="color:#ae81ff">95</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;95</span><span style="color:#e6db74">% c</span><span style="color:#e6db74">onfidence regression plot&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><pre><code>                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                      y   R-squared:                       0.709
 Model:                            OLS   Adj. R-squared:                  0.698
@@ -577,8 +577,8 @@ Warnings:
 <p><img src="../../img/2022-06-19-Modeling-and-analysis-of-one-finger-QWERTY-keyboard-typing-using-Fiits-and-Zipfs-laws/2022-06-19-12-47-26.png" alt="png"></p>
 <h3 id="3-average-typing-time-of-1000-most-frequent-words">3. Average typing time of 1000 most frequent words</h3>
 <p>View of the file</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;mostcommonwords.txt&#39;</span>)
-</code></pre></div><div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;mostcommonwords.txt&#39;</span>)
+</span></span></code></pre></div><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -648,99 +648,99 @@ Warnings:
 </table>
 <p>999 rows × 1 columns</p>
 </div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Most Common words</span>
-<span style="color:#75715e"># Estimate the average time needed to type the 1000 most common english words</span>
-<span style="color:#75715e"># These words are given in the accompanying mostcommonwords.txt file.</span>
-<span style="color:#75715e"># No information of frequency is given, so assume that each word is equally probable</span>
-<span style="color:#75715e"># Consider that the first key is &#34;free&#34;, i.e. time starts only after the first key of the word is pressed</span>
-
-slope <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.12</span>
-intercept <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.03</span>
-
-<span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;mostcommonwords.txt&#34;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> _file:
-    T <span style="color:#f92672">=</span> []
-    <span style="color:#66d9ef">for</span> nline, line <span style="color:#f92672">in</span> enumerate(_file):
-        t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-        line <span style="color:#f92672">=</span> line[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
-        <span style="color:#75715e">#print(line, len(line))</span>
-        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(line)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
-            <span style="color:#66d9ef">try</span>:
-                ns <span style="color:#f92672">=</span> alphabet<span style="color:#f92672">.</span>index(line[i])
-                ne <span style="color:#f92672">=</span> alphabet<span style="color:#f92672">.</span>index(line[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
-                id <span style="color:#f92672">=</span> ids[ns, ne]
-                t <span style="color:#f92672">+=</span> intercept <span style="color:#f92672">+</span> (slope<span style="color:#f92672">*</span>id)
-            <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
-                <span style="color:#66d9ef">pass</span>
-        T<span style="color:#f92672">.</span>append(t)
-
-<span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Average time needed&#34;</span>)
-<span style="color:#66d9ef">print</span>(numpy<span style="color:#f92672">.</span>mean(T))
-</code></pre></div><pre><code>Average time needed
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Most Common words</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Estimate the average time needed to type the 1000 most common english words</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># These words are given in the accompanying mostcommonwords.txt file.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># No information of frequency is given, so assume that each word is equally probable</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Consider that the first key is &#34;free&#34;, i.e. time starts only after the first key of the word is pressed</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>slope <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.12</span>
+</span></span><span style="display:flex;"><span>intercept <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.03</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">with</span> open(<span style="color:#e6db74">&#34;mostcommonwords.txt&#34;</span>, <span style="color:#e6db74">&#39;r&#39;</span>) <span style="color:#66d9ef">as</span> _file:
+</span></span><span style="display:flex;"><span>    T <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> nline, line <span style="color:#f92672">in</span> enumerate(_file):
+</span></span><span style="display:flex;"><span>        t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>        line <span style="color:#f92672">=</span> line[:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">#print(line, len(line))</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">0</span>, len(line)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>                ns <span style="color:#f92672">=</span> alphabet<span style="color:#f92672">.</span>index(line[i])
+</span></span><span style="display:flex;"><span>                ne <span style="color:#f92672">=</span> alphabet<span style="color:#f92672">.</span>index(line[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>                id <span style="color:#f92672">=</span> ids[ns, ne]
+</span></span><span style="display:flex;"><span>                t <span style="color:#f92672">+=</span> intercept <span style="color:#f92672">+</span> (slope<span style="color:#f92672">*</span>id)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">ValueError</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">pass</span>
+</span></span><span style="display:flex;"><span>        T<span style="color:#f92672">.</span>append(t)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Average time needed&#34;</span>)
+</span></span><span style="display:flex;"><span>print(numpy<span style="color:#f92672">.</span>mean(T))
+</span></span></code></pre></div><pre><code>Average time needed
 0.9999165686462256
 </code></pre>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>))
-ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">121</span>)
-axhist <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">122</span>)
-
-ax<span style="color:#f92672">.</span>plot(range(<span style="color:#ae81ff">0</span>,len(T)), T, <span style="color:#e6db74">&#39;o&#39;</span>)
-ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Typing time (seconds)&#34;</span>)
-ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Word Index&#34;</span>)
-ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;1000 frequent words typing time&#39;</span>)
-axhist<span style="color:#f92672">.</span>hist(T)
-axhist<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Typing time (seconds)&#34;</span>)
-axhist<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Frequency&#34;</span>)
-axhist<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Typing time frequency&#39;</span>)
-plt<span style="color:#f92672">.</span>show()
-plt<span style="color:#f92672">.</span>close()
-</code></pre></div><img src="../../img/2022-06-19-Modeling-and-analysis-of-one-finger-QWERTY-keyboard-typing-using-Fiits-and-Zipfs-laws/2022-06-19-12-48-48.png" height="20">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>))
+</span></span><span style="display:flex;"><span>ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">121</span>)
+</span></span><span style="display:flex;"><span>axhist <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">122</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>plot(range(<span style="color:#ae81ff">0</span>,len(T)), T, <span style="color:#e6db74">&#39;o&#39;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Typing time (seconds)&#34;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Word Index&#34;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;1000 frequent words typing time&#39;</span>)
+</span></span><span style="display:flex;"><span>axhist<span style="color:#f92672">.</span>hist(T)
+</span></span><span style="display:flex;"><span>axhist<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Typing time (seconds)&#34;</span>)
+</span></span><span style="display:flex;"><span>axhist<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Frequency&#34;</span>)
+</span></span><span style="display:flex;"><span>axhist<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Typing time frequency&#39;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>close()
+</span></span></code></pre></div><img src="../../img/2022-06-19-Modeling-and-analysis-of-one-finger-QWERTY-keyboard-typing-using-Fiits-and-Zipfs-laws/2022-06-19-12-48-48.png" height="20">
 <h3 id="4-zipfs-law-parameter-estimation--average-typing-time-of-1000-most-frequent-words">4. Zipf&rsquo;s law parameter estimation &amp; average typing time of 1000 most frequent words</h3>
 <p>Zipf&rsquo;s law states that the frequency of a word is inversely proportional to its rank in the frequency table: $p(k) = \frac{\frac{1}{k^{s}}}{\sum 1/i^{s}}$</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Modeling word frequency</span>
-<span style="color:#75715e"># Frenquency/occurence pairs for the 100 most frequent english words to estimate s of Zipf&#39;s model</span>
-frequency <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1e9</span>, <span style="color:#ae81ff">182e6</span>, <span style="color:#ae81ff">99e6</span>, <span style="color:#ae81ff">73e6</span>, <span style="color:#ae81ff">53e6</span>, <span style="color:#ae81ff">41e6</span>, <span style="color:#ae81ff">34e6</span>, <span style="color:#ae81ff">30e6</span>, <span style="color:#ae81ff">25.7e6</span>, <span style="color:#ae81ff">22.5e6</span>, <span style="color:#ae81ff">20e6</span>]
-rank  <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">100</span>]
-
-logfreq <span style="color:#f92672">=</span> [math<span style="color:#f92672">.</span>log(f, <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> frequency]
-logoc <span style="color:#f92672">=</span> [math<span style="color:#f92672">.</span>log(o, <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">for</span> o <span style="color:#f92672">in</span> rank]
-
-<span style="color:#75715e"># Fit Zipf&#39;s model to the frequencey-rank relationship</span>
-prob <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>array(frequency)<span style="color:#f92672">/</span>sum(frequency)
-logprob <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>array([math<span style="color:#f92672">.</span>log(f, <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> prob]) <span style="color:#f92672">*</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-
-slope, intercept, r_value, p_value, std_err <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>linregress(logoc, logprob)
-s <span style="color:#f92672">=</span> round(slope, <span style="color:#ae81ff">2</span>)
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">## Plot the data + fitted model</span>
-fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">9</span>))
-ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">121</span>)
-axlog <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">122</span>)
-ax<span style="color:#f92672">.</span>plot(rank, frequency, <span style="color:#e6db74">&#39;-&#39;</span>)
-ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Word frequency&#39;</span>)
-ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Rank&#34;</span>)
-ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Frequency&#34;</span>)
-
-axlog<span style="color:#f92672">.</span>plot(logoc, intercept <span style="color:#f92672">+</span> s<span style="color:#f92672">*</span>(numpy<span style="color:#f92672">.</span>array(logoc)), <span style="color:#e6db74">&#39;r&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;fitted line&#39;</span>)
-axlog<span style="color:#f92672">.</span>plot(logoc, logprob, <span style="color:#e6db74">&#39;o&#39;</span>)
-axlog<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Word probability&#39;</span>)
-axlog<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Log Rank&#34;</span>)
-axlog<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Log Probablity&#34;</span>)
-plt<span style="color:#f92672">.</span>legend()
-plt<span style="color:#f92672">.</span>show()
-</code></pre></div><p><img src="../../img/2022-06-19-Modeling-and-analysis-of-one-finger-QWERTY-keyboard-typing-using-Fiits-and-Zipfs-laws/2022-06-19-12-50-37.png" alt="png"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">## Use this new information to evaluate the average time it takes to type the 1000 most common words</span>
-_sum <span style="color:#f92672">=</span> sum([<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>(i<span style="color:#f92672">**</span>s) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> list(range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1001</span>))])
-
-<span style="color:#75715e"># Compute the p(k)&#39;s for each k</span>
-weights <span style="color:#f92672">=</span> []
-<span style="color:#66d9ef">for</span> nt <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1001</span>):
-    weight <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>(nt<span style="color:#f92672">**</span>s))<span style="color:#f92672">/</span>_sum
-    weights<span style="color:#f92672">.</span>append(weight)
-
-weighted_sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-<span style="color:#66d9ef">for</span> w,t <span style="color:#f92672">in</span> zip(weights, T):
-    weighted_sum <span style="color:#f92672">+=</span> w<span style="color:#f92672">*</span>t
-
-<span style="color:#66d9ef">print</span>(weighted_sum)
-</code></pre></div><pre><code>0.7124495668649804
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Modeling word frequency</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Frenquency/occurence pairs for the 100 most frequent english words to estimate s of Zipf&#39;s model</span>
+</span></span><span style="display:flex;"><span>frequency <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1e9</span>, <span style="color:#ae81ff">182e6</span>, <span style="color:#ae81ff">99e6</span>, <span style="color:#ae81ff">73e6</span>, <span style="color:#ae81ff">53e6</span>, <span style="color:#ae81ff">41e6</span>, <span style="color:#ae81ff">34e6</span>, <span style="color:#ae81ff">30e6</span>, <span style="color:#ae81ff">25.7e6</span>, <span style="color:#ae81ff">22.5e6</span>, <span style="color:#ae81ff">20e6</span>]
+</span></span><span style="display:flex;"><span>rank  <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">80</span>, <span style="color:#ae81ff">90</span>, <span style="color:#ae81ff">100</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logfreq <span style="color:#f92672">=</span> [math<span style="color:#f92672">.</span>log(f, <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> frequency]
+</span></span><span style="display:flex;"><span>logoc <span style="color:#f92672">=</span> [math<span style="color:#f92672">.</span>log(o, <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">for</span> o <span style="color:#f92672">in</span> rank]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Fit Zipf&#39;s model to the frequencey-rank relationship</span>
+</span></span><span style="display:flex;"><span>prob <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>array(frequency)<span style="color:#f92672">/</span>sum(frequency)
+</span></span><span style="display:flex;"><span>logprob <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>array([math<span style="color:#f92672">.</span>log(f, <span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">for</span> f <span style="color:#f92672">in</span> prob]) <span style="color:#f92672">*</span> (<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>slope, intercept, r_value, p_value, std_err <span style="color:#f92672">=</span> stats<span style="color:#f92672">.</span>linregress(logoc, logprob)
+</span></span><span style="display:flex;"><span>s <span style="color:#f92672">=</span> round(slope, <span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">## Plot the data + fitted model</span>
+</span></span><span style="display:flex;"><span>fig <span style="color:#f92672">=</span> plt<span style="color:#f92672">.</span>figure(figsize<span style="color:#f92672">=</span>(<span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">9</span>))
+</span></span><span style="display:flex;"><span>ax <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">121</span>)
+</span></span><span style="display:flex;"><span>axlog <span style="color:#f92672">=</span> fig<span style="color:#f92672">.</span>add_subplot(<span style="color:#ae81ff">122</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>plot(rank, frequency, <span style="color:#e6db74">&#39;-&#39;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Word frequency&#39;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Rank&#34;</span>)
+</span></span><span style="display:flex;"><span>ax<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Frequency&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>axlog<span style="color:#f92672">.</span>plot(logoc, intercept <span style="color:#f92672">+</span> s<span style="color:#f92672">*</span>(numpy<span style="color:#f92672">.</span>array(logoc)), <span style="color:#e6db74">&#39;r&#39;</span>, label<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;fitted line&#39;</span>)
+</span></span><span style="display:flex;"><span>axlog<span style="color:#f92672">.</span>plot(logoc, logprob, <span style="color:#e6db74">&#39;o&#39;</span>)
+</span></span><span style="display:flex;"><span>axlog<span style="color:#f92672">.</span>set_title(<span style="color:#e6db74">&#39;Word probability&#39;</span>)
+</span></span><span style="display:flex;"><span>axlog<span style="color:#f92672">.</span>set_xlabel(<span style="color:#e6db74">&#34;Log Rank&#34;</span>)
+</span></span><span style="display:flex;"><span>axlog<span style="color:#f92672">.</span>set_ylabel(<span style="color:#e6db74">&#34;Log Probablity&#34;</span>)
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>legend()
+</span></span><span style="display:flex;"><span>plt<span style="color:#f92672">.</span>show()
+</span></span></code></pre></div><p><img src="../../img/2022-06-19-Modeling-and-analysis-of-one-finger-QWERTY-keyboard-typing-using-Fiits-and-Zipfs-laws/2022-06-19-12-50-37.png" alt="png"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e">## Use this new information to evaluate the average time it takes to type the 1000 most common words</span>
+</span></span><span style="display:flex;"><span>_sum <span style="color:#f92672">=</span> sum([<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>(i<span style="color:#f92672">**</span>s) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> list(range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1001</span>))])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Compute the p(k)&#39;s for each k</span>
+</span></span><span style="display:flex;"><span>weights <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> nt <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1001</span>):
+</span></span><span style="display:flex;"><span>    weight <span style="color:#f92672">=</span> (<span style="color:#ae81ff">1</span><span style="color:#f92672">/</span>(nt<span style="color:#f92672">**</span>s))<span style="color:#f92672">/</span>_sum
+</span></span><span style="display:flex;"><span>    weights<span style="color:#f92672">.</span>append(weight)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>weighted_sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> w,t <span style="color:#f92672">in</span> zip(weights, T):
+</span></span><span style="display:flex;"><span>    weighted_sum <span style="color:#f92672">+=</span> w<span style="color:#f92672">*</span>t
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(weighted_sum)
+</span></span></code></pre></div><pre><code>0.7124495668649804
 </code></pre>
 </article>
     </section>
@@ -1050,8 +1050,8 @@ weighted_sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0<
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -1573,7 +1573,7 @@ weighted_sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0<
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

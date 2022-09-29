@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.99.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/tags/docker/" />
 
@@ -25,9 +25,8 @@
 <meta property="og:title" content="docker" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://rushichaudhari.github.io/tags/docker/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-<meta property="og:updated_time" content="2022-04-14T00:00:00+00:00" />
+<meta property="og:url" content="https://rushichaudhari.github.io/tags/docker/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+
 
 
 
@@ -358,8 +357,8 @@
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -812,6 +811,35 @@
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2022-09-29-hudson-and-thames-mlfinlab-docker/">Hudson and Thames mlfinlab stuff</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Thursday, Sep 29, 2022</p>
+    </div>
+    <div class="description">
+      Dockerfile FROM python:3.8.14-slim-buster RUN apt update &amp;&amp; apt install git -y RUN git clone https://github.com/hudson-and-thames/mlfinlab.git &amp;&amp; cd mlfinlab &amp;&amp; python setup.py install RUN pip install jupyter COPY Untitled.ipynb /root/Untitled.ipynb COPY start.sh /root/start.sh WORKDIR /root EXPOSE 8888 RUN chmod a+x /root/start.sh ENTRYPOINT [&#34;/root/start.sh&#34;] start.sh #!/bin/bash python -m jupyter notebook --allow-root To run docker run --rm -it --net=host $(docker build -q .) 
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
   <a class="image" href="https://rushichaudhari.github.io/posts/2022-04-13-my-pinephone-setup/">
     
       <img src="../../img/2022-04-13-My-Pinephone-Setup/pinephone.jpg" alt="My Pinephone Setup" />
@@ -855,7 +883,7 @@
       <p class="date">Sunday, Mar 27, 2022</p>
     </div>
     <div class="description">
-      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &quot;3&quot; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &quot;host&quot; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &#34;host&#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
     </div>
@@ -1009,7 +1037,7 @@ Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

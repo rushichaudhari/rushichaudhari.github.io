@@ -14,21 +14,22 @@
 
 <meta name="author" content="rushi" />
 <meta name="description" content="We Need  RTL SDR Dongle RTL SDR Software Computer  SDR works by receiving a analogue radio signal and then using an analog to digital converter to digitalise the signal. The digitalised signal can then be worked in digital processing software. We need GQRX -&amp;gt; osx/ linux git clone https://github.com/csete/gqrx.git cd gqrx mkdir build cd build qmake .. make make install
- sudo apt-get update sudo apt install git cmake libusb-1." />
+sudo apt-get update sudo apt install git cmake libusb-1." />
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.99.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/" />
 
 
 <meta property="og:title" content="RTL SDR notes" />
 <meta property="og:description" content="We Need  RTL SDR Dongle RTL SDR Software Computer  SDR works by receiving a analogue radio signal and then using an analog to digital converter to digitalise the signal. The digitalised signal can then be worked in digital processing software. We need GQRX -&gt; osx/ linux git clone https://github.com/csete/gqrx.git cd gqrx mkdir build cd build qmake .. make make install
- sudo apt-get update sudo apt install git cmake libusb-1." />
+sudo apt-get update sudo apt install git cmake libusb-1." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+
+
 
 
 
@@ -38,7 +39,7 @@
 
 <meta name="twitter:title" content="RTL SDR notes"/>
 <meta name="twitter:description" content="We Need  RTL SDR Dongle RTL SDR Software Computer  SDR works by receiving a analogue radio signal and then using an analog to digital converter to digitalise the signal. The digitalised signal can then be worked in digital processing software. We need GQRX -&gt; osx/ linux git clone https://github.com/csete/gqrx.git cd gqrx mkdir build cd build qmake .. make make install
- sudo apt-get update sudo apt install git cmake libusb-1."/>
+sudo apt-get update sudo apt install git cmake libusb-1."/>
 
 
 <link rel="stylesheet" href="../../css/semantic.min.css" />
@@ -167,11 +168,10 @@
 <li>RTL SDR Software</li>
 <li>Computer</li>
 </ol>
-<pre><code>SDR works by receiving a analogue radio signal and then using an analog to digital converter to  digitalise the signal. The digitalised signal can then be worked in digital processing software.
+<pre tabindex="0"><code>SDR works by receiving a analogue radio signal and then using an analog to digital converter to  digitalise the signal. The digitalised signal can then be worked in digital processing software.
 
 We need
 GQRX  -&gt; osx/ linux
-
 </code></pre><p>git clone <a href="https://github.com/csete/gqrx.git">https://github.com/csete/gqrx.git</a>
 cd gqrx
 mkdir build
@@ -179,22 +179,21 @@ cd build
 qmake ..
 make
 make install</p>
-<pre><code>
-</code></pre><p>sudo apt-get update
+<pre tabindex="0"><code></code></pre><p>sudo apt-get update
 sudo apt install git cmake libusb-1.0-0.dev build-essential</p>
-<pre><code>
+<pre tabindex="0"><code>
 ### Rtl2832u- osmocom driver
 </code></pre><p>git clone <a href="https://github.com/osmocom/rtl-sdr">https://github.com/osmocom/rtl-sdr</a>
 cd rtl-sdr
 mkdir build cd build cmake ..
 make
 make install</p>
-<pre><code>
+<pre tabindex="0"><code>
 ## Examples of rtl_fm used
 RTL_FM needs to be piped into an auto player that can play raw_audio such as sox or aplay
 </code></pre><p>sudo apt install sox
 rtl_fm -M wbfm -f 91.10M | play -r 32000 -t raw -e s -b 16 -c 1 -V1</p>
-<pre><code>
+<pre tabindex="0"><code>
 ## Calibrating RTL-SDR
 
 rtl-sdr is mass chinese manufactured device with poor crystal tolerance.
@@ -211,7 +210,7 @@ kalibrate is a linux tool to auto calibrate. It requires that there are local GS
 GSM signals are used because they transmit frequency correction data which calibrate can use to determine the clock offset.
 Let us scan for gsm 900 bands with 50db gain
 </code></pre><p>kal -s GSM900 -g 50 #using this you will get the offset range</p>
-<pre><code>
+<pre tabindex="0"><code>
 | GENERAL FREQUENCIES | Mhz  |
 | ------------- |:-------------:|
 |Amateur Radio  | 0.535-1605    |
@@ -262,7 +261,8 @@ In aviation, ACARS is a digital communication system for transmission of short m
 |136.900  |  European secondary|
 |136.850  |  SITA North American Frequency|
 |136.750  |  New European frequency|
-|131.850  |  New European frequency|</code></pre></article>
+|131.850  |  New European frequency|
+</code></pre></article>
     </section>
 
     <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
@@ -560,8 +560,8 @@ In aviation, ACARS is a digital communication system for transmission of short m
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -1083,7 +1083,7 @@ In aviation, ACARS is a digital communication system for transmission of short m
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

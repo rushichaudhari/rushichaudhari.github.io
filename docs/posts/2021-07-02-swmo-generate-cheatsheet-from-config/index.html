@@ -18,7 +18,7 @@ Then I got a linux phone where swaywm was highly popular in development, I could
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.99.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2021-07-02-swmo-generate-cheatsheet-from-config/" />
 
@@ -27,10 +27,10 @@ Then I got a linux phone where swaywm was highly popular in development, I could
 <meta property="og:description" content="I had recently moved to awesomewm from i3wm, some default keybindings were different and It had a really cool command to access cheatsheet which looked like below
 Then I got a linux phone where swaywm was highly popular in development, I couldn&rsquo;t find anything good enough to create that cheatsheet like the one found in awesomewm. This script allows me to parse the swaywm config, and create a cheatsheet. It can later be made more pretty through https://carbon." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-07-02-swmo-generate-cheatsheet-from-config/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-07-02-swmo-generate-cheatsheet-from-config/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-07-02T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-07-02T00:00:00+00:00" />
+
 
 
 
@@ -162,158 +162,158 @@ Then I got a linux phone where swaywm was highly popular in development, I could
 <p><img src="../../img/2021-07-02-SWMO-generate-cheatsheet-from-config/2021-07-02-22-09-13.png" alt="image"></p>
 <p>Then I got a linux phone where swaywm was highly popular in development, I couldn&rsquo;t find anything good enough to create that cheatsheet like the one found in awesomewm. This script allows me to parse the swaywm config, and create a cheatsheet. It can later be made more pretty through  <a href="https://carbon.now.sh/">https://carbon.now.sh/</a>.</p>
 <h1 id="generate_keys_cheatsheetpy">generate_keys_cheatsheet.py</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Will generate a keys.txt, go to https://carbon.now.sh and generate a carbon.png from keys.txt</span>
-<span style="color:#f92672">import</span> os
-<span style="color:#f92672">import</span> sys
-<span style="color:#f92672">import</span> re
-<span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
-<span style="color:#f92672">from</span> rich <span style="color:#f92672">import</span> <span style="color:#66d9ef">print</span>
-<span style="color:#f92672">from</span> tabulate <span style="color:#f92672">import</span> tabulate
-
-<span style="color:#75715e"># FIXME: there must be a more pythonesque way to do this!</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_category</span>(conf, name):
-    <span style="color:#66d9ef">for</span> cat <span style="color:#f92672">in</span> conf:
-        <span style="color:#66d9ef">if</span> cat[<span style="color:#e6db74">&#34;category-name&#34;</span>] <span style="color:#f92672">==</span> name:
-            <span style="color:#66d9ef">return</span> cat
-    cat<span style="color:#f92672">=</span>{ }
-    cat[<span style="color:#e6db74">&#34;category-name&#34;</span>] <span style="color:#f92672">=</span> name
-    cat[<span style="color:#e6db74">&#34;bindings&#34;</span>] <span style="color:#f92672">=</span> [ ]
-    conf<span style="color:#f92672">.</span>append(cat)
-    <span style="color:#66d9ef">return</span> cat
-
-token_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^(\S+)\s+(.*)$&#34;</span>)
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_token</span>(line):
-    line <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>strip()
-    m <span style="color:#f92672">=</span> token_pattern<span style="color:#f92672">.</span>match(line)
-    <span style="color:#66d9ef">if</span> m:
-        t1, t2 <span style="color:#f92672">=</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>), m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">2</span>)
-    <span style="color:#66d9ef">else</span>:
-        t1 <span style="color:#f92672">=</span> t2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-    <span style="color:#66d9ef">return</span> t1, t2
-
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">check_for</span>(pattern, line, annotation):
-    <span style="color:#66d9ef">if</span> re<span style="color:#f92672">.</span>search(pattern, line, re<span style="color:#f92672">.</span>IGNORECASE):
-        <span style="color:#66d9ef">print</span>(annotation)
-
-<span style="color:#75715e"># parsing the sway config file:</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_bindsym</span>():
-    bindsym_dummy <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#bindsym-dummy&#34;</span>
-
-    conf<span style="color:#f92672">=</span>[ ]
-    <span style="color:#66d9ef">with</span> open(my_globals[<span style="color:#e6db74">&#39;config_file&#39;</span>], <span style="color:#e6db74">&#34;r&#34;</span>) <span style="color:#66d9ef">as</span> fp:
-        <span style="color:#66d9ef">while</span> True:
-            line <span style="color:#f92672">=</span> fp<span style="color:#f92672">.</span>readline()
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> line:
-                <span style="color:#66d9ef">break</span>
-            <span style="color:#66d9ef">if</span> my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>]:
-                sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(line)
-            orig_line <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>strip()
-            token, line <span style="color:#f92672">=</span> get_token(line)
-            <span style="color:#66d9ef">if</span> token <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;####&#34;</span>:
-                cat, desc <span style="color:#f92672">=</span> get_token(line)
-                <span style="color:#66d9ef">if</span> cat <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">or</span> desc <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>:
-                    <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74">&#34;{my_globals[&#39;progName&#39;]}: can&#39;t recognise &#39;{orig_line}&#39;&#34;</span>, file<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>stderr)
-                    sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
-                category <span style="color:#f92672">=</span> get_category(conf, cat)
-                <span style="color:#75715e"># look for next bindsym or #bindsym-dummy line:</span>
-                <span style="color:#66d9ef">while</span> True:
-                    line <span style="color:#f92672">=</span> fp<span style="color:#f92672">.</span>readline()
-                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> line:
-                        sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(f<span style="color:#e6db74">&#34;{my_globals[&#39;progName&#39;]}: Unexpected EOF - missing &#39;bindsym&#39; for &#39;{orig_line}&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
-                        sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
-                    <span style="color:#66d9ef">if</span> my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>]:
-                        sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(line)
-                    token, line <span style="color:#f92672">=</span> get_token(line)
-                    <span style="color:#66d9ef">if</span> token <span style="color:#f92672">in</span> ( <span style="color:#e6db74">&#34;bindsym&#34;</span>, <span style="color:#e6db74">&#34;bindcode&#34;</span>, bindsym_dummy):
-                        <span style="color:#66d9ef">break</span>
-                <span style="color:#66d9ef">if</span> token <span style="color:#f92672">==</span> bindsym_dummy:
-                    shortcut <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
-                    command <span style="color:#f92672">=</span> line
-                <span style="color:#66d9ef">else</span>:
-                    <span style="color:#75715e"># skip any --locked or other options:</span>
-                    shortcut <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;--&#34;</span>
-                    <span style="color:#66d9ef">while</span> shortcut[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;--&#34;</span>:
-                        shortcut, line <span style="color:#f92672">=</span> get_token(line)
-                    command <span style="color:#f92672">=</span> line
-                item <span style="color:#f92672">=</span> { }
-                item[<span style="color:#e6db74">&#34;name&#34;</span>] <span style="color:#f92672">=</span> desc
-                item[<span style="color:#e6db74">&#34;shortcut&#34;</span>] <span style="color:#f92672">=</span> shortcut
-                item[<span style="color:#e6db74">&#34;command&#34;</span>] <span style="color:#f92672">=</span> command
-                <span style="color:#66d9ef">if</span> my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>]:
-                    sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(str(item))
-                category[<span style="color:#e6db74">&#34;bindings&#34;</span>]<span style="color:#f92672">.</span>append(item)
-    <span style="color:#66d9ef">return</span> conf
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_annotated_config</span>():
-    <span style="color:#66d9ef">with</span> open(my_globals[<span style="color:#e6db74">&#39;config_file&#39;</span>], <span style="color:#e6db74">&#34;r&#34;</span>) <span style="color:#66d9ef">as</span> fp:
-        <span style="color:#66d9ef">while</span> True:
-            line <span style="color:#f92672">=</span> fp<span style="color:#f92672">.</span>readline()
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> line:
-                <span style="color:#66d9ef">break</span>
-            check_for(<span style="color:#e6db74">&#34;bindsym .* exec </span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">$term&#34;</span>,                 line,<span style="color:#e6db74">&#34;    #### _Run Terminal&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* kill$&#34;</span>,                        line,<span style="color:#e6db74">&#34;    #### _Window Kill&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* exec </span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">$menu&#34;</span>,                 line,<span style="color:#e6db74">&#34;    #### _Run Program Launcher&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* reload$&#34;</span>,                      line,<span style="color:#e6db74">&#34;    #### _Mode Reload sway&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* exec swaynag .*exit shortcut&#34;</span>, line,<span style="color:#e6db74">&#34;    #### _Mode Exit sway&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* focus left&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Focus left&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* focus right&#34;</span>,                  line,<span style="color:#e6db74">&#34;    #### _Window Focus right&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* focus up&#34;</span>,                     line,<span style="color:#e6db74">&#34;    #### _Window Focus up&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* focus down&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Focus down&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* move left$&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Move window left&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* move right$&#34;</span>,                  line,<span style="color:#e6db74">&#34;    #### _Window Move window right&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* move up$&#34;</span>,                     line,<span style="color:#e6db74">&#34;    #### _Window Move window up&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* move down$&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Move window down&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 1&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 1&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 2&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 2&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 3&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 3&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 4&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 4&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 1&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 1&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 2&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 2&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 3&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 3&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 4&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 4&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* splith$&#34;</span>,                      line,<span style="color:#e6db74">&#34;    #### _Window Horizontal split&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* splitv$&#34;</span>,                      line,<span style="color:#e6db74">&#34;    #### _Window Vertical split&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* layout stacking&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### W_orkspace Stacked layout&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* layout tabbed&#34;</span>,                line,<span style="color:#e6db74">&#34;    #### W_orkspace Tabbed layout&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* layout toggle split&#34;</span>,          line,<span style="color:#e6db74">&#34;    #### W_orkspace Toggle layout&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* fullscreen$&#34;</span>,                  line,<span style="color:#e6db74">&#34;    #### _Window Fullscreen&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* floating toggle&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### W_orkspace Toggle focus with floating&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* focus mode_toggle&#34;</span>,            line,<span style="color:#e6db74">&#34;    #### W_orkspace Swap focus with floating&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* focus parent&#34;</span>,                 line,<span style="color:#e6db74">&#34;    #### _Window Focus parent&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* move scratchpad&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### _Window Move to scratchpad&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* scratchpad show&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### W_orkspace Show next scratchpad&#34;</span>)
-            check_for(<span style="color:#e6db74">&#34;bindsym .* mode </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">resize</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">&#34;</span>,              line,<span style="color:#e6db74">&#34;#### _Mode Resize Mode (Esc to exit)&#34;</span>)
-
-            sys<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>write(line)
-
-my_globals <span style="color:#f92672">=</span> { }
-my_globals[<span style="color:#e6db74">&#39;focused&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-my_globals[<span style="color:#e6db74">&#39;dirName&#39;</span>], my_globals[<span style="color:#e6db74">&#39;progName&#39;</span>] <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>split(sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">0</span>])
-my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>] <span style="color:#f92672">=</span> False
-my_globals[<span style="color:#e6db74">&#39;notify&#39;</span>] <span style="color:#f92672">=</span> True
-my_globals[<span style="color:#e6db74">&#39;lock&#39;</span>] <span style="color:#f92672">=</span> False
-my_globals[<span style="color:#e6db74">&#39;config_file&#39;</span>] <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getenv(<span style="color:#e6db74">&#34;HOME&#34;</span>)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/.config/sway/config&#34;</span>
-
-config <span style="color:#f92672">=</span> read_bindsym()
-
-f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;keys.txt&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>)
-<span style="color:#75715e"># print(config)</span>
-<span style="color:#66d9ef">for</span> cat <span style="color:#f92672">in</span> config:
-    title <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;[bold red] {cat[&#39;category-name&#39;]} [/bold red]&#34;</span>
-    <span style="color:#66d9ef">print</span>(title)
-    cf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(cat[<span style="color:#e6db74">&#39;bindings&#39;</span>], columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;name&#34;</span>, <span style="color:#e6db74">&#34;shortcut&#34;</span>])
-    table <span style="color:#f92672">=</span> tabulate(cf, headers<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;keys&#39;</span>, tablefmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;psql&#39;</span>)
-    <span style="color:#75715e"># os.system(f&#34;/home/alarm/Documents/herbe/herbe \&#34;{title}\n{table}\&#34;&#34;)</span>
-    f<span style="color:#f92672">.</span>write(title<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
-    f<span style="color:#f92672">.</span>write(table)
-f<span style="color:#f92672">.</span>close()
-</code></pre></div><h1 id="in-sway-config-add">In sway config add</h1>
-<pre><code># show cheatsheet
-bindsym $mod+s exec feh -x --zoom fill --scale-down --auto-zoom --no-menus --on-last-slide quit --title &quot;cheat&quot; /home/alarm/.local/share/bin/carbon.png
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Will generate a keys.txt, go to https://carbon.now.sh and generate a carbon.png from keys.txt</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> os
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> sys
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> rich <span style="color:#f92672">import</span> print
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> tabulate <span style="color:#f92672">import</span> tabulate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># FIXME: there must be a more pythonesque way to do this!</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_category</span>(conf, name):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> cat <span style="color:#f92672">in</span> conf:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> cat[<span style="color:#e6db74">&#34;category-name&#34;</span>] <span style="color:#f92672">==</span> name:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> cat
+</span></span><span style="display:flex;"><span>    cat<span style="color:#f92672">=</span>{ }
+</span></span><span style="display:flex;"><span>    cat[<span style="color:#e6db74">&#34;category-name&#34;</span>] <span style="color:#f92672">=</span> name
+</span></span><span style="display:flex;"><span>    cat[<span style="color:#e6db74">&#34;bindings&#34;</span>] <span style="color:#f92672">=</span> [ ]
+</span></span><span style="display:flex;"><span>    conf<span style="color:#f92672">.</span>append(cat)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> cat
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>token_pattern <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;^(\S+)\s+(.*)$&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_token</span>(line):
+</span></span><span style="display:flex;"><span>    line <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>    m <span style="color:#f92672">=</span> token_pattern<span style="color:#f92672">.</span>match(line)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> m:
+</span></span><span style="display:flex;"><span>        t1, t2 <span style="color:#f92672">=</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>), m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        t1 <span style="color:#f92672">=</span> t2 <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> t1, t2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">check_for</span>(pattern, line, annotation):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> re<span style="color:#f92672">.</span>search(pattern, line, re<span style="color:#f92672">.</span>IGNORECASE):
+</span></span><span style="display:flex;"><span>        print(annotation)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># parsing the sway config file:</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">read_bindsym</span>():
+</span></span><span style="display:flex;"><span>    bindsym_dummy <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;#bindsym-dummy&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    conf<span style="color:#f92672">=</span>[ ]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(my_globals[<span style="color:#e6db74">&#39;config_file&#39;</span>], <span style="color:#e6db74">&#34;r&#34;</span>) <span style="color:#66d9ef">as</span> fp:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>            line <span style="color:#f92672">=</span> fp<span style="color:#f92672">.</span>readline()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> line:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>]:
+</span></span><span style="display:flex;"><span>                sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(line)
+</span></span><span style="display:flex;"><span>            orig_line <span style="color:#f92672">=</span> line<span style="color:#f92672">.</span>strip()
+</span></span><span style="display:flex;"><span>            token, line <span style="color:#f92672">=</span> get_token(line)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> token <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;####&#34;</span>:
+</span></span><span style="display:flex;"><span>                cat, desc <span style="color:#f92672">=</span> get_token(line)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> cat <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">or</span> desc <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>:
+</span></span><span style="display:flex;"><span>                    print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>my_globals[<span style="color:#e6db74">&#39;progName&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">: can&#39;t recognise &#39;</span><span style="color:#e6db74">{</span>orig_line<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;&#34;</span>, file<span style="color:#f92672">=</span>sys<span style="color:#f92672">.</span>stderr)
+</span></span><span style="display:flex;"><span>                    sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>                category <span style="color:#f92672">=</span> get_category(conf, cat)
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># look for next bindsym or #bindsym-dummy line:</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>                    line <span style="color:#f92672">=</span> fp<span style="color:#f92672">.</span>readline()
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> line:
+</span></span><span style="display:flex;"><span>                        sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{</span>my_globals[<span style="color:#e6db74">&#39;progName&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74">: Unexpected EOF - missing &#39;bindsym&#39; for &#39;</span><span style="color:#e6db74">{</span>orig_line<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>                        sys<span style="color:#f92672">.</span>exit(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>]:
+</span></span><span style="display:flex;"><span>                        sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(line)
+</span></span><span style="display:flex;"><span>                    token, line <span style="color:#f92672">=</span> get_token(line)
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">if</span> token <span style="color:#f92672">in</span> ( <span style="color:#e6db74">&#34;bindsym&#34;</span>, <span style="color:#e6db74">&#34;bindcode&#34;</span>, bindsym_dummy):
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> token <span style="color:#f92672">==</span> bindsym_dummy:
+</span></span><span style="display:flex;"><span>                    shortcut <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>                    command <span style="color:#f92672">=</span> line
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                    <span style="color:#75715e"># skip any --locked or other options:</span>
+</span></span><span style="display:flex;"><span>                    shortcut <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;--&#34;</span>
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">while</span> shortcut[<span style="color:#ae81ff">0</span>:<span style="color:#ae81ff">2</span>] <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;--&#34;</span>:
+</span></span><span style="display:flex;"><span>                        shortcut, line <span style="color:#f92672">=</span> get_token(line)
+</span></span><span style="display:flex;"><span>                    command <span style="color:#f92672">=</span> line
+</span></span><span style="display:flex;"><span>                item <span style="color:#f92672">=</span> { }
+</span></span><span style="display:flex;"><span>                item[<span style="color:#e6db74">&#34;name&#34;</span>] <span style="color:#f92672">=</span> desc
+</span></span><span style="display:flex;"><span>                item[<span style="color:#e6db74">&#34;shortcut&#34;</span>] <span style="color:#f92672">=</span> shortcut
+</span></span><span style="display:flex;"><span>                item[<span style="color:#e6db74">&#34;command&#34;</span>] <span style="color:#f92672">=</span> command
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>]:
+</span></span><span style="display:flex;"><span>                    sys<span style="color:#f92672">.</span>stderr<span style="color:#f92672">.</span>write(str(item))
+</span></span><span style="display:flex;"><span>                category[<span style="color:#e6db74">&#34;bindings&#34;</span>]<span style="color:#f92672">.</span>append(item)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">print_annotated_config</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">with</span> open(my_globals[<span style="color:#e6db74">&#39;config_file&#39;</span>], <span style="color:#e6db74">&#34;r&#34;</span>) <span style="color:#66d9ef">as</span> fp:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>            line <span style="color:#f92672">=</span> fp<span style="color:#f92672">.</span>readline()
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> line:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* exec </span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">$term&#34;</span>,                 line,<span style="color:#e6db74">&#34;    #### _Run Terminal&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* kill$&#34;</span>,                        line,<span style="color:#e6db74">&#34;    #### _Window Kill&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* exec </span><span style="color:#ae81ff">\\</span><span style="color:#e6db74">$menu&#34;</span>,                 line,<span style="color:#e6db74">&#34;    #### _Run Program Launcher&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* reload$&#34;</span>,                      line,<span style="color:#e6db74">&#34;    #### _Mode Reload sway&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* exec swaynag .*exit shortcut&#34;</span>, line,<span style="color:#e6db74">&#34;    #### _Mode Exit sway&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* focus left&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Focus left&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* focus right&#34;</span>,                  line,<span style="color:#e6db74">&#34;    #### _Window Focus right&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* focus up&#34;</span>,                     line,<span style="color:#e6db74">&#34;    #### _Window Focus up&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* focus down&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Focus down&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* move left$&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Move window left&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* move right$&#34;</span>,                  line,<span style="color:#e6db74">&#34;    #### _Window Move window right&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* move up$&#34;</span>,                     line,<span style="color:#e6db74">&#34;    #### _Window Move window up&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* move down$&#34;</span>,                   line,<span style="color:#e6db74">&#34;    #### _Window Move window down&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 1&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 1&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 2&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 2&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 3&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 3&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .*[0-9] workspace number 4&#34;</span>,      line,<span style="color:#e6db74">&#34;    #### W_orkspace Jump to w/s 4&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 1&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 1&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 2&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 2&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 3&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 3&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* to workspace number 4&#34;</span>,        line,<span style="color:#e6db74">&#34;    #### _Window Move to w/s 4&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* splith$&#34;</span>,                      line,<span style="color:#e6db74">&#34;    #### _Window Horizontal split&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* splitv$&#34;</span>,                      line,<span style="color:#e6db74">&#34;    #### _Window Vertical split&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* layout stacking&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### W_orkspace Stacked layout&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* layout tabbed&#34;</span>,                line,<span style="color:#e6db74">&#34;    #### W_orkspace Tabbed layout&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* layout toggle split&#34;</span>,          line,<span style="color:#e6db74">&#34;    #### W_orkspace Toggle layout&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* fullscreen$&#34;</span>,                  line,<span style="color:#e6db74">&#34;    #### _Window Fullscreen&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* floating toggle&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### W_orkspace Toggle focus with floating&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* focus mode_toggle&#34;</span>,            line,<span style="color:#e6db74">&#34;    #### W_orkspace Swap focus with floating&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* focus parent&#34;</span>,                 line,<span style="color:#e6db74">&#34;    #### _Window Focus parent&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* move scratchpad&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### _Window Move to scratchpad&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* scratchpad show&#34;</span>,              line,<span style="color:#e6db74">&#34;    #### W_orkspace Show next scratchpad&#34;</span>)
+</span></span><span style="display:flex;"><span>            check_for(<span style="color:#e6db74">&#34;bindsym .* mode </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">resize</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">&#34;</span>,              line,<span style="color:#e6db74">&#34;#### _Mode Resize Mode (Esc to exit)&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            sys<span style="color:#f92672">.</span>stdout<span style="color:#f92672">.</span>write(line)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>my_globals <span style="color:#f92672">=</span> { }
+</span></span><span style="display:flex;"><span>my_globals[<span style="color:#e6db74">&#39;focused&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>my_globals[<span style="color:#e6db74">&#39;dirName&#39;</span>], my_globals[<span style="color:#e6db74">&#39;progName&#39;</span>] <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>path<span style="color:#f92672">.</span>split(sys<span style="color:#f92672">.</span>argv[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>my_globals[<span style="color:#e6db74">&#39;debug&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>my_globals[<span style="color:#e6db74">&#39;notify&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span>my_globals[<span style="color:#e6db74">&#39;lock&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">False</span>
+</span></span><span style="display:flex;"><span>my_globals[<span style="color:#e6db74">&#39;config_file&#39;</span>] <span style="color:#f92672">=</span> os<span style="color:#f92672">.</span>getenv(<span style="color:#e6db74">&#34;HOME&#34;</span>)<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;/.config/sway/config&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>config <span style="color:#f92672">=</span> read_bindsym()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>f <span style="color:#f92672">=</span> open(<span style="color:#e6db74">&#34;keys.txt&#34;</span>, <span style="color:#e6db74">&#34;a&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># print(config)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> cat <span style="color:#f92672">in</span> config:
+</span></span><span style="display:flex;"><span>    title <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[bold red] </span><span style="color:#e6db74">{</span>cat[<span style="color:#e6db74">&#39;category-name&#39;</span>]<span style="color:#e6db74">}</span><span style="color:#e6db74"> [/bold red]&#34;</span>
+</span></span><span style="display:flex;"><span>    print(title)
+</span></span><span style="display:flex;"><span>    cf <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(cat[<span style="color:#e6db74">&#39;bindings&#39;</span>], columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;name&#34;</span>, <span style="color:#e6db74">&#34;shortcut&#34;</span>])
+</span></span><span style="display:flex;"><span>    table <span style="color:#f92672">=</span> tabulate(cf, headers<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;keys&#39;</span>, tablefmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;psql&#39;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># os.system(f&#34;/home/alarm/Documents/herbe/herbe \&#34;{title}\n{table}\&#34;&#34;)</span>
+</span></span><span style="display:flex;"><span>    f<span style="color:#f92672">.</span>write(title<span style="color:#f92672">+</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>)
+</span></span><span style="display:flex;"><span>    f<span style="color:#f92672">.</span>write(table)
+</span></span><span style="display:flex;"><span>f<span style="color:#f92672">.</span>close()
+</span></span></code></pre></div><h1 id="in-sway-config-add">In sway config add</h1>
+<pre tabindex="0"><code># show cheatsheet
+bindsym $mod+s exec feh -x --zoom fill --scale-down --auto-zoom --no-menus --on-last-slide quit --title &#34;cheat&#34; /home/alarm/.local/share/bin/carbon.png
 
 # make cheatsheet window floating and centered
-for_window [title=&quot;cheat&quot;] floating enable, move position center
+for_window [title=&#34;cheat&#34;] floating enable, move position center
 </code></pre></article>
     </section>
 
@@ -610,8 +610,8 @@ for_window [title=&quot;cheat&quot;] floating enable, move position center
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -1133,7 +1133,7 @@ for_window [title=&quot;cheat&quot;] floating enable, move position center
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

@@ -18,7 +18,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.99.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2022-05-19-wayvnc-arch-linux/" />
 
@@ -27,10 +27,10 @@
 <meta property="og:description" content="Traditionally we have been using Xorg or X11 as the display server on linux. Wayland is a similar display server which aims to be a modern and more optimized. I&rsquo;m not much used to wayland and this is a guide for using wayvnc, a vnc server for wayland. Any vnc client like tigervnc/ realvncviewer can be used.
 # Install wayvnc sudo pacman -S wayvnc Create a config with the authentication info and load it using the &ndash;config command line option or place it at the default location $HOME/." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-05-19-wayvnc-arch-linux/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-05-19-wayvnc-arch-linux/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-05-19T00:00:00+00:00" />
 <meta property="article:modified_time" content="2022-05-19T00:00:00+00:00" />
+
 
 
 
@@ -159,17 +159,17 @@
       </header>
 
       <article class="main"><p>Traditionally we have been using Xorg or X11 as the display server on linux. Wayland is a similar display server which aims to be a modern and more optimized. I&rsquo;m not much used to wayland and this is a guide for using wayvnc, a vnc server for wayland. Any vnc client like tigervnc/ realvncviewer can be used.</p>
-<pre><code># Install wayvnc
+<pre tabindex="0"><code># Install wayvnc
 sudo pacman -S wayvnc
 </code></pre><p>Create a config with the authentication info and load it using the &ndash;config command line option or place it at the default location <code>$HOME/.config/wayvnc/config</code>.</p>
-<pre><code>address=0.0.0.0
+<pre tabindex="0"><code>address=0.0.0.0
 enable_auth=true
 username=luser
 password=p455w0rd
 private_key_file=/path/to/key.pem
 certificate_file=/path/to/cert.pem
 </code></pre><p>or without auth</p>
-<pre><code>address=0.0.0.0
+<pre tabindex="0"><code>address=0.0.0.0
 enable_auth=false
 username=luser
 password=p455w0rd
@@ -470,8 +470,8 @@ password=p455w0rd
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -993,7 +993,7 @@ password=p455w0rd
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>

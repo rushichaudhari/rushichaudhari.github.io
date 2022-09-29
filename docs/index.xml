@@ -6,14 +6,23 @@
     <description>Recent content on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hudson and Thames mlfinlab stuff</title>
+      <link>https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/</link>
+      <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/</guid>
+      <description>Dockerfile FROM python:3.8.14-slim-buster RUN apt update &amp;amp;&amp;amp; apt install git -y RUN git clone https://github.com/hudson-and-thames/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py install RUN pip install jupyter COPY Untitled.ipynb /root/Untitled.ipynb COPY start.sh /root/start.sh WORKDIR /root EXPOSE 8888 RUN chmod a+x /root/start.sh ENTRYPOINT [&amp;#34;/root/start.sh&amp;#34;] start.sh #!/bin/bash python -m jupyter notebook --allow-root To run docker run --rm -it --net=host $(docker build -q .) </description>
+    </item>
+    
     <item>
       <title>Apache Hadoop Stack: MapReduce, Pig, Spark, Hive</title>
       <link>https://rushichaudhari.github.io/posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/</link>
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/</guid>
-      <description>Apache Hadoop Stack: MapReduce, Pig, Spark, Hive 1. HDFS CLI: load input data list all directories hadoop fs -ls make a new directory to store movie data hadoop fs -mkdir movieData copy data file from local to hdfs hadoop fs -copyFromLocal u.data movieData/u.data 2. MapReduce with Python: movies sorted by rating counts script from mrjob.job import MRJob from mrjob.step import MRStep class RatingsBreakdown(MRJob): def steps(self): return [ MRStep(mapper=self.mapper_get_movie, combiner=self.combiner_count_ratings, reducer=self.reducer_count_ratings), MRStep(reducer=self.</description>
+      <description>Apache Hadoop Stack: MapReduce, Pig, Spark, Hive 1. HDFS CLI: load input data list all directories hadoop fs -ls make a new directory to store movie data hadoop fs -mkdir movieData copy data file from local to hdfs hadoop fs -copyFromLocal u.data movieData/u.data 2. MapReduce with Python: movies sorted by rating counts script  from mrjob.job import MRJob from mrjob.step import MRStep  class RatingsBreakdown(MRJob):  def steps(self):  return [  MRStep(mapper=self.</description>
     </item>
     
     <item>
@@ -41,7 +50,7 @@ We&amp;rsquo;ll compare these two types of posts to determine the following: 1. 
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/</guid>
-      <description>Goals 1. Modeling the keyboard 2. Fiit&amp;rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&amp;rsquo;s law parameter estimation &amp;amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &amp;#39;qwertyuiop&amp;#39; line2 = &amp;#39;asdfghjkl&amp;#39; line3 = &amp;#39;zxcvbnm&amp;#39; # Define a keyboard as a list of keys.</description>
+      <description>Goals 1. Modeling the keyboard 2. Fiit&amp;rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&amp;rsquo;s law parameter estimation &amp;amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &amp;#39;qwertyuiop&amp;#39; line2 = &amp;#39;asdfghjkl&amp;#39; line3 = &amp;#39;zxcvbnm&amp;#39;  # Define a keyboard as a list of keys.</description>
     </item>
     
     <item>
@@ -82,7 +91,7 @@ This file requires three main items:</description>
       
       <guid>https://rushichaudhari.github.io/posts/2022-04-24-convert-browser-requests-to-python/</guid>
       <description>Scraping dynamic content these days is bit difficult as there are wide variety of authentication mechanisms and web server needs correct headers, session, cookies to authenticate the request. If we need to quickly scrape content just for once, implementing authenticationis an overhead. Instead, we can manually login to the website, capture an authenticated request and use it for scraping other pages by changing url/form parameters.
-curl &#39;https://www.glassdoor.com/member/home/index.htm&#39; -H &#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.</description>
+curl &amp;#39;https://www.glassdoor.com/member/home/index.htm&amp;#39; -H &amp;#39;User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:99.</description>
     </item>
     
     <item>
@@ -100,7 +109,7 @@ curl &#39;https://www.glassdoor.com/member/home/index.htm&#39; -H &#39;User-Agen
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/</guid>
-      <description>Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;quot;3&amp;quot; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &amp;quot;host&amp;quot; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+      <description>Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;#34;3&amp;#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &amp;#34;host&amp;#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works</description>
     </item>
@@ -374,7 +383,7 @@ Loosen the polkit permissions in your system to allow your normal user to mount 
       
       <guid>https://rushichaudhari.github.io/posts/2020-04-09-rtl-sdr-notes-copy/</guid>
       <description>We Need  RTL SDR Dongle RTL SDR Software Computer  SDR works by receiving a analogue radio signal and then using an analog to digital converter to digitalise the signal. The digitalised signal can then be worked in digital processing software. We need GQRX -&amp;gt; osx/ linux git clone https://github.com/csete/gqrx.git cd gqrx mkdir build cd build qmake .. make make install
- sudo apt-get update sudo apt install git cmake libusb-1.</description>
+sudo apt-get update sudo apt install git cmake libusb-1.</description>
     </item>
     
     <item>

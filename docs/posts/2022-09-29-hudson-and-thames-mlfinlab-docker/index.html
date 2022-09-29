@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>keep | A collection of random ideas so I don&#39;t have to google again</title>
+    <title>Hudson and Thames mlfinlab stuff | A collection of random ideas so I don&#39;t have to google again</title>
 
     
 <link href="../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
@@ -13,19 +13,21 @@
 
 
 <meta name="author" content="rushi" />
-<meta name="description" content="" />
+<meta name="description" content="Dockerfile FROM python:3.8.14-slim-buster RUN apt update &amp;amp;&amp;amp; apt install git -y RUN git clone https://github.com/hudson-and-thames/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py install RUN pip install jupyter COPY Untitled.ipynb /root/Untitled.ipynb COPY start.sh /root/start.sh WORKDIR /root EXPOSE 8888 RUN chmod a&#43;x /root/start.sh ENTRYPOINT [&amp;#34;/root/start.sh&amp;#34;] start.sh #!/bin/bash python -m jupyter notebook --allow-root To run docker run --rm -it --net=host $(docker build -q .) " />
 
 
 
 <meta name="generator" content="Hugo 0.99.1" />
 
-<link rel="canonical" href="https://rushichaudhari.github.io/tags/keep/" />
+<link rel="canonical" href="https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/" />
 
 
-<meta property="og:title" content="keep" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://rushichaudhari.github.io/tags/keep/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:title" content="Hudson and Thames mlfinlab stuff" />
+<meta property="og:description" content="Dockerfile FROM python:3.8.14-slim-buster RUN apt update &amp;&amp; apt install git -y RUN git clone https://github.com/hudson-and-thames/mlfinlab.git &amp;&amp; cd mlfinlab &amp;&amp; python setup.py install RUN pip install jupyter COPY Untitled.ipynb /root/Untitled.ipynb COPY start.sh /root/start.sh WORKDIR /root EXPOSE 8888 RUN chmod a&#43;x /root/start.sh ENTRYPOINT [&#34;/root/start.sh&#34;] start.sh #!/bin/bash python -m jupyter notebook --allow-root To run docker run --rm -it --net=host $(docker build -q .) " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-09-29T00:00:00+00:00" />
 
 
 
@@ -33,8 +35,8 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
-<meta name="twitter:title" content="keep"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Hudson and Thames mlfinlab stuff"/>
+<meta name="twitter:description" content="Dockerfile FROM python:3.8.14-slim-buster RUN apt update &amp;&amp; apt install git -y RUN git clone https://github.com/hudson-and-thames/mlfinlab.git &amp;&amp; cd mlfinlab &amp;&amp; python setup.py install RUN pip install jupyter COPY Untitled.ipynb /root/Untitled.ipynb COPY start.sh /root/start.sh WORKDIR /root EXPOSE 8888 RUN chmod a&#43;x /root/start.sh ENTRYPOINT [&#34;/root/start.sh&#34;] start.sh #!/bin/bash python -m jupyter notebook --allow-root To run docker run --rm -it --net=host $(docker build -q .) "/>
 
 
 <link rel="stylesheet" href="../../css/semantic.min.css" />
@@ -86,7 +88,17 @@
   
 </style>
 
-     
+    
+
+
+  
+    <link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/gruvbox-light.min.css" />
+  
+
+
+
+
+
   </head>
 
   <body class="default">
@@ -115,7 +127,108 @@
           <div class="dream-max-width">
             
 <div class="ui centered relaxed grid dream-grid">
-  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+  <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
+    
+    <section class="ui attached segment">
+      <header>
+        <h1 class="ui large header">
+          Hudson and Thames mlfinlab stuff
+          <div class="sub header">
+            @
+            
+              
+                rushi
+              
+            
+
+            | 
+                Thursday, Sep 29, 2022
+              
+
+            | 1 minutes read
+
+            | Update at
+              
+                Thursday, Sep 29, 2022
+              
+          </div>
+        </h1>
+      </header>
+
+      <article class="main"><h1 id="dockerfile">Dockerfile</h1>
+<pre tabindex="0"><code>FROM python:3.8.14-slim-buster
+RUN apt update &amp;&amp; apt install git -y
+RUN git clone https://github.com/hudson-and-thames/mlfinlab.git &amp;&amp; cd mlfinlab &amp;&amp; python setup.py install
+RUN pip install jupyter
+
+
+COPY Untitled.ipynb /root/Untitled.ipynb
+COPY start.sh /root/start.sh
+WORKDIR /root
+
+EXPOSE 8888
+
+RUN chmod a+x /root/start.sh
+
+ENTRYPOINT [&#34;/root/start.sh&#34;]
+</code></pre><h1 id="startsh">start.sh</h1>
+<pre tabindex="0"><code>#!/bin/bash
+python -m jupyter notebook --allow-root
+</code></pre><h1 id="to-run">To run</h1>
+<pre tabindex="0"><code>docker run --rm -it --net=host $(docker build -q .)
+</code></pre></article>
+    </section>
+
+    <footer class="ui attached segment dream-tags" data-html2canvas-ignore>
+      
+        
+          <a class="ui label" href="../../tags/python" title="python">python</a>
+        
+          <a class="ui label" href="../../tags/docker" title="docker">docker</a>
+        
+      
+      <div
+        class="ui label"
+        style="float: right; cursor: pointer;"
+        onclick="savePostAsImg()">
+        <i class="save icon"></i>Save as image
+      </div>
+    </footer>
+
+    
+
+    
+      <footer class="ui bottom attached stacked segment post-disqus-area" data-html2canvas-ignore>
+        <div id="disqus_thread"></div>
+        <script>
+          
+
+
+          var disqus_config = function () {
+            this.page.url = 'https:\/\/rushichaudhari.github.io\/posts\/2022-09-29-hudson-and-thames-mlfinlab-docker\/';  
+            this.page.identifier = '\/posts\/2022-09-29-hudson-and-thames-mlfinlab-docker\/'; 
+          };
+
+          (function() { 
+            var d = document, s = d.createElement('script');
+            s.src = 'https://' + 'rushichaudhari' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </footer>
+    
+    
+    
+
+    
+
+  </div>
+  <aside class="sixteen wide mobile sixteen wide tablet four wide computer column dream-single-aside">
+    
+    
+
     <article class="dream-header">
   <section class="ui top attached center aligned segment">
     <div class="ui small circular image">
@@ -805,47 +918,7 @@
   </section>
 </article>
 
-  </div>
-
-  
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-10-28-bookmark-linux-commands-keep/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../posts/2021-10-28-bookmark-linux-commands-keep/">Bookmark Linux Commands using Keep</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Thursday, Oct 28, 2021</p>
-    </div>
-    <div class="description">
-      Why keep ?  opensource can export commands from ~/.keep/commands.json  My branch now supports running commands with id https://github.com/rushic24/keep
-Add command: keep new
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-
-  <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-    
-
-
-
-  </div>
+  </aside>
 </div>
 
           </div>
@@ -985,30 +1058,6 @@ Add command: keep new
   </section>
 
   
-    
-      <section class="sixteen wide mobile eight wide tablet eight wide computer column dream-column">
-        <footer class="ui segment">
-          <div id="disqus_thread"></div>
-          <script>
-            
-
-
-            var disqus_config = function () {
-              this.page.url = 'https:\/\/rushichaudhari.github.io\/tags\/keep\/';  
-              this.page.identifier = '/'; 
-            };
-
-            (function() { 
-              var d = document, s = d.createElement('script');
-              s.src = 'https://' + 'rushichaudhari' + '.disqus.com/embed.js';
-              s.setAttribute('data-timestamp', +new Date());
-              (d.head || d.body).appendChild(s);
-            })();
-          </script>
-          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        </footer>
-      </section>
-    
   
 </div>
 
@@ -1052,9 +1101,35 @@ Add command: keep new
 <script src="../../js/theme.js"></script>
 
     
-<script src="../../js/imagesloaded.pkgd.min.js"></script>
-<script src="../../js/masonry.pkgd.min.js"></script>
-<script src="../../js/grid.js"></script>
+<script src="../../js/html2canvas.min.js"></script>
+<script src="../../js/post.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+
+  
+    
+      <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+     
+  
+
+  <script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    var lightTheme = "gruvbox-light"
+    var darkTheme = "gruvbox-dark"
+    var theme = isDark ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark ? '#333' : '')
+  }
+</script>
+
+
+
 
 
     

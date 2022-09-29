@@ -18,7 +18,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.0" />
+<meta name="generator" content="Hugo 0.99.1" />
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/" />
 
@@ -27,8 +27,9 @@
 <meta property="og:description" content="Change cache location of Firefox You can do this by creating a new hidden preference.
  Type about:config into the location bar and press enter Accept the warning message that appears, you will be taken to a list of preferences Right-click somewhere in the list and select &ldquo;New &gt; String&rdquo; For the name of the preference type browser.cache.disk.parent_directory For its value type the path to where you want to store the cache Next locate the preference browser." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/" />
-<meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
+<meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
+
+
 
 
 
@@ -174,13 +175,13 @@
 <h2 id="symlink-appdata-folders">Symlink AppData folders</h2>
 <p>Windows applications often store their data and settings in an AppData folder, and each Windows user account has its own. It is located under C:\Users&lt;username&gt; which stores caches of various applications.</p>
 <p>Move all the files/hidden files/sub folders from the <code>C:\Users\Nikhil\AppData\Local</code> to to your <code>D:\AppData\Local</code> directory and create a symlink.</p>
-<pre><code>mklink /d C:\Users\Nikhil\AppData\Local D:\AppData\Local
+<pre tabindex="0"><code>mklink /d C:\Users\Nikhil\AppData\Local D:\AppData\Local
 </code></pre><h2 id="move-ms-office-to-some-other-drive-or-install">Move MS Office to some other drive [or install]</h2>
 <p>source: <a href="https://www.youtube.com/watch?v=CIBNlTpByoY&amp;t=36s">https://www.youtube.com/watch?v=CIBNlTpByoY&amp;t=36s</a></p>
 <p>For 64bit</p>
-<pre><code>MKLINK /J &quot;C:\Program Files\Microsoft Office\root&quot; &quot;U:\Program Files\Microsoft Office\root&quot;
+<pre tabindex="0"><code>MKLINK /J &#34;C:\Program Files\Microsoft Office\root&#34; &#34;U:\Program Files\Microsoft Office\root&#34;
 </code></pre><p>For 32 bit [x86]</p>
-<pre><code>MKLINK /J &quot;C:\Program Files (x86)\Microsoft Office\root&quot; &quot;U:\Program Files (x86)\Microsoft Office\root&quot;
+<pre tabindex="0"><code>MKLINK /J &#34;C:\Program Files (x86)\Microsoft Office\root&#34; &#34;U:\Program Files (x86)\Microsoft Office\root&#34;
 </code></pre></article>
     </section>
 
@@ -481,8 +482,8 @@
     
       
       
-      <a class="ui label" href="../../tags/ssh/" title="Ssh">
-        Ssh
+      <a class="ui label" href="../../tags/ssh/" title="SSH">
+        SSH
       </a>
     
       
@@ -1004,7 +1005,7 @@
 <p><strong>Patreon</strong>:</p>
 <p><a href="https://www.patreon.com/bePatron?u=42327574" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></p>
 <p><strong>微信赞赏码</strong>：</p>
-<p><img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" /></p>
+<img class="ui image" src="../../me/微信赞赏码.jpeg" alt="wechat" />
 <blockquote>
 <p>最好附加一下信息或者留言，方便我可以<a href="../../posts/buy-me-a-coffee">将捐助记录 📝 下来</a>，十分感谢 🙏。</p>
 <p>It is better to attach some information or leave a message so that I can <a href="../../posts/buy-me-a-coffee">record the donation 📝</a>, thank you very much 🙏.</p>
