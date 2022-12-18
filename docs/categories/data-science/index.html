@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.99.1" />
+<meta name="generator" content="Hugo 0.108.0">
 
 <link rel="canonical" href="https://rushichaudhari.github.io/categories/data-science/" />
 
@@ -26,7 +26,6 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rushichaudhari.github.io/categories/data-science/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-
 
 
 
@@ -201,6 +200,18 @@
     
       
       
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -215,6 +226,12 @@
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -245,6 +262,12 @@
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -287,6 +310,12 @@
       
       <a class="ui label" href="../../tags/machine-learning/" title="Machine Learning">
         Machine Learning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/mlfinlab/" title="Mlfinlab">
+        Mlfinlab
       </a>
     
       
@@ -825,7 +854,7 @@
       <p class="date">Sunday, Jun 19, 2022</p>
     </div>
     <div class="description">
-      Apache Hadoop Stack: MapReduce, Pig, Spark, Hive 1. HDFS CLI: load input data list all directories hadoop fs -ls make a new directory to store movie data hadoop fs -mkdir movieData copy data file from local to hdfs hadoop fs -copyFromLocal u.data movieData/u.data 2. MapReduce with Python: movies sorted by rating counts script  from mrjob.job import MRJob from mrjob.step import MRStep  class RatingsBreakdown(MRJob):  def steps(self):  return [  MRStep(mapper=self.
+      Apache Hadoop Stack: MapReduce, Pig, Spark, Hive 1. HDFS CLI: load input data list all directories hadoop fs -ls make a new directory to store movie data hadoop fs -mkdir movieData copy data file from local to hdfs hadoop fs -copyFromLocal u.data movieData/u.data 2. MapReduce with Python: movies sorted by rating counts script from mrjob.job import MRJob from mrjob.step import MRStep class RatingsBreakdown(MRJob): def steps(self): return [ MRStep(mapper=self.mapper_get_movie, combiner=self.combiner_count_ratings, reducer=self.reducer_count_ratings), MRStep(reducer=self.
     </div>
   </div>
 
@@ -854,7 +883,7 @@
       <p class="date">Sunday, Jun 19, 2022</p>
     </div>
     <div class="description">
-      Goals Recommend top 5 products for an user: RMSE = 1.22 Data set description  This is a list of over 34,000 consumer reviews for Amazon products like the Kindle, Fire TV Stick, and more provided by Datafiniti&rsquo;s Product Database. The dataset includes basic product information, rating, review text, and more for each product. Note that this is a sample of a large dataset. The full dataset is available through Datafiniti.
+      Goals Recommend top 5 products for an user: RMSE = 1.22 Data set description This is a list of over 34,000 consumer reviews for Amazon products like the Kindle, Fire TV Stick, and more provided by Datafiniti&rsquo;s Product Database. The dataset includes basic product information, rating, review text, and more for each product. Note that this is a sample of a large dataset. The full dataset is available through Datafiniti. from pyspark.
     </div>
   </div>
 
@@ -891,7 +920,7 @@ We&rsquo;ll compare these two types of posts to determine the following: 1. Do &
   <div class="extra content">
     <div class="author">@&nbsp;rushi</div>
     <div class="reading-time">
-      <i class="clock icon"></i>7 minutes read</div>
+      <i class="clock icon"></i>6 minutes read</div>
   </div>
 </article>
 
@@ -913,7 +942,7 @@ We&rsquo;ll compare these two types of posts to determine the following: 1. Do &
       <p class="date">Sunday, Jun 19, 2022</p>
     </div>
     <div class="description">
-      Goals 1. Modeling the keyboard 2. Fiit&rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&rsquo;s law parameter estimation &amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &#39;qwertyuiop&#39; line2 = &#39;asdfghjkl&#39; line3 = &#39;zxcvbnm&#39;  # Define a keyboard as a list of keys.
+      Goals 1. Modeling the keyboard 2. Fiit&rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&rsquo;s law parameter estimation &amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &#39;qwertyuiop&#39; line2 = &#39;asdfghjkl&#39; line3 = &#39;zxcvbnm&#39; # Define a keyboard as a list of keys.
     </div>
   </div>
 

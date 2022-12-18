@@ -26,7 +26,7 @@ I already had my own docker image created here https://hub.docker.com/repository
 but I wondered If I could use GUI in it, luckily I managed to do so.
 So here are the steps :-
 Pre-requirements:
- Windows 10 WSL  For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on //build 2020 that they will release soon an improvement that will not require any third-party component to run Linux GUI Apps on Windows Desktop.</description>
+Windows 10 WSL For now, it is necessary to install a third-party App to run the GUI Apps, but Microsoft announced on //build 2020 that they will release soon an improvement that will not require any third-party component to run Linux GUI Apps on Windows Desktop.</description>
     </item>
     
   </channel>

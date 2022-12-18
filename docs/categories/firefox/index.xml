@@ -13,7 +13,7 @@
       
       <guid>https://rushichaudhari.github.io/posts/2020-04-10-ssd-savespace/</guid>
       <description>Change cache location of Firefox You can do this by creating a new hidden preference.
- Type about:config into the location bar and press enter Accept the warning message that appears, you will be taken to a list of preferences Right-click somewhere in the list and select &amp;ldquo;New &amp;gt; String&amp;rdquo; For the name of the preference type browser.cache.disk.parent_directory For its value type the path to where you want to store the cache Next locate the preference browser.</description>
+Type about:config into the location bar and press enter Accept the warning message that appears, you will be taken to a list of preferences Right-click somewhere in the list and select &amp;ldquo;New &amp;gt; String&amp;rdquo; For the name of the preference type browser.cache.disk.parent_directory For its value type the path to where you want to store the cache Next locate the preference browser.</description>
     </item>
     
   </channel>

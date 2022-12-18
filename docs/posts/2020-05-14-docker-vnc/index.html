@@ -15,11 +15,11 @@
 <meta name="author" content="rushi" />
 <meta name="description" content="This guide assumes you already know what is docker and docker, vncviewer installed on your system The docker image given at https://hub.docker.com/search?q=&amp;amp;type=image is a blank kali image with 0 tools.
 Let us create a light-weight custom image with the tools needed. The following are the tools which I think are commonly used in kali you can add/remove a few from that list.
-aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils dos2unix enum4linux exploitdb ftp git gobuster hashcat hping3 hydra impacket-scripts john joomscan masscan metasploit-framework mimikatz nasm ncat netcat-traditional nikto nmap patator php powersploit proxychains python-pip python2 python3 recon-ng responder samba samdump2 smbclient smbmap snmp socat sqlmap sslscan theharvester vim wafw00f weevely wfuzz whois wordlists wpscan Creating Dockerfile" />
+aircrack-ngcrackmapexeccrunchcurldirbdirbusterdnsenumdnsrecondnsutilsdos2unixenum4linuxexploitdbftpgitgobusterhashcathping3hydraimpacket-scriptsjohnjoomscanmasscanmetasploit-frameworkmimikatznasmncatnetcat-traditionalniktonmappatatorphppowersploitproxychainspython-pippython2python3recon-ngrespondersambasamdump2smbclientsmbmapsnmpsocatsqlmapsslscantheharvestervimwafw00fweevelywfuzzwhoiswordlistswpscan Creating Dockerfile" />
 
 
 
-<meta name="generator" content="Hugo 0.99.1" />
+<meta name="generator" content="Hugo 0.108.0">
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/" />
 
@@ -27,10 +27,9 @@ aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils do
 <meta property="og:title" content="A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds" />
 <meta property="og:description" content="This guide assumes you already know what is docker and docker, vncviewer installed on your system The docker image given at https://hub.docker.com/search?q=&amp;type=image is a blank kali image with 0 tools.
 Let us create a light-weight custom image with the tools needed. The following are the tools which I think are commonly used in kali you can add/remove a few from that list.
-aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils dos2unix enum4linux exploitdb ftp git gobuster hashcat hping3 hydra impacket-scripts john joomscan masscan metasploit-framework mimikatz nasm ncat netcat-traditional nikto nmap patator php powersploit proxychains python-pip python2 python3 recon-ng responder samba samdump2 smbclient smbmap snmp socat sqlmap sslscan theharvester vim wafw00f weevely wfuzz whois wordlists wpscan Creating Dockerfile" />
+aircrack-ngcrackmapexeccrunchcurldirbdirbusterdnsenumdnsrecondnsutilsdos2unixenum4linuxexploitdbftpgitgobusterhashcathping3hydraimpacket-scriptsjohnjoomscanmasscanmetasploit-frameworkmimikatznasmncatnetcat-traditionalniktonmappatatorphppowersploitproxychainspython-pippython2python3recon-ngrespondersambasamdump2smbclientsmbmapsnmpsocatsqlmapsslscantheharvestervimwafw00fweevelywfuzzwhoiswordlistswpscan Creating Dockerfile" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
-
 
 
 
@@ -42,7 +41,7 @@ aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils do
 <meta name="twitter:title" content="A prebuilt kali-linux with GUI aka vnc in docker in 2 seconds"/>
 <meta name="twitter:description" content="This guide assumes you already know what is docker and docker, vncviewer installed on your system The docker image given at https://hub.docker.com/search?q=&amp;type=image is a blank kali image with 0 tools.
 Let us create a light-weight custom image with the tools needed. The following are the tools which I think are commonly used in kali you can add/remove a few from that list.
-aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils dos2unix enum4linux exploitdb ftp git gobuster hashcat hping3 hydra impacket-scripts john joomscan masscan metasploit-framework mimikatz nasm ncat netcat-traditional nikto nmap patator php powersploit proxychains python-pip python2 python3 recon-ng responder samba samdump2 smbclient smbmap snmp socat sqlmap sslscan theharvester vim wafw00f weevely wfuzz whois wordlists wpscan Creating Dockerfile"/>
+aircrack-ngcrackmapexeccrunchcurldirbdirbusterdnsenumdnsrecondnsutilsdos2unixenum4linuxexploitdbftpgitgobusterhashcathping3hydraimpacket-scriptsjohnjoomscanmasscanmetasploit-frameworkmimikatznasmncatnetcat-traditionalniktonmappatatorphppowersploitproxychainspython-pippython2python3recon-ngrespondersambasamdump2smbclientsmbmapsnmpsocatsqlmapsslscantheharvestervimwafw00fweevelywfuzzwhoiswordlistswpscan Creating Dockerfile"/>
 
 
 <link rel="stylesheet" href="../../css/semantic.min.css" />
@@ -421,6 +420,18 @@ WORKDIR /root
     
       
       
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -435,6 +446,12 @@ WORKDIR /root
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -465,6 +482,12 @@ WORKDIR /root
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -507,6 +530,12 @@ WORKDIR /root
       
       <a class="ui label" href="../../tags/machine-learning/" title="Machine Learning">
         Machine Learning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/mlfinlab/" title="Mlfinlab">
+        Mlfinlab
       </a>
     
       

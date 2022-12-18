@@ -13,7 +13,7 @@
       <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/</guid>
-      <description>Dockerfile FROM python:3.8.14-slim-buster RUN apt update &amp;amp;&amp;amp; apt install git -y RUN git clone https://github.com/hudson-and-thames/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py install RUN pip install jupyter COPY Untitled.ipynb /root/Untitled.ipynb COPY start.sh /root/start.sh WORKDIR /root EXPOSE 8888 RUN chmod a+x /root/start.sh ENTRYPOINT [&amp;#34;/root/start.sh&amp;#34;] start.sh #!/bin/bash python -m jupyter notebook --allow-root To run docker run --rm -it --net=host $(docker build -q .) </description>
+      <description>Dockerfile FROM python:3.8-slim-busterRUN apt update &amp;amp;&amp;amp; apt install git -yRUN apt install -y build-essential g++ libgl1-mesa-glx libx11-6 cmake protobuf-compiler -yRUN python -m pip install jupyter cvxpyRUN git clone https://github.com/rushic24/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py installRUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5EXPOSE 8890ENTRYPOINT [ &amp;#34;jupyter&amp;#34;, &amp;#34;notebook&amp;#34;, &amp;#34;--no-browser&amp;#34;, &amp;#34;--port=8890&amp;#34;, &amp;#34;--ip=0.0.0.0&amp;#34;, &amp;#34;--allow-root&amp;#34; ] Makefile # Specify the name of the imageIMAGE_NAME = &amp;#34;mlfinlabstuf&amp;#34;# Specify the path to the DockerfileDOCKERFILE_PATH = &amp;#34;.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/</guid>
-      <description>Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;#34;3&amp;#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &amp;#34;host&amp;#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+      <description>Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-develWORKDIR /rootRUN pip install jupyter jupyterlabEXPOSE 8888COPY . .CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;#34;3&amp;#34;services:main:build: .volumes:- .:/rootports:- 8888:8888network_mode: &amp;#34;host&amp;#34;privileged: truedeploy:resources:reservations:devices:- driver: nvidiacount: 1capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works</description>
     </item>
@@ -63,7 +63,7 @@ It happened to me several times that I didn’t have enough space in my root par
       <guid>https://rushichaudhari.github.io/posts/2020-05-14-docker-vnc/</guid>
       <description>This guide assumes you already know what is docker and docker, vncviewer installed on your system The docker image given at https://hub.docker.com/search?q=&amp;amp;type=image is a blank kali image with 0 tools.
 Let us create a light-weight custom image with the tools needed. The following are the tools which I think are commonly used in kali you can add/remove a few from that list.
-aircrack-ng crackmapexec crunch curl dirb dirbuster dnsenum dnsrecon dnsutils dos2unix enum4linux exploitdb ftp git gobuster hashcat hping3 hydra impacket-scripts john joomscan masscan metasploit-framework mimikatz nasm ncat netcat-traditional nikto nmap patator php powersploit proxychains python-pip python2 python3 recon-ng responder samba samdump2 smbclient smbmap snmp socat sqlmap sslscan theharvester vim wafw00f weevely wfuzz whois wordlists wpscan Creating Dockerfile</description>
+aircrack-ngcrackmapexeccrunchcurldirbdirbusterdnsenumdnsrecondnsutilsdos2unixenum4linuxexploitdbftpgitgobusterhashcathping3hydraimpacket-scriptsjohnjoomscanmasscanmetasploit-frameworkmimikatznasmncatnetcat-traditionalniktonmappatatorphppowersploitproxychainspython-pippython2python3recon-ngrespondersambasamdump2smbclientsmbmapsnmpsocatsqlmapsslscantheharvestervimwafw00fweevelywfuzzwhoiswordlistswpscan Creating Dockerfile</description>
     </item>
     
   </channel>

@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.99.1" />
+<meta name="generator" content="Hugo 0.108.0">
 
 <link rel="canonical" href="https://rushichaudhari.github.io/tags/linux/" />
 
@@ -26,7 +26,6 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rushichaudhari.github.io/tags/linux/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-
 
 
 
@@ -201,6 +200,18 @@
     
       
       
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -215,6 +226,12 @@
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -245,6 +262,12 @@
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -287,6 +310,12 @@
       
       <a class="ui label" href="../../tags/machine-learning/" title="Machine Learning">
         Machine Learning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/mlfinlab/" title="Mlfinlab">
+        Mlfinlab
       </a>
     
       
@@ -858,7 +887,7 @@ This file requires three main items:
     </div>
     <div class="description">
       Traditionally we have been using Xorg or X11 as the display server on linux. Wayland is a similar display server which aims to be a modern and more optimized. I&rsquo;m not much used to wayland and this is a guide for using wayvnc, a vnc server for wayland. Any vnc client like tigervnc/ realvncviewer can be used.
-# Install wayvnc sudo pacman -S wayvnc Create a config with the authentication info and load it using the &ndash;config command line option or place it at the default location $HOME/.
+# Install wayvncsudo pacman -S wayvnc Create a config with the authentication info and load it using the &ndash;config command line option or place it at the default location $HOME/.
     </div>
   </div>
 
@@ -917,7 +946,7 @@ This file requires three main items:
     </div>
     <div class="description">
       Watch Netflix from restricted regions Use: Some Netflix shows are only available in India, Let us proxy through some Indian server to watch Netflix
-# In terminal 1 # 9050 is default port for proxychains socksproxy # something@someIP should be some Indian server ssh something@someIP -D 9050 # In terminal 2 proxychains firefox # Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux
+# In terminal 1 # 9050 is default port for proxychains socksproxy# something@someIP should be some Indian serverssh something@someIP -D 9050 # In terminal 2proxychains firefox# Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux
     </div>
   </div>
 
@@ -976,7 +1005,7 @@ Then I got a linux phone where swaywm was highly popular in development, I could
       <p class="date">Monday, Jan 1, 0001</p>
     </div>
     <div class="description">
-      # nmcli con add type wifi ifname wlan0 con-name CONNECTION_NAME ssid SSID # nmcli con edit id CONNECTION_NAME nmcli&gt; set ipv4.method auto nmcli&gt; set 802-1x.eap peap nmcli&gt; set 802-1x.phase2-auth mschapv2 nmcli&gt; set 802-1x.identity USERNAME nmcli&gt; set 802-1x.password PASSWORD nmcli&gt; set wifi-sec.key-mgmt wpa-eap nmcli&gt; save nmcli&gt; activate 
+      # nmcli con add type wifi ifname wlan0 con-name CONNECTION_NAME ssid SSID# nmcli con edit id CONNECTION_NAMEnmcli&gt; set ipv4.method autonmcli&gt; set 802-1x.eap peapnmcli&gt; set 802-1x.phase2-auth mschapv2nmcli&gt; set 802-1x.identity USERNAMEnmcli&gt; set 802-1x.password PASSWORDnmcli&gt; set wifi-sec.key-mgmt wpa-eapnmcli&gt; savenmcli&gt; activate 
     </div>
   </div>
 

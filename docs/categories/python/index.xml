@@ -13,7 +13,7 @@
       <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/</guid>
-      <description>Dockerfile FROM python:3.8.14-slim-buster RUN apt update &amp;amp;&amp;amp; apt install git -y RUN git clone https://github.com/hudson-and-thames/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py install RUN pip install jupyter COPY Untitled.ipynb /root/Untitled.ipynb COPY start.sh /root/start.sh WORKDIR /root EXPOSE 8888 RUN chmod a+x /root/start.sh ENTRYPOINT [&amp;#34;/root/start.sh&amp;#34;] start.sh #!/bin/bash python -m jupyter notebook --allow-root To run docker run --rm -it --net=host $(docker build -q .) </description>
+      <description>Dockerfile FROM python:3.8-slim-busterRUN apt update &amp;amp;&amp;amp; apt install git -yRUN apt install -y build-essential g++ libgl1-mesa-glx libx11-6 cmake protobuf-compiler -yRUN python -m pip install jupyter cvxpyRUN git clone https://github.com/rushic24/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py installRUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5EXPOSE 8890ENTRYPOINT [ &amp;#34;jupyter&amp;#34;, &amp;#34;notebook&amp;#34;, &amp;#34;--no-browser&amp;#34;, &amp;#34;--port=8890&amp;#34;, &amp;#34;--ip=0.0.0.0&amp;#34;, &amp;#34;--allow-root&amp;#34; ] Makefile # Specify the name of the imageIMAGE_NAME = &amp;#34;mlfinlabstuf&amp;#34;# Specify the path to the DockerfileDOCKERFILE_PATH = &amp;#34;.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/</guid>
-      <description>Apache Hadoop Stack: MapReduce, Pig, Spark, Hive 1. HDFS CLI: load input data list all directories hadoop fs -ls make a new directory to store movie data hadoop fs -mkdir movieData copy data file from local to hdfs hadoop fs -copyFromLocal u.data movieData/u.data 2. MapReduce with Python: movies sorted by rating counts script  from mrjob.job import MRJob from mrjob.step import MRStep  class RatingsBreakdown(MRJob):  def steps(self):  return [  MRStep(mapper=self.</description>
+      <description>Apache Hadoop Stack: MapReduce, Pig, Spark, Hive 1. HDFS CLI: load input data list all directories hadoop fs -ls make a new directory to store movie data hadoop fs -mkdir movieData copy data file from local to hdfs hadoop fs -copyFromLocal u.data movieData/u.data 2. MapReduce with Python: movies sorted by rating counts script from mrjob.job import MRJob from mrjob.step import MRStep class RatingsBreakdown(MRJob): def steps(self): return [ MRStep(mapper=self.mapper_get_movie, combiner=self.combiner_count_ratings, reducer=self.reducer_count_ratings), MRStep(reducer=self.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-06-19-collaborative-filtering-on-amazon-products-with-pyspark/</guid>
-      <description>Goals Recommend top 5 products for an user: RMSE = 1.22 Data set description  This is a list of over 34,000 consumer reviews for Amazon products like the Kindle, Fire TV Stick, and more provided by Datafiniti&amp;rsquo;s Product Database. The dataset includes basic product information, rating, review text, and more for each product. Note that this is a sample of a large dataset. The full dataset is available through Datafiniti.</description>
+      <description>Goals Recommend top 5 products for an user: RMSE = 1.22 Data set description This is a list of over 34,000 consumer reviews for Amazon products like the Kindle, Fire TV Stick, and more provided by Datafiniti&amp;rsquo;s Product Database. The dataset includes basic product information, rating, review text, and more for each product. Note that this is a sample of a large dataset. The full dataset is available through Datafiniti. from pyspark.</description>
     </item>
     
     <item>
@@ -50,7 +50,7 @@ We&amp;rsquo;ll compare these two types of posts to determine the following: 1. 
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/</guid>
-      <description>Goals 1. Modeling the keyboard 2. Fiit&amp;rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&amp;rsquo;s law parameter estimation &amp;amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &amp;#39;qwertyuiop&amp;#39; line2 = &amp;#39;asdfghjkl&amp;#39; line3 = &amp;#39;zxcvbnm&amp;#39;  # Define a keyboard as a list of keys.</description>
+      <description>Goals 1. Modeling the keyboard 2. Fiit&amp;rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&amp;rsquo;s law parameter estimation &amp;amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &amp;#39;qwertyuiop&amp;#39; line2 = &amp;#39;asdfghjkl&amp;#39; line3 = &amp;#39;zxcvbnm&amp;#39; # Define a keyboard as a list of keys.</description>
     </item>
     
     <item>

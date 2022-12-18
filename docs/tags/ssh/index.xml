@@ -14,7 +14,7 @@
       
       <guid>https://rushichaudhari.github.io/posts/2022-02-05-cool-stuff-to-do-with-ssh/</guid>
       <description>Watch Netflix from restricted regions Use: Some Netflix shows are only available in India, Let us proxy through some Indian server to watch Netflix
-# In terminal 1 # 9050 is default port for proxychains socksproxy # something@someIP should be some Indian server ssh something@someIP -D 9050 # In terminal 2 proxychains firefox # Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux</description>
+# In terminal 1 # 9050 is default port for proxychains socksproxy# something@someIP should be some Indian serverssh something@someIP -D 9050 # In terminal 2proxychains firefox# Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux</description>
     </item>
     
   </channel>

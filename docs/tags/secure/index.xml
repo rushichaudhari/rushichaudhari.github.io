@@ -14,7 +14,7 @@
       
       <guid>https://rushichaudhari.github.io/posts/2021-11-01-enable-secure-boot-on-dualboot/</guid>
       <description>Repo to https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Using_a_signed_boot_loader
-Tips  preloader-signed works with systemd boot If you have grub and want to move to systemd-boot refer this  </description>
+Tips preloader-signed works with systemd boot If you have grub and want to move to systemd-boot refer this </description>
     </item>
     
   </channel>

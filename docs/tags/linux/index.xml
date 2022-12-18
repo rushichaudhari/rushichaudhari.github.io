@@ -26,7 +26,7 @@ This file requires three main items:</description>
       
       <guid>https://rushichaudhari.github.io/posts/2022-05-19-wayvnc-arch-linux/</guid>
       <description>Traditionally we have been using Xorg or X11 as the display server on linux. Wayland is a similar display server which aims to be a modern and more optimized. I&amp;rsquo;m not much used to wayland and this is a guide for using wayvnc, a vnc server for wayland. Any vnc client like tigervnc/ realvncviewer can be used.
-# Install wayvnc sudo pacman -S wayvnc Create a config with the authentication info and load it using the &amp;ndash;config command line option or place it at the default location $HOME/.</description>
+# Install wayvncsudo pacman -S wayvnc Create a config with the authentication info and load it using the &amp;ndash;config command line option or place it at the default location $HOME/.</description>
     </item>
     
     <item>
@@ -45,7 +45,7 @@ This file requires three main items:</description>
       
       <guid>https://rushichaudhari.github.io/posts/2022-02-05-cool-stuff-to-do-with-ssh/</guid>
       <description>Watch Netflix from restricted regions Use: Some Netflix shows are only available in India, Let us proxy through some Indian server to watch Netflix
-# In terminal 1 # 9050 is default port for proxychains socksproxy # something@someIP should be some Indian server ssh something@someIP -D 9050 # In terminal 2 proxychains firefox # Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux</description>
+# In terminal 1 # 9050 is default port for proxychains socksproxy# something@someIP should be some Indian serverssh something@someIP -D 9050 # In terminal 2proxychains firefox# Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux</description>
     </item>
     
     <item>
@@ -64,7 +64,7 @@ Then I got a linux phone where swaywm was highly popular in development, I could
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2021-09-12-nmcli-enterprise-wifi/</guid>
-      <description># nmcli con add type wifi ifname wlan0 con-name CONNECTION_NAME ssid SSID # nmcli con edit id CONNECTION_NAME nmcli&amp;gt; set ipv4.method auto nmcli&amp;gt; set 802-1x.eap peap nmcli&amp;gt; set 802-1x.phase2-auth mschapv2 nmcli&amp;gt; set 802-1x.identity USERNAME nmcli&amp;gt; set 802-1x.password PASSWORD nmcli&amp;gt; set wifi-sec.key-mgmt wpa-eap nmcli&amp;gt; save nmcli&amp;gt; activate </description>
+      <description># nmcli con add type wifi ifname wlan0 con-name CONNECTION_NAME ssid SSID# nmcli con edit id CONNECTION_NAMEnmcli&amp;gt; set ipv4.method autonmcli&amp;gt; set 802-1x.eap peapnmcli&amp;gt; set 802-1x.phase2-auth mschapv2nmcli&amp;gt; set 802-1x.identity USERNAMEnmcli&amp;gt; set 802-1x.password PASSWORDnmcli&amp;gt; set wifi-sec.key-mgmt wpa-eapnmcli&amp;gt; savenmcli&amp;gt; activate </description>
     </item>
     
   </channel>

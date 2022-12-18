@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.99.1" />
+<meta name="generator" content="Hugo 0.108.0">
 
 <link rel="canonical" href="https://rushichaudhari.github.io/" />
 
@@ -26,7 +26,6 @@
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://rushichaudhari.github.io/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
-
 
 
 
@@ -201,6 +200,18 @@
     
       
       
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -215,6 +226,12 @@
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -245,6 +262,12 @@
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -287,6 +310,12 @@
       
       <a class="ui label" href="../../tags/machine-learning/" title="Machine Learning">
         Machine Learning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/mlfinlab/" title="Mlfinlab">
+        Mlfinlab
       </a>
     
       
@@ -826,7 +855,7 @@
       <p class="date">Sunday, Mar 27, 2022</p>
     </div>
     <div class="description">
-      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &#34;host&#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-develWORKDIR /rootRUN pip install jupyter jupyterlabEXPOSE 8888COPY . .CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34;services:main:build: .volumes:- .:/rootports:- 8888:8888network_mode: &#34;host&#34;privileged: truedeploy:resources:reservations:devices:- driver: nvidiacount: 1capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
     </div>
@@ -858,7 +887,7 @@ Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
     </div>
     <div class="description">
       Watch Netflix from restricted regions Use: Some Netflix shows are only available in India, Let us proxy through some Indian server to watch Netflix
-# In terminal 1 # 9050 is default port for proxychains socksproxy # something@someIP should be some Indian server ssh something@someIP -D 9050 # In terminal 2 proxychains firefox # Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux
+# In terminal 1 # 9050 is default port for proxychains socksproxy# something@someIP should be some Indian serverssh something@someIP -D 9050 # In terminal 2proxychains firefox# Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux
     </div>
   </div>
 
@@ -888,7 +917,7 @@ Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
     </div>
     <div class="description">
       I had decided to get my email reminders using any celebrity&rsquo;s voice in my previous post Alexa AI for reminding important emails and reminders. Here is a small step towards it :D
-If you don&rsquo;t know how Priyanka Chopra sounds like, here is a real sample     Sample synthesized voice 1   Sample synthesized voice 2   Sample synthesized voice 3   Real voice of Amitabh Bachchan     Sample synthesized voice for Amitabh Bachchan This one is more robotic.
+If you don&rsquo;t know how Priyanka Chopra sounds like, here is a real sample Sample synthesized voice 1 Sample synthesized voice 2 Sample synthesized voice 3 Real voice of Amitabh Bachchan Sample synthesized voice for Amitabh Bachchan This one is more robotic.
     </div>
   </div>
 
@@ -975,7 +1004,7 @@ If you don&rsquo;t know how Priyanka Chopra sounds like, here is a real sample  
       <p class="date">Thursday, Nov 25, 2021</p>
     </div>
     <div class="description">
-      PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&#34;integer&#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&#39;Design matrix size: {}&#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz 32768/29515 [=================================] - 0s 0us/step 40960/29515 [=========================================] - 0s 0us/step Downloading data from https://storage.
+      PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&#34;integer&#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&#39;Design matrix size: {}&#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz32768/29515 [=================================] - 0s 0us/step40960/29515 [=========================================] - 0s 0us/stepDownloading data from https://storage.
     </div>
   </div>
 
@@ -983,6 +1012,37 @@ If you don&rsquo;t know how Priyanka Chopra sounds like, here is a real sample  
     <div class="author">@&nbsp;rushi</div>
     <div class="reading-time">
       <i class="clock icon"></i>5 minutes read</div>
+  </div>
+</article>
+
+    </div>
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/">
+    
+      
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2021-11-20-stop-colab-from-disconnecting/">Stop Colab From Disconnecting</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Saturday, Nov 20, 2021</p>
+    </div>
+    <div class="description">
+      Are you irritated by google colab automatically disconnecting after every 30mins ? Open your Chrome DevTools and enter the following JavaScript snippet in your console:
+function KeepClicking(){console.log(&#34;Clicking&#34;);document.querySelector(&#34;colab-connect-button&#34;).click()}setInterval(KeepClicking,60000) This clicks the connect button every 60 seconds, there is no need to worry about colab being disconnected!
+This is different from the GPU time, colab can still disconnect you for long running background tasks on GPU. 
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>1 minutes read</div>
   </div>
 </article>
 
@@ -1004,7 +1064,7 @@ If you don&rsquo;t know how Priyanka Chopra sounds like, here is a real sample  
       <p class="date">Saturday, Nov 6, 2021</p>
     </div>
     <div class="description">
-      Why this tool?  There are aleady a few github actions available like publish-devto and markdown-to-devto They seem to be failing despite of the valid data in the markdown file. For a large amount of posts there was no option to add a break and the API got overflowed.  Steps to set up Creating API Keys in Dev.To Login to dev.to and then go to accounts and create new api key.
+      Why this tool? There are aleady a few github actions available like publish-devto and markdown-to-devto They seem to be failing despite of the valid data in the markdown file. For a large amount of posts there was no option to add a break and the API got overflowed. Steps to set up Creating API Keys in Dev.To Login to dev.to and then go to accounts and create new api key.
     </div>
   </div>
 
@@ -1034,7 +1094,7 @@ If you don&rsquo;t know how Priyanka Chopra sounds like, here is a real sample  
     </div>
     <div class="description">
       Repo to https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Using_a_signed_boot_loader
-Tips  preloader-signed works with systemd boot If you have grub and want to move to systemd-boot refer this  
+Tips preloader-signed works with systemd boot If you have grub and want to move to systemd-boot refer this 
     </div>
   </div>
 
@@ -1068,50 +1128,8 @@ Install Vagrant
 sudo pacman -S vagrant vagrant plugin install vagrant-vbguest vagrant-share Note: There is also vagrant libvirt plugin for qemu
 vagrant plugin install vagrant-libvirt but this doesn&rsquo;t work with kubeflow
 Install virtualbox
-sudo pacman -S virtualbox  for the linux kernel, choose virtualbox-host-modules-arch for any other kernel (including linux-lts), choose virtualbox-host-dkms  Load the vbox drv module
+sudo pacman -S virtualbox for the linux kernel, choose virtualbox-host-modules-arch for any other kernel (including linux-lts), choose virtualbox-host-dkms Load the vbox drv module
 sudo modprobe vboxdrv Make sure to put path for Virtualbox where you have a lot of space (50GB+)
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-01-switch-to-systemd-from-grub/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../posts/2021-11-01-switch-to-systemd-from-grub/">Switch to Systemd From Grub</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Monday, Nov 1, 2021</p>
-    </div>
-    <div class="description">
-      I have two efi partitions, p1 for windows and p4 for Arch
-sudo fdisk -l
-Add the efi entry in /etc/fstab
-get the UUID from sudo blkid
-Mount the /efi
-sudo mount /efi &amp;&amp; ls /efi
-The structure would look something like
-Install ucode for my amd machine it is
-sudo pacman -S amd-ucode
-Reinstall linux kernel
-sudo pacman -S linux linux-headers
-mkinitcpio -P
-Add the following in
-sudo nano /efi/loader/entries/arch.
     </div>
   </div>
 

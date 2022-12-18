@@ -15,7 +15,7 @@
       <description>Sometimes, when using i3wm I get this error when mounting a partition. But it works for other des like gnome/cinnamon.
 Make sure polkit is installed.
 Loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:
-[Allow Unauthorized mounting/Unmounting] Identity=unix-group:plugdev;cdrom Action=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject* ResultAny=yes ResultInactive=yes ResultActive=yes You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.</description>
+[Allow Unauthorized mounting/Unmounting]Identity=unix-group:plugdev;cdromAction=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject*ResultAny=yesResultInactive=yesResultActive=yes You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.</description>
     </item>
     
   </channel>

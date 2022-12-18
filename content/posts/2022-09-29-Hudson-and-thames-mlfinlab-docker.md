@@ -5,38 +5,44 @@ date: 2022-09-29
 author: rushi
 # cover: ''
 categories: ["python", "docker"]
-tags: ["python", "docker"]
+tags: ["python", "docker", "mlfinlab"]
 ---
 
 # Dockerfile
 
 ```
-FROM python:3.8.14-slim-buster
+FROM python:3.8-slim-buster
+
 RUN apt update && apt install git -y
-RUN git clone https://github.com/hudson-and-thames/mlfinlab.git && cd mlfinlab && python setup.py install
-RUN pip install jupyter
+RUN apt install -y build-essential g++ libgl1-mesa-glx libx11-6 cmake protobuf-compiler -y
+RUN python -m pip install jupyter cvxpy
+RUN git clone https://github.com/rushic24/mlfinlab.git && cd mlfinlab && python setup.py install
+RUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5
 
-
-COPY Untitled.ipynb /root/Untitled.ipynb
-COPY start.sh /root/start.sh
-WORKDIR /root
-
-EXPOSE 8888
-
-RUN chmod a+x /root/start.sh
-
-ENTRYPOINT ["/root/start.sh"]
-
+EXPOSE 8890
+ENTRYPOINT [ "jupyter", "notebook", "--no-browser", "--port=8890", "--ip=0.0.0.0", "--allow-root" ]
 ```
 
-# start.sh
+# Makefile
 ```
-#!/bin/bash
-python -m jupyter notebook --allow-root
+# Specify the name of the image
+IMAGE_NAME = "mlfinlabstuf"
+
+# Specify the path to the Dockerfile
+DOCKERFILE_PATH = "."
+
+# Build the Docker image
+build:
+	docker build -t $(IMAGE_NAME) $(DOCKERFILE_PATH)
+
+# Run the Docker image
+run:
+	docker run --rm -it  -v ${PWD}:/work -p 8890:8890 $(IMAGE_NAME)
 ```
 
 
 # To run
 ```
-docker run --rm -it --net=host $(docker build -q .)
+make build
+make run
 ```

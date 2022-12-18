@@ -13,7 +13,7 @@
       <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/</guid>
-      <description>Dockerfile FROM python:3.8.14-slim-buster RUN apt update &amp;amp;&amp;amp; apt install git -y RUN git clone https://github.com/hudson-and-thames/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py install RUN pip install jupyter COPY Untitled.ipynb /root/Untitled.ipynb COPY start.sh /root/start.sh WORKDIR /root EXPOSE 8888 RUN chmod a+x /root/start.sh ENTRYPOINT [&amp;#34;/root/start.sh&amp;#34;] start.sh #!/bin/bash python -m jupyter notebook --allow-root To run docker run --rm -it --net=host $(docker build -q .) </description>
+      <description>Dockerfile FROM python:3.8-slim-busterRUN apt update &amp;amp;&amp;amp; apt install git -yRUN apt install -y build-essential g++ libgl1-mesa-glx libx11-6 cmake protobuf-compiler -yRUN python -m pip install jupyter cvxpyRUN git clone https://github.com/rushic24/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py installRUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5EXPOSE 8890ENTRYPOINT [ &amp;#34;jupyter&amp;#34;, &amp;#34;notebook&amp;#34;, &amp;#34;--no-browser&amp;#34;, &amp;#34;--port=8890&amp;#34;, &amp;#34;--ip=0.0.0.0&amp;#34;, &amp;#34;--allow-root&amp;#34; ] Makefile # Specify the name of the imageIMAGE_NAME = &amp;#34;mlfinlabstuf&amp;#34;# Specify the path to the DockerfileDOCKERFILE_PATH = &amp;#34;.</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-06-19-collaborative-filtering-on-amazon-products-with-pyspark/</guid>
-      <description>Goals Recommend top 5 products for an user: RMSE = 1.22 Data set description  This is a list of over 34,000 consumer reviews for Amazon products like the Kindle, Fire TV Stick, and more provided by Datafiniti&amp;rsquo;s Product Database. The dataset includes basic product information, rating, review text, and more for each product. Note that this is a sample of a large dataset. The full dataset is available through Datafiniti.</description>
+      <description>Goals Recommend top 5 products for an user: RMSE = 1.22 Data set description This is a list of over 34,000 consumer reviews for Amazon products like the Kindle, Fire TV Stick, and more provided by Datafiniti&amp;rsquo;s Product Database. The dataset includes basic product information, rating, review text, and more for each product. Note that this is a sample of a large dataset. The full dataset is available through Datafiniti. from pyspark.</description>
     </item>
     
     <item>
@@ -41,7 +41,7 @@ We&amp;rsquo;ll compare these two types of posts to determine the following: 1. 
       <pubDate>Sun, 19 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-06-19-modeling-and-analysis-of-one-finger-qwerty-keyboard-typing-using-fiits-and-zipfs-laws/</guid>
-      <description>Goals 1. Modeling the keyboard 2. Fiit&amp;rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&amp;rsquo;s law parameter estimation &amp;amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &amp;#39;qwertyuiop&amp;#39; line2 = &amp;#39;asdfghjkl&amp;#39; line3 = &amp;#39;zxcvbnm&amp;#39;  # Define a keyboard as a list of keys.</description>
+      <description>Goals 1. Modeling the keyboard 2. Fiit&amp;rsquo;s law parameter estimation: r-squared = 0.709 3. Average typing time of 1000 most frequent words: 0.99 4. Zipf&amp;rsquo;s law parameter estimation &amp;amp; average typing time of 1000 most frequent words: 0.71 import matplotlib.pyplot as plt import math import numpy numpy.set_printoptions(precision=2) import scipy.stats as stats import statsmodels.api as sm from statsmodels.graphics.regressionplots import abline_plot import seaborn as sns 1. Keyboard modeling # Define keyboard line1 = &amp;#39;qwertyuiop&amp;#39; line2 = &amp;#39;asdfghjkl&amp;#39; line3 = &amp;#39;zxcvbnm&amp;#39; # Define a keyboard as a list of keys.</description>
     </item>
     
     <item>
@@ -61,7 +61,7 @@ curl &amp;#39;https://www.glassdoor.com/member/home/index.htm&amp;#39; -H &amp;#
       
       <guid>https://rushichaudhari.github.io/posts/2022-01-12-lets-clone-the-voice-of-priyanka-chopra-jonas/</guid>
       <description>I had decided to get my email reminders using any celebrity&amp;rsquo;s voice in my previous post Alexa AI for reminding important emails and reminders. Here is a small step towards it :D
-If you don&amp;rsquo;t know how Priyanka Chopra sounds like, here is a real sample     Sample synthesized voice 1   Sample synthesized voice 2   Sample synthesized voice 3   Real voice of Amitabh Bachchan     Sample synthesized voice for Amitabh Bachchan This one is more robotic.</description>
+If you don&amp;rsquo;t know how Priyanka Chopra sounds like, here is a real sample Sample synthesized voice 1 Sample synthesized voice 2 Sample synthesized voice 3 Real voice of Amitabh Bachchan Sample synthesized voice for Amitabh Bachchan This one is more robotic.</description>
     </item>
     
     <item>
@@ -79,7 +79,18 @@ If you don&amp;rsquo;t know how Priyanka Chopra sounds like, here is a real samp
       <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2021-11-25-pca-vs-autoencoders/</guid>
-      <description>PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&amp;#34;integer&amp;#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&amp;#39;Design matrix size: {}&amp;#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz 32768/29515 [=================================] - 0s 0us/step 40960/29515 [=========================================] - 0s 0us/step Downloading data from https://storage.</description>
+      <description>PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&amp;#34;integer&amp;#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&amp;#39;Design matrix size: {}&amp;#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz32768/29515 [=================================] - 0s 0us/step40960/29515 [=========================================] - 0s 0us/stepDownloading data from https://storage.</description>
+    </item>
+    
+    <item>
+      <title>Stop Colab From Disconnecting</title>
+      <link>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</link>
+      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</guid>
+      <description>Are you irritated by google colab automatically disconnecting after every 30mins ? Open your Chrome DevTools and enter the following JavaScript snippet in your console:
+function KeepClicking(){console.log(&amp;#34;Clicking&amp;#34;);document.querySelector(&amp;#34;colab-connect-button&amp;#34;).click()}setInterval(KeepClicking,60000) This clicks the connect button every 60 seconds, there is no need to worry about colab being disconnected!
+This is different from the GPU time, colab can still disconnect you for long running background tasks on GPU. </description>
     </item>
     
   </channel>

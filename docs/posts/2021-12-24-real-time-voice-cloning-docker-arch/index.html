@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.99.1" />
+<meta name="generator" content="Hugo 0.108.0">
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2021-12-24-real-time-voice-cloning-docker-arch/" />
 
@@ -28,7 +28,6 @@
 <meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-12-24-real-time-voice-cloning-docker-arch/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-12-24T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-12-24T00:00:00+00:00" />
-
 
 
 
@@ -158,16 +157,16 @@
       <article class="main"><p>I came across this awesome project called Real Time Voice Cloning by Corentin Jemine and I wanted to give it a shot. I’m currently working on a Arch linux machine with GPU, that could easily run the toolbox, but I wanted an easy way to get everything setup. Docker would do the trick as far as getting it setup, and then through forwarding the X Window System via SSH, I could view and control the program locally as it ran remotely. Note that these steps should be more or less compatible with Linux or macOS, but maybe on Windows with the WSL.</p>
 <p><strong>Step 0: You should probably have access to a machine with a CUDA-compatible GPU, and docker installed on Arch linux</strong></p>
 <p><strong>Step 1: We don&rsquo;t have nvidia-docker, arch wiki recommends nvidia-container-toolkit</strong></p>
-<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">yay -S nvidia-container-toolkit
+<pre tabindex="0"><code>yay -S nvidia-container-toolkit
 </code></pre><p><strong>Step 2: Clone the Real-Time-Voice-Cloning project and download pretrained models</strong></p>
 <p>I’ll assume that you’re working from your home directory, and we’ll make a directory called voice for our project to sit in and clone the GitHub repo:</p>
-<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">cd ~
+<pre tabindex="0"><code>cd ~
 mkdir voice &amp;&amp; cd voice
 git clone https://github.com/CorentinJ/Real-Time-Voice-Cloning.git
 </code></pre><p>Next, download the pretrained models as described here: <a href="https://github.com/CorentinJ/Real-Time-Voice-Cloning/wiki/Pretrained-models">https://github.com/CorentinJ/Real-Time-Voice-Cloning/wiki/Pretrained-models</a>. Note that you’re expected to merge the contents with the project root directory.</p>
 <p><strong>Step 3: Copy the Dockerfile</strong></p>
 <p>Create a new file called <code>Dockerfile</code> in <code>~/voice</code> and insert the following:</p>
-<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">FROM pytorch/pytorch
+<pre tabindex="0"><code>FROM pytorch/pytorch
 
 WORKDIR &#34;/workspace&#34;
 RUN apt-get clean \
@@ -238,7 +237,7 @@ exit
 	-e NVIDIA_VISIBLE_DEVICES=0 -p 2150:22 \
 	--device /dev/snd voice-base
 </code></pre><p>I usually use the same config file for my other pytorch projects</p>
-<pre tabindex="0"><code class="language-{bash}" data-lang="{bash}">docker run -it --rm --init --gpus=all \
+<pre tabindex="0"><code>docker run -it --rm --init --gpus=all \
 -e DISPLAY=${DISPLAY} --privileged \ 
 above--ipc=host --volume=&#34;$PWD:/workspace&#34; \
  -e NVIDIA_VISIBLE_DEVICES=0 -p 2150:22 \
@@ -437,6 +436,18 @@ python demo_toolbox.py
     
       
       
+      <a class="ui label" href="../../tags/colab/" title="Colab">
+        Colab
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
+        Colaboratory
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/commands/" title="Commands">
         Commands
       </a>
@@ -451,6 +462,12 @@ python demo_toolbox.py
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
+        Disconnect
       </a>
     
       
@@ -481,6 +498,12 @@ python demo_toolbox.py
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/google/" title="Google">
+        Google
       </a>
     
       
@@ -523,6 +546,12 @@ python demo_toolbox.py
       
       <a class="ui label" href="../../tags/machine-learning/" title="Machine Learning">
         Machine Learning
+      </a>
+    
+      
+      
+      <a class="ui label" href="../../tags/mlfinlab/" title="Mlfinlab">
+        Mlfinlab
       </a>
     
       

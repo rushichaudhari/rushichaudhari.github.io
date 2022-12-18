@@ -14,7 +14,7 @@
       
       <guid>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</guid>
       <description>Are you irritated by google colab automatically disconnecting after every 30mins ? Open your Chrome DevTools and enter the following JavaScript snippet in your console:
-function KeepClicking(){ console.log(&amp;quot;Clicking&amp;quot;); document.querySelector(&amp;quot;colab-connect-button&amp;quot;).click() } setInterval(KeepClicking,60000) This clicks the connect button every 60 seconds, there is no need to worry about colab being disconnected!
+function KeepClicking(){console.log(&amp;#34;Clicking&amp;#34;);document.querySelector(&amp;#34;colab-connect-button&amp;#34;).click()}setInterval(KeepClicking,60000) This clicks the connect button every 60 seconds, there is no need to worry about colab being disconnected!
 This is different from the GPU time, colab can still disconnect you for long running background tasks on GPU. </description>
     </item>
     
