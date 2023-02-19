@@ -3,10 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://rushichaudhari.github.io/</loc>
-    <lastmod>2022-09-29T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rushichaudhari.github.io/posts/2023-02-18-building-your-own-personal-assistant-with-chatgpt/</loc>
+    <lastmod>2023-02-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rushichaudhari.github.io/categories/</loc>
-    <lastmod>2022-09-29T00:00:00+00:00</lastmod>
+    <lastmod>2023-02-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rushichaudhari.github.io/tags/chatgpt/</loc>
+    <lastmod>2023-02-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rushichaudhari.github.io/posts/</loc>
+    <lastmod>2023-02-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rushichaudhari.github.io/tags/python/</loc>
+    <lastmod>2023-02-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rushichaudhari.github.io/categories/python/</loc>
+    <lastmod>2023-02-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://rushichaudhari.github.io/tags/</loc>
+    <lastmod>2023-02-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rushichaudhari.github.io/tags/docker/</loc>
     <lastmod>2022-09-29T00:00:00+00:00</lastmod>
@@ -18,18 +36,6 @@
     <lastmod>2022-09-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rushichaudhari.github.io/tags/mlfinlab/</loc>
-    <lastmod>2022-09-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/posts/</loc>
-    <lastmod>2022-09-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/tags/python/</loc>
-    <lastmod>2022-09-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/categories/python/</loc>
-    <lastmod>2022-09-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/tags/</loc>
     <lastmod>2022-09-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rushichaudhari.github.io/posts/2022-06-19-apache_hadoop_stack_mapreduce_pig_spark_hive/</loc>
@@ -175,21 +181,6 @@
   </url><url>
     <loc>https://rushichaudhari.github.io/tags/tensorflow/</loc>
     <lastmod>2021-11-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/tags/colab/</loc>
-    <lastmod>2021-11-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/tags/colaboratory/</loc>
-    <lastmod>2021-11-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/tags/disconnect/</loc>
-    <lastmod>2021-11-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/tags/google/</loc>
-    <lastmod>2021-11-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</loc>
-    <lastmod>2021-11-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://rushichaudhari.github.io/tags/cd/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>

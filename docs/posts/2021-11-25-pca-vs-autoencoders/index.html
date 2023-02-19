@@ -13,17 +13,17 @@
 
 
 <meta name="author" content="rushi" />
-<meta name="description" content="PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&amp;#34;integer&amp;#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&amp;#39;Design matrix size: {}&amp;#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz32768/29515 [=================================] - 0s 0us/step40960/29515 [=========================================] - 0s 0us/stepDownloading data from https://storage." />
+<meta name="description" content="PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&amp;#34;integer&amp;#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&amp;#39;Design matrix size: {}&amp;#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz 32768/29515 [=================================] - 0s 0us/step 40960/29515 [=========================================] - 0s 0us/step Downloading data from https://storage." />
 
 
 
-<meta name="generator" content="Hugo 0.108.0">
+<meta name="generator" content="Hugo 0.110.0">
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2021-11-25-pca-vs-autoencoders/" />
 
 
 <meta property="og:title" content="Pca VS AutoEncoders" />
-<meta property="og:description" content="PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&#34;integer&#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&#39;Design matrix size: {}&#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz32768/29515 [=================================] - 0s 0us/step40960/29515 [=========================================] - 0s 0us/stepDownloading data from https://storage." />
+<meta property="og:description" content="PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&#34;integer&#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&#39;Design matrix size: {}&#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz 32768/29515 [=================================] - 0s 0us/step 40960/29515 [=========================================] - 0s 0us/step Downloading data from https://storage." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rushichaudhari.github.io/posts/2021-11-25-pca-vs-autoencoders/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-11-25T00:00:00+00:00" />
@@ -35,7 +35,7 @@
 <meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 <meta name="twitter:title" content="Pca VS AutoEncoders"/>
-<meta name="twitter:description" content="PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&#34;integer&#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&#39;Design matrix size: {}&#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz32768/29515 [=================================] - 0s 0us/step40960/29515 [=========================================] - 0s 0us/stepDownloading data from https://storage."/>
+<meta name="twitter:description" content="PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&#34;integer&#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&#39;Design matrix size: {}&#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz 32768/29515 [=================================] - 0s 0us/step 40960/29515 [=========================================] - 0s 0us/step Downloading data from https://storage."/>
 
 
 <link rel="stylesheet" href="../../css/semantic.min.css" />
@@ -570,6 +570,12 @@ Epoch 3/3
     
       
       
+      <a class="ui label" href="../../tags/chatgpt/" title="Chatgpt">
+        Chatgpt
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/ci/" title="Ci">
         Ci
       </a>
@@ -578,18 +584,6 @@ Epoch 3/3
       
       <a class="ui label" href="../../tags/clone/" title="Clone">
         Clone
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colab/" title="Colab">
-        Colab
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
-        Colaboratory
       </a>
     
       
@@ -608,12 +602,6 @@ Epoch 3/3
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
-        Disconnect
       </a>
     
       
@@ -644,12 +632,6 @@ Epoch 3/3
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/google/" title="Google">
-        Google
       </a>
     
       
@@ -1209,7 +1191,7 @@ Epoch 3/3
 
   <section class="ui bottom attached center aligned segment">
     
-      <p>© 2018 - 2022 A collection of random ideas so I don&#39;t have to google again</p>
+      <p>© 2018 - 2023 A collection of random ideas so I don&#39;t have to google again</p>
     
 
     

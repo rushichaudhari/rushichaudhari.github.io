@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.108.0">
+<meta name="generator" content="Hugo 0.110.0">
 
 <link rel="canonical" href="https://rushichaudhari.github.io/" />
 
@@ -188,6 +188,12 @@
     
       
       
+      <a class="ui label" href="../../tags/chatgpt/" title="Chatgpt">
+        Chatgpt
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/ci/" title="Ci">
         Ci
       </a>
@@ -196,18 +202,6 @@
       
       <a class="ui label" href="../../tags/clone/" title="Clone">
         Clone
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colab/" title="Colab">
-        Colab
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
-        Colaboratory
       </a>
     
       
@@ -226,12 +220,6 @@
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
-        Disconnect
       </a>
     
       
@@ -262,12 +250,6 @@
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/google/" title="Google">
-        Google
       </a>
     
       
@@ -827,7 +809,7 @@
 
   <section class="ui bottom attached center aligned segment">
     
-      <p>© 2018 - 2022 A collection of random ideas so I don&#39;t have to google again</p>
+      <p>© 2018 - 2023 A collection of random ideas so I don&#39;t have to google again</p>
     
 
     
@@ -838,6 +820,35 @@
 
   
   
+  
+    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
+      <article class="ui attached segment card dream-card">
+  <a class="image" href="https://rushichaudhari.github.io/posts/2022-04-13-my-pinephone-setup/">
+    
+      <img src="../../img/2022-04-13-My-Pinephone-Setup/pinephone.jpg" alt="My Pinephone Setup" />
+    
+  </a>
+
+  <div class="content">
+    <h2 class="ui medium header">
+      <a href="../../posts/2022-04-13-my-pinephone-setup/">My Pinephone Setup</a>
+    </h2>
+    <div class="meta">
+      <p class="date">Thursday, Apr 14, 2022</p>
+    </div>
+    <div class="description">
+      The Pinephone[1] is my first Linux smartphone. I&rsquo;ve been waiting for this since 2018. I feel the more android is advancing the more it is getting IOS&rsquo;ish. Android was not meant to be this way. The reason it became popular early was it being opensource, and developer friendly. That era allowed bootloader unlocking, developing custom and newer kernels, tweaking the UI. Newer android has become too much bloatish and restrictive. For instance if we see miracast, android dropped miracast support for non samsung devices after android 8.
+    </div>
+  </div>
+
+  <div class="extra content">
+    <div class="author">@&nbsp;rushi</div>
+    <div class="reading-time">
+      <i class="clock icon"></i>6 minutes read</div>
+  </div>
+</article>
+
+    </div>
   
     <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
       <article class="ui attached segment card dream-card">
@@ -855,7 +866,7 @@
       <p class="date">Sunday, Mar 27, 2022</p>
     </div>
     <div class="description">
-      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-develWORKDIR /rootRUN pip install jupyter jupyterlabEXPOSE 8888COPY . .CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34;services:main:build: .volumes:- .:/rootports:- 8888:8888network_mode: &#34;host&#34;privileged: truedeploy:resources:reservations:devices:- driver: nvidiacount: 1capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &#34;host&#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
     </div>
@@ -887,7 +898,7 @@ Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
     </div>
     <div class="description">
       Watch Netflix from restricted regions Use: Some Netflix shows are only available in India, Let us proxy through some Indian server to watch Netflix
-# In terminal 1 # 9050 is default port for proxychains socksproxy# something@someIP should be some Indian serverssh something@someIP -D 9050 # In terminal 2proxychains firefox# Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux
+# In terminal 1 # 9050 is default port for proxychains socksproxy # something@someIP should be some Indian server ssh something@someIP -D 9050 # In terminal 2 proxychains firefox # Check the IP using https://www.whatismyipaddress.com It should show the ip of the ssh server(India), Now you can watch Indian Netflix :D VNC over SSH tunnel Best alternative if Anydesk/ Teamviewer fails on linux
     </div>
   </div>
 
@@ -1004,7 +1015,7 @@ If you don&rsquo;t know how Priyanka Chopra sounds like, here is a real sample S
       <p class="date">Thursday, Nov 25, 2021</p>
     </div>
     <div class="description">
-      PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&#34;integer&#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&#39;Design matrix size: {}&#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz32768/29515 [=================================] - 0s 0us/step40960/29515 [=========================================] - 0s 0us/stepDownloading data from https://storage.
+      PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&#34;integer&#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&#39;Design matrix size: {}&#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz 32768/29515 [=================================] - 0s 0us/step 40960/29515 [=========================================] - 0s 0us/step Downloading data from https://storage.
     </div>
   </div>
 
@@ -1012,37 +1023,6 @@ If you don&rsquo;t know how Priyanka Chopra sounds like, here is a real sample S
     <div class="author">@&nbsp;rushi</div>
     <div class="reading-time">
       <i class="clock icon"></i>5 minutes read</div>
-  </div>
-</article>
-
-    </div>
-  
-    <div class="sixteen wide mobile eight wide tablet eight wide computer four wide large screen four wide widescreen column dream-column">
-      <article class="ui attached segment card dream-card">
-  <a class="image" href="https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/">
-    
-      
-    
-  </a>
-
-  <div class="content">
-    <h2 class="ui medium header">
-      <a href="../../posts/2021-11-20-stop-colab-from-disconnecting/">Stop Colab From Disconnecting</a>
-    </h2>
-    <div class="meta">
-      <p class="date">Saturday, Nov 20, 2021</p>
-    </div>
-    <div class="description">
-      Are you irritated by google colab automatically disconnecting after every 30mins ? Open your Chrome DevTools and enter the following JavaScript snippet in your console:
-function KeepClicking(){console.log(&#34;Clicking&#34;);document.querySelector(&#34;colab-connect-button&#34;).click()}setInterval(KeepClicking,60000) This clicks the connect button every 60 seconds, there is no need to worry about colab being disconnected!
-This is different from the GPU time, colab can still disconnect you for long running background tasks on GPU. 
-    </div>
-  </div>
-
-  <div class="extra content">
-    <div class="author">@&nbsp;rushi</div>
-    <div class="reading-time">
-      <i class="clock icon"></i>1 minutes read</div>
   </div>
 </article>
 

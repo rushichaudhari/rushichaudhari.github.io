@@ -6,14 +6,24 @@
     <description>Recent content in python on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Your Own Personal Assistant With ChatGPT</title>
+      <link>https://rushichaudhari.github.io/posts/2023-02-18-building-your-own-personal-assistant-with-chatgpt/</link>
+      <pubDate>Sat, 18 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2023-02-18-building-your-own-personal-assistant-with-chatgpt/</guid>
+      <description>If you&amp;rsquo;ve ever used Siri, Alexa, or Google Assistant, you know how powerful and convenient having a personal assistant can be. What if you could build your own personal assistant, tailored to your specific needs? Thanks to the power of OpenAI&amp;rsquo;s ChatGPT language model and the open-source community, you can!
+In this post, we&amp;rsquo;ll explore a GitHub project called &amp;ldquo;ChatGPT-chan,&amp;rdquo; which provides a collection of tools to help you build your own personal assistant.</description>
+    </item>
+    
     <item>
       <title>Hudson and Thames mlfinlab stuff</title>
       <link>https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/</link>
       <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/</guid>
-      <description>Dockerfile FROM python:3.8-slim-busterRUN apt update &amp;amp;&amp;amp; apt install git -yRUN apt install -y build-essential g++ libgl1-mesa-glx libx11-6 cmake protobuf-compiler -yRUN python -m pip install jupyter cvxpyRUN git clone https://github.com/rushic24/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py installRUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5EXPOSE 8890ENTRYPOINT [ &amp;#34;jupyter&amp;#34;, &amp;#34;notebook&amp;#34;, &amp;#34;--no-browser&amp;#34;, &amp;#34;--port=8890&amp;#34;, &amp;#34;--ip=0.0.0.0&amp;#34;, &amp;#34;--allow-root&amp;#34; ] Makefile # Specify the name of the imageIMAGE_NAME = &amp;#34;mlfinlabstuf&amp;#34;# Specify the path to the DockerfileDOCKERFILE_PATH = &amp;#34;.</description>
+      <description>Dockerfile FROM python:3.8-slim-buster RUN apt update &amp;amp;&amp;amp; apt install git -y RUN apt install -y build-essential g++ libgl1-mesa-glx libx11-6 cmake protobuf-compiler -y RUN python -m pip install jupyter cvxpy RUN git clone https://github.com/rushic24/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py install RUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5 EXPOSE 8890 ENTRYPOINT [ &amp;#34;jupyter&amp;#34;, &amp;#34;notebook&amp;#34;, &amp;#34;--no-browser&amp;#34;, &amp;#34;--port=8890&amp;#34;, &amp;#34;--ip=0.0.0.0&amp;#34;, &amp;#34;--allow-root&amp;#34; ] Makefile # Specify the name of the image IMAGE_NAME = &amp;#34;mlfinlabstuf&amp;#34; # Specify the path to the Dockerfile DOCKERFILE_PATH = &amp;#34;.</description>
     </item>
     
     <item>
@@ -79,18 +89,7 @@ If you don&amp;rsquo;t know how Priyanka Chopra sounds like, here is a real samp
       <pubDate>Thu, 25 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2021-11-25-pca-vs-autoencoders/</guid>
-      <description>PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&amp;#34;integer&amp;#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&amp;#39;Design matrix size: {}&amp;#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz32768/29515 [=================================] - 0s 0us/step40960/29515 [=========================================] - 0s 0us/stepDownloading data from https://storage.</description>
-    </item>
-    
-    <item>
-      <title>Stop Colab From Disconnecting</title>
-      <link>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</link>
-      <pubDate>Sat, 20 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/posts/2021-11-20-stop-colab-from-disconnecting/</guid>
-      <description>Are you irritated by google colab automatically disconnecting after every 30mins ? Open your Chrome DevTools and enter the following JavaScript snippet in your console:
-function KeepClicking(){console.log(&amp;#34;Clicking&amp;#34;);document.querySelector(&amp;#34;colab-connect-button&amp;#34;).click()}setInterval(KeepClicking,60000) This clicks the connect button every 60 seconds, there is no need to worry about colab being disconnected!
-This is different from the GPU time, colab can still disconnect you for long running background tasks on GPU. </description>
+      <description>PCA import numpy as np import sklearn import matplotlib.pyplot as plt from sklearn.decomposition import PCA from sklearn.preprocessing import StandardScaler from sklearn.preprocessing import MinMaxScaler from tensorflow.keras.datasets import fashion_mnist import seaborn as sns import os import gzip import sys # The number of components for pca N_COMP = 100 #@param {type:&amp;#34;integer&amp;#34;} #Load data: (X_train, y_train), (X_test, y_test) = fashion_mnist.load_data() #Design matrix print(&amp;#39;Design matrix size: {}&amp;#39;.format(X_train.shape)) Downloading data from https://storage.googleapis.com/tensorflow/tf-keras-datasets/train-labels-idx1-ubyte.gz 32768/29515 [=================================] - 0s 0us/step 40960/29515 [=========================================] - 0s 0us/step Downloading data from https://storage.</description>
     </item>
     
   </channel>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ChatGPT on A collection of random ideas so I don&#39;t have to google again</title>
+    <link>https://rushichaudhari.github.io/tags/chatgpt/</link>
+    <description>Recent content in ChatGPT on A collection of random ideas so I don&#39;t have to google again</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 18 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/tags/chatgpt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Your Own Personal Assistant With ChatGPT</title>
+      <link>https://rushichaudhari.github.io/posts/2023-02-18-building-your-own-personal-assistant-with-chatgpt/</link>
+      <pubDate>Sat, 18 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/posts/2023-02-18-building-your-own-personal-assistant-with-chatgpt/</guid>
+      <description>If you&amp;rsquo;ve ever used Siri, Alexa, or Google Assistant, you know how powerful and convenient having a personal assistant can be. What if you could build your own personal assistant, tailored to your specific needs? Thanks to the power of OpenAI&amp;rsquo;s ChatGPT language model and the open-source community, you can!
+In this post, we&amp;rsquo;ll explore a GitHub project called &amp;ldquo;ChatGPT-chan,&amp;rdquo; which provides a collection of tools to help you build your own personal assistant.</description>
+    </item>
+    
+  </channel>
+</rss>

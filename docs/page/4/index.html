@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.108.0">
+<meta name="generator" content="Hugo 0.110.0">
 
 <link rel="canonical" href="https://rushichaudhari.github.io/" />
 
@@ -188,6 +188,12 @@
     
       
       
+      <a class="ui label" href="../../tags/chatgpt/" title="Chatgpt">
+        Chatgpt
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/ci/" title="Ci">
         Ci
       </a>
@@ -196,18 +202,6 @@
       
       <a class="ui label" href="../../tags/clone/" title="Clone">
         Clone
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colab/" title="Colab">
-        Colab
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
-        Colaboratory
       </a>
     
       
@@ -226,12 +220,6 @@
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
-        Disconnect
       </a>
     
       
@@ -262,12 +250,6 @@
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/google/" title="Google">
-        Google
       </a>
     
       
@@ -827,7 +809,7 @@
 
   <section class="ui bottom attached center aligned segment">
     
-      <p>© 2018 - 2022 A collection of random ideas so I don&#39;t have to google again</p>
+      <p>© 2018 - 2023 A collection of random ideas so I don&#39;t have to google again</p>
     
 
     
@@ -855,7 +837,7 @@
       <p class="date">Monday, Jan 1, 0001</p>
     </div>
     <div class="description">
-      # nmcli con add type wifi ifname wlan0 con-name CONNECTION_NAME ssid SSID# nmcli con edit id CONNECTION_NAMEnmcli&gt; set ipv4.method autonmcli&gt; set 802-1x.eap peapnmcli&gt; set 802-1x.phase2-auth mschapv2nmcli&gt; set 802-1x.identity USERNAMEnmcli&gt; set 802-1x.password PASSWORDnmcli&gt; set wifi-sec.key-mgmt wpa-eapnmcli&gt; savenmcli&gt; activate 
+      # nmcli con add type wifi ifname wlan0 con-name CONNECTION_NAME ssid SSID # nmcli con edit id CONNECTION_NAME nmcli&gt; set ipv4.method auto nmcli&gt; set 802-1x.eap peap nmcli&gt; set 802-1x.phase2-auth mschapv2 nmcli&gt; set 802-1x.identity USERNAME nmcli&gt; set 802-1x.password PASSWORD nmcli&gt; set wifi-sec.key-mgmt wpa-eap nmcli&gt; save nmcli&gt; activate 
     </div>
   </div>
 
@@ -1008,7 +990,7 @@ find ~/.thunderbird/ -name msgFilterRules.dat
       Sometimes, when using i3wm I get this error when mounting a partition. But it works for other des like gnome/cinnamon.
 Make sure polkit is installed.
 Loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.d/org.freedesktop.automount.plka (as root!) with the following content:
-[Allow Unauthorized mounting/Unmounting]Identity=unix-group:plugdev;cdromAction=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject*ResultAny=yesResultInactive=yesResultActive=yes You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.
+[Allow Unauthorized mounting/Unmounting] Identity=unix-group:plugdev;cdrom Action=org.freedesktop.udisks2.filesystem-*;org.freedesktop.udisks2.eject* ResultAny=yes ResultInactive=yes ResultActive=yes You can loosen the polkit permissions in your system to allow your normal user to mount devices by creating a file at /etc/polkit-1/localauthority/50-local.
     </div>
   </div>
 
@@ -1037,7 +1019,7 @@ Loosen the polkit permissions in your system to allow your normal user to mount 
       <p class="date">Monday, Jan 1, 0001</p>
     </div>
     <div class="description">
-      We Need RTL SDR Dongle RTL SDR Software Computer SDR works by receiving a analogue radio signal and then using an analog to digital converter to digitalise the signal. The digitalised signal can then be worked in digital processing software.We needGQRX -&gt; osx/ linux git clone https://github.com/csete/gqrx.git cd gqrx mkdir build cd build qmake .. make make install
+      We Need RTL SDR Dongle RTL SDR Software Computer SDR works by receiving a analogue radio signal and then using an analog to digital converter to digitalise the signal. The digitalised signal can then be worked in digital processing software. We need GQRX -&gt; osx/ linux git clone https://github.com/csete/gqrx.git cd gqrx mkdir build cd build qmake .. make make install
 sudo apt-get update sudo apt install git cmake libusb-1.0-0.dev build-essential
     </div>
   </div>
@@ -1102,7 +1084,7 @@ Windows 10 WSL For now, it is necessary to install a third-party App to run the 
     </div>
     <div class="description">
       Installing tigervnc sudo pacman -Ss tigervnc Editing the environment file ~/.vnc/xstartup functions like .xinitrc and it&rsquo;s sourced by vncserver when being started. At a minimum, users should start a DE from this file. As an example, to start lxde, you&rsquo;ll modify the file to:
-$nano ~/.vnc/xstartup#!/bin/bashexec lxde &amp;&gt;/dev/null The file should be executable: $ chmod +x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/configdesktop=sandboxgeometry=1920x1080dpi=96SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user
+$nano ~/.vnc/xstartup #!/bin/bash exec lxde &amp;&gt;/dev/null The file should be executable: $ chmod +x ~/.vnc/xstartup Adding vncserver options $ nano ~/.vnc/config desktop=sandbox geometry=1920x1080 dpi=96 SecurityTypes=none Starting and stopping vncserver via systemd To control vncserver with systemd, first, create systemd unit file for the user
     </div>
   </div>
 

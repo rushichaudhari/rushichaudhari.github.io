@@ -13,7 +13,7 @@
       <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/</guid>
-      <description>Dockerfile FROM python:3.8-slim-busterRUN apt update &amp;amp;&amp;amp; apt install git -yRUN apt install -y build-essential g++ libgl1-mesa-glx libx11-6 cmake protobuf-compiler -yRUN python -m pip install jupyter cvxpyRUN git clone https://github.com/rushic24/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py installRUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5EXPOSE 8890ENTRYPOINT [ &amp;#34;jupyter&amp;#34;, &amp;#34;notebook&amp;#34;, &amp;#34;--no-browser&amp;#34;, &amp;#34;--port=8890&amp;#34;, &amp;#34;--ip=0.0.0.0&amp;#34;, &amp;#34;--allow-root&amp;#34; ] Makefile # Specify the name of the imageIMAGE_NAME = &amp;#34;mlfinlabstuf&amp;#34;# Specify the path to the DockerfileDOCKERFILE_PATH = &amp;#34;.</description>
+      <description>Dockerfile FROM python:3.8-slim-buster RUN apt update &amp;amp;&amp;amp; apt install git -y RUN apt install -y build-essential g++ libgl1-mesa-glx libx11-6 cmake protobuf-compiler -y RUN python -m pip install jupyter cvxpy RUN git clone https://github.com/rushic24/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py install RUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5 EXPOSE 8890 ENTRYPOINT [ &amp;#34;jupyter&amp;#34;, &amp;#34;notebook&amp;#34;, &amp;#34;--no-browser&amp;#34;, &amp;#34;--port=8890&amp;#34;, &amp;#34;--ip=0.0.0.0&amp;#34;, &amp;#34;--allow-root&amp;#34; ] Makefile # Specify the name of the image IMAGE_NAME = &amp;#34;mlfinlabstuf&amp;#34; # Specify the path to the Dockerfile DOCKERFILE_PATH = &amp;#34;.</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/posts/2022-03-27-colab-equivalent-pytorch-docker-with-gpu/</guid>
-      <description>Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-develWORKDIR /rootRUN pip install jupyter jupyterlabEXPOSE 8888COPY . .CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;#34;3&amp;#34;services:main:build: .volumes:- .:/rootports:- 8888:8888network_mode: &amp;#34;host&amp;#34;privileged: truedeploy:resources:reservations:devices:- driver: nvidiacount: 1capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+      <description>Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &amp;#34;3&amp;#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &amp;#34;host&amp;#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works</description>
     </item>

@@ -6,22 +6,22 @@
     <description>Recent content in Categories on A collection of random ideas so I don&#39;t have to google again</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 18 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://rushichaudhari.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python</title>
+      <link>https://rushichaudhari.github.io/categories/python/</link>
+      <pubDate>Sat, 18 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://rushichaudhari.github.io/categories/python/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>docker</title>
       <link>https://rushichaudhari.github.io/categories/docker/</link>
       <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://rushichaudhari.github.io/categories/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://rushichaudhari.github.io/categories/python/</link>
-      <pubDate>Thu, 29 Sep 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://rushichaudhari.github.io/categories/python/</guid>
       <description></description>
     </item>
     

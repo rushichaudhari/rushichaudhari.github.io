@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.108.0">
+<meta name="generator" content="Hugo 0.110.0">
 
 <link rel="canonical" href="https://rushichaudhari.github.io/tags/mlfinlab/" />
 
@@ -188,6 +188,12 @@
     
       
       
+      <a class="ui label" href="../../tags/chatgpt/" title="Chatgpt">
+        Chatgpt
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/ci/" title="Ci">
         Ci
       </a>
@@ -196,18 +202,6 @@
       
       <a class="ui label" href="../../tags/clone/" title="Clone">
         Clone
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colab/" title="Colab">
-        Colab
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
-        Colaboratory
       </a>
     
       
@@ -226,12 +220,6 @@
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
-        Disconnect
       </a>
     
       
@@ -262,12 +250,6 @@
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/google/" title="Google">
-        Google
       </a>
     
       
@@ -827,7 +809,7 @@
 
   <section class="ui bottom attached center aligned segment">
     
-      <p>© 2018 - 2022 A collection of random ideas so I don&#39;t have to google again</p>
+      <p>© 2018 - 2023 A collection of random ideas so I don&#39;t have to google again</p>
     
 
     
@@ -854,7 +836,7 @@
       <p class="date">Thursday, Sep 29, 2022</p>
     </div>
     <div class="description">
-      Dockerfile FROM python:3.8-slim-busterRUN apt update &amp;&amp; apt install git -yRUN apt install -y build-essential g++ libgl1-mesa-glx libx11-6 cmake protobuf-compiler -yRUN python -m pip install jupyter cvxpyRUN git clone https://github.com/rushic24/mlfinlab.git &amp;&amp; cd mlfinlab &amp;&amp; python setup.py installRUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5EXPOSE 8890ENTRYPOINT [ &#34;jupyter&#34;, &#34;notebook&#34;, &#34;--no-browser&#34;, &#34;--port=8890&#34;, &#34;--ip=0.0.0.0&#34;, &#34;--allow-root&#34; ] Makefile # Specify the name of the imageIMAGE_NAME = &#34;mlfinlabstuf&#34;# Specify the path to the DockerfileDOCKERFILE_PATH = &#34;.
+      Dockerfile FROM python:3.8-slim-buster RUN apt update &amp;&amp; apt install git -y RUN apt install -y build-essential g++ libgl1-mesa-glx libx11-6 cmake protobuf-compiler -y RUN python -m pip install jupyter cvxpy RUN git clone https://github.com/rushic24/mlfinlab.git &amp;&amp; cd mlfinlab &amp;&amp; python setup.py install RUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5 EXPOSE 8890 ENTRYPOINT [ &#34;jupyter&#34;, &#34;notebook&#34;, &#34;--no-browser&#34;, &#34;--port=8890&#34;, &#34;--ip=0.0.0.0&#34;, &#34;--allow-root&#34; ] Makefile # Specify the name of the image IMAGE_NAME = &#34;mlfinlabstuf&#34; # Specify the path to the Dockerfile DOCKERFILE_PATH = &#34;.
     </div>
   </div>
 

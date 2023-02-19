@@ -17,7 +17,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.108.0">
+<meta name="generator" content="Hugo 0.110.0">
 
 <link rel="canonical" href="https://rushichaudhari.github.io/categories/arch/" />
 
@@ -188,6 +188,12 @@
     
       
       
+      <a class="ui label" href="../../tags/chatgpt/" title="Chatgpt">
+        Chatgpt
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/ci/" title="Ci">
         Ci
       </a>
@@ -196,18 +202,6 @@
       
       <a class="ui label" href="../../tags/clone/" title="Clone">
         Clone
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colab/" title="Colab">
-        Colab
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
-        Colaboratory
       </a>
     
       
@@ -226,12 +220,6 @@
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
-        Disconnect
       </a>
     
       
@@ -262,12 +250,6 @@
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/google/" title="Google">
-        Google
       </a>
     
       
@@ -827,7 +809,7 @@
 
   <section class="ui bottom attached center aligned segment">
     
-      <p>© 2018 - 2022 A collection of random ideas so I don&#39;t have to google again</p>
+      <p>© 2018 - 2023 A collection of random ideas so I don&#39;t have to google again</p>
     
 
     
@@ -886,7 +868,7 @@ This file requires three main items:
       <p class="date">Sunday, Mar 27, 2022</p>
     </div>
     <div class="description">
-      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-develWORKDIR /rootRUN pip install jupyter jupyterlabEXPOSE 8888COPY . .CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34;services:main:build: .volumes:- .:/rootports:- 8888:8888network_mode: &#34;host&#34;privileged: truedeploy:resources:reservations:devices:- driver: nvidiacount: 1capabilities: [gpu] Run docker-compose build docker-compose run --rm main
+      Dockerfile FROM pytorch/pytorch:1.10.0-cuda11.3-cudnn8-devel WORKDIR /root RUN pip install jupyter jupyterlab EXPOSE 8888 COPY . . CMD jupyter notebook --port=8888 --no-browser --ip=0.0.0.0 --allow-root docker-compose.yml version: &#34;3&#34; services: main: build: . volumes: - .:/root ports: - 8888:8888 network_mode: &#34;host&#34; privileged: true deploy: resources: reservations: devices: - driver: nvidia count: 1 capabilities: [gpu] Run docker-compose build docker-compose run --rm main
 Reason?
 Colab equivalent Pytorch version 1.10.0 torchtext works torchdata works
     </div>

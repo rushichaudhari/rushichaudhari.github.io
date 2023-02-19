@@ -14,7 +14,7 @@
       
       <guid>https://rushichaudhari.github.io/posts/2022-05-19-wayvnc-arch-linux/</guid>
       <description>Traditionally we have been using Xorg or X11 as the display server on linux. Wayland is a similar display server which aims to be a modern and more optimized. I&amp;rsquo;m not much used to wayland and this is a guide for using wayvnc, a vnc server for wayland. Any vnc client like tigervnc/ realvncviewer can be used.
-# Install wayvncsudo pacman -S wayvnc Create a config with the authentication info and load it using the &amp;ndash;config command line option or place it at the default location $HOME/.</description>
+# Install wayvnc sudo pacman -S wayvnc Create a config with the authentication info and load it using the &amp;ndash;config command line option or place it at the default location $HOME/.</description>
     </item>
     
     <item>

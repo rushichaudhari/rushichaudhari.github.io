@@ -13,17 +13,17 @@
 
 
 <meta name="author" content="rushi" />
-<meta name="description" content="Dockerfile FROM python:3.8-slim-busterRUN apt update &amp;amp;&amp;amp; apt install git -yRUN apt install -y build-essential g&#43;&#43; libgl1-mesa-glx libx11-6 cmake protobuf-compiler -yRUN python -m pip install jupyter cvxpyRUN git clone https://github.com/rushic24/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py installRUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5EXPOSE 8890ENTRYPOINT [ &amp;#34;jupyter&amp;#34;, &amp;#34;notebook&amp;#34;, &amp;#34;--no-browser&amp;#34;, &amp;#34;--port=8890&amp;#34;, &amp;#34;--ip=0.0.0.0&amp;#34;, &amp;#34;--allow-root&amp;#34; ] Makefile # Specify the name of the imageIMAGE_NAME = &amp;#34;mlfinlabstuf&amp;#34;# Specify the path to the DockerfileDOCKERFILE_PATH = &amp;#34;." />
+<meta name="description" content="Dockerfile FROM python:3.8-slim-buster RUN apt update &amp;amp;&amp;amp; apt install git -y RUN apt install -y build-essential g&#43;&#43; libgl1-mesa-glx libx11-6 cmake protobuf-compiler -y RUN python -m pip install jupyter cvxpy RUN git clone https://github.com/rushic24/mlfinlab.git &amp;amp;&amp;amp; cd mlfinlab &amp;amp;&amp;amp; python setup.py install RUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5 EXPOSE 8890 ENTRYPOINT [ &amp;#34;jupyter&amp;#34;, &amp;#34;notebook&amp;#34;, &amp;#34;--no-browser&amp;#34;, &amp;#34;--port=8890&amp;#34;, &amp;#34;--ip=0.0.0.0&amp;#34;, &amp;#34;--allow-root&amp;#34; ] Makefile # Specify the name of the image IMAGE_NAME = &amp;#34;mlfinlabstuf&amp;#34; # Specify the path to the Dockerfile DOCKERFILE_PATH = &amp;#34;." />
 
 
 
-<meta name="generator" content="Hugo 0.108.0">
+<meta name="generator" content="Hugo 0.110.0">
 
 <link rel="canonical" href="https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/" />
 
 
 <meta property="og:title" content="Hudson and Thames mlfinlab stuff" />
-<meta property="og:description" content="Dockerfile FROM python:3.8-slim-busterRUN apt update &amp;&amp; apt install git -yRUN apt install -y build-essential g&#43;&#43; libgl1-mesa-glx libx11-6 cmake protobuf-compiler -yRUN python -m pip install jupyter cvxpyRUN git clone https://github.com/rushic24/mlfinlab.git &amp;&amp; cd mlfinlab &amp;&amp; python setup.py installRUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5EXPOSE 8890ENTRYPOINT [ &#34;jupyter&#34;, &#34;notebook&#34;, &#34;--no-browser&#34;, &#34;--port=8890&#34;, &#34;--ip=0.0.0.0&#34;, &#34;--allow-root&#34; ] Makefile # Specify the name of the imageIMAGE_NAME = &#34;mlfinlabstuf&#34;# Specify the path to the DockerfileDOCKERFILE_PATH = &#34;." />
+<meta property="og:description" content="Dockerfile FROM python:3.8-slim-buster RUN apt update &amp;&amp; apt install git -y RUN apt install -y build-essential g&#43;&#43; libgl1-mesa-glx libx11-6 cmake protobuf-compiler -y RUN python -m pip install jupyter cvxpy RUN git clone https://github.com/rushic24/mlfinlab.git &amp;&amp; cd mlfinlab &amp;&amp; python setup.py install RUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5 EXPOSE 8890 ENTRYPOINT [ &#34;jupyter&#34;, &#34;notebook&#34;, &#34;--no-browser&#34;, &#34;--port=8890&#34;, &#34;--ip=0.0.0.0&#34;, &#34;--allow-root&#34; ] Makefile # Specify the name of the image IMAGE_NAME = &#34;mlfinlabstuf&#34; # Specify the path to the Dockerfile DOCKERFILE_PATH = &#34;." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rushichaudhari.github.io/posts/2022-09-29-hudson-and-thames-mlfinlab-docker/" /><meta property="og:image" content="https://rushichaudhari.github.io/me/background.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2022-09-29T00:00:00+00:00" />
@@ -35,7 +35,7 @@
 <meta name="twitter:image" content="https://rushichaudhari.github.io/me/background.jpg"/>
 
 <meta name="twitter:title" content="Hudson and Thames mlfinlab stuff"/>
-<meta name="twitter:description" content="Dockerfile FROM python:3.8-slim-busterRUN apt update &amp;&amp; apt install git -yRUN apt install -y build-essential g&#43;&#43; libgl1-mesa-glx libx11-6 cmake protobuf-compiler -yRUN python -m pip install jupyter cvxpyRUN git clone https://github.com/rushic24/mlfinlab.git &amp;&amp; cd mlfinlab &amp;&amp; python setup.py installRUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5EXPOSE 8890ENTRYPOINT [ &#34;jupyter&#34;, &#34;notebook&#34;, &#34;--no-browser&#34;, &#34;--port=8890&#34;, &#34;--ip=0.0.0.0&#34;, &#34;--allow-root&#34; ] Makefile # Specify the name of the imageIMAGE_NAME = &#34;mlfinlabstuf&#34;# Specify the path to the DockerfileDOCKERFILE_PATH = &#34;."/>
+<meta name="twitter:description" content="Dockerfile FROM python:3.8-slim-buster RUN apt update &amp;&amp; apt install git -y RUN apt install -y build-essential g&#43;&#43; libgl1-mesa-glx libx11-6 cmake protobuf-compiler -y RUN python -m pip install jupyter cvxpy RUN git clone https://github.com/rushic24/mlfinlab.git &amp;&amp; cd mlfinlab &amp;&amp; python setup.py install RUN pip install pandas==1.5.2 tqdm statsmodels==0.13.5 numpy==1.23.5 EXPOSE 8890 ENTRYPOINT [ &#34;jupyter&#34;, &#34;notebook&#34;, &#34;--no-browser&#34;, &#34;--port=8890&#34;, &#34;--ip=0.0.0.0&#34;, &#34;--allow-root&#34; ] Makefile # Specify the name of the image IMAGE_NAME = &#34;mlfinlabstuf&#34; # Specify the path to the Dockerfile DOCKERFILE_PATH = &#34;."/>
 
 
 <link rel="stylesheet" href="../../css/semantic.min.css" />
@@ -310,6 +310,12 @@ make run
     
       
       
+      <a class="ui label" href="../../tags/chatgpt/" title="Chatgpt">
+        Chatgpt
+      </a>
+    
+      
+      
       <a class="ui label" href="../../tags/ci/" title="Ci">
         Ci
       </a>
@@ -318,18 +324,6 @@ make run
       
       <a class="ui label" href="../../tags/clone/" title="Clone">
         Clone
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colab/" title="Colab">
-        Colab
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/colaboratory/" title="Colaboratory">
-        Colaboratory
       </a>
     
       
@@ -348,12 +342,6 @@ make run
       
       <a class="ui label" href="../../tags/devto/" title="Devto">
         Devto
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/disconnect/" title="Disconnect">
-        Disconnect
       </a>
     
       
@@ -384,12 +372,6 @@ make run
       
       <a class="ui label" href="../../tags/github/" title="Github">
         Github
-      </a>
-    
-      
-      
-      <a class="ui label" href="../../tags/google/" title="Google">
-        Google
       </a>
     
       
@@ -949,7 +931,7 @@ make run
 
   <section class="ui bottom attached center aligned segment">
     
-      <p>© 2018 - 2022 A collection of random ideas so I don&#39;t have to google again</p>
+      <p>© 2018 - 2023 A collection of random ideas so I don&#39;t have to google again</p>
     
 
     
